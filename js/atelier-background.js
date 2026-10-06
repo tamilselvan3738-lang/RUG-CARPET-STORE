@@ -81,6 +81,17 @@
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
+        max-width: 100vw !important;
+        overflow: hidden !important;
+      }
+
+      @media (max-width: 768px) {
+        .aurora-orb-1,
+        .aurora-orb-2,
+        .aurora-orb-3 {
+          display: none !important;
+          animation: none !important;
+        }
       }
 
       /* ==================================================== */
