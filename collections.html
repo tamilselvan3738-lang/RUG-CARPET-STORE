@@ -1,0 +1,3301 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rug & Carpet Store — Luxury Artisan Atelier</title>
+  <!-- Atelier Favicon Suite (SVG, Multi-size ICO & Retina PNG) -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+  <link rel="alternate icon" href="favicon.ico">
+
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            gold: {
+              300: '#F5DE93',
+              400: '#E6C665',
+              500: '#D4AF37',
+              600: '#AA8820',
+              700: '#836511',
+            },
+            obsidian: {
+              950: '#07080a',
+              900: '#0d0f14',
+              850: '#12151c',
+              800: '#171b24',
+              700: '#222735',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Motion (Framer Motion Engine for Vanilla & Modern Web) -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.17/dist/motion.js"></script>
+
+  <!-- High-Contrast Luxury Atelier Background Engine (Dark & Light) -->
+  <script src="js/atelier-background.js"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D4AF37;
+      border-radius: 9999px;
+    }
+
+    /* 3D Button Styles */
+    .btn-3d {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+      transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.15s ease, background 0.2s ease;
+      cursor: pointer;
+      user-select: none;
+      touch-action: manipulation;
+      transform-style: preserve-3d;
+      perspective: 800px;
+    }
+
+    /* 3D Gold Accent Button (Sign Up) */
+    .btn-3d-gold {
+      background: linear-gradient(180deg, #F9E79F 0%, #D4AF37 40%, #B89020 100%);
+      color: #121008;
+      border: 1px solid #FFE494;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.6) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.3) inset,
+        0 5px 0 #88670F,
+        0 8px 18px rgba(212, 175, 55, 0.45);
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+    .btn-3d-gold:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(180deg, #FCF0BC 0%, #DFC04E 40%, #C39922 100%);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.3) inset,
+        0 7px 0 #88670F,
+        0 12px 24px rgba(212, 175, 55, 0.55);
+    }
+    .btn-3d-gold:active {
+      transform: translateY(4px) !important;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.4) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        0 1px 0 #88670F,
+        0 3px 8px rgba(212, 175, 55, 0.35);
+    }
+
+    /* 3D Slate / Obsidian Button (Login) */
+    .btn-3d-dark {
+      background: linear-gradient(180deg, #2b303c 0%, #1a1e28 50%, #12151d 100%);
+      color: #E2E8F0;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.6) inset,
+        0 4px 0 #090a0e,
+        0 6px 14px rgba(0, 0, 0, 0.45);
+    }
+    .dark .btn-3d-dark {
+      background: linear-gradient(180deg, #2a2f3d 0%, #1a1e27 60%, #10131a 100%);
+    }
+    html:not(.dark) .btn-3d-dark {
+      background: linear-gradient(180deg, #ffffff 0%, #f1f3f7 60%, #e2e6ee 100%);
+      color: #1e293b;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.1) inset,
+        0 4px 0 #cbd5e1,
+        0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+    .btn-3d-dark:hover {
+      transform: translateY(-2px);
+      border-color: rgba(212, 175, 55, 0.4);
+      color: #F8FAFC;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.25) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.6) inset,
+        0 6px 0 #090a0e,
+        0 10px 20px rgba(0, 0, 0, 0.55);
+    }
+    html:not(.dark) .btn-3d-dark:hover {
+      color: #0f172a;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.12) inset,
+        0 6px 0 #cbd5e1,
+        0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    .btn-3d-dark:active {
+      transform: translateY(3px) !important;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.1) inset,
+        0 1px 0 #090a0e,
+        0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+    html:not(.dark) .btn-3d-dark:active {
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 1px 0 #cbd5e1,
+        0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 3D Round Control (Toggles & Hamburger) */
+    .btn-3d-icon {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+      user-select: none;
+    }
+    .dark .btn-3d-icon {
+      background: linear-gradient(180deg, #242934 0%, #151821 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.12) inset,
+        0 3px 0 #0d0f15,
+        0 5px 10px rgba(0, 0, 0, 0.35);
+    }
+    html:not(.dark) .btn-3d-icon {
+      background: linear-gradient(180deg, #ffffff 0%, #f1f4f9 100%);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 3px 0 #cbd5e1,
+        0 5px 10px rgba(0, 0, 0, 0.08);
+    }
+    .btn-3d-icon:hover {
+      transform: translateY(-2px);
+    }
+    .btn-3d-icon:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 #0d0f15, 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    html:not(.dark) .btn-3d-icon:active {
+      box-shadow: 0 1px 0 #cbd5e1, 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Navigation Gliding Indicator */
+    .nav-pill-active {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .nav-indicator {
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      z-index: -1;
+    }
+
+    /* Backdrop Glassmorphism */
+    .glass-nav {
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    /* RTL specific adjustments */
+    [dir="rtl"] {
+      text-align: right;
+    }
+    [dir="rtl"] .dropdown-menu {
+      left: auto;
+      right: 0;
+    }
+    [dir="rtl"] .mobile-drawer {
+      left: 0;
+      right: auto;
+      transform: translateX(-100%);
+    }
+    [dir="rtl"] .mobile-drawer.open {
+      transform: translateX(0);
+    }
+
+    /* 3D Specular Sheen for buttons */
+    .sheen {
+      position: relative;
+      overflow: hidden;
+    }
+    .sheen::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      transition: all 0.75s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .sheen:hover::after {
+      left: 140%;
+      opacity: 1;
+    }
+
+    /* ======================================================== */
+    /* THEME SYSTEM (Dark / Light Dynamic Navbar System) */
+    /* ======================================================== */
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    header#mainHeader {
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .dark header#mainHeader {
+      background-color: rgba(7, 8, 10, 0.88) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5) !important;
+    }
+    html:not(.dark) header#mainHeader {
+      background-color: rgba(255, 255, 255, 0.92) !important;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* Brand Logo Text */
+    .dark #brandLogoTitle {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #brandLogoTitle {
+      color: #0F172A !important;
+    }
+    .dark #brandLogoSubtitle {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) #brandLogoSubtitle {
+      color: #64748B !important;
+    }
+
+    /* Desktop Navigation Links */
+    .dark .nav-link,
+    .dark #homeDropdownBtn {
+      color: #CBD5E1 !important;
+    }
+    .dark .nav-link:hover,
+    .dark #homeDropdownBtn:hover {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) .nav-link,
+    html:not(.dark) #homeDropdownBtn {
+      color: #334155 !important;
+    }
+    html:not(.dark) .nav-link:hover,
+    html:not(.dark) #homeDropdownBtn:hover {
+      color: #AA8820 !important;
+    }
+
+    /* Home Dropdown Menu */
+    .dark #homeDropdownMenu {
+      background-color: rgba(7, 8, 10, 0.96) !important;
+      border-color: rgba(212, 175, 55, 0.25) !important;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
+    }
+    .dark #homeDropdownMenu a {
+      color: #E2E8F0 !important;
+    }
+    .dark #homeDropdownMenu a:hover {
+      background-color: rgba(212, 175, 55, 0.15) !important;
+      color: #E6C665 !important;
+    }
+    html:not(.dark) #homeDropdownMenu {
+      background-color: rgba(255, 255, 255, 0.98) !important;
+      border-color: rgba(226, 232, 240, 0.95) !important;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+    }
+    html:not(.dark) #homeDropdownMenu a {
+      color: #334155 !important;
+    }
+    html:not(.dark) #homeDropdownMenu a:hover {
+      background-color: rgba(212, 175, 55, 0.1) !important;
+      color: #AA8820 !important;
+    }
+
+    /* Hamburger Bars */
+    .dark #hamBarTop,
+    .dark #hamBarMid,
+    .dark #hamBarBot {
+      background-color: #E6C665 !important;
+    }
+    html:not(.dark) #hamBarTop,
+    html:not(.dark) #hamBarMid,
+    html:not(.dark) #hamBarBot {
+      background-color: #0F172A !important;
+    }
+
+    /* RTL Icon */
+    .dark #rtlIcon,
+    .dark #mobileRtlIcon {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) #rtlIcon,
+    html:not(.dark) #mobileRtlIcon {
+      color: #1E293B !important;
+    }
+
+    /* Mobile Drawer */
+    .dark #mobileDrawer {
+      background-color: rgba(7, 8, 10, 0.98) !important;
+      color: #F8FAFC !important;
+      border-left-color: rgba(212, 175, 55, 0.2) !important;
+    }
+    html:not(.dark) #mobileDrawer {
+      background-color: rgba(255, 255, 255, 0.98) !important;
+      color: #0F172A !important;
+      border-left-color: rgba(226, 232, 240, 0.9) !important;
+    }
+    .dark #mobileDrawerHeader {
+      border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) #mobileDrawerHeader {
+      border-bottom-color: rgba(226, 232, 240, 0.85) !important;
+    }
+    .dark #mobileDrawerTitle {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #mobileDrawerTitle {
+      color: #0F172A !important;
+    }
+    .dark #mobileDrawerSubtitle {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) #mobileDrawerSubtitle {
+      color: #64748B !important;
+    }
+    .dark #closeDrawerBtn {
+      color: #94A3B8 !important;
+    }
+    .dark #closeDrawerBtn:hover {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #closeDrawerBtn {
+      color: #64748B !important;
+    }
+    html:not(.dark) #closeDrawerBtn:hover {
+      color: #0F172A !important;
+    }
+    .dark #mobileHomeAccordionBtn {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #mobileHomeAccordionBtn {
+      color: #0F172A !important;
+    }
+    .dark #mobileDrawer .mobile-nav-link {
+      color: #E2E8F0 !important;
+    }
+    .dark #mobileDrawer .mobile-nav-link:hover {
+      color: #E6C665 !important;
+      background-color: rgba(212, 175, 55, 0.1) !important;
+    }
+    html:not(.dark) #mobileDrawer .mobile-nav-link {
+      color: #334155 !important;
+    }
+    html:not(.dark) #mobileDrawer .mobile-nav-link:hover {
+      color: #AA8820 !important;
+      background-color: rgba(212, 175, 55, 0.1) !important;
+    }
+    .dark .mobile-section-heading {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .mobile-section-heading {
+      color: #64748B !important;
+    }
+    .dark .drawer-pref-box {
+      background-color: rgba(255, 255, 255, 0.04) !important;
+      border-color: rgba(255, 255, 255, 0.06) !important;
+      color: #E2E8F0 !important;
+    }
+    html:not(.dark) .drawer-pref-box {
+      background-color: #F8FAFC !important;
+      border-color: #E2E8F0 !important;
+      color: #1E293B !important;
+    }
+    .dark #mobileDrawerFooter {
+      background-color: rgba(13, 15, 20, 0.6) !important;
+      border-top-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) #mobileDrawerFooter {
+      background-color: #F8FAFC !important;
+      border-top-color: rgba(226, 232, 240, 0.9) !important;
+    }
+
+    /* Modal Dark & Light Mode */
+    .dark #authModalBox {
+      background-color: #07080a !important;
+      border-color: rgba(212, 175, 55, 0.3) !important;
+      color: #F8FAFC !important;
+    }
+    html:not(.dark) #authModalBox {
+      background-color: #FFFFFF !important;
+      border-color: #E2E8F0 !important;
+      color: #0F172A !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15) !important;
+    }
+    html:not(.dark) #modalTitle {
+      color: #0F172A !important;
+    }
+    html:not(.dark) #modalSubtitle {
+      color: #64748B !important;
+    }
+    html:not(.dark) #authModalBox input {
+      background-color: #F8FAFC !important;
+      border-color: #CBD5E1 !important;
+      color: #0F172A !important;
+    }
+
+    /* ======================================================== */
+    /* FOOTER THEME STYLING (Dark & Light Mode + RTL) */
+    /* ======================================================== */
+    .footer-card {
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .dark .footer-card {
+      background-color: #0B0F19 !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8) !important;
+    }
+    html:not(.dark) .footer-card {
+      background-color: #FFFFFF !important;
+      border: 1px solid rgba(226, 232, 240, 0.9) !important;
+      box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.06) !important;
+    }
+
+    /* Footer Trust Badges */
+    .dark .footer-trust-badge {
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) .footer-trust-badge {
+      background-color: #F8FAFC !important;
+      border: 1px solid #E2E8F0 !important;
+    }
+    .dark .footer-trust-title {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-trust-title {
+      color: #0F172A !important;
+    }
+    .dark .footer-trust-sub {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .footer-trust-sub {
+      color: #64748B !important;
+    }
+
+    /* Footer Section Headings */
+    .dark .footer-col-heading {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-col-heading {
+      color: #0F172A !important;
+    }
+
+    /* Footer Links & Services */
+    .dark .footer-link {
+      color: #94A3B8 !important;
+    }
+    .dark .footer-link:hover {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) .footer-link {
+      color: #475569 !important;
+    }
+    html:not(.dark) .footer-link:hover {
+      color: #B89020 !important;
+    }
+
+    /* Footer Portal Cards */
+    .dark .footer-portal-card {
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    .dark .footer-portal-card:hover {
+      background-color: rgba(255, 255, 255, 0.06) !important;
+      border-color: rgba(212, 175, 55, 0.35) !important;
+    }
+    html:not(.dark) .footer-portal-card {
+      background-color: #F8FAFC !important;
+      border: 1px solid #E2E8F0 !important;
+    }
+    html:not(.dark) .footer-portal-card:hover {
+      background-color: #F1F5F9 !important;
+      border-color: rgba(212, 175, 55, 0.5) !important;
+    }
+    .dark .footer-portal-title {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-portal-title {
+      color: #0F172A !important;
+    }
+    .dark .footer-portal-sub {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .footer-portal-sub {
+      color: #64748B !important;
+    }
+
+    /* Newsletter Card & Input */
+    .dark .footer-news-card {
+      background-color: rgba(255, 255, 255, 0.02) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) .footer-news-card {
+      background-color: #F8FAFC !important;
+      border: 1px solid #E2E8F0 !important;
+    }
+    .dark .footer-news-title {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-news-title {
+      color: #0F172A !important;
+    }
+    .dark .footer-news-sub {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .footer-news-sub {
+      color: #64748B !important;
+    }
+    .dark .footer-input {
+      background-color: #07090E !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-input {
+      background-color: #FFFFFF !important;
+      border: 1px solid #CBD5E1 !important;
+      color: #0F172A !important;
+    }
+
+    /* 3D Amber / Orange Button */
+    .btn-3d-amber {
+      background: linear-gradient(180deg, #F59E0B 0%, #D97706 60%, #B45309 100%);
+      color: #FFFFFF;
+      border: 1px solid #FCD34D;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.6) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.3) inset,
+        0 4px 0 #78350F,
+        0 8px 18px rgba(217, 119, 6, 0.45);
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+    .btn-3d-amber:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(180deg, #FBBF24 0%, #F59E0B 60%, #C2410C 100%);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 6px 0 #78350F,
+        0 12px 24px rgba(217, 119, 6, 0.55);
+    }
+    .btn-3d-amber:active {
+      transform: translateY(3px) !important;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.3) inset,
+        0 1px 0 #78350F,
+        0 3px 8px rgba(217, 119, 6, 0.35);
+    }
+
+    /* Footer Social Buttons */
+    .dark .footer-social-btn {
+      color: #94A3B8 !important;
+    }
+    .dark .footer-social-btn:hover {
+      color: #E6C665 !important;
+      border-color: rgba(212, 175, 55, 0.4) !important;
+    }
+    html:not(.dark) .footer-social-btn {
+      color: #334155 !important;
+    }
+    html:not(.dark) .footer-social-btn:hover {
+      color: #B89020 !important;
+      border-color: rgba(212, 175, 55, 0.5) !important;
+    }
+
+    /* Footer Bottom Line */
+    .dark .footer-bottom-border {
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) .footer-bottom-border {
+      border-top: 1px solid rgba(226, 232, 240, 0.9) !important;
+    }
+    .dark .footer-bottom-text {
+      color: #64748B !important;
+    }
+    html:not(.dark) .footer-bottom-text {
+      color: #64748B !important;
+    }
+
+    /* RTL specific adjustments for footer */
+    [dir="rtl"] .rtl-chevron {
+      transform: rotate(180deg);
+    }
+  
+    /* ======================================================== */
+    /* COLLECTIONS PAGE THEME SYSTEM (Dark / Light Transitions) */
+    /* ======================================================== */
+    .collection-card {
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    }
+    .dark .collection-card {
+      background-color: rgba(13, 17, 26, 0.85) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
+    }
+    html:not(.dark) .collection-card {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      border: 1px solid rgba(226, 232, 240, 0.9) !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .dark .collection-subcard {
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    .dark .collection-subcard:hover {
+      background-color: rgba(255, 255, 255, 0.06) !important;
+      border-color: rgba(212, 175, 55, 0.35) !important;
+    }
+    html:not(.dark) .collection-subcard {
+      background-color: #F8FAFC !important;
+      border: 1px solid #E2E8F0 !important;
+    }
+    html:not(.dark) .collection-subcard:hover {
+      background-color: #F1F5F9 !important;
+      border-color: rgba(212, 175, 55, 0.5) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06) !important;
+    }
+
+    .dark .collection-heading {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .collection-heading {
+      color: #0F172A !important;
+    }
+    .dark .collection-subheading {
+      color: #E2E8F0 !important;
+    }
+    html:not(.dark) .collection-subheading {
+      color: #1E293B !important;
+    }
+    .dark .collection-body {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .collection-body {
+      color: #475569 !important;
+    }
+    .dark .collection-meta {
+      color: #64748B !important;
+    }
+    html:not(.dark) .collection-meta {
+      color: #64748B !important;
+    }
+
+    .dark .collection-pill {
+      background-color: rgba(212, 175, 55, 0.12) !important;
+      border: 1px solid rgba(212, 175, 55, 0.3) !important;
+      color: #F5DE93 !important;
+    }
+    html:not(.dark) .collection-pill {
+      background-color: #FEF3C7 !important;
+      border: 1px solid #FCD34D !important;
+      color: #92400E !important;
+    }
+
+    /* Filter button active / hover */
+    .col-filter-btn {
+      transition: all 0.25s ease;
+    }
+    .col-filter-btn.active {
+      background: linear-gradient(180deg, #F5DE93 0%, #D4AF37 60%, #AA8820 100%) !important;
+      color: #121008 !important;
+      border-color: #FDE68A !important;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35) !important;
+    }
+
+  
+    /* ========================================================================== */
+    /* 100% BULLETPROOF FIXED STICKY NAVBAR ARCHITECTURE                         */
+    /* Unaffected by overflow-x, guarantees header stays permanently on screen   */
+    /* ========================================================================== */
+    #mainHeader {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      z-index: 50 !important;
+      margin: 0 !important;
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    }
+
+    body.has-navbar,
+    body:has(#mainHeader) {
+      padding-top: 5rem !important; /* 80px mobile header height */
+    }
+
+    @media (min-width: 640px) {
+      body.has-navbar,
+      body:has(#mainHeader) {
+        padding-top: 5.5rem !important; /* 88px desktop header height */
+      }
+    }
+
+        #mobileDrawerOverlay {
+      z-index: 55 !important;
+    }
+
+    /* ========================================================================== */
+    /* ZERO-LAG ULTRA-SMOOTH MOBILE DRAWER ARCHITECTURE                           */
+    /* Fixes scrolling lag, double-overflow conflicts, and backdrop-filter GPU stalls */
+    /* ========================================================================== */
+    html.mobile-drawer-open,
+    body.mobile-drawer-open {
+      overflow: hidden !important;
+      touch-action: none !important;
+      height: 100% !important;
+      overscroll-behavior: none !important;
+    }
+
+    #mobileDrawer {
+      position: fixed !important;
+      top: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      height: 100dvh !important;
+      max-height: 100dvh !important;
+      overflow: hidden !important; /* Outer container NEVER scrolls - fixes double-scroll lag */
+      backdrop-filter: none !important; /* Eliminate expensive GPU blur on every scroll frame */
+      -webkit-backdrop-filter: none !important;
+      will-change: transform !important;
+      transform: translate3d(100%, 0, 0) !important;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      z-index: 60 !important;
+      box-shadow: -8px 0 32px rgba(0, 0, 0, 0.45) !important;
+      contain: paint !important;
+    }
+
+    #mobileDrawer.translate-x-0,
+    #mobileDrawer.open {
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    [dir="rtl"] #mobileDrawer {
+      right: auto !important;
+      left: 0 !important;
+      transform: translate3d(-100%, 0, 0) !important;
+      box-shadow: 8px 0 32px rgba(0, 0, 0, 0.45) !important;
+    }
+
+    [dir="rtl"] #mobileDrawer.translate-x-0,
+    [dir="rtl"] #mobileDrawer.open {
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    /* Fixed Header & Footer inside Drawer */
+    #mobileDrawerHeader {
+      flex-shrink: 0 !important;
+      position: relative !important;
+      z-index: 10 !important;
+      transform: translateZ(0) !important;
+    }
+
+    #mobileDrawerFooter {
+      flex-shrink: 0 !important;
+      position: relative !important;
+      z-index: 10 !important;
+      transform: translateZ(0) !important;
+    }
+
+    /* Single Dedicated High-Performance Smooth Scroll Container */
+    #mobileDrawerContent,
+    #mobileDrawer > .flex-1 {
+      flex: 1 1 auto !important;
+      min-height: 0 !important; /* Critical for flex child scroll */
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      -webkit-overflow-scrolling: touch !important; /* 60fps/120fps iOS momentum */
+      overscroll-behavior: contain !important; /* Prevents scroll chaining to parent body */
+      overscroll-behavior-y: contain !important;
+      touch-action: pan-y !important;
+      contain: content !important; /* Isolate layout & paint calculations */
+      will-change: scroll-position !important;
+    }
+
+    /* Fast, Lightweight Scrollbar */
+    #mobileDrawerContent::-webkit-scrollbar,
+    #mobileDrawer > .flex-1::-webkit-scrollbar {
+      width: 4px !important;
+    }
+    #mobileDrawerContent::-webkit-scrollbar-track,
+    #mobileDrawer > .flex-1::-webkit-scrollbar-track {
+      background: transparent !important;
+    }
+    #mobileDrawerContent::-webkit-scrollbar-thumb,
+    #mobileDrawer > .flex-1::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.35) !important;
+      border-radius: 9999px !important;
+    }
+
+    /* Keep Drawer Buttons Lightweight during scroll */
+    #mobileDrawer .btn-3d {
+      transform-style: flat !important;
+      perspective: none !important;
+    }
+
+    #authModal {
+      z-index: 70 !important;
+    }
+
+    /* Enhanced Ambient Shadow & Border on Scroll */
+    #mainHeader.scrolled {
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.15) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+    }
+    html:not(.dark) #mainHeader.scrolled {
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 0 15px rgba(212, 175, 55, 0.2) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.45) !important;
+    }
+
+  
+    /* ========================================================== */
+    /* ACTIVE NAVBAR STATUS SYSTEM (DESKTOP & MOBILE)             */
+    /* ========================================================== */
+    
+    /* 1. Desktop Nav Active Links */
+    .nav-link.nav-pill-active,
+    .nav-link.active,
+    #homeDropdownBtn.nav-pill-active,
+    #homeDropdownBtn.active {
+      position: relative !important;
+      background: rgba(212, 175, 55, 0.16) !important;
+      color: #E6C665 !important;
+      border: 1px solid rgba(212, 175, 55, 0.45) !important;
+      font-weight: 700 !important;
+      border-radius: 10px !important;
+      box-shadow: 0 0 14px rgba(212, 175, 55, 0.22) !important;
+    }
+    
+    html:not(.dark) .nav-link.nav-pill-active,
+    html:not(.dark) .nav-link.active,
+    html:not(.dark) #homeDropdownBtn.nav-pill-active,
+    html:not(.dark) #homeDropdownBtn.active {
+      background: rgba(212, 175, 55, 0.18) !important;
+      color: #836511 !important;
+      border: 1px solid rgba(212, 175, 55, 0.55) !important;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 8px rgba(170, 136, 32, 0.18) !important;
+    }
+
+    /* Glowing Bottom Accent Indicator Bar for Active Desktop Link */
+    .nav-link.nav-pill-active::after,
+    .nav-link.active::after,
+    #homeDropdownBtn.nav-pill-active::after,
+    #homeDropdownBtn.active::after {
+      content: '' !important;
+      position: absolute !important;
+      bottom: -2px !important;
+      left: 15% !important;
+      right: 15% !important;
+      height: 2.5px !important;
+      background: linear-gradient(90deg, transparent, #E6C665 50%, transparent) !important;
+      border-radius: 9999px !important;
+      box-shadow: 0 0 8px #E6C665 !important;
+    }
+
+    /* 2. Desktop Dropdown Menu Active Item */
+    #homeDropdownMenu a.nav-pill-active,
+    #homeDropdownMenu a.active {
+      background: rgba(212, 175, 55, 0.2) !important;
+      color: #E6C665 !important;
+      font-weight: 700 !important;
+      border-left: 3px solid #D4AF37 !important;
+    }
+    html:not(.dark) #homeDropdownMenu a.nav-pill-active,
+    html:not(.dark) #homeDropdownMenu a.active {
+      background: rgba(212, 175, 55, 0.18) !important;
+      color: #836511 !important;
+      font-weight: 700 !important;
+      border-left: 3px solid #AA8820 !important;
+    }
+
+    /* 3. Mobile Drawer Active Link */
+    .mobile-nav-link.nav-pill-active,
+    .mobile-nav-link.active,
+    #mobileHomeLink.nav-pill-active,
+    #mobileHomeLink.active,
+    #mobileHomeAccordionBtn.nav-pill-active,
+    #mobileHomeAccordionBtn.active {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.05) 100%) !important;
+      color: #E6C665 !important;
+      border-left: 4px solid #D4AF37 !important;
+      font-weight: 700 !important;
+      box-shadow: inset 0 0 14px rgba(212, 175, 55, 0.12) !important;
+    }
+    .mobile-nav-link.nav-pill-active i,
+    .mobile-nav-link.active i,
+    #mobileHomeLink.nav-pill-active i,
+    #mobileHomeLink.active i {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) .mobile-nav-link.nav-pill-active,
+    html:not(.dark) .mobile-nav-link.active,
+    html:not(.dark) #mobileHomeLink.nav-pill-active,
+    html:not(.dark) #mobileHomeLink.active,
+    html:not(.dark) #mobileHomeAccordionBtn.nav-pill-active,
+    html:not(.dark) #mobileHomeAccordionBtn.active {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.24) 0%, rgba(212, 175, 55, 0.06) 100%) !important;
+      color: #836511 !important;
+      border-left: 4px solid #AA8820 !important;
+      font-weight: 700 !important;
+    }
+    html:not(.dark) .mobile-nav-link.nav-pill-active i,
+    html:not(.dark) .mobile-nav-link.active i,
+    html:not(.dark) #mobileHomeLink.nav-pill-active i,
+    html:not(.dark) #mobileHomeLink.active i {
+      color: #836511 !important;
+    }
+
+  
+    /* ========================================================================== */
+    /* MASTER MOBILE-FIRST RESPONSIVE ARCHITECTURE                                */
+    /* Breakpoints: 320px, 480px, 768px, 1024px                                   */
+    /* Fixes overflow, text clipping, button squeezing, and card stacking        */
+    /* ========================================================================== */
+
+    /* 1. Global Box-Sizing & Viewport Boundary Reset */
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+      -webkit-box-sizing: border-box !important;
+    }
+
+    html {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      position: relative !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      min-width: 320px !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+    }
+
+    /* 2. Semantic Containers & Sections Strict Fit */
+    main {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+    }
+
+    section {
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: clip !important;
+      position: relative !important;
+    }
+
+    /* Contain decorative ambient radial orbs */
+    [class*="blur-"],
+    [class*="aurora-orb"],
+    .ambient-orb {
+      max-width: 90vw !important;
+      pointer-events: none !important;
+    }
+
+    /* 3. Media, Canvas & SVG Fluid Scaling */
+    img, video, canvas, svg, picture, iframe {
+      max-width: 100% !important;
+      height: auto;
+    }
+
+    /* 4. Universal Typography Word-Break Protection */
+    h1, h2, h3, h4, h5, h6, p, span, a, li, button, label, input, textarea {
+      overflow-wrap: break-word !important;
+      word-break: break-word !important;
+    }
+
+    /* Fix flex input shrinking */
+    input, textarea, select {
+      min-width: 0 !important;
+    }
+
+    /* 5. Mobile Drawer Responsive Bounds */
+    #mobileDrawer {
+      width: min(88vw, 380px) !important;
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: ULTRA-COMPACT MOBILE (320px to 479px)                          */
+    /* ========================================================================== */
+    @media (max-width: 479px) {
+      /* Typography Scaling */
+      h1, .font-serif.text-3xl, .font-serif.text-4xl, .font-serif.text-5xl {
+        font-size: clamp(1.45rem, 6.2vw, 2.15rem) !important;
+        line-height: 1.22 !important;
+      }
+      h2, .font-serif.text-2xl, .font-serif.text-3xl {
+        font-size: clamp(1.25rem, 5vw, 1.75rem) !important;
+        line-height: 1.25 !important;
+      }
+      h3, .font-serif.text-xl, .font-serif.text-2xl {
+        font-size: clamp(1.05rem, 4vw, 1.35rem) !important;
+        line-height: 1.3 !important;
+      }
+      p {
+        font-size: 0.85rem !important;
+        line-height: 1.55 !important;
+      }
+
+      /* Equalized Vertical Section Spacing */
+      section {
+        padding-top: 2.75rem !important;
+        padding-bottom: 2.75rem !important;
+      }
+
+      /* Container Horizontal Padding */
+      .mx-auto.px-4,
+      .mx-auto.px-6,
+      .mx-auto.px-8,
+      [class*="max-w-"][class*="mx-auto"] {
+        padding-left: 0.875rem !important;
+        padding-right: 0.875rem !important;
+      }
+
+      /* Universal Card Stacking */
+      .grid.grid-cols-2:not(.keep-grid-mobile),
+      .grid.grid-cols-3,
+      .grid.grid-cols-4,
+      .grid.grid-cols-5,
+      .grid.grid-cols-6 {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+      }
+
+      /* 3D Action Buttons Fitting Mobile Screens */
+      .btn-3d {
+        max-width: 100% !important;
+        padding-left: 0.875rem !important;
+        padding-right: 0.875rem !important;
+        font-size: 0.75rem !important;
+      }
+
+      /* Action Button Groups Wrap Vertically */
+      .hero-cta-group,
+      .btn-group-mobile,
+      form .flex-row:not(.keep-inline) {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 0.75rem !important;
+      }
+
+      /* Stat rows inside cards: 2 columns instead of 3 or 4 */
+      .grid.grid-cols-3.text-center,
+      .grid.grid-cols-4.text-center {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.5rem !important;
+      }
+
+      /* Modal and Auth Card Max Bounds */
+      #authModalBox,
+      #loginCard,
+      #registerCard {
+        width: 100% !important;
+        max-width: calc(100vw - 1.5rem) !important;
+        padding: 1.25rem 1rem !important;
+        margin: 0.75rem auto !important;
+      }
+
+      /* Header Logo Typography on 320px */
+      #brandLogoTitle {
+        font-size: 11.5px !important;
+      }
+      #brandLogoSubtitle {
+        font-size: 7px !important;
+      }
+
+      /* Footer Columns Stacking */
+      footer .grid.grid-cols-12,
+      footer .grid.grid-cols-2,
+      footer .grid.grid-cols-3,
+      footer .grid.grid-cols-4 {
+        grid-template-columns: 1fr !important;
+        gap: 1.75rem !important;
+      }
+    }
+
+    /* Special 320px Micro Screen Tuning */
+    @media (max-width: 340px) {
+      #mobileDrawer {
+        width: 96vw !important;
+      }
+      .mx-auto.px-4,
+      .mx-auto.px-6 {
+        padding-left: 0.625rem !important;
+        padding-right: 0.625rem !important;
+      }
+      h1 {
+        font-size: 1.4rem !important;
+      }
+      .btn-3d {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        height: 2.5rem !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: MOBILE LANDSCAPE & PHABLET (480px to 767px)                    */
+    /* ========================================================================== */
+    @media (min-width: 480px) and (max-width: 767px) {
+      h1, .font-serif.text-3xl, .font-serif.text-4xl, .font-serif.text-5xl {
+        font-size: clamp(1.85rem, 5vw, 2.5rem) !important;
+        line-height: 1.22 !important;
+      }
+      h2 {
+        font-size: clamp(1.45rem, 4vw, 1.95rem) !important;
+      }
+      section {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+      }
+      .grid.grid-cols-3,
+      .grid.grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1.25rem !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: TABLET PORTRAIT (768px to 1023px)                              */
+    /* ========================================================================== */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      h1, .font-serif.text-4xl, .font-serif.text-5xl {
+        font-size: clamp(2.2rem, 4vw, 3rem) !important;
+      }
+      section {
+        padding-top: 4.5rem !important;
+        padding-bottom: 4.5rem !important;
+      }
+      .grid.grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      .lg\:col-span-12,
+      .lg\:col-span-7,
+      .lg\:col-span-5 {
+        grid-column: span 12 / span 12 !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: DESKTOP & WIDE DISPLAYS (1024px+)                              */
+    /* ========================================================================== */
+    @media (min-width: 1024px) {
+      section {
+        padding-top: 5.5rem !important;
+        padding-bottom: 5.5rem !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* RTL ICONS & TEXT FLOW RESILIENCE                                           */
+    /* ========================================================================== */
+    [dir="rtl"] {
+      text-align: right;
+    }
+    [dir="rtl"] [data-lucide="chevron-right"],
+    [dir="rtl"] [data-lucide="arrow-right"],
+    [dir="rtl"] .rtl-flip {
+      transform: scaleX(-1) !important;
+    }
+    [dir="rtl"] [data-lucide="chevron-left"],
+    [dir="rtl"] [data-lucide="arrow-left"] {
+      transform: scaleX(-1) !important;
+    }
+    [dir="rtl"] .border-l-4 {
+      border-left-width: 0 !important;
+      border-right-width: 4px !important;
+    }
+    [dir="rtl"] .border-l-2 {
+      border-left-width: 0 !important;
+      border-right-width: 2px !important;
+    }
+    [dir="rtl"] .pl-9 {
+      padding-left: 0 !important;
+      padding-right: 2.25rem !important;
+    }
+
+  </style>
+</head>
+
+<body class="has-navbar bg-[#0A0C10] text-slate-100 font-sans antialiased transition-colors duration-300 min-h-screen flex flex-col justify-between selection:bg-gold-500 selection:text-black">
+
+  <!-- ======================================================== -->
+  <!-- MAIN NAVBAR HEADER -->
+  <!-- ======================================================== -->
+  <header id="mainHeader" class="fixed top-0 left-0 right-0 z-40 w-full transition-all duration-300 glass-nav">
+    <div class="max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between gap-2">
+
+      <!-- ==================================================== -->
+      <!-- 1. LEFT: LOGO (Ultra-Sleek & Refined Luxury Emblem) -->
+      <!-- ==================================================== -->
+      <div class="flex items-center gap-2.5 flex-shrink-0">
+        <a href="index.html" id="brandLogo" class="group flex items-center gap-2 focus:outline-none" aria-label="Rug & Carpet Store Homepage">
+          
+          <!-- Compact 3D Interwoven Loom Emblem (SVG) -->
+          <div class="relative w-7 h-7 sm:w-7.5 sm:h-7.5 rounded-[7px] bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 p-[1.1px] shadow-[0_2px_8px_rgba(212,175,55,0.22)] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-1">
+            <div class="w-full h-full bg-obsidian-950 rounded-[5.5px] flex items-center justify-center overflow-hidden relative">
+              <!-- Radial sheen -->
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,175,55,0.3),transparent_70%)]"></div>
+              
+              <!-- Creative Carpet Weave Geometric Monogram SVG -->
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-400 transition-transform duration-500 group-hover:scale-110" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+                <!-- Interlacing Rug Loom Strands -->
+                <rect x="7" y="7" width="26" height="26" rx="5" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 1.5" class="opacity-70" />
+                <path d="M12 12L28 28M28 12L12 28" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M20 6V34M6 20H34" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <circle cx="20" cy="20" r="4.5" fill="#D4AF37" stroke="#121008" stroke-width="1.2" />
+                <!-- Corner Knots -->
+                <circle cx="10" cy="10" r="1.5" fill="currentColor" />
+                <circle cx="30" cy="10" r="1.5" fill="currentColor" />
+                <circle cx="10" cy="30" r="1.5" fill="currentColor" />
+                <circle cx="30" cy="30" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Brand Typography (Without Atelier Badge, Compact) -->
+          <div class="flex flex-col">
+            <span id="brandLogoTitle" class="font-serif font-bold text-[12.5px] sm:text-[14px] tracking-[0.05em] group-hover:text-gold-500 transition-colors uppercase leading-tight">
+              Rug & Carpet
+            </span>
+            <span id="brandLogoSubtitle" class="text-[7.5px] sm:text-[8px] tracking-[0.16em] uppercase font-medium leading-none mt-0.5 transition-colors">
+              Handcrafted &bull; Heritage
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- ==================================================== -->
+      <!-- 2. CENTER: NAVBAR MENU (Laptop / Desktop View) -->
+      <!-- ==================================================== -->
+      <nav id="desktopMenu" class="hidden xl:flex items-center justify-center flex-1 max-w-5xl px-2">
+        <ul class="flex items-center gap-0.5 2xl:gap-1 text-[12px] xl:text-[12.5px] 2xl:text-[13.5px] font-medium tracking-wide">
+          
+          <!-- HOME (With Smooth Dropdown for Home 1 and Home 2) -->
+          <li class="relative group/home" id="homeDropdownWrapper">
+            <a 
+              href="index.html" 
+              id="homeDropdownBtn" 
+              class="flex items-center gap-1 px-2 2xl:px-2.5 py-2 rounded-lg transition-colors focus:outline-none"
+              aria-expanded="false" 
+              aria-haspopup="true"
+            >
+              <span>Home</span>
+              <i data-lucide="chevron-down" id="homeChevron" class="w-3.5 h-3.5 transition-transform duration-300 group-hover/home:rotate-180"></i>
+            </a>
+
+            <!-- Home Dropdown Menu (Home 1 and Home 2 Only) -->
+            <div 
+              id="homeDropdownMenu" 
+              class="dropdown-menu absolute top-full left-0 mt-2 w-32 rounded-xl p-1.5 shadow-xl glass-nav opacity-0 invisible translate-y-2 pointer-events-none transition-all duration-200 group-hover/home:opacity-100 group-hover/home:visible group-hover/home:translate-y-0 group-hover/home:pointer-events-auto z-50"
+            >
+              <a href="index.html" class="block px-3 py-2 rounded-lg text-xs font-semibold transition-colors">
+                Home 1
+              </a>
+              <a href="home-2.html" class="block px-3 py-2 rounded-lg text-xs font-semibold transition-colors">
+                Home 2
+              </a>
+            </div>
+          </li>
+
+          <!-- Remaining 10 Direct Navbar Links -->
+          <li>
+            <a href="about.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">About</a>
+          </li>
+          <li>
+            <a href="products.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Products</a>
+          </li>
+          <li>
+            <a href="collections.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap nav-pill-active active">Collections</a>
+          </li>
+          <li>
+            <a href="custom-rugs.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap relative">
+              <span>Custom Rugs</span>
+              <span class="absolute -top-1 right-0 text-[8px] font-black uppercase px-1 py-0.2 rounded-full bg-gold-500 text-black shadow-sm">Bespoke</span>
+            </a>
+          </li>
+          <li>
+            <a href="rug-guide.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Rug Guide</a>
+          </li>
+          <li>
+            <a href="craftmanship.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Craftmanship</a>
+          </li>
+          <li>
+            <a href="showroom.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Showroom</a>
+          </li>
+          <li>
+            <a href="inspiration.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Inspiration</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- ==================================================== -->
+      <!-- 3. RIGHT: TOGGLES & 3D BUTTONS (Desktop: Visible | Mobile/Tab: Inside Hamburger) -->
+      <!-- ==================================================== -->
+      <div class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0">
+
+        <!-- All Right-side Controls for Laptop / Desktop View -->
+        <div class="hidden xl:flex items-center gap-2.5">
+          <!-- Dark Mode Toggle Button (3D - Reduced Size) -->
+          <button 
+            id="darkModeToggle" 
+            class="btn-3d-icon w-9 h-9 rounded-xl focus:outline-none flex items-center justify-center" 
+            aria-label="Toggle Dark or Light Mode"
+            title="Toggle Dark / Light Theme"
+          >
+            <!-- Sun Icon (Shown in Dark Mode) -->
+            <i data-lucide="sun" id="sunIcon" class="w-4 h-4 text-gold-400 transition-transform duration-300"></i>
+            <!-- Moon Icon (Shown in Light Mode) -->
+            <i data-lucide="moon" id="moonIcon" class="w-4 h-4 text-slate-700 hidden transition-transform duration-300"></i>
+          </button>
+
+          <!-- Right to Left (RTL) Toggle Button (3D - Reduced Size & Right-Left Icon) -->
+          <button 
+            id="rtlToggle" 
+            class="btn-3d-icon w-9 h-9 rounded-xl focus:outline-none flex items-center justify-center" 
+            aria-label="Toggle Direction Right to Left"
+            title="Toggle Layout Direction (LTR / RTL)"
+          >
+            <!-- Right-Left Bidirectional Arrow Icon (⇄) -->
+            <svg id="rtlIcon" class="w-4 h-4 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8h16M16 4l4 4-4 4" />
+              <path d="M20 16H4M8 12l-4 4 4 4" />
+            </svg>
+          </button>
+
+          <!-- 3D Login Button (Exact Same Height & Width as Sign Up) -->
+          <button 
+            id="loginBtnDesktop" 
+            class="btn-3d btn-3d-dark sheen w-24 h-9 text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center text-center"
+           onclick="window.location.href='login.html'">
+            <span>Login</span>
+          </button>
+
+          <!-- 3D Sign Up Button (Exact Same Height & Width as Login) -->
+          <button 
+            id="signUpBtnDesktop" 
+            class="btn-3d btn-3d-gold sheen w-24 h-9 text-xs font-extrabold uppercase tracking-wider rounded-xl flex items-center justify-center text-center"
+           onclick="window.location.href='registeration.html'">
+            <span>Sign Up</span>
+          </button>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- MOBILE & TABLET HAMBURGER BUTTON (Right side) -->
+        <!-- ==================================================== -->
+        <button 
+          id="hamburgerBtn" 
+          class="xl:hidden btn-3d-icon w-11 h-11 text-gold-400 focus:outline-none relative z-50 flex items-center justify-center"
+          aria-label="Toggle Navigation Menu"
+          aria-expanded="false"
+        >
+          <div class="w-5 h-4 flex flex-col justify-between items-center relative">
+            <span id="hamBarTop" class="w-full h-0.5 bg-gold-400 rounded-full transition-all duration-300 origin-center"></span>
+            <span id="hamBarMid" class="w-full h-0.5 bg-gold-400 rounded-full transition-all duration-200"></span>
+            <span id="hamBarBot" class="w-full h-0.5 bg-gold-400 rounded-full transition-all duration-300 origin-center"></span>
+          </div>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- MOBILE & TABLET HAMBURGER MENU DRAWER -->
+  <!-- ======================================================== -->
+  <div id="mobileDrawerOverlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden"></div>
+
+    <aside 
+    id="mobileDrawer" 
+    class="mobile-drawer fixed top-0 right-0 h-full w-[85%] max-w-md z-50 shadow-2xl transform translate-x-full flex flex-col justify-between overflow-hidden xl:hidden"
+    aria-label="Mobile Navigation Menu"
+  >
+    <!-- Drawer Header -->
+    <div id="mobileDrawerHeader" class="p-6 border-b flex items-center justify-between transition-colors">
+      <a href="index.html" class="flex items-center gap-2 focus:outline-none cursor-pointer" aria-label="Rug & Carpet Store Homepage">
+        <div class="w-7 h-7 rounded-[7px] bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 p-[1.1px] shadow-md">
+          <div class="w-full h-full bg-obsidian-950 rounded-[5.5px] flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-gold-400" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+              <path d="M12 12L28 28M28 12L12 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="20" cy="20" r="4" fill="#D4AF37" />
+            </svg>
+          </div>
+        </div>
+        <div>
+          <div id="mobileDrawerTitle" class="font-serif font-bold text-xs sm:text-sm tracking-wide uppercase leading-tight transition-colors">Rug & Carpet</div>
+          <div id="mobileDrawerSubtitle" class="text-[7.5px] uppercase tracking-widest font-medium leading-none mt-0.5 transition-colors">Handcrafted &bull; Heritage</div>
+        </div>
+      </a>
+
+      <!-- Close Icon inside drawer header -->
+      <button id="closeDrawerBtn" class="btn-3d-icon w-9 h-9" aria-label="Close menu">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Navigation Links (All required items inside) -->
+    <div id="mobileDrawerContent" class="p-6 space-y-6 flex-1 overflow-y-auto">
+      
+      <!-- Home Link & Submenu Toggle -->
+      <div class="space-y-1">
+        <div class="w-full flex items-center justify-between p-1 rounded-xl transition-colors">
+          <a 
+            href="index.html" 
+            id="mobileHomeLink" 
+            class="mobile-nav-link flex-1 flex items-center gap-3 p-2.5 rounded-lg hover:bg-gold-500/10 text-sm font-semibold transition-colors"
+          >
+            <i data-lucide="home" class="w-4 h-4 text-gold-400"></i>
+            <span>Home</span>
+          </a>
+          <button 
+            id="mobileHomeAccordionBtn" 
+            class="p-2.5 text-slate-400 hover:text-gold-400 focus:outline-none" 
+            aria-label="Toggle Home Submenu"
+          >
+            <i data-lucide="chevron-down" id="mobileHomeChevron" class="w-4 h-4 transition-transform duration-200"></i>
+          </button>
+        </div>
+
+        <div id="mobileHomeSubmenu" class="hidden pl-9 space-y-1 pt-1">
+          <a href="index.html" class="mobile-nav-link block p-2 rounded-lg text-xs font-semibold transition-colors">
+            Home 1
+          </a>
+          <a href="home-2.html" class="mobile-nav-link block p-2 rounded-lg text-xs font-semibold transition-colors">
+            Home 2
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation Category: Collections & Atelier -->
+      <nav class="space-y-1">
+        <div class="mobile-section-heading text-[10px] font-bold uppercase tracking-wider px-3 pt-2">Collections &amp; Atelier</div>
+        
+        <a href="about.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="info" class="w-4 h-4 text-gold-400/80"></i>
+          <span>About</span>
+        </a>
+        
+        <a href="products.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="package" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Products</span>
+        </a>
+
+        <a href="collections.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors nav-pill-active active">
+          <i data-lucide="layers" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Collections</span>
+        </a>
+
+        <a href="custom-rugs.html" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="scissors" class="w-4 h-4 text-gold-400/80"></i>
+            <span>Custom Rugs</span>
+          </div>
+          <span class="text-[9px] font-bold uppercase px-2 py-0.5 rounded-full bg-gold-500 text-black">Bespoke</span>
+        </a>
+
+        <a href="rug-guide.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="book-open" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Rug Guide</span>
+        </a>
+
+        <a href="craftmanship.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="feather" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Craftmanship</span>
+        </a>
+
+        <a href="showroom.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="map-pin" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Showroom</span>
+        </a>
+
+        <a href="inspiration.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="compass" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Inspiration</span>
+        </a>
+
+        <a href="contact.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="mail" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <!-- Preferences Section Inside Drawer: Dark Mode & RTL -->
+      <div class="pt-4 border-t border-white/10 space-y-3">
+        <div class="mobile-section-heading text-[10px] font-bold uppercase tracking-wider">Settings & Direction</div>
+        
+        <div class="drawer-pref-box flex items-center justify-between p-3 rounded-xl transition-colors">
+          <span class="text-xs font-semibold flex items-center gap-2">
+            <i data-lucide="moon" class="w-4 h-4 text-gold-400"></i>
+            Theme Mode
+          </span>
+          <button id="mobileDarkModeToggle" class="btn-3d-icon w-9 h-9 flex items-center justify-center rounded-xl" aria-label="Toggle Dark Mode in Mobile Menu">
+            <i data-lucide="sun" id="mobileSunIcon" class="w-4 h-4 text-gold-400"></i>
+            <i data-lucide="moon" id="mobileMoonIcon" class="w-4 h-4 text-slate-700 hidden"></i>
+          </button>
+        </div>
+
+        <div class="drawer-pref-box flex items-center justify-between p-3 rounded-xl transition-colors">
+          <span class="text-xs font-semibold flex items-center gap-2">
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8h16M16 4l4 4-4 4" />
+              <path d="M20 16H4M8 12l-4 4 4 4" />
+            </svg>
+            Layout Direction
+          </span>
+          <button id="mobileRtlToggle" class="btn-3d-icon w-9 h-9 flex items-center justify-center rounded-xl" aria-label="Toggle Direction in Mobile Menu" title="Toggle Layout Direction (LTR / RTL)">
+            <svg id="mobileRtlIcon" class="w-4 h-4 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8h16M16 4l4 4-4 4" />
+              <path d="M20 16H4M8 12l-4 4 4 4" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer: 3D Action Buttons (Sign Up & Login - Identical Height & Width) -->
+    <div id="mobileDrawerFooter" class="p-5 border-t space-y-2.5 transition-colors">
+      <button id="mobileSignUpBtn" class="btn-3d btn-3d-gold sheen w-full h-11 text-xs font-extrabold uppercase tracking-wider flex items-center justify-center rounded-xl" onclick="window.location.href='registeration.html'">
+        <span>Sign Up</span>
+      </button>
+
+      <button id="mobileLoginBtn" class="btn-3d btn-3d-dark sheen w-full h-11 text-xs font-bold uppercase tracking-wider flex items-center justify-center rounded-xl" onclick="window.location.href='login.html'">
+        <span>Login</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Central semantic canvas -->
+    <main class="flex-1 w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20 space-y-16 sm:space-y-24 lg:space-y-32">
+
+    <!-- ======================================================== -->
+    <!-- SECTION 1: HERO PREMIERE & NEW COLLECTION (Curatorial Runway Stage) -->
+    <!-- ======================================================== -->
+    <section id="collection-premiere" class="relative">
+      <div class="collection-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-14 overflow-hidden relative">
+        <div class="absolute -top-32 -left-32 w-80 h-80 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="space-y-8 relative z-10">
+          <!-- Curatorial Runway Header -->
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+            <div class="max-w-2xl space-y-4">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full collection-pill text-xs font-bold uppercase tracking-wider">
+                <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+                <span>New Collection &bull; 2026 Sovereign Premiere</span>
+              </div>
+              <h1 class="collection-heading font-serif text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+                The 2026 Anthology: <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-amber-500">Living Heirlooms</span> for Modern Architecture.
+              </h1>
+              <p class="collection-body text-xs sm:text-sm lg:text-base leading-relaxed">
+                Forty-five newly commissioned masterworks tied entirely by hand across our mountain looms. From ancient imperial silk medallions to restrained Japandi textures, discover floor art calibrated to anchor the finest spaces in the world.
+              </p>
+            </div>
+
+            <!-- Quick Curator Stats -->
+            <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+              <div class="collection-subcard p-3 sm:p-4 rounded-2xl text-center min-w-[95px] sm:min-w-[110px]">
+                <div class="text-xl sm:text-2xl font-serif font-black text-gold-400">45</div>
+                <div class="text-[10px] font-bold uppercase tracking-wider collection-heading">New Pieces</div>
+                <div class="text-[9px] collection-meta">Direct From Loom</div>
+              </div>
+              <div class="collection-subcard p-3 sm:p-4 rounded-2xl text-center min-w-[95px] sm:min-w-[110px]">
+                <div class="text-xl sm:text-2xl font-serif font-black text-cyan-400">10</div>
+                <div class="text-[10px] font-bold uppercase tracking-wider collection-heading">Curated Lines</div>
+                <div class="text-[9px] collection-meta">Zero Synthetic</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive 3D Collection Spectrum Tabs -->
+          <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none pt-2">
+            <button class="col-filter-btn col-filter-pill active px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap">
+              All Collections (128)
+            </button>
+            <a href="#heritage-handwoven" class="col-filter-btn col-filter-pill collection-subcard px-4 py-2 rounded-xl text-xs font-bold collection-heading whitespace-nowrap hover:text-gold-400">
+              Heritage & Handwoven (34)
+            </a>
+            <a href="#contemporary-living" class="col-filter-btn col-filter-pill collection-subcard px-4 py-2 rounded-xl text-xs font-bold collection-heading whitespace-nowrap hover:text-gold-400">
+              Modern & Minimalist (28)
+            </a>
+            <a href="#haute-luxury" class="col-filter-btn col-filter-pill collection-subcard px-4 py-2 rounded-xl text-xs font-bold collection-heading whitespace-nowrap hover:text-gold-400">
+              Haute Silk Luxury (22)
+            </a>
+            <a href="#earth-sanctuary" class="col-filter-btn col-filter-pill collection-subcard px-4 py-2 rounded-xl text-xs font-bold collection-heading whitespace-nowrap hover:text-gold-400">
+              Natural Fibers (24)
+            </a>
+            <a href="#statement-limited" class="col-filter-btn col-filter-pill collection-subcard px-4 py-2 rounded-xl text-xs font-bold collection-heading whitespace-nowrap hover:text-gold-400">
+              Statement & Limited (20)
+            </a>
+          </div>
+
+          <!-- Grand Showcase Gallery Card: New Collection Premiere -->
+          <div id="premiereVisualCard" class="relative rounded-3xl overflow-hidden shadow-2xl border border-gold-500/25 group transition-all duration-500">
+            <img 
+              src="images/col_new_collection.jpg" 
+              alt="New Collection 2026 Premier Area Rug" 
+              class="w-full h-[340px] sm:h-[460px] lg:h-[520px] object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+
+            <!-- Floating Curator Exhibition Plaque -->
+            <div class="absolute bottom-5 left-5 right-5 sm:bottom-8 sm:left-8 sm:right-8 p-5 sm:p-6 rounded-2xl bg-black/70 backdrop-blur-md border border-white/15 flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div class="space-y-1 min-w-0">
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-gold-500 text-black text-[10px] font-black uppercase tracking-wider">
+                    Anthology Lead
+                  </span>
+                  <span class="text-xs text-gold-400 font-serif font-bold truncate">Aura of Echoes No. 01</span>
+                </div>
+                <h3 class="text-base sm:text-xl font-serif font-bold text-white tracking-wide">
+                  Topographic Silk & Highland Wool in Royal Obsidian & Champagne
+                </h3>
+                <p class="text-xs text-slate-300 hidden sm:block">
+                  950 Knots Per Square Inch &bull; 9 &times; 12 ft &bull; 14 Months Loom Dedication &bull; Natural Indigo & Pomegranate Dye
+                </p>
+              </div>
+
+              <div class="flex items-center gap-3 flex-shrink-0">
+                <button onclick="document.getElementById('signUpBtnDesktop')?.click()" class="btn-3d btn-3d-gold sheen px-5 h-10 text-xs font-extrabold uppercase tracking-wider rounded-xl">
+                  <span>Reserve Piece</span>
+                </button>
+                <a href="#heritage-handwoven" class="btn-3d btn-3d-dark sheen px-4 h-10 text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center">
+                  <span>Explore Line</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 2: HERITAGE & HANDWOVEN COLLECTIONS (Dual Imperial Vault Doors) -->
+    <!-- ======================================================== -->
+    <section id="heritage-handwoven" class="space-y-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full collection-pill text-xs font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>Ancestral Dynasties &bull; Nomadic Looms</span>
+        </div>
+        <h2 class="collection-heading font-serif text-2xl sm:text-4xl font-bold tracking-tight">
+          The Heritage & Handwoven Sanctuaries
+        </h2>
+        <p class="collection-body text-xs sm:text-sm">
+          Two ancient weaving traditions: royal imperial court carpets preserving 16th-century Persian treatises, beside authentic nomadic flatweaves steeped in tribal geometry.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Vault 1: Heritage Collection -->
+        <div id="vaultHeritage" class="vault-card collection-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 space-y-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1">
+          <div class="flex items-center justify-between">
+            <div class="inline-flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-400 font-serif">Heritage Collection</span>
+            </div>
+            <span class="px-3 py-1 rounded-full collection-subcard text-[10px] font-mono font-bold uppercase collection-heading">
+              1,200 Max KPSI
+            </span>
+          </div>
+
+          <div class="relative rounded-2xl overflow-hidden shadow-xl border border-white/10 group">
+            <img 
+              src="images/col_heritage.jpg" 
+              alt="Imperial Heritage Persian Rug" 
+              class="w-full h-[260px] sm:h-[320px] object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-xs font-bold text-amber-400 block font-serif">Imperial Isfahan Shah Abbas Medallion</span>
+              <span class="text-[11px] text-slate-300">Warped with pure high-twist silk, madder root, and wild pomegranate rinds.</span>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="collection-heading font-serif text-lg sm:text-xl font-bold">
+              The Sovereign Court Medallions of Isfahan & Tabriz
+            </h3>
+            <p class="collection-body text-xs leading-relaxed">
+              Drawn from private archives dating to royal dynasties, each Heritage carpet features central celestial medallions surrounded by spiral arabesques. Reversible, indestructible, and appreciating in value with every decade.
+            </p>
+            <div class="grid grid-cols-3 gap-2 pt-2 text-center">
+              <div class="collection-subcard p-2.5 rounded-xl">
+                <div class="text-sm font-bold text-amber-400 font-serif">100+ Yr</div>
+                <div class="text-[9.5px] collection-meta uppercase">Longevity</div>
+              </div>
+              <div class="collection-subcard p-2.5 rounded-xl">
+                <div class="text-sm font-bold text-rose-400 font-serif">100%</div>
+                <div class="text-[9.5px] collection-meta uppercase">Plant Dyes</div>
+              </div>
+              <div class="collection-subcard p-2.5 rounded-xl">
+                <div class="text-sm font-bold text-gold-400 font-serif">Double</div>
+                <div class="text-[9.5px] collection-meta uppercase">Senneh Knot</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vault 2: Handwoven Collection -->
+        <div id="vaultHandwoven" class="vault-card collection-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 space-y-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1">
+          <div class="flex items-center justify-between">
+            <div class="inline-flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-400 font-serif">Handwoven Collection</span>
+            </div>
+            <span class="px-3 py-1 rounded-full collection-subcard text-[10px] font-mono font-bold uppercase collection-heading">
+              Tribal Flatweaves
+            </span>
+          </div>
+
+          <div class="relative rounded-2xl overflow-hidden shadow-xl border border-white/10 group">
+            <img 
+              src="images/col_handwoven.jpg" 
+              alt="Handwoven Anatolian Kilim and Tribal Rug" 
+              class="w-full h-[260px] sm:h-[320px] object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-xs font-bold text-amber-400 block font-serif">Taurus Mountain Nomadic Kilims</span>
+              <span class="text-[11px] text-slate-300">Woven on horizontal wooden looms with unbleached sheep fleece.</span>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="collection-heading font-serif text-lg sm:text-xl font-bold">
+              The Nomadic Kilims & Village Double-Knot Weaves
+            </h3>
+            <p class="collection-body text-xs leading-relaxed">
+              Every diamond, ram horn, and water talisman tells the story of nomadic migrations. Hand-carded coarse Highland fleece gives these rugs their rugged tactile bounce, making them ideal for high-traffic gathering spaces.
+            </p>
+            <div class="grid grid-cols-3 gap-2 pt-2 text-center">
+              <div class="collection-subcard p-2.5 rounded-xl">
+                <div class="text-sm font-bold text-amber-400 font-serif">Nomad</div>
+                <div class="text-[9.5px] collection-meta uppercase">Loom Spun</div>
+              </div>
+              <div class="collection-subcard p-2.5 rounded-xl">
+                <div class="text-sm font-bold text-cyan-400 font-serif">Zero</div>
+                <div class="text-[9.5px] collection-meta uppercase">Chemicals</div>
+              </div>
+              <div class="collection-subcard p-2.5 rounded-xl">
+                <div class="text-sm font-bold text-emerald-400 font-serif">Double</div>
+                <div class="text-[9.5px] collection-meta uppercase">Sided Use</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 3: MODERN LIVING & MINIMALIST (Contemporary Architectural Split) -->
+    <!-- ======================================================== -->
+    <section id="contemporary-living" class="space-y-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full collection-pill text-xs font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span>Architectural Sanctuary &bull; Contemporary Living</span>
+        </div>
+        <h2 class="collection-heading font-serif text-2xl sm:text-4xl font-bold tracking-tight">
+          Modern Living & Minimalist Japandi Collections
+        </h2>
+        <p class="collection-body text-xs sm:text-sm">
+          Tailored for concrete villas, penthouse lounges, and serene zen residences where floor coverings anchor the acoustic tranquility of the room.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <!-- Modern Living Showcase (6 cols) -->
+        <div class="lg:col-span-6 collection-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-2">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+                <span>Modern Living Collection</span>
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full collection-pill text-[10px] font-bold">Acoustic Plush</span>
+            </div>
+            
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-white/10 group">
+              <img 
+                src="images/col_modern_living.jpg" 
+                alt="Modern Living Luxury Scandinavian Area Rug" 
+                class="w-full h-[240px] sm:h-[280px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+
+            <h3 class="collection-heading font-serif text-lg sm:text-xl font-bold">
+              Topographic Organic Carving in Warm Nordic Wool
+            </h3>
+            <p class="collection-body text-xs leading-relaxed">
+              Featuring variable-height sheared pile creating dynamic shadows that shift as the sun moves across your living room. Engineered with natural lanolin wool for effortless stain resistance.
+            </p>
+          </div>
+
+          <div class="space-y-3 pt-2 border-t border-white/10 dark:border-white/10">
+            <div class="flex items-center justify-between text-xs">
+              <span class="collection-heading font-bold">Acoustic Absorption Index</span>
+              <span class="text-cyan-400 font-mono font-bold">NRC 0.85 (High Calm)</span>
+            </div>
+            <div class="w-full h-1.5 rounded-full bg-slate-700/30 overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" style="width: 85%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Minimalist Collection Showcase (6 cols) -->
+        <div class="lg:col-span-6 collection-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-2">
+                <i data-lucide="compass" class="w-4 h-4"></i>
+                <span>Minimalist Collection</span>
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full collection-pill text-[10px] font-bold">Japandi Zen</span>
+            </div>
+            
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-white/10 group">
+              <img 
+                src="images/col_minimalist.jpg" 
+                alt="Minimalist Japandi Zen Area Rug" 
+                class="w-full h-[240px] sm:h-[280px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+
+            <h3 class="collection-heading font-serif text-lg sm:text-xl font-bold">
+              Wabi-Sabi Negative Space & Micro-Ribbed Textures
+            </h3>
+            <p class="collection-body text-xs leading-relaxed">
+              Designed for devotees of architectural restraint. Pure unbleached oatmeal wool blended with raw mountain hemp in quiet linear striations that soothe the eye and ground the senses.
+            </p>
+          </div>
+
+          <div class="space-y-3 pt-2 border-t border-white/10 dark:border-white/10">
+            <div class="flex items-center justify-between text-xs">
+              <span class="collection-heading font-bold">Visual Quietude & Negative Space</span>
+              <span class="text-emerald-400 font-mono font-bold">96% Calibrated Purity</span>
+            </div>
+            <div class="w-full h-1.5 rounded-full bg-slate-700/30 overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full" style="width: 96%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 4: HAUTE COUTURE LUXURY COLLECTION (Luster Refraction Salon) -->
+    <!-- ======================================================== -->
+    <section id="haute-luxury" class="space-y-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full collection-pill text-xs font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-gold-400"></span>
+          <span>Haute Couture &bull; 100% Filament Silk</span>
+        </div>
+        <h2 class="collection-heading font-serif text-2xl sm:text-4xl font-bold tracking-tight">
+          The Luxury Collection: The Prismatic Silk Salon
+        </h2>
+        <p class="collection-body text-xs sm:text-sm">
+          Knotted with hand-reeled Mulberry filament silk that refracts room light with unmistakable diamond luster.
+        </p>
+      </div>
+
+      <div id="hauteSilkCard" class="collection-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 overflow-hidden relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Visual: Luxury Silk Rug under Chandelier (7 cols) -->
+          <div class="lg:col-span-7 relative">
+            <div class="rounded-3xl overflow-hidden shadow-2xl border border-gold-500/30 relative group">
+              <img 
+                src="images/col_luxury_silk.jpg" 
+                alt="Ultra Luxury Mulberry Silk Carpet" 
+                class="w-full h-[320px] sm:h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              
+              <!-- Prismatic Badge -->
+              <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-black/70 backdrop-blur-md border border-white/15 flex items-center justify-between text-white">
+                <div>
+                  <div class="text-xs font-bold text-gold-400 font-serif">Royal Sapphire & Champagne Silk</div>
+                  <div class="text-[10px] text-slate-300">1,200 Knots / Sq Inch &bull; Steel-Grade Tensile Silk Warp</div>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-gold-500/20 border border-gold-500/40 text-gold-400 text-[10px] font-black uppercase">
+                  Haute Couture
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content: Silk Specifications (5 cols) -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="space-y-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-gold-500">Museum Density</span>
+              <h3 class="collection-heading font-serif text-xl sm:text-2xl font-bold">
+                Why A Silk Carpet Radiates Different Hues from Each Direction
+              </h3>
+              <p class="collection-body text-xs sm:text-sm leading-relaxed">
+                Because mulberry silk fibers possess triangular prismatic cross-sections, they act as miniature optical crystals. When viewed with the pile direction, the carpet glows with soft silvery champagne; when viewed against the pile, it deepens into dramatic, iridescent royal sapphire.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <div class="collection-subcard p-3.5 rounded-xl flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center font-serif font-bold text-xs flex-shrink-0">
+                  01
+                </div>
+                <div class="text-xs">
+                  <span class="collection-heading font-bold block">Zero Artificial Viscose or Rayon</span>
+                  <span class="collection-body text-[11px]">100% natural silkworm filament that never crushes or pills.</span>
+                </div>
+              </div>
+
+              <div class="collection-subcard p-3.5 rounded-xl flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-serif font-bold text-xs flex-shrink-0">
+                  02
+                </div>
+                <div class="text-xs">
+                  <span class="collection-heading font-bold block">Over 1,000,000 Knots Per Rug</span>
+                  <span class="collection-body text-[11px]">Each piece represents 12 to 18 months of artisan knotting.</span>
+                </div>
+              </div>
+            </div>
+
+            <button onclick="document.getElementById('signUpBtnDesktop')?.click()" class="btn-3d btn-3d-gold sheen w-full h-11 text-xs font-extrabold uppercase tracking-wider rounded-xl">
+              <span>Request Private Silk Viewing</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 5: NATURAL FIBER COLLECTION (The Terra Mater Laboratory) -->
+    <!-- ======================================================== -->
+    <section id="earth-sanctuary" class="space-y-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full collection-pill text-xs font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>Terra Mater &bull; 100% Earth-Grown</span>
+        </div>
+        <h2 class="collection-heading font-serif text-2xl sm:text-4xl font-bold tracking-tight">
+          The Natural Fiber Collection: Pure Botanical Textures
+        </h2>
+        <p class="collection-body text-xs sm:text-sm">
+          Everything that enters our looms was cultivated by sunshine and mountain rainwater. Zero petroleum synthetics, zero microplastics.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- 4 Specimen Cells (7 cols) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="earth-specimen-cell collection-card rounded-2xl p-5 space-y-3 border-l-4 border-l-gold-400 transition-all hover:-translate-y-1">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center">
+                <i data-lucide="feather" class="w-4 h-4"></i>
+              </span>
+              <h4 class="collection-heading text-sm font-bold">Highland Wool Fleece</h4>
+            </div>
+            <p class="collection-body text-xs leading-relaxed">
+              Unbleached natural fleece shorn from ethically pastured high-altitude flocks. Rich in protective lanolin wax.
+            </p>
+            <span class="text-[10px] font-bold uppercase text-gold-500 tracking-wider">Natural Stain Barrier</span>
+          </div>
+
+          <div class="earth-specimen-cell collection-card rounded-2xl p-5 space-y-3 border-l-4 border-l-amber-400 transition-all hover:-translate-y-1">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                <i data-lucide="sprout" class="w-4 h-4"></i>
+              </span>
+              <h4 class="collection-heading text-sm font-bold">Wild Himalayan Jute</h4>
+            </div>
+            <p class="collection-body text-xs leading-relaxed">
+              Rain-fed bast fibers hand-braided into thick, supple ribs that lay perfectly flat without synthetic underlays.
+            </p>
+            <span class="text-[10px] font-bold uppercase text-amber-500 tracking-wider">Carbon-Negative Plant</span>
+          </div>
+
+          <div class="earth-specimen-cell collection-card rounded-2xl p-5 space-y-3 border-l-4 border-l-cyan-400 transition-all hover:-translate-y-1">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center">
+                <i data-lucide="gem" class="w-4 h-4"></i>
+              </span>
+              <h4 class="collection-heading text-sm font-bold">Raw Mulberry Silk</h4>
+            </div>
+            <p class="collection-body text-xs leading-relaxed">
+              Continuous natural filament silk harvested without caustic chemicals. Delivers high tensile resilience.
+            </p>
+            <span class="text-[10px] font-bold uppercase text-cyan-500 tracking-wider">Hypoallergenic Purity</span>
+          </div>
+
+          <div class="earth-specimen-cell collection-card rounded-2xl p-5 space-y-3 border-l-4 border-l-emerald-400 transition-all hover:-translate-y-1">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                <i data-lucide="palette" class="w-4 h-4"></i>
+              </span>
+              <h4 class="collection-heading text-sm font-bold">Botanical Pot Pigments</h4>
+            </div>
+            <p class="collection-body text-xs leading-relaxed">
+              Simmered in copper cauldrons with madder root, walnut rinds, and wild indigo. Releasing zero chemical VOC off-gassing.
+            </p>
+            <span class="text-[10px] font-bold uppercase text-emerald-500 tracking-wider">Zero Chemical VOCs</span>
+          </div>
+        </div>
+
+        <!-- Visual: Natural Fiber Flatlay & Living Eco Seal (5 cols) -->
+        <div class="lg:col-span-5 relative">
+          <div class="collection-card rounded-3xl overflow-hidden p-3 border border-white/10 shadow-2xl relative group">
+            <img 
+              src="images/col_natural_fiber.jpg" 
+              alt="Raw Organic Fibers and Botanical Rug Materials" 
+              class="w-full h-[320px] sm:h-[400px] object-cover rounded-2xl"
+            />
+            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-black/75 backdrop-blur-md border border-white/15 text-white space-y-1">
+              <div class="text-xs font-bold text-emerald-400 flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                <span>100% Soil Biodegradable Guarantee</span>
+              </div>
+              <div class="text-[11px] text-slate-300">Clean for crawling babies, bare feet, and indoor air wellness.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 6: STATEMENT RUGS & LIMITED EDITION (Museum Plinth Exhibition) -->
+    <!-- ======================================================== -->
+    <section id="statement-limited" class="space-y-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full collection-pill text-xs font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span>Curatorial Masterpieces &bull; Numbered Vault Editions</span>
+        </div>
+        <h2 class="collection-heading font-serif text-2xl sm:text-4xl font-bold tracking-tight">
+          Statement Floor Sculptures & Limited Editions
+        </h2>
+        <p class="collection-body text-xs sm:text-sm">
+          Acquired by international architectural galleries, state embassies, and collectors seeking numbered legacy masterworks.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Exhibition Plinth 1: Statement Rugs -->
+        <div class="exhibition-plinth collection-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 space-y-5 transition-all hover:-translate-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 font-serif">Statement Collection</span>
+            <span class="px-2.5 py-0.5 rounded-full collection-pill text-[10px] font-bold">Oversized Scale</span>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-xl border border-white/10 relative group">
+            <img 
+              src="images/col_statement_rugs.jpg" 
+              alt="Avant-Garde Statement Rug in Gallery" 
+              class="w-full h-[260px] sm:h-[320px] object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-xs font-bold text-cyan-300 font-serif block">The Monumental Color Field</span>
+              <span class="text-[11px] text-slate-300">Up to 16 &times; 24 ft seamless single-loom weave for grand architectural salons.</span>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="collection-heading font-serif text-lg font-bold">
+              Commanding Presence That Defines The Room's Center of Gravity
+            </h3>
+            <p class="collection-body text-xs leading-relaxed">
+              Designed as the undisputed protagonist of high-ceiling residences. Each statement rug features bold gestural strokes and deep spatial depth that commands the eye.
+            </p>
+          </div>
+        </div>
+
+        <!-- Exhibition Plinth 2: Limited Edition Rugs -->
+        <div class="exhibition-plinth collection-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 space-y-5 transition-all hover:-translate-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-gold-400 font-serif">Limited Edition Collection</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-gold-500/20 text-gold-400 text-[10px] font-black uppercase">
+              1 of 12 Worldwide
+            </span>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-xl border border-white/10 relative group">
+            <img 
+              src="images/col_limited_edition.jpg" 
+              alt="Numbered Limited Edition Master Rug" 
+              class="w-full h-[260px] sm:h-[320px] object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="text-xs font-bold text-gold-300 font-serif block">Vault Serial No. 04 / 12</span>
+              <span class="text-[11px] text-slate-300">Hand-engraved solid brass medallion sewn into warp edge with deed.</span>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="collection-heading font-serif text-lg font-bold">
+              Numbered Solid Brass Medallion & Weaver Signature Deed
+            </h3>
+            <p class="collection-body text-xs leading-relaxed">
+              Only twelve iterations will ever be knotted from this cartoon pattern before the master loom blueprint is formally retired into our historical archive.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 7: SEASONAL COLLECTION & BESPOKE CONCIERGE (Solstice Quadrant) -->
+    <!-- ======================================================== -->
+    <section id="seasonal-solstice" class="space-y-10">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full collection-pill text-xs font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-gold-400"></span>
+          <span>Seasonal Rhythms &bull; Bespoke Loom Concierge</span>
+        </div>
+        <h2 class="collection-heading font-serif text-2xl sm:text-4xl font-bold tracking-tight">
+          The Seasonal Collection & Private Concierge
+        </h2>
+        <p class="collection-body text-xs sm:text-sm">
+          Calibrated to transition your interior sanctuary across the natural cycles of equinox and solstice.
+        </p>
+      </div>
+
+      <!-- 4-Season Quadrant Matrix -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Spring -->
+        <div class="seasonal-quad-card collection-card rounded-2xl p-5 space-y-2 border-t-2 border-t-emerald-400 transition-all hover:-translate-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Spring Equinox</span>
+            <i data-lucide="sprout" class="w-4 h-4 text-emerald-400"></i>
+          </div>
+          <h4 class="collection-heading text-sm font-bold">Pastel Silk Abrash</h4>
+          <p class="collection-body text-xs leading-relaxed">
+            Light botanical tones, celadon greens, and breathable silk luster welcoming natural morning sun.
+          </p>
+        </div>
+
+        <!-- Summer -->
+        <div class="seasonal-quad-card collection-card rounded-2xl p-5 space-y-2 border-t-2 border-t-cyan-400 transition-all hover:-translate-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Summer Solstice</span>
+            <i data-lucide="sun" class="w-4 h-4 text-cyan-400"></i>
+          </div>
+          <h4 class="collection-heading text-sm font-bold">Linen & Low-Pile Weaves</h4>
+          <p class="collection-body text-xs leading-relaxed">
+            Cooling bare-foot flatweaves unbleached and woven for light coastal and terrace indoor living.
+          </p>
+        </div>
+
+        <!-- Autumn -->
+        <div class="seasonal-quad-card collection-card rounded-2xl p-5 space-y-2 border-t-2 border-t-amber-400 transition-all hover:-translate-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Autumn Harvest</span>
+            <i data-lucide="palette" class="w-4 h-4 text-amber-400"></i>
+          </div>
+          <h4 class="collection-heading text-sm font-bold">Amber & Madder Warmth</h4>
+          <p class="collection-body text-xs leading-relaxed">
+            Toasted saffron, pomegranate rind, and rich terracotta shades introducing cozy warmth.
+          </p>
+        </div>
+
+        <!-- Winter -->
+        <div class="seasonal-quad-card collection-card rounded-2xl p-5 space-y-2 border-t-2 border-t-blue-400 transition-all hover:-translate-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-400">Winter Solstice</span>
+            <i data-lucide="feather" class="w-4 h-4 text-blue-400"></i>
+          </div>
+          <h4 class="collection-heading text-sm font-bold">Alpine Heavy Fleece</h4>
+          <p class="collection-body text-xs leading-relaxed">
+            High-density thermal sheep fleece with acoustic dampening for deep fireside comfort.
+          </p>
+        </div>
+      </div>
+
+      <!-- Private Concierge & Seasonal Showcase Card -->
+      <div class="collection-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 overflow-hidden relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+          <div class="lg:col-span-5 relative">
+            <div class="rounded-3xl overflow-hidden shadow-2xl border border-gold-500/20 group">
+              <img 
+                src="images/col_seasonal.jpg" 
+                alt="Seasonal Rug Exhibition Suite" 
+                class="w-full h-[280px] sm:h-[340px] object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 text-white">
+                <span class="text-xs font-bold text-gold-400 block font-serif">Curatorial Seasonal Rotation</span>
+                <span class="text-[10px] text-slate-300">White-glove seasonal rotation available for private collector members.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full collection-pill text-xs font-bold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-gold-400"></span>
+              <span>White-Glove In-Home Presentation</span>
+            </div>
+            <h3 class="collection-heading font-serif text-2xl sm:text-3xl font-bold leading-tight">
+              Experience Any Piece In Your Private Sanctuary
+            </h3>
+            <p class="collection-body text-xs sm:text-sm leading-relaxed">
+              Our curators will transport up to three commissioned rugs directly to your residence. Observe how natural morning sunlight and ambient evening lighting interact with the wool and silk pile in your own space before finalizing your acquisition.
+            </p>
+            <div class="flex items-center flex-wrap gap-4 pt-2">
+              <button onclick="document.getElementById('signUpBtnDesktop')?.click()" class="btn-3d btn-3d-gold sheen px-8 h-12 text-xs font-extrabold uppercase tracking-wider rounded-xl">
+                <span>Book In-Home Private Showing</span>
+              </button>
+              <a href="about.html" class="btn-3d btn-3d-dark sheen px-8 h-12 text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center">
+                <span>Our Craftsmanship & Story</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- MAIN LUXURY FOOTER (Based on Navbar & Reference Layout) -->
+  <!-- ======================================================== -->
+  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-14">
+    <!-- Outer Card Shell with 3D/Rounded Aesthetics Matching Reference -->
+    <div class="footer-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 transition-all duration-300 relative overflow-hidden">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 xl:gap-12 mb-10">
+
+        <!-- ==================================================== -->
+        <!-- COLUMN 1: BRAND LOGO, DESCRIPTION, TRUST BADGES, SOCIALS -->
+        <!-- ==================================================== -->
+        <div class="space-y-6">
+          <!-- Logo Block (Same Logo Which Is Present In Navbar) -->
+          <a href="index.html" id="footerBrandLogo" class="group flex items-center gap-2 focus:outline-none" aria-label="Rug & Carpet Store Homepage">
+            <!-- Compact 3D Interwoven Loom Emblem (SVG) -->
+            <div class="relative w-7 h-7 sm:w-7.5 sm:h-7.5 rounded-[7px] bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 p-[1.1px] shadow-[0_2px_8px_rgba(212,175,55,0.22)] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-1 flex-shrink-0">
+              <div class="w-full h-full bg-obsidian-950 rounded-[5.5px] flex items-center justify-center overflow-hidden relative">
+                <!-- Radial sheen -->
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,175,55,0.3),transparent_70%)]"></div>
+                
+                <!-- Creative Carpet Weave Geometric Monogram SVG -->
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-400 transition-transform duration-500 group-hover:scale-110" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+                  <!-- Interlacing Rug Loom Strands -->
+                  <rect x="7" y="7" width="26" height="26" rx="5" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 1.5" class="opacity-70" />
+                  <path d="M12 12L28 28M28 12L12 28" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M20 6V34M6 20H34" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <circle cx="20" cy="20" r="4.5" fill="#D4AF37" stroke="#121008" stroke-width="1.2" />
+                  <!-- Corner Knots -->
+                  <circle cx="10" cy="10" r="1.5" fill="currentColor" />
+                  <circle cx="30" cy="10" r="1.5" fill="currentColor" />
+                  <circle cx="10" cy="30" r="1.5" fill="currentColor" />
+                  <circle cx="30" cy="30" r="1.5" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Brand Typography (Without Atelier Badge, Compact) -->
+            <div class="flex flex-col">
+              <span id="footerBrandLogoTitle" class="font-serif font-bold text-[12.5px] sm:text-[14px] tracking-[0.05em] group-hover:text-gold-500 transition-colors uppercase leading-tight footer-trust-title">
+                Rug & Carpet
+              </span>
+              <span id="footerBrandLogoSubtitle" class="text-[7.5px] sm:text-[8px] tracking-[0.16em] uppercase font-medium leading-none mt-0.5 transition-colors footer-trust-sub">
+                Handcrafted &bull; Heritage
+              </span>
+            </div>
+          </a>
+
+          <!-- Description paragraph matching reference -->
+          <p class="text-xs sm:text-[13px] leading-relaxed footer-trust-sub">
+            The premier international atelier for handcrafted heritage rugs and bespoke architectural floor art. Every piece is tied by hand with pure organic Highland wool, raw mulberry silk, and certified museum-grade provenance.
+          </p>
+
+          <!-- 2 Trust / Guarantee Badges side-by-side matching reference image -->
+          <div class="grid grid-cols-2 gap-3 pt-1">
+            <!-- Badge 1: 100% Hand-Knotted -->
+            <div class="footer-trust-badge flex items-center gap-2.5 p-3 rounded-2xl transition-colors">
+              <div class="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-xs font-bold leading-tight truncate footer-trust-title">100% Hand-Knotted</span>
+                <span class="text-[9.5px] footer-trust-sub leading-tight mt-0.5 truncate">Master Artisans</span>
+              </div>
+            </div>
+
+            <!-- Badge 2: Certified Provenance -->
+            <div class="footer-trust-badge flex items-center gap-2.5 p-3 rounded-2xl transition-colors">
+              <div class="w-8 h-8 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-xs font-bold leading-tight truncate footer-trust-title">Museum Certified</span>
+                <span class="text-[9.5px] footer-trust-sub leading-tight mt-0.5 truncate">Clean Provenance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Follow Socials Row matching reference image -->
+          <div class="space-y-2.5 pt-1">
+            <div class="text-[10px] font-bold uppercase tracking-wider footer-trust-sub">
+              Follow The Atelier
+            </div>
+            <div class="flex items-center gap-2.5">
+              <!-- Instagram -->
+              <a href="#instagram" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="Instagram">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+
+              <!-- YouTube -->
+              <a href="#youtube" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="YouTube">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+
+              <!-- Facebook -->
+              <a href="#facebook" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="Facebook">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="#linkedin" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="LinkedIn">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </a>
+
+              <!-- X (Twitter) -->
+              <a href="#x" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="X (Twitter)">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: EXPLORE ATELIER (Based Directly on Navbar) -->
+        <!-- ==================================================== -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 footer-col-heading text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,0.6)]"></span>
+            <span>Explore Atelier</span>
+          </div>
+
+          <ul class="space-y-2.5 text-xs sm:text-[13px] font-medium">
+            <!-- Home with Home 1 and Home 2 subitems -->
+            <li class="space-y-1.5">
+              <a href="#home" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Home (Atelier & Collections)</span>
+              </a>
+              <ul class="pl-4 space-y-1 border-l border-white/10 dark:border-white/10 ml-2">
+                <li>
+                  <a href="#home-1" class="footer-link inline-flex items-center gap-1.5 text-[11.5px] transition-all">
+                    <span class="text-gold-500/80">•</span>
+                    <span>Home 1 (Royal Palace & Heirlooms)</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#home-2" class="footer-link inline-flex items-center gap-1.5 text-[11.5px] transition-all">
+                    <span class="text-gold-500/80">•</span>
+                    <span>Home 2 (Contemporary Luxury)</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Remaining Navbar Menu Links -->
+            <li>
+              <a href="#about" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>About Us</span>
+              </a>
+            </li>
+            <li>
+              <a href="#products" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="#collections" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Collections</span>
+              </a>
+            </li>
+            <!-- Custom Rugs (Highlighted in Gold, matching "Sell Your Car" in image) -->
+            <li>
+              <a href="#custom-rugs" class="inline-flex items-center gap-1.5 text-gold-400 hover:text-gold-300 font-bold hover:translate-x-1 transition-all">
+                <span class="rtl-chevron font-mono text-gold-400">›</span>
+                <span>Custom Rugs (Bespoke Atelier)</span>
+              </a>
+            </li>
+            <li>
+              <a href="#rug-guide" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Rug Guide</span>
+              </a>
+            </li>
+            <li>
+              <a href="#craftsmanship" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Craftsmanship</span>
+              </a>
+            </li>
+            <li>
+              <a href="#showroom" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Showroom</span>
+              </a>
+            </li>
+            <li>
+              <a href="#inspiration" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Inspiration</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Contact Support</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- COLUMN 3: COLLECTIONS & SERVICES (With Icons Matching Reference) -->
+        <!-- ==================================================== -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 footer-col-heading text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.6)]"></span>
+            <span>Collections & Services</span>
+          </div>
+
+          <ul class="space-y-3 text-xs sm:text-[13px] font-medium">
+            <li>
+              <a href="#persian-rugs" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <span>Persian & Oriental Heirlooms</span>
+              </a>
+            </li>
+            <li>
+              <a href="#silk-wool" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="gem" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                <span>Luxury Silk & Pure Wool</span>
+              </a>
+            </li>
+            <li>
+              <a href="#modern-rugs" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="sparkles" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Modern & Minimalist Rugs</span>
+              </a>
+            </li>
+            <li>
+              <a href="#vintage-oushak" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="arrow-left-right" class="w-4 h-4 text-sky-400 flex-shrink-0"></i>
+                <span>Vintage Oushak & Kilims</span>
+              </a>
+            </li>
+            <li>
+              <a href="#custom-dye" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="palette" class="w-4 h-4 text-rose-400 flex-shrink-0"></i>
+                <span>Bespoke Sizing & Custom Dye</span>
+              </a>
+            </li>
+            <li>
+              <a href="#room-visualizer" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="layers" class="w-4 h-4 text-purple-400 flex-shrink-0"></i>
+                <span>3D Virtual Room Visualizer</span>
+              </a>
+            </li>
+            <li>
+              <a href="#authenticity-guarantee" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <span>Lifetime Authenticity Guarantee</span>
+              </a>
+            </li>
+            <li>
+              <a href="#white-glove-delivery" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="truck" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                <span>White-Glove Home Delivery</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- COLUMN 4: PORTALS & NEWSLETTER (Matching Reference Layout) -->
+        <!-- ==================================================== -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 footer-col-heading text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.6)]"></span>
+            <span>Portals & Newsletter</span>
+          </div>
+
+          <!-- Action Card 1: Collector Dashboard -->
+          <div id="footerCollectorCard" class="footer-portal-card group flex items-center justify-between p-3.5 rounded-2xl transition-all cursor-pointer">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="user" class="w-4.5 h-4.5"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="footer-portal-title text-xs font-bold leading-tight group-hover:text-gold-400 transition-colors">
+                  Collector Dashboard
+                </span>
+                <span class="footer-portal-sub text-[10px] leading-tight mt-0.5">
+                  Saved Pieces & Garage
+                </span>
+              </div>
+            </div>
+            <i data-lucide="chevron-right" class="rtl-chevron w-4 h-4 text-slate-500 group-hover:text-gold-400 group-hover:translate-x-1 transition-all"></i>
+          </div>
+
+          <!-- Action Card 2: Trade & Designer Portal -->
+          <div id="footerTradeCard" class="footer-portal-card group flex items-center justify-between p-3.5 rounded-2xl transition-all cursor-pointer">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-4.5 h-4.5"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="footer-portal-title text-xs font-bold leading-tight group-hover:text-gold-400 transition-colors">
+                  Trade & Designer Portal
+                </span>
+                <span class="footer-portal-sub text-[10px] leading-tight mt-0.5">
+                  Architect CRM & Wholesale
+                </span>
+              </div>
+            </div>
+            <i data-lucide="chevron-right" class="rtl-chevron w-4 h-4 text-slate-500 group-hover:text-gold-400 group-hover:translate-x-1 transition-all"></i>
+          </div>
+
+          <!-- Newsletter Box matching reference -->
+          <div class="footer-news-card p-4 rounded-2xl space-y-2.5 transition-colors">
+            <div class="space-y-1">
+              <div class="footer-news-title text-xs font-bold flex items-center gap-1.5">
+                <span>Join Atelier Family!</span>
+                <span>✨</span>
+              </div>
+              <p class="footer-news-sub text-[11px] leading-relaxed">
+                Get free rug curation guides and $250 voucher off your bespoke purchase.
+              </p>
+            </div>
+
+            <form id="footerNewsletterForm" class="space-y-2.5">
+              <input 
+                type="email" 
+                required 
+                placeholder="buyer@email.com" 
+                class="footer-input w-full px-3.5 py-2.5 rounded-xl text-xs placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors"
+              />
+              <button 
+                type="submit" 
+                class="btn-3d btn-3d-amber sheen w-full h-10 text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center gap-2"
+              >
+                <span class="text-[10px]">▲</span>
+                <span>Subscribe</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==================================================== -->
+      <!-- BOTTOM COPYRIGHT & LEGAL BAR -->
+      <!-- ==================================================== -->
+      <div class="footer-bottom-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs footer-bottom-text">
+        <p class="text-center md:text-left">
+          &copy; 2026 <strong class="font-serif footer-trust-title">Rug & Carpet Store</strong> Atelier. All Rights Reserved. Master Hand-Knotted Traditions.
+        </p>
+
+        <div class="flex items-center flex-wrap justify-center gap-4 text-xs font-medium">
+          <a href="#privacy" class="hover:text-gold-400 transition-colors">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#terms" class="hover:text-gold-400 transition-colors">Terms of Curation</a>
+          <span>&bull;</span>
+          <a href="#ethics" class="hover:text-gold-400 transition-colors">Artisan Ethics</a>
+          <span>&bull;</span>
+          <a href="#provenance" class="hover:text-gold-400 transition-colors">Provenance Registry</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ======================================================== -->
+  <!-- 3D AUTH MODAL PREVIEW (Login & Sign Up) -->
+  <!-- ======================================================== -->
+  <div id="authModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="authModalBox" class="relative w-full max-w-md p-8 rounded-3xl bg-obsidian-950 border border-gold-500/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] transform scale-95 transition-transform duration-300 text-slate-100">
+      
+      <button id="closeAuthModal" class="absolute top-5 right-5 btn-3d-icon w-8 h-8 text-slate-400 hover:text-white" aria-label="Close modal">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="text-center space-y-2 mb-6">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center">
+          <i data-lucide="lock" class="w-6 h-6"></i>
+        </div>
+        <h3 id="modalTitle" class="font-serif text-2xl font-bold text-white">Member Portal</h3>
+        <p id="modalSubtitle" class="text-xs text-slate-400">Access your private carpet commissions and curation history.</p>
+      </div>
+
+      <form id="authForm" class="space-y-4" onsubmit="event.preventDefault(); alert('Demo action triggered!'); document.getElementById('authModal').classList.add('opacity-0', 'pointer-events-none');">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
+          <input type="email" placeholder="collector@atelier.com" required class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-gold-500 transition-colors" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Password</label>
+          <input type="password" placeholder="••••••••••••" required class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-gold-500 transition-colors" />
+        </div>
+        
+        <button type="submit" id="modalSubmitBtn" class="btn-3d btn-3d-gold sheen w-full h-12 text-xs font-extrabold uppercase tracking-wider mt-4">
+          Authenticate
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- JAVASCRIPT: LOGIC, 3D PARALLAX, & FRAMER MOTION -->
+  <!-- ======================================================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // ----------------------------------------------------
+    // Permanent Sticky Navbar Scroll Enhancer
+    // ----------------------------------------------------
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (!header) return;
+      if (window.scrollY > 15) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+
+    // ----------------------------------------------------
+    // Dynamic Active Navbar Status Controller
+    // ----------------------------------------------------
+    function syncActiveNavbarState() {
+      let currentFile = window.location.pathname.split('/').pop().toLowerCase();
+      if (!currentFile || currentFile === '/' || currentFile === '') {
+        currentFile = 'index.html';
+      }
+      currentFile = decodeURIComponent(currentFile.split('?')[0].split('#')[0]);
+
+      const aliases = {
+        'index.html': 'index.html',
+        'home-1': 'index.html',
+        'home-2.html': 'home-2.html',
+        'about.html': 'about.html',
+        'collections.html': 'collections.html',
+        'craftsmanship.html': 'craftmanship.html',
+        'craftmanship.html': 'craftmanship.html',
+        'custom-rugs.html': 'custom-rugs.html',
+        'inspiration.html': 'inspiration.html',
+        'products.html': 'products.html',
+        'rug-guide.html': 'rug-guide.html',
+        'contact.html': 'contact.html',
+        'showroom.html': 'showroom.html'
+      };
+
+      const targetKey = aliases[currentFile] || currentFile;
+
+      document.querySelectorAll('#desktopMenu a, #desktopMenu button, #mobileDrawer a').forEach(el => {
+        el.classList.remove('nav-pill-active', 'active');
+      });
+
+      document.querySelectorAll('#desktopMenu a, #mobileDrawer a').forEach(el => {
+        const href = (el.getAttribute('href') || '').toLowerCase().split('?')[0].split('#')[0];
+        const normalizedHref = aliases[href] || href;
+
+        if (normalizedHref && normalizedHref === targetKey) {
+          el.classList.add('nav-pill-active', 'active');
+        }
+      });
+
+      if (targetKey === 'index.html') {
+        document.getElementById('homeDropdownBtn')?.classList.add('nav-pill-active', 'active');
+        document.getElementById('mobileHomeLink')?.classList.add('nav-pill-active', 'active');
+      } else if (targetKey === 'home-2.html') {
+        document.getElementById('homeDropdownBtn')?.classList.add('nav-pill-active', 'active');
+      }
+    }
+
+    try {
+      syncActiveNavbarState();
+    } catch(e) {
+      console.warn('Active navbar state sync:', e);
+    }
+
+
+    // DOM Elements
+    const html = document.documentElement;
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    const mobileSunIcon = document.getElementById('mobileSunIcon');
+    const mobileMoonIcon = document.getElementById('mobileMoonIcon');
+
+    const rtlToggle = document.getElementById('rtlToggle');
+    const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileDrawerOverlay = document.getElementById('mobileDrawerOverlay');
+    const hamBarTop = document.getElementById('hamBarTop');
+    const hamBarMid = document.getElementById('hamBarMid');
+    const hamBarBot = document.getElementById('hamBarBot');
+
+    const mobileHomeAccordionBtn = document.getElementById('mobileHomeAccordionBtn');
+    const mobileHomeSubmenu = document.getElementById('mobileHomeSubmenu');
+    const mobileHomeChevron = document.getElementById('mobileHomeChevron');
+
+    const homeDropdownWrapper = document.getElementById('homeDropdownWrapper');
+    const homeDropdownBtn = document.getElementById('homeDropdownBtn');
+    const homeDropdownMenu = document.getElementById('homeDropdownMenu');
+    const homeChevron = document.getElementById('homeChevron');
+
+    // ----------------------------------------------------
+    // 1. DARK / LIGHT MODE CONTROLLER
+    // ----------------------------------------------------
+    let isDark = true;
+    function updateTheme(dark) {
+      isDark = dark;
+      if (isDark) {
+        html.classList.add('dark');
+        html.classList.remove('light');
+        document.body.classList.remove('bg-[#F8F9FA]', 'text-slate-900', 'bg-slate-100');
+        document.body.classList.add('bg-[#0A0C10]', 'text-slate-100');
+        sunIcon?.classList.remove('hidden');
+        moonIcon?.classList.add('hidden');
+        mobileSunIcon?.classList.remove('hidden');
+        mobileMoonIcon?.classList.add('hidden');
+      } else {
+        html.classList.remove('dark');
+        html.classList.add('light');
+        document.body.classList.remove('bg-[#0A0C10]', 'text-slate-100');
+        document.body.classList.add('bg-[#F8F9FA]', 'text-slate-900');
+        sunIcon?.classList.add('hidden');
+        moonIcon?.classList.remove('hidden');
+        mobileSunIcon?.classList.add('hidden');
+        mobileMoonIcon?.classList.remove('hidden');
+      }
+
+      // Smooth Framer Motion rotation & scale for toggle icons
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#darkModeToggle', {
+          rotate: [0, 180, 360],
+          scale: [1, 0.85, 1]
+        }, { duration: 0.45, easing: Motion.spring({ stiffness: 300, damping: 18 }) });
+
+        Motion.animate('#mobileDarkModeToggle', {
+          rotate: [0, 180, 360],
+          scale: [1, 0.85, 1]
+        }, { duration: 0.45, easing: Motion.spring({ stiffness: 300, damping: 18 }) });
+      }
+    }
+
+    darkModeToggle?.addEventListener('click', () => updateTheme(!isDark));
+    mobileDarkModeToggle?.addEventListener('click', () => updateTheme(!isDark));
+
+    // ----------------------------------------------------
+    // 2. RTL (RIGHT TO LEFT) CONTROLLER (Icon-Only)
+    // ----------------------------------------------------
+    let isRtl = false;
+    function updateDirection(rtl) {
+      isRtl = rtl;
+      const dirVal = isRtl ? 'rtl' : 'ltr';
+      html.setAttribute('dir', dirVal);
+
+      // Smooth Framer Motion spring jump & rotation for RTL icons
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#rtlToggle', {
+          scale: [1, 1.18, 1],
+          rotate: isRtl ? [0, 180] : [180, 0]
+        }, { duration: 0.4, easing: Motion.spring({ stiffness: 380, damping: 20 }) });
+
+        Motion.animate('#mobileRtlToggle', {
+          scale: [1, 1.18, 1],
+          rotate: isRtl ? [0, 180] : [180, 0]
+        }, { duration: 0.4, easing: Motion.spring({ stiffness: 380, damping: 20 }) });
+      }
+    }
+
+    rtlToggle.addEventListener('click', () => updateDirection(!isRtl));
+    mobileRtlToggle.addEventListener('click', () => updateDirection(!isRtl));
+
+    // ----------------------------------------------------
+    // 3. HAMBURGER MENU DRAWER (Mobile & Tablet)
+    // ----------------------------------------------------
+    let isDrawerOpen = false;
+
+        function openMobileDrawer() {
+      isDrawerOpen = true;
+      document.body.classList.add('mobile-drawer-open');
+      document.documentElement.classList.add('mobile-drawer-open');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+      mobileDrawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
+      mobileDrawerOverlay.classList.add('opacity-100', 'pointer-events-auto');
+      
+      mobileDrawer.classList.remove('translate-x-full');
+      mobileDrawer.classList.add('translate-x-0', 'open');
+
+      // Morph Hamburger Bars into X
+      hamBarTop.style.transform = 'translateY(6px) rotate(45deg)';
+      hamBarMid.style.opacity = '0';
+      hamBarBot.style.transform = 'translateY(-6px) rotate(-45deg)';
+
+      // Framer Motion staggered entrance with transform cleanup to ensure 60fps buttery scrolling
+      if (window.Motion && Motion.animate) {
+        try {
+          const anim = Motion.animate('.mobile-nav-link', {
+            opacity: [0, 1],
+            x: [isRtl ? -12 : 12, 0]
+          }, {
+            delay: Motion.stagger(0.02),
+            duration: 0.25,
+            easing: [0.16, 1, 0.3, 1]
+          });
+          if (anim && anim.finished) {
+            anim.finished.then(() => {
+              document.querySelectorAll('.mobile-nav-link').forEach(el => {
+                el.style.transform = '';
+              });
+            }).catch(() => {});
+          }
+        } catch(e) {}
+      }
+    }
+
+    function closeMobileDrawer() {
+      isDrawerOpen = false;
+      document.body.classList.remove('mobile-drawer-open');
+      document.documentElement.classList.remove('mobile-drawer-open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      mobileDrawerOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+      mobileDrawerOverlay.classList.add('opacity-0', 'pointer-events-none');
+
+      mobileDrawer.classList.add('translate-x-full');
+      mobileDrawer.classList.remove('translate-x-0', 'open');
+
+      // Restore Hamburger Bars
+      hamBarTop.style.transform = 'none';
+      hamBarMid.style.opacity = '1';
+      hamBarBot.style.transform = 'none';
+    }
+
+    hamburgerBtn.addEventListener('click', () => {
+      if (isDrawerOpen) closeMobileDrawer();
+      else openMobileDrawer();
+    });
+
+    closeDrawerBtn.addEventListener('click', closeMobileDrawer);
+    mobileDrawerOverlay.addEventListener('click', closeMobileDrawer);
+
+    // Mobile Home Accordion Toggle
+    mobileHomeAccordionBtn?.addEventListener('click', (e) => { e.stopPropagation();
+      const isHidden = mobileHomeSubmenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileHomeSubmenu.classList.remove('hidden');
+        mobileHomeChevron.style.transform = 'rotate(180deg)';
+        if (window.Motion && Motion.animate) {
+          Motion.animate('#mobileHomeSubmenu', {
+            opacity: [0, 1],
+            height: ['0px', 'auto']
+          }, { duration: 0.25 });
+        }
+      } else {
+        mobileHomeSubmenu.classList.add('hidden');
+        mobileHomeChevron.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    // Close mobile drawer on link click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', closeMobileDrawer);
+    });
+
+    // ----------------------------------------------------
+    // 4. DESKTOP HOME DROPDOWN CLICK & HOVER ENHANCEMENT
+    // ----------------------------------------------------
+    let isHomeOpen = false;
+    homeDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      isHomeOpen = !isHomeOpen;
+      homeDropdownBtn.setAttribute('aria-expanded', isHomeOpen);
+      if (isHomeOpen) {
+        homeDropdownMenu.classList.remove('opacity-0', 'invisible', 'translate-y-3', 'pointer-events-none');
+        homeChevron.classList.add('rotate-180');
+        if (window.Motion && Motion.animate) {
+          Motion.animate('#homeDropdownMenu', {
+            scale: [0.94, 1],
+            opacity: [0, 1],
+            y: [-8, 0]
+          }, { duration: 0.25, easing: Motion.spring({ stiffness: 350, damping: 24 }) });
+        }
+      } else {
+        homeDropdownMenu.classList.add('opacity-0', 'invisible', 'translate-y-3', 'pointer-events-none');
+        homeChevron.classList.remove('rotate-180');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!homeDropdownWrapper.contains(e.target)) {
+        isHomeOpen = false;
+        homeDropdownMenu.classList.add('opacity-0', 'invisible', 'translate-y-3', 'pointer-events-none');
+        homeChevron.classList.remove('rotate-180');
+      }
+    });
+
+    // ----------------------------------------------------
+    // 5. 3D BUTTON TACTILE TILT & PARALLAX (Framer Motion Physics)
+    // ----------------------------------------------------
+    const buttons3D = document.querySelectorAll('.btn-3d');
+
+    buttons3D.forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left; // x position within element.
+        const y = e.clientY - rect.top;  // y position within element.
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -12; // Invert for natural tilt
+        const rotateY = ((x - centerX) / centerX) * 12;
+
+        btn.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
+    });
+
+    // ----------------------------------------------------
+    // 6. VIEWPORT TRACKER & RESIZE HANDLER
+    // ----------------------------------------------------
+    function handleResize() {
+      const width = window.innerWidth;
+      if (width >= 1280) {
+        closeMobileDrawer();
+      }
+    }
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    // ----------------------------------------------------
+    // 7. AUTH MODAL CONTROLLER (Sign Up & Login)
+    // ----------------------------------------------------
+    const authModal = document.getElementById('authModal');
+    const authModalBox = document.getElementById('authModalBox');
+    const closeAuthModal = document.getElementById('closeAuthModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    const modalSubmitBtn = document.getElementById('modalSubmitBtn');
+
+    function openModal(type) {
+      if (type === 'signup') {
+        modalTitle.textContent = 'Create Atelier Account';
+        modalSubtitle.textContent = 'Join the connoisseur circle for bespoke rug commissions.';
+        modalSubmitBtn.textContent = 'Register Privilege Account';
+      } else {
+        modalTitle.textContent = 'Collector Login';
+        modalSubtitle.textContent = 'Access your curated showroom pieces and orders.';
+        modalSubmitBtn.textContent = 'Authenticate Member';
+      }
+
+      authModal.classList.remove('opacity-0', 'pointer-events-none');
+      authModal.classList.add('opacity-100', 'pointer-events-auto');
+      authModalBox.classList.remove('scale-95');
+      authModalBox.classList.add('scale-100');
+
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#authModalBox', {
+          y: [-20, 0],
+          opacity: [0, 1]
+        }, { duration: 0.3, easing: Motion.spring({ stiffness: 350, damping: 25 }) });
+      }
+    }
+
+    function closeModal() {
+      authModal.classList.remove('opacity-100', 'pointer-events-auto');
+      authModal.classList.add('opacity-0', 'pointer-events-none');
+      authModalBox.classList.remove('scale-100');
+      authModalBox.classList.add('scale-95');
+    }
+
+    document.getElementById('loginBtnDesktop')?.addEventListener('click', () => openModal('login'));
+    document.getElementById('signUpBtnDesktop')?.addEventListener('click', () => openModal('signup'));
+    document.getElementById('mobileLoginBtn')?.addEventListener('click', () => { closeMobileDrawer(); openModal('login'); });
+    document.getElementById('mobileSignUpBtn')?.addEventListener('click', () => { closeMobileDrawer(); openModal('signup'); });
+    closeAuthModal?.addEventListener('click', closeModal);
+    authModal?.addEventListener('click', (e) => {
+      if (e.target === authModal) closeModal();
+    });
+
+    // Wire Footer Portal Cards to Auth Modal
+    document.getElementById('footerCollectorCard')?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'login.html'; });
+    document.getElementById('footerTradeCard')?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'registeration.html'; });
+
+    // Footer Newsletter Form
+    const footerNewsletterForm = document.getElementById('footerNewsletterForm');
+    footerNewsletterForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = footerNewsletterForm.querySelector('input');
+      const email = input?.value || '';
+      alert(`✨ Welcome to Atelier Connoisseurs!\n\nYour exclusive $250 commission voucher has been sent to ${email}.`);
+      if (input) input.value = '';
+    });
+
+    // Refresh Lucide Icons to render all newly added footer icons
+    lucide.createIcons();
+
+    // Initial entrance animation using Framer Motion engine
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#mainHeader', {
+          y: [-50, 0],
+          opacity: [0, 1]
+        }, { duration: 0.6, easing: Motion.spring({ stiffness: 220, damping: 22 }) });
+
+        Motion.animate('#mainFooter', {
+          y: [40, 0],
+          opacity: [0, 1]
+        }, { duration: 0.7, delay: 0.15, easing: Motion.spring({ stiffness: 200, damping: 20 }) });
+      }
+    });
+  
+    // ========================================================
+    // 8. UNIQUE FRAMER MOTION SUITE FOR COLLECTIONS PAGE (7 SECTIONS)
+    // ========================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!window.Motion || !Motion.animate) return;
+
+      // --------------------------------------------------------
+      // MOTION 1: SECTION 1 (#collection-premiere)
+      // Runway Stage Unroll & 3D Magnetic Parallax Card
+      // --------------------------------------------------------
+      const premiereVisualCard = document.getElementById('premiereVisualCard');
+      if (premiereVisualCard) {
+        premiereVisualCard.addEventListener('mousemove', (e) => {
+          const rect = premiereVisualCard.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * -9;
+          const rotateY = ((x - centerX) / centerX) * 9;
+
+          premiereVisualCard.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.015, 1.015, 1.015)`;
+        });
+
+        premiereVisualCard.addEventListener('mouseleave', () => {
+          premiereVisualCard.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+      }
+
+      if (Motion.inView) {
+        Motion.inView('#collection-premiere', () => {
+          Motion.animate('#collection-premiere .col-filter-pill', {
+            scale: [0.88, 1],
+            opacity: [0, 1],
+            y: [15, 0]
+          }, {
+            delay: Motion.stagger(0.07),
+            duration: 0.45,
+            easing: Motion.spring({ stiffness: 280, damping: 20 })
+          });
+        });
+
+        // --------------------------------------------------------
+        // MOTION 2: SECTION 2 (#heritage-handwoven)
+        // Dual Imperial Vault Door 3D Fold & Wax Seal Spin
+        // --------------------------------------------------------
+        Motion.inView('#heritage-handwoven', () => {
+          Motion.animate('#vaultHeritage', {
+            x: [-40, 0],
+            rotateY: [-12, 0],
+            opacity: [0, 1]
+          }, { duration: 0.65, easing: Motion.spring({ stiffness: 200, damping: 22 }) });
+
+          Motion.animate('#vaultHandwoven', {
+            x: [40, 0],
+            rotateY: [12, 0],
+            opacity: [0, 1]
+          }, { delay: 0.12, duration: 0.65, easing: Motion.spring({ stiffness: 200, damping: 22 }) });
+        });
+
+        // --------------------------------------------------------
+        // MOTION 3: SECTION 3 (#contemporary-living)
+        // Isometric Architectural Split & Texture Bar Fill
+        // --------------------------------------------------------
+        Motion.inView('#contemporary-living', () => {
+          Motion.animate('#contemporary-living .collection-card', {
+            y: [40, 0],
+            opacity: [0, 1],
+            scale: [0.96, 1]
+          }, {
+            delay: Motion.stagger(0.12),
+            duration: 0.6,
+            easing: Motion.spring({ stiffness: 220, damping: 20 })
+          });
+        });
+
+        // --------------------------------------------------------
+        // MOTION 4: SECTION 4 (#haute-luxury)
+        // Silk Luster Grand Salon Scale Glide & Light Angle Wave
+        // --------------------------------------------------------
+        Motion.inView('#haute-luxury', () => {
+          Motion.animate('#hauteSilkCard', {
+            scale: [0.93, 1],
+            opacity: [0, 1],
+            y: [30, 0]
+          }, { duration: 0.65, easing: Motion.spring({ stiffness: 210, damping: 22 }) });
+        });
+
+        // --------------------------------------------------------
+        // MOTION 5: SECTION 5 (#earth-sanctuary)
+        // Botanical Specimen Cells Elastic Radial Expansion
+        // --------------------------------------------------------
+        Motion.inView('#earth-sanctuary', () => {
+          Motion.animate('.earth-specimen-cell', {
+            scale: [0.86, 1],
+            opacity: [0, 1],
+            y: [20, 0]
+          }, {
+            delay: Motion.stagger(0.09),
+            duration: 0.5,
+            easing: Motion.spring({ stiffness: 280, damping: 19 })
+          });
+        });
+
+        // --------------------------------------------------------
+        // MOTION 6: SECTION 6 (#statement-limited)
+        // Museum Pedestal Elevation & Serialized Medallion Pulse
+        // --------------------------------------------------------
+        Motion.inView('#statement-limited', () => {
+          Motion.animate('.exhibition-plinth', {
+            y: [45, 0],
+            opacity: [0, 1],
+            scale: [0.94, 1]
+          }, {
+            delay: Motion.stagger(0.14),
+            duration: 0.6,
+            easing: Motion.spring({ stiffness: 210, damping: 20 })
+          });
+        });
+
+        // --------------------------------------------------------
+        // MOTION 7: SECTION 7 (#seasonal-solstice)
+        // Solstice 4-Season Quadrant Sweep & VIP Studio Reveal
+        // --------------------------------------------------------
+        Motion.inView('#seasonal-solstice', () => {
+          Motion.animate('.seasonal-quad-card', {
+            rotate: [-6, 0],
+            opacity: [0, 1],
+            scale: [0.9, 1]
+          }, {
+            delay: Motion.stagger(0.08),
+            duration: 0.5,
+            easing: Motion.spring({ stiffness: 260, damping: 22 })
+          });
+        });
+      }
+
+      // Refresh icons after dynamic injection
+      lucide.createIcons();
+    });
+
+  </script>
+</body>
+</html>

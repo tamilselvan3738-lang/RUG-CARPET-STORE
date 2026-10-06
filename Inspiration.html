@@ -1,0 +1,3505 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rug & Carpet Store — Luxury Artisan Atelier</title>
+  <!-- Atelier Favicon Suite (SVG, Multi-size ICO & Retina PNG) -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+  <link rel="alternate icon" href="favicon.ico">
+
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            gold: {
+              300: '#F5DE93',
+              400: '#E6C665',
+              500: '#D4AF37',
+              600: '#AA8820',
+              700: '#836511',
+            },
+            obsidian: {
+              950: '#07080a',
+              900: '#0d0f14',
+              850: '#12151c',
+              800: '#171b24',
+              700: '#222735',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Motion (Framer Motion Engine for Vanilla & Modern Web) -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.17/dist/motion.js"></script>
+
+  <!-- High-Contrast Luxury Atelier Background Engine (Dark & Light) -->
+  <script src="js/atelier-background.js"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D4AF37;
+      border-radius: 9999px;
+    }
+
+    /* 3D Button Styles */
+    .btn-3d {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+      transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.15s ease, background 0.2s ease;
+      cursor: pointer;
+      user-select: none;
+      touch-action: manipulation;
+      transform-style: preserve-3d;
+      perspective: 800px;
+    }
+
+    /* 3D Gold Accent Button (Sign Up) */
+    .btn-3d-gold {
+      background: linear-gradient(180deg, #F9E79F 0%, #D4AF37 40%, #B89020 100%);
+      color: #121008;
+      border: 1px solid #FFE494;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.6) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.3) inset,
+        0 5px 0 #88670F,
+        0 8px 18px rgba(212, 175, 55, 0.45);
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+    .btn-3d-gold:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(180deg, #FCF0BC 0%, #DFC04E 40%, #C39922 100%);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.3) inset,
+        0 7px 0 #88670F,
+        0 12px 24px rgba(212, 175, 55, 0.55);
+    }
+    .btn-3d-gold:active {
+      transform: translateY(4px) !important;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.4) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        0 1px 0 #88670F,
+        0 3px 8px rgba(212, 175, 55, 0.35);
+    }
+
+    /* 3D Slate / Obsidian Button (Login) */
+    .btn-3d-dark {
+      background: linear-gradient(180deg, #2b303c 0%, #1a1e28 50%, #12151d 100%);
+      color: #E2E8F0;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.6) inset,
+        0 4px 0 #090a0e,
+        0 6px 14px rgba(0, 0, 0, 0.45);
+    }
+    .dark .btn-3d-dark {
+      background: linear-gradient(180deg, #2a2f3d 0%, #1a1e27 60%, #10131a 100%);
+    }
+    html:not(.dark) .btn-3d-dark {
+      background: linear-gradient(180deg, #ffffff 0%, #f1f3f7 60%, #e2e6ee 100%);
+      color: #1e293b;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.1) inset,
+        0 4px 0 #cbd5e1,
+        0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+    .btn-3d-dark:hover {
+      transform: translateY(-2px);
+      border-color: rgba(212, 175, 55, 0.4);
+      color: #F8FAFC;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.25) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.6) inset,
+        0 6px 0 #090a0e,
+        0 10px 20px rgba(0, 0, 0, 0.55);
+    }
+    html:not(.dark) .btn-3d-dark:hover {
+      color: #0f172a;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.12) inset,
+        0 6px 0 #cbd5e1,
+        0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    .btn-3d-dark:active {
+      transform: translateY(3px) !important;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.1) inset,
+        0 1px 0 #090a0e,
+        0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+    html:not(.dark) .btn-3d-dark:active {
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 1px 0 #cbd5e1,
+        0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 3D Round Control (Toggles & Hamburger) */
+    .btn-3d-icon {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+      user-select: none;
+    }
+    .dark .btn-3d-icon {
+      background: linear-gradient(180deg, #242934 0%, #151821 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.12) inset,
+        0 3px 0 #0d0f15,
+        0 5px 10px rgba(0, 0, 0, 0.35);
+    }
+    html:not(.dark) .btn-3d-icon {
+      background: linear-gradient(180deg, #ffffff 0%, #f1f4f9 100%);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 3px 0 #cbd5e1,
+        0 5px 10px rgba(0, 0, 0, 0.08);
+    }
+    .btn-3d-icon:hover {
+      transform: translateY(-2px);
+    }
+    .btn-3d-icon:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 #0d0f15, 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    html:not(.dark) .btn-3d-icon:active {
+      box-shadow: 0 1px 0 #cbd5e1, 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Navigation Gliding Indicator */
+    .nav-pill-active {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .nav-indicator {
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      z-index: -1;
+    }
+
+    /* Backdrop Glassmorphism */
+    .glass-nav {
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    /* RTL specific adjustments */
+    [dir="rtl"] {
+      text-align: right;
+    }
+    [dir="rtl"] .dropdown-menu {
+      left: auto;
+      right: 0;
+    }
+    [dir="rtl"] .mobile-drawer {
+      left: 0;
+      right: auto;
+      transform: translateX(-100%);
+    }
+    [dir="rtl"] .mobile-drawer.open {
+      transform: translateX(0);
+    }
+
+    /* 3D Specular Sheen for buttons */
+    .sheen {
+      position: relative;
+      overflow: hidden;
+    }
+    .sheen::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      transition: all 0.75s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .sheen:hover::after {
+      left: 140%;
+      opacity: 1;
+    }
+
+    /* ======================================================== */
+    /* THEME SYSTEM (Dark / Light Dynamic Navbar System) */
+    /* ======================================================== */
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    header#mainHeader {
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .dark header#mainHeader {
+      background-color: rgba(7, 8, 10, 0.88) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5) !important;
+    }
+    html:not(.dark) header#mainHeader {
+      background-color: rgba(255, 255, 255, 0.92) !important;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* Brand Logo Text */
+    .dark #brandLogoTitle {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #brandLogoTitle {
+      color: #0F172A !important;
+    }
+    .dark #brandLogoSubtitle {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) #brandLogoSubtitle {
+      color: #64748B !important;
+    }
+
+    /* Desktop Navigation Links */
+    .dark .nav-link,
+    .dark #homeDropdownBtn {
+      color: #CBD5E1 !important;
+    }
+    .dark .nav-link:hover,
+    .dark #homeDropdownBtn:hover {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) .nav-link,
+    html:not(.dark) #homeDropdownBtn {
+      color: #334155 !important;
+    }
+    html:not(.dark) .nav-link:hover,
+    html:not(.dark) #homeDropdownBtn:hover {
+      color: #AA8820 !important;
+    }
+
+    /* Home Dropdown Menu */
+    .dark #homeDropdownMenu {
+      background-color: rgba(7, 8, 10, 0.96) !important;
+      border-color: rgba(212, 175, 55, 0.25) !important;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
+    }
+    .dark #homeDropdownMenu a {
+      color: #E2E8F0 !important;
+    }
+    .dark #homeDropdownMenu a:hover {
+      background-color: rgba(212, 175, 55, 0.15) !important;
+      color: #E6C665 !important;
+    }
+    html:not(.dark) #homeDropdownMenu {
+      background-color: rgba(255, 255, 255, 0.98) !important;
+      border-color: rgba(226, 232, 240, 0.95) !important;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+    }
+    html:not(.dark) #homeDropdownMenu a {
+      color: #334155 !important;
+    }
+    html:not(.dark) #homeDropdownMenu a:hover {
+      background-color: rgba(212, 175, 55, 0.1) !important;
+      color: #AA8820 !important;
+    }
+
+    /* Hamburger Bars */
+    .dark #hamBarTop,
+    .dark #hamBarMid,
+    .dark #hamBarBot {
+      background-color: #E6C665 !important;
+    }
+    html:not(.dark) #hamBarTop,
+    html:not(.dark) #hamBarMid,
+    html:not(.dark) #hamBarBot {
+      background-color: #0F172A !important;
+    }
+
+    /* RTL Icon */
+    .dark #rtlIcon,
+    .dark #mobileRtlIcon {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) #rtlIcon,
+    html:not(.dark) #mobileRtlIcon {
+      color: #1E293B !important;
+    }
+
+    /* Mobile Drawer */
+    .dark #mobileDrawer {
+      background-color: rgba(7, 8, 10, 0.98) !important;
+      color: #F8FAFC !important;
+      border-left-color: rgba(212, 175, 55, 0.2) !important;
+    }
+    html:not(.dark) #mobileDrawer {
+      background-color: rgba(255, 255, 255, 0.98) !important;
+      color: #0F172A !important;
+      border-left-color: rgba(226, 232, 240, 0.9) !important;
+    }
+    .dark #mobileDrawerHeader {
+      border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) #mobileDrawerHeader {
+      border-bottom-color: rgba(226, 232, 240, 0.85) !important;
+    }
+    .dark #mobileDrawerTitle {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #mobileDrawerTitle {
+      color: #0F172A !important;
+    }
+    .dark #mobileDrawerSubtitle {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) #mobileDrawerSubtitle {
+      color: #64748B !important;
+    }
+    .dark #closeDrawerBtn {
+      color: #94A3B8 !important;
+    }
+    .dark #closeDrawerBtn:hover {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #closeDrawerBtn {
+      color: #64748B !important;
+    }
+    html:not(.dark) #closeDrawerBtn:hover {
+      color: #0F172A !important;
+    }
+    .dark #mobileHomeAccordionBtn {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #mobileHomeAccordionBtn {
+      color: #0F172A !important;
+    }
+    .dark #mobileDrawer .mobile-nav-link {
+      color: #E2E8F0 !important;
+    }
+    .dark #mobileDrawer .mobile-nav-link:hover {
+      color: #E6C665 !important;
+      background-color: rgba(212, 175, 55, 0.1) !important;
+    }
+    html:not(.dark) #mobileDrawer .mobile-nav-link {
+      color: #334155 !important;
+    }
+    html:not(.dark) #mobileDrawer .mobile-nav-link:hover {
+      color: #AA8820 !important;
+      background-color: rgba(212, 175, 55, 0.1) !important;
+    }
+    .dark .mobile-section-heading {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .mobile-section-heading {
+      color: #64748B !important;
+    }
+    .dark .drawer-pref-box {
+      background-color: rgba(255, 255, 255, 0.04) !important;
+      border-color: rgba(255, 255, 255, 0.06) !important;
+      color: #E2E8F0 !important;
+    }
+    html:not(.dark) .drawer-pref-box {
+      background-color: #F8FAFC !important;
+      border-color: #E2E8F0 !important;
+      color: #1E293B !important;
+    }
+    .dark #mobileDrawerFooter {
+      background-color: rgba(13, 15, 20, 0.6) !important;
+      border-top-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) #mobileDrawerFooter {
+      background-color: #F8FAFC !important;
+      border-top-color: rgba(226, 232, 240, 0.9) !important;
+    }
+
+    /* Modal Dark & Light Mode */
+    .dark #authModalBox {
+      background-color: #07080a !important;
+      border-color: rgba(212, 175, 55, 0.3) !important;
+      color: #F8FAFC !important;
+    }
+    html:not(.dark) #authModalBox {
+      background-color: #FFFFFF !important;
+      border-color: #E2E8F0 !important;
+      color: #0F172A !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15) !important;
+    }
+    html:not(.dark) #modalTitle {
+      color: #0F172A !important;
+    }
+    html:not(.dark) #modalSubtitle {
+      color: #64748B !important;
+    }
+    html:not(.dark) #authModalBox input {
+      background-color: #F8FAFC !important;
+      border-color: #CBD5E1 !important;
+      color: #0F172A !important;
+    }
+
+    /* ======================================================== */
+    /* FOOTER THEME STYLING (Dark & Light Mode + RTL) */
+    /* ======================================================== */
+    .footer-card {
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .dark .footer-card {
+      background-color: #0B0F19 !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8) !important;
+    }
+    html:not(.dark) .footer-card {
+      background-color: #FFFFFF !important;
+      border: 1px solid rgba(226, 232, 240, 0.9) !important;
+      box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.06) !important;
+    }
+
+    /* Footer Trust Badges */
+    .dark .footer-trust-badge {
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) .footer-trust-badge {
+      background-color: #F8FAFC !important;
+      border: 1px solid #E2E8F0 !important;
+    }
+    .dark .footer-trust-title {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-trust-title {
+      color: #0F172A !important;
+    }
+    .dark .footer-trust-sub {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .footer-trust-sub {
+      color: #64748B !important;
+    }
+
+    /* Footer Section Headings */
+    .dark .footer-col-heading {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-col-heading {
+      color: #0F172A !important;
+    }
+
+    /* Footer Links & Services */
+    .dark .footer-link {
+      color: #94A3B8 !important;
+    }
+    .dark .footer-link:hover {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) .footer-link {
+      color: #475569 !important;
+    }
+    html:not(.dark) .footer-link:hover {
+      color: #B89020 !important;
+    }
+
+    /* Footer Portal Cards */
+    .dark .footer-portal-card {
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    .dark .footer-portal-card:hover {
+      background-color: rgba(255, 255, 255, 0.06) !important;
+      border-color: rgba(212, 175, 55, 0.35) !important;
+    }
+    html:not(.dark) .footer-portal-card {
+      background-color: #F8FAFC !important;
+      border: 1px solid #E2E8F0 !important;
+    }
+    html:not(.dark) .footer-portal-card:hover {
+      background-color: #F1F5F9 !important;
+      border-color: rgba(212, 175, 55, 0.5) !important;
+    }
+    .dark .footer-portal-title {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-portal-title {
+      color: #0F172A !important;
+    }
+    .dark .footer-portal-sub {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .footer-portal-sub {
+      color: #64748B !important;
+    }
+
+    /* Newsletter Card & Input */
+    .dark .footer-news-card {
+      background-color: rgba(255, 255, 255, 0.02) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) .footer-news-card {
+      background-color: #F8FAFC !important;
+      border: 1px solid #E2E8F0 !important;
+    }
+    .dark .footer-news-title {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-news-title {
+      color: #0F172A !important;
+    }
+    .dark .footer-news-sub {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .footer-news-sub {
+      color: #64748B !important;
+    }
+    .dark .footer-input {
+      background-color: #07090E !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-input {
+      background-color: #FFFFFF !important;
+      border: 1px solid #CBD5E1 !important;
+      color: #0F172A !important;
+    }
+
+    /* 3D Amber / Orange Button */
+    .btn-3d-amber {
+      background: linear-gradient(180deg, #F59E0B 0%, #D97706 60%, #B45309 100%);
+      color: #FFFFFF;
+      border: 1px solid #FCD34D;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.6) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.3) inset,
+        0 4px 0 #78350F,
+        0 8px 18px rgba(217, 119, 6, 0.45);
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+    .btn-3d-amber:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(180deg, #FBBF24 0%, #F59E0B 60%, #C2410C 100%);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 6px 0 #78350F,
+        0 12px 24px rgba(217, 119, 6, 0.55);
+    }
+    .btn-3d-amber:active {
+      transform: translateY(3px) !important;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.3) inset,
+        0 1px 0 #78350F,
+        0 3px 8px rgba(217, 119, 6, 0.35);
+    }
+
+    /* Footer Social Buttons */
+    .dark .footer-social-btn {
+      color: #94A3B8 !important;
+    }
+    .dark .footer-social-btn:hover {
+      color: #E6C665 !important;
+      border-color: rgba(212, 175, 55, 0.4) !important;
+    }
+    html:not(.dark) .footer-social-btn {
+      color: #334155 !important;
+    }
+    html:not(.dark) .footer-social-btn:hover {
+      color: #B89020 !important;
+      border-color: rgba(212, 175, 55, 0.5) !important;
+    }
+
+    /* Footer Bottom Line */
+    .dark .footer-bottom-border {
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) .footer-bottom-border {
+      border-top: 1px solid rgba(226, 232, 240, 0.9) !important;
+    }
+    .dark .footer-bottom-text {
+      color: #64748B !important;
+    }
+    html:not(.dark) .footer-bottom-text {
+      color: #64748B !important;
+    }
+
+    /* RTL specific adjustments for footer */
+    [dir="rtl"] .rtl-chevron {
+      transform: rotate(180deg);
+    }
+  
+    /* ======================================================== */
+    /* INSPIRATION CUSTOM ENHANCEMENTS (Light & Dark Mode) */
+    /* ======================================================== */
+    .active-mood-tab {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.08) 100%) !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2) !important;
+    }
+    .active-space-tab {
+      background: #D4AF37 !important;
+      color: #0F172A !important;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35) !important;
+    }
+
+  
+    /* ========================================================================== */
+    /* 100% BULLETPROOF FIXED STICKY NAVBAR ARCHITECTURE                         */
+    /* Unaffected by overflow-x, guarantees header stays permanently on screen   */
+    /* ========================================================================== */
+    #mainHeader {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      z-index: 50 !important;
+      margin: 0 !important;
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    }
+
+    body.has-navbar,
+    body:has(#mainHeader) {
+      padding-top: 5rem !important; /* 80px mobile header height */
+    }
+
+    @media (min-width: 640px) {
+      body.has-navbar,
+      body:has(#mainHeader) {
+        padding-top: 5.5rem !important; /* 88px desktop header height */
+      }
+    }
+
+        #mobileDrawerOverlay {
+      z-index: 55 !important;
+    }
+
+    /* ========================================================================== */
+    /* ZERO-LAG ULTRA-SMOOTH MOBILE DRAWER ARCHITECTURE                           */
+    /* Fixes scrolling lag, double-overflow conflicts, and backdrop-filter GPU stalls */
+    /* ========================================================================== */
+    html.mobile-drawer-open,
+    body.mobile-drawer-open {
+      overflow: hidden !important;
+      touch-action: none !important;
+      height: 100% !important;
+      overscroll-behavior: none !important;
+    }
+
+    #mobileDrawer {
+      position: fixed !important;
+      top: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      height: 100dvh !important;
+      max-height: 100dvh !important;
+      overflow: hidden !important; /* Outer container NEVER scrolls - fixes double-scroll lag */
+      backdrop-filter: none !important; /* Eliminate expensive GPU blur on every scroll frame */
+      -webkit-backdrop-filter: none !important;
+      will-change: transform !important;
+      transform: translate3d(100%, 0, 0) !important;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      z-index: 60 !important;
+      box-shadow: -8px 0 32px rgba(0, 0, 0, 0.45) !important;
+      contain: paint !important;
+    }
+
+    #mobileDrawer.translate-x-0,
+    #mobileDrawer.open {
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    [dir="rtl"] #mobileDrawer {
+      right: auto !important;
+      left: 0 !important;
+      transform: translate3d(-100%, 0, 0) !important;
+      box-shadow: 8px 0 32px rgba(0, 0, 0, 0.45) !important;
+    }
+
+    [dir="rtl"] #mobileDrawer.translate-x-0,
+    [dir="rtl"] #mobileDrawer.open {
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    /* Fixed Header & Footer inside Drawer */
+    #mobileDrawerHeader {
+      flex-shrink: 0 !important;
+      position: relative !important;
+      z-index: 10 !important;
+      transform: translateZ(0) !important;
+    }
+
+    #mobileDrawerFooter {
+      flex-shrink: 0 !important;
+      position: relative !important;
+      z-index: 10 !important;
+      transform: translateZ(0) !important;
+    }
+
+    /* Single Dedicated High-Performance Smooth Scroll Container */
+    #mobileDrawerContent,
+    #mobileDrawer > .flex-1 {
+      flex: 1 1 auto !important;
+      min-height: 0 !important; /* Critical for flex child scroll */
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      -webkit-overflow-scrolling: touch !important; /* 60fps/120fps iOS momentum */
+      overscroll-behavior: contain !important; /* Prevents scroll chaining to parent body */
+      overscroll-behavior-y: contain !important;
+      touch-action: pan-y !important;
+      contain: content !important; /* Isolate layout & paint calculations */
+      will-change: scroll-position !important;
+    }
+
+    /* Fast, Lightweight Scrollbar */
+    #mobileDrawerContent::-webkit-scrollbar,
+    #mobileDrawer > .flex-1::-webkit-scrollbar {
+      width: 4px !important;
+    }
+    #mobileDrawerContent::-webkit-scrollbar-track,
+    #mobileDrawer > .flex-1::-webkit-scrollbar-track {
+      background: transparent !important;
+    }
+    #mobileDrawerContent::-webkit-scrollbar-thumb,
+    #mobileDrawer > .flex-1::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.35) !important;
+      border-radius: 9999px !important;
+    }
+
+    /* Keep Drawer Buttons Lightweight during scroll */
+    #mobileDrawer .btn-3d {
+      transform-style: flat !important;
+      perspective: none !important;
+    }
+
+    #authModal {
+      z-index: 70 !important;
+    }
+
+    /* Enhanced Ambient Shadow & Border on Scroll */
+    #mainHeader.scrolled {
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.15) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+    }
+    html:not(.dark) #mainHeader.scrolled {
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 0 15px rgba(212, 175, 55, 0.2) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.45) !important;
+    }
+
+  
+    /* ========================================================== */
+    /* ACTIVE NAVBAR STATUS SYSTEM (DESKTOP & MOBILE)             */
+    /* ========================================================== */
+    
+    /* 1. Desktop Nav Active Links */
+    .nav-link.nav-pill-active,
+    .nav-link.active,
+    #homeDropdownBtn.nav-pill-active,
+    #homeDropdownBtn.active {
+      position: relative !important;
+      background: rgba(212, 175, 55, 0.16) !important;
+      color: #E6C665 !important;
+      border: 1px solid rgba(212, 175, 55, 0.45) !important;
+      font-weight: 700 !important;
+      border-radius: 10px !important;
+      box-shadow: 0 0 14px rgba(212, 175, 55, 0.22) !important;
+    }
+    
+    html:not(.dark) .nav-link.nav-pill-active,
+    html:not(.dark) .nav-link.active,
+    html:not(.dark) #homeDropdownBtn.nav-pill-active,
+    html:not(.dark) #homeDropdownBtn.active {
+      background: rgba(212, 175, 55, 0.18) !important;
+      color: #836511 !important;
+      border: 1px solid rgba(212, 175, 55, 0.55) !important;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 8px rgba(170, 136, 32, 0.18) !important;
+    }
+
+    /* Glowing Bottom Accent Indicator Bar for Active Desktop Link */
+    .nav-link.nav-pill-active::after,
+    .nav-link.active::after,
+    #homeDropdownBtn.nav-pill-active::after,
+    #homeDropdownBtn.active::after {
+      content: '' !important;
+      position: absolute !important;
+      bottom: -2px !important;
+      left: 15% !important;
+      right: 15% !important;
+      height: 2.5px !important;
+      background: linear-gradient(90deg, transparent, #E6C665 50%, transparent) !important;
+      border-radius: 9999px !important;
+      box-shadow: 0 0 8px #E6C665 !important;
+    }
+
+    /* 2. Desktop Dropdown Menu Active Item */
+    #homeDropdownMenu a.nav-pill-active,
+    #homeDropdownMenu a.active {
+      background: rgba(212, 175, 55, 0.2) !important;
+      color: #E6C665 !important;
+      font-weight: 700 !important;
+      border-left: 3px solid #D4AF37 !important;
+    }
+    html:not(.dark) #homeDropdownMenu a.nav-pill-active,
+    html:not(.dark) #homeDropdownMenu a.active {
+      background: rgba(212, 175, 55, 0.18) !important;
+      color: #836511 !important;
+      font-weight: 700 !important;
+      border-left: 3px solid #AA8820 !important;
+    }
+
+    /* 3. Mobile Drawer Active Link */
+    .mobile-nav-link.nav-pill-active,
+    .mobile-nav-link.active,
+    #mobileHomeLink.nav-pill-active,
+    #mobileHomeLink.active,
+    #mobileHomeAccordionBtn.nav-pill-active,
+    #mobileHomeAccordionBtn.active {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.05) 100%) !important;
+      color: #E6C665 !important;
+      border-left: 4px solid #D4AF37 !important;
+      font-weight: 700 !important;
+      box-shadow: inset 0 0 14px rgba(212, 175, 55, 0.12) !important;
+    }
+    .mobile-nav-link.nav-pill-active i,
+    .mobile-nav-link.active i,
+    #mobileHomeLink.nav-pill-active i,
+    #mobileHomeLink.active i {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) .mobile-nav-link.nav-pill-active,
+    html:not(.dark) .mobile-nav-link.active,
+    html:not(.dark) #mobileHomeLink.nav-pill-active,
+    html:not(.dark) #mobileHomeLink.active,
+    html:not(.dark) #mobileHomeAccordionBtn.nav-pill-active,
+    html:not(.dark) #mobileHomeAccordionBtn.active {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.24) 0%, rgba(212, 175, 55, 0.06) 100%) !important;
+      color: #836511 !important;
+      border-left: 4px solid #AA8820 !important;
+      font-weight: 700 !important;
+    }
+    html:not(.dark) .mobile-nav-link.nav-pill-active i,
+    html:not(.dark) .mobile-nav-link.active i,
+    html:not(.dark) #mobileHomeLink.nav-pill-active i,
+    html:not(.dark) #mobileHomeLink.active i {
+      color: #836511 !important;
+    }
+
+  
+    /* ========================================================================== */
+    /* MASTER MOBILE-FIRST RESPONSIVE ARCHITECTURE                                */
+    /* Breakpoints: 320px, 480px, 768px, 1024px                                   */
+    /* Fixes overflow, text clipping, button squeezing, and card stacking        */
+    /* ========================================================================== */
+
+    /* 1. Global Box-Sizing & Viewport Boundary Reset */
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+      -webkit-box-sizing: border-box !important;
+    }
+
+    html {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      position: relative !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      min-width: 320px !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+    }
+
+    /* 2. Semantic Containers & Sections Strict Fit */
+    main {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+    }
+
+    section {
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: clip !important;
+      position: relative !important;
+    }
+
+    /* Contain decorative ambient radial orbs */
+    [class*="blur-"],
+    [class*="aurora-orb"],
+    .ambient-orb {
+      max-width: 90vw !important;
+      pointer-events: none !important;
+    }
+
+    /* 3. Media, Canvas & SVG Fluid Scaling */
+    img, video, canvas, svg, picture, iframe {
+      max-width: 100% !important;
+      height: auto;
+    }
+
+    /* 4. Universal Typography Word-Break Protection */
+    h1, h2, h3, h4, h5, h6, p, span, a, li, button, label, input, textarea {
+      overflow-wrap: break-word !important;
+      word-break: break-word !important;
+    }
+
+    /* Fix flex input shrinking */
+    input, textarea, select {
+      min-width: 0 !important;
+    }
+
+    /* 5. Mobile Drawer Responsive Bounds */
+    #mobileDrawer {
+      width: min(88vw, 380px) !important;
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: ULTRA-COMPACT MOBILE (320px to 479px)                          */
+    /* ========================================================================== */
+    @media (max-width: 479px) {
+      /* Typography Scaling */
+      h1, .font-serif.text-3xl, .font-serif.text-4xl, .font-serif.text-5xl {
+        font-size: clamp(1.45rem, 6.2vw, 2.15rem) !important;
+        line-height: 1.22 !important;
+      }
+      h2, .font-serif.text-2xl, .font-serif.text-3xl {
+        font-size: clamp(1.25rem, 5vw, 1.75rem) !important;
+        line-height: 1.25 !important;
+      }
+      h3, .font-serif.text-xl, .font-serif.text-2xl {
+        font-size: clamp(1.05rem, 4vw, 1.35rem) !important;
+        line-height: 1.3 !important;
+      }
+      p {
+        font-size: 0.85rem !important;
+        line-height: 1.55 !important;
+      }
+
+      /* Equalized Vertical Section Spacing */
+      section {
+        padding-top: 2.75rem !important;
+        padding-bottom: 2.75rem !important;
+      }
+
+      /* Container Horizontal Padding */
+      .mx-auto.px-4,
+      .mx-auto.px-6,
+      .mx-auto.px-8,
+      [class*="max-w-"][class*="mx-auto"] {
+        padding-left: 0.875rem !important;
+        padding-right: 0.875rem !important;
+      }
+
+      /* Universal Card Stacking */
+      .grid.grid-cols-2:not(.keep-grid-mobile),
+      .grid.grid-cols-3,
+      .grid.grid-cols-4,
+      .grid.grid-cols-5,
+      .grid.grid-cols-6 {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+      }
+
+      /* 3D Action Buttons Fitting Mobile Screens */
+      .btn-3d {
+        max-width: 100% !important;
+        padding-left: 0.875rem !important;
+        padding-right: 0.875rem !important;
+        font-size: 0.75rem !important;
+      }
+
+      /* Action Button Groups Wrap Vertically */
+      .hero-cta-group,
+      .btn-group-mobile,
+      form .flex-row:not(.keep-inline) {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 0.75rem !important;
+      }
+
+      /* Stat rows inside cards: 2 columns instead of 3 or 4 */
+      .grid.grid-cols-3.text-center,
+      .grid.grid-cols-4.text-center {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.5rem !important;
+      }
+
+      /* Modal and Auth Card Max Bounds */
+      #authModalBox,
+      #loginCard,
+      #registerCard {
+        width: 100% !important;
+        max-width: calc(100vw - 1.5rem) !important;
+        padding: 1.25rem 1rem !important;
+        margin: 0.75rem auto !important;
+      }
+
+      /* Header Logo Typography on 320px */
+      #brandLogoTitle {
+        font-size: 11.5px !important;
+      }
+      #brandLogoSubtitle {
+        font-size: 7px !important;
+      }
+
+      /* Footer Columns Stacking */
+      footer .grid.grid-cols-12,
+      footer .grid.grid-cols-2,
+      footer .grid.grid-cols-3,
+      footer .grid.grid-cols-4 {
+        grid-template-columns: 1fr !important;
+        gap: 1.75rem !important;
+      }
+    }
+
+    /* Special 320px Micro Screen Tuning */
+    @media (max-width: 340px) {
+      #mobileDrawer {
+        width: 96vw !important;
+      }
+      .mx-auto.px-4,
+      .mx-auto.px-6 {
+        padding-left: 0.625rem !important;
+        padding-right: 0.625rem !important;
+      }
+      h1 {
+        font-size: 1.4rem !important;
+      }
+      .btn-3d {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        height: 2.5rem !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: MOBILE LANDSCAPE & PHABLET (480px to 767px)                    */
+    /* ========================================================================== */
+    @media (min-width: 480px) and (max-width: 767px) {
+      h1, .font-serif.text-3xl, .font-serif.text-4xl, .font-serif.text-5xl {
+        font-size: clamp(1.85rem, 5vw, 2.5rem) !important;
+        line-height: 1.22 !important;
+      }
+      h2 {
+        font-size: clamp(1.45rem, 4vw, 1.95rem) !important;
+      }
+      section {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+      }
+      .grid.grid-cols-3,
+      .grid.grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1.25rem !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: TABLET PORTRAIT (768px to 1023px)                              */
+    /* ========================================================================== */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      h1, .font-serif.text-4xl, .font-serif.text-5xl {
+        font-size: clamp(2.2rem, 4vw, 3rem) !important;
+      }
+      section {
+        padding-top: 4.5rem !important;
+        padding-bottom: 4.5rem !important;
+      }
+      .grid.grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      .lg\:col-span-12,
+      .lg\:col-span-7,
+      .lg\:col-span-5 {
+        grid-column: span 12 / span 12 !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: DESKTOP & WIDE DISPLAYS (1024px+)                              */
+    /* ========================================================================== */
+    @media (min-width: 1024px) {
+      section {
+        padding-top: 5.5rem !important;
+        padding-bottom: 5.5rem !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* RTL ICONS & TEXT FLOW RESILIENCE                                           */
+    /* ========================================================================== */
+    [dir="rtl"] {
+      text-align: right;
+    }
+    [dir="rtl"] [data-lucide="chevron-right"],
+    [dir="rtl"] [data-lucide="arrow-right"],
+    [dir="rtl"] .rtl-flip {
+      transform: scaleX(-1) !important;
+    }
+    [dir="rtl"] [data-lucide="chevron-left"],
+    [dir="rtl"] [data-lucide="arrow-left"] {
+      transform: scaleX(-1) !important;
+    }
+    [dir="rtl"] .border-l-4 {
+      border-left-width: 0 !important;
+      border-right-width: 4px !important;
+    }
+    [dir="rtl"] .border-l-2 {
+      border-left-width: 0 !important;
+      border-right-width: 2px !important;
+    }
+    [dir="rtl"] .pl-9 {
+      padding-left: 0 !important;
+      padding-right: 2.25rem !important;
+    }
+
+  </style>
+</head>
+
+<body class="has-navbar bg-[#0A0C10] text-slate-100 font-sans antialiased transition-colors duration-300 min-h-screen flex flex-col justify-between selection:bg-gold-500 selection:text-black">
+
+  <!-- ======================================================== -->
+  <!-- MAIN NAVBAR HEADER -->
+  <!-- ======================================================== -->
+  <header id="mainHeader" class="fixed top-0 left-0 right-0 z-40 w-full transition-all duration-300 glass-nav">
+    <div class="max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between gap-2">
+
+      <!-- ==================================================== -->
+      <!-- 1. LEFT: LOGO (Ultra-Sleek & Refined Luxury Emblem) -->
+      <!-- ==================================================== -->
+      <div class="flex items-center gap-2.5 flex-shrink-0">
+        <a href="index.html" id="brandLogo" class="group flex items-center gap-2 focus:outline-none" aria-label="Rug & Carpet Store Homepage">
+          
+          <!-- Compact 3D Interwoven Loom Emblem (SVG) -->
+          <div class="relative w-7 h-7 sm:w-7.5 sm:h-7.5 rounded-[7px] bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 p-[1.1px] shadow-[0_2px_8px_rgba(212,175,55,0.22)] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-1">
+            <div class="w-full h-full bg-obsidian-950 rounded-[5.5px] flex items-center justify-center overflow-hidden relative">
+              <!-- Radial sheen -->
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,175,55,0.3),transparent_70%)]"></div>
+              
+              <!-- Creative Carpet Weave Geometric Monogram SVG -->
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-400 transition-transform duration-500 group-hover:scale-110" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+                <!-- Interlacing Rug Loom Strands -->
+                <rect x="7" y="7" width="26" height="26" rx="5" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 1.5" class="opacity-70" />
+                <path d="M12 12L28 28M28 12L12 28" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M20 6V34M6 20H34" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <circle cx="20" cy="20" r="4.5" fill="#D4AF37" stroke="#121008" stroke-width="1.2" />
+                <!-- Corner Knots -->
+                <circle cx="10" cy="10" r="1.5" fill="currentColor" />
+                <circle cx="30" cy="10" r="1.5" fill="currentColor" />
+                <circle cx="10" cy="30" r="1.5" fill="currentColor" />
+                <circle cx="30" cy="30" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Brand Typography (Without Atelier Badge, Compact) -->
+          <div class="flex flex-col">
+            <span id="brandLogoTitle" class="font-serif font-bold text-[12.5px] sm:text-[14px] tracking-[0.05em] group-hover:text-gold-500 transition-colors uppercase leading-tight">
+              Rug & Carpet
+            </span>
+            <span id="brandLogoSubtitle" class="text-[7.5px] sm:text-[8px] tracking-[0.16em] uppercase font-medium leading-none mt-0.5 transition-colors">
+              Handcrafted &bull; Heritage
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- ==================================================== -->
+      <!-- 2. CENTER: NAVBAR MENU (Laptop / Desktop View) -->
+      <!-- ==================================================== -->
+      <nav id="desktopMenu" class="hidden xl:flex items-center justify-center flex-1 max-w-5xl px-2">
+        <ul class="flex items-center gap-0.5 2xl:gap-1 text-[12px] xl:text-[12.5px] 2xl:text-[13.5px] font-medium tracking-wide">
+          
+          <!-- HOME (With Smooth Dropdown for Home 1 and Home 2) -->
+          <li class="relative group/home" id="homeDropdownWrapper">
+            <a 
+              href="index.html" 
+              id="homeDropdownBtn" 
+              class="flex items-center gap-1 px-2 2xl:px-2.5 py-2 rounded-lg transition-colors focus:outline-none"
+              aria-expanded="false" 
+              aria-haspopup="true"
+            >
+              <span>Home</span>
+              <i data-lucide="chevron-down" id="homeChevron" class="w-3.5 h-3.5 transition-transform duration-300 group-hover/home:rotate-180"></i>
+            </a>
+
+            <!-- Home Dropdown Menu (Home 1 and Home 2 Only) -->
+            <div 
+              id="homeDropdownMenu" 
+              class="dropdown-menu absolute top-full left-0 mt-2 w-32 rounded-xl p-1.5 shadow-xl glass-nav opacity-0 invisible translate-y-2 pointer-events-none transition-all duration-200 group-hover/home:opacity-100 group-hover/home:visible group-hover/home:translate-y-0 group-hover/home:pointer-events-auto z-50"
+            >
+              <a href="index.html" class="block px-3 py-2 rounded-lg text-xs font-semibold transition-colors">
+                Home 1
+              </a>
+              <a href="home-2.html" class="block px-3 py-2 rounded-lg text-xs font-semibold transition-colors">
+                Home 2
+              </a>
+            </div>
+          </li>
+
+          <!-- Remaining 10 Direct Navbar Links -->
+          <li>
+            <a href="about.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">About</a>
+          </li>
+          <li>
+            <a href="products.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Products</a>
+          </li>
+          <li>
+            <a href="collections.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Collections</a>
+          </li>
+          <li>
+            <a href="custom-rugs.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap relative">
+              <span>Custom Rugs</span>
+              <span class="absolute -top-1 right-0 text-[8px] font-black uppercase px-1 py-0.2 rounded-full bg-gold-500 text-black shadow-sm">Bespoke</span>
+            </a>
+          </li>
+          <li>
+            <a href="rug-guide.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Rug Guide</a>
+          </li>
+          <li>
+            <a href="craftmanship.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Craftmanship</a>
+          </li>
+          <li>
+            <a href="showroom.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Showroom</a>
+          </li>
+          <li>
+            <a href="inspiration.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap nav-pill-active active">Inspiration</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- ==================================================== -->
+      <!-- 3. RIGHT: TOGGLES & 3D BUTTONS (Desktop: Visible | Mobile/Tab: Inside Hamburger) -->
+      <!-- ==================================================== -->
+      <div class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0">
+
+        <!-- All Right-side Controls for Laptop / Desktop View -->
+        <div class="hidden xl:flex items-center gap-2.5">
+          <!-- Dark Mode Toggle Button (3D - Reduced Size) -->
+          <button 
+            id="darkModeToggle" 
+            class="btn-3d-icon w-9 h-9 rounded-xl focus:outline-none flex items-center justify-center" 
+            aria-label="Toggle Dark or Light Mode"
+            title="Toggle Dark / Light Theme"
+          >
+            <!-- Sun Icon (Shown in Dark Mode) -->
+            <i data-lucide="sun" id="sunIcon" class="w-4 h-4 text-gold-400 transition-transform duration-300"></i>
+            <!-- Moon Icon (Shown in Light Mode) -->
+            <i data-lucide="moon" id="moonIcon" class="w-4 h-4 text-slate-700 hidden transition-transform duration-300"></i>
+          </button>
+
+          <!-- Right to Left (RTL) Toggle Button (3D - Reduced Size & Right-Left Icon) -->
+          <button 
+            id="rtlToggle" 
+            class="btn-3d-icon w-9 h-9 rounded-xl focus:outline-none flex items-center justify-center" 
+            aria-label="Toggle Direction Right to Left"
+            title="Toggle Layout Direction (LTR / RTL)"
+          >
+            <!-- Right-Left Bidirectional Arrow Icon (⇄) -->
+            <svg id="rtlIcon" class="w-4 h-4 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8h16M16 4l4 4-4 4" />
+              <path d="M20 16H4M8 12l-4 4 4 4" />
+            </svg>
+          </button>
+
+          <!-- 3D Login Button (Exact Same Height & Width as Sign Up) -->
+          <button 
+            id="loginBtnDesktop" 
+            class="btn-3d btn-3d-dark sheen w-24 h-9 text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center text-center"
+           onclick="window.location.href='login.html'">
+            <span>Login</span>
+          </button>
+
+          <!-- 3D Sign Up Button (Exact Same Height & Width as Login) -->
+          <button 
+            id="signUpBtnDesktop" 
+            class="btn-3d btn-3d-gold sheen w-24 h-9 text-xs font-extrabold uppercase tracking-wider rounded-xl flex items-center justify-center text-center"
+           onclick="window.location.href='registeration.html'">
+            <span>Sign Up</span>
+          </button>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- MOBILE & TABLET HAMBURGER BUTTON (Right side) -->
+        <!-- ==================================================== -->
+        <button 
+          id="hamburgerBtn" 
+          class="xl:hidden btn-3d-icon w-11 h-11 text-gold-400 focus:outline-none relative z-50 flex items-center justify-center"
+          aria-label="Toggle Navigation Menu"
+          aria-expanded="false"
+        >
+          <div class="w-5 h-4 flex flex-col justify-between items-center relative">
+            <span id="hamBarTop" class="w-full h-0.5 bg-gold-400 rounded-full transition-all duration-300 origin-center"></span>
+            <span id="hamBarMid" class="w-full h-0.5 bg-gold-400 rounded-full transition-all duration-200"></span>
+            <span id="hamBarBot" class="w-full h-0.5 bg-gold-400 rounded-full transition-all duration-300 origin-center"></span>
+          </div>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- MOBILE & TABLET HAMBURGER MENU DRAWER -->
+  <!-- ======================================================== -->
+  <div id="mobileDrawerOverlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden"></div>
+
+    <aside 
+    id="mobileDrawer" 
+    class="mobile-drawer fixed top-0 right-0 h-full w-[85%] max-w-md z-50 shadow-2xl transform translate-x-full flex flex-col justify-between overflow-hidden xl:hidden"
+    aria-label="Mobile Navigation Menu"
+  >
+    <!-- Drawer Header -->
+    <div id="mobileDrawerHeader" class="p-6 border-b flex items-center justify-between transition-colors">
+      <a href="index.html" class="flex items-center gap-2 focus:outline-none cursor-pointer" aria-label="Rug & Carpet Store Homepage">
+        <div class="w-7 h-7 rounded-[7px] bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 p-[1.1px] shadow-md">
+          <div class="w-full h-full bg-obsidian-950 rounded-[5.5px] flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-gold-400" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+              <path d="M12 12L28 28M28 12L12 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="20" cy="20" r="4" fill="#D4AF37" />
+            </svg>
+          </div>
+        </div>
+        <div>
+          <div id="mobileDrawerTitle" class="font-serif font-bold text-xs sm:text-sm tracking-wide uppercase leading-tight transition-colors">Rug & Carpet</div>
+          <div id="mobileDrawerSubtitle" class="text-[7.5px] uppercase tracking-widest font-medium leading-none mt-0.5 transition-colors">Handcrafted &bull; Heritage</div>
+        </div>
+      </a>
+
+      <!-- Close Icon inside drawer header -->
+      <button id="closeDrawerBtn" class="btn-3d-icon w-9 h-9" aria-label="Close menu">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Navigation Links (All required items inside) -->
+    <div id="mobileDrawerContent" class="p-6 space-y-6 flex-1 overflow-y-auto">
+      
+      <!-- Home Link & Submenu Toggle -->
+      <div class="space-y-1">
+        <div class="w-full flex items-center justify-between p-1 rounded-xl transition-colors">
+          <a 
+            href="index.html" 
+            id="mobileHomeLink" 
+            class="mobile-nav-link flex-1 flex items-center gap-3 p-2.5 rounded-lg hover:bg-gold-500/10 text-sm font-semibold transition-colors"
+          >
+            <i data-lucide="home" class="w-4 h-4 text-gold-400"></i>
+            <span>Home</span>
+          </a>
+          <button 
+            id="mobileHomeAccordionBtn" 
+            class="p-2.5 text-slate-400 hover:text-gold-400 focus:outline-none" 
+            aria-label="Toggle Home Submenu"
+          >
+            <i data-lucide="chevron-down" id="mobileHomeChevron" class="w-4 h-4 transition-transform duration-200"></i>
+          </button>
+        </div>
+
+        <div id="mobileHomeSubmenu" class="hidden pl-9 space-y-1 pt-1">
+          <a href="index.html" class="mobile-nav-link block p-2 rounded-lg text-xs font-semibold transition-colors">
+            Home 1
+          </a>
+          <a href="home-2.html" class="mobile-nav-link block p-2 rounded-lg text-xs font-semibold transition-colors">
+            Home 2
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation Category: Collections & Atelier -->
+      <nav class="space-y-1">
+        <div class="mobile-section-heading text-[10px] font-bold uppercase tracking-wider px-3 pt-2">Collections &amp; Atelier</div>
+        
+        <a href="about.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="info" class="w-4 h-4 text-gold-400/80"></i>
+          <span>About</span>
+        </a>
+        
+        <a href="products.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="package" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Products</span>
+        </a>
+
+        <a href="collections.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="layers" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Collections</span>
+        </a>
+
+        <a href="custom-rugs.html" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="scissors" class="w-4 h-4 text-gold-400/80"></i>
+            <span>Custom Rugs</span>
+          </div>
+          <span class="text-[9px] font-bold uppercase px-2 py-0.5 rounded-full bg-gold-500 text-black">Bespoke</span>
+        </a>
+
+        <a href="rug-guide.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="book-open" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Rug Guide</span>
+        </a>
+
+        <a href="craftmanship.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="feather" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Craftmanship</span>
+        </a>
+
+        <a href="showroom.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="map-pin" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Showroom</span>
+        </a>
+
+        <a href="inspiration.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors nav-pill-active active">
+          <i data-lucide="compass" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Inspiration</span>
+        </a>
+
+        <a href="contact.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="mail" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <!-- Preferences Section Inside Drawer: Dark Mode & RTL -->
+      <div class="pt-4 border-t border-white/10 space-y-3">
+        <div class="mobile-section-heading text-[10px] font-bold uppercase tracking-wider">Settings & Direction</div>
+        
+        <div class="drawer-pref-box flex items-center justify-between p-3 rounded-xl transition-colors">
+          <span class="text-xs font-semibold flex items-center gap-2">
+            <i data-lucide="moon" class="w-4 h-4 text-gold-400"></i>
+            Theme Mode
+          </span>
+          <button id="mobileDarkModeToggle" class="btn-3d-icon w-9 h-9 flex items-center justify-center rounded-xl" aria-label="Toggle Dark Mode in Mobile Menu">
+            <i data-lucide="sun" id="mobileSunIcon" class="w-4 h-4 text-gold-400"></i>
+            <i data-lucide="moon" id="mobileMoonIcon" class="w-4 h-4 text-slate-700 hidden"></i>
+          </button>
+        </div>
+
+        <div class="drawer-pref-box flex items-center justify-between p-3 rounded-xl transition-colors">
+          <span class="text-xs font-semibold flex items-center gap-2">
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8h16M16 4l4 4-4 4" />
+              <path d="M20 16H4M8 12l-4 4 4 4" />
+            </svg>
+            Layout Direction
+          </span>
+          <button id="mobileRtlToggle" class="btn-3d-icon w-9 h-9 flex items-center justify-center rounded-xl" aria-label="Toggle Direction in Mobile Menu" title="Toggle Layout Direction (LTR / RTL)">
+            <svg id="mobileRtlIcon" class="w-4 h-4 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8h16M16 4l4 4-4 4" />
+              <path d="M20 16H4M8 12l-4 4 4 4" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer: 3D Action Buttons (Sign Up & Login - Identical Height & Width) -->
+    <div id="mobileDrawerFooter" class="p-5 border-t space-y-2.5 transition-colors">
+      <button id="mobileSignUpBtn" class="btn-3d btn-3d-gold sheen w-full h-11 text-xs font-extrabold uppercase tracking-wider flex items-center justify-center rounded-xl" onclick="window.location.href='registeration.html'">
+        <span>Sign Up</span>
+      </button>
+
+      <button id="mobileLoginBtn" class="btn-3d btn-3d-dark sheen w-full h-11 text-xs font-bold uppercase tracking-wider flex items-center justify-center rounded-xl" onclick="window.location.href='login.html'">
+        <span>Login</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Central semantic canvas -->
+    <main class="flex-1">
+
+    <!-- ======================================================== -->
+    <!-- SECTION 1: HERO — LIVING ROOM INSPIRATION & SPATIAL ANCHOR -->
+    <!-- ======================================================== -->
+    <section id="insp-living-room" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
+      <!-- Ambient Radial Lighting -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left Column: Narrative, Lighting Selector & Quick Specs (7 cols) -->
+          <div class="lg:col-span-7 space-y-6 sm:space-y-8" id="livingHeroTextCol">
+            
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>Spatial Masterpieces &bull; Living Room Inspiration</span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
+              Where Architecture Meets the <span class="bg-gradient-to-r from-gold-500 via-amber-400 to-gold-600 bg-clip-text text-transparent">Handwoven Loom</span>
+            </h1>
+
+            <p class="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-2xl">
+              A rug is the foundation of interior harmony. In double-height living salons, sun-drenched lofts, and classic drawing rooms, our hand-knotted creations define acoustic boundaries, anchor sculptural furniture, and reflect shifting natural daylight.
+            </p>
+
+            <!-- Interactive Room Mood / Lighting Switcher -->
+            <div class="space-y-3 pt-1">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                  Simulate Ambient Lighting Character:
+                </span>
+                <span id="lightTempLabel" class="text-[10px] font-mono text-gold-600 dark:text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded">
+                  5000K Natural Solarium
+                </span>
+              </div>
+
+              <div class="grid grid-cols-3 gap-2.5" id="lightingMoodTabs">
+                <button class="mood-tab-btn active-mood-tab p-3 rounded-2xl border transition-all text-left group" data-mood="daylight" data-temp="5000K Natural Solarium" data-desc="Reveals high-low pile shearing and subtle botanical dye nuances under direct southern daylight.">
+                  <div class="flex items-center gap-2 mb-1">
+                    <i data-lucide="sun" class="w-3.5 h-3.5 text-amber-500"></i>
+                    <span class="text-xs font-bold text-slate-900 dark:text-white">Daylight</span>
+                  </div>
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 font-mono block">5000K Clear</span>
+                </button>
+
+                <button class="mood-tab-btn p-3 rounded-2xl border border-slate-200/80 dark:border-white/10 bg-white/60 dark:bg-obsidian-900/60 hover:bg-gold-500/10 transition-all text-left group" data-mood="golden" data-temp="2700K Warm Twilight" data-desc="Amber lamps highlight the natural golden lanolin sheen of Tibetan wool, imparting deep hearth warmth.">
+                  <div class="flex items-center gap-2 mb-1">
+                    <i data-lucide="sunset" class="w-3.5 h-3.5 text-gold-500"></i>
+                    <span class="text-xs font-bold text-slate-900 dark:text-white">Golden Hour</span>
+                  </div>
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 font-mono block">2700K Amber</span>
+                </button>
+
+                <button class="mood-tab-btn p-3 rounded-2xl border border-slate-200/80 dark:border-white/10 bg-white/60 dark:bg-obsidian-900/60 hover:bg-gold-500/10 transition-all text-left group" data-mood="midnight" data-temp="2200K Fireside Glow" data-desc="Soft shadows accentuate sculptural relief carving while silk highlights shimmer like liquid moonlight.">
+                  <div class="flex items-center gap-2 mb-1">
+                    <i data-lucide="flame" class="w-3.5 h-3.5 text-orange-500"></i>
+                    <span class="text-xs font-bold text-slate-900 dark:text-white">Fireside</span>
+                  </div>
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400 font-mono block">2200K Intimate</span>
+                </button>
+              </div>
+
+              <!-- Active Mood Description Box -->
+              <div id="moodDescBox" class="p-3.5 rounded-xl bg-white/80 dark:bg-obsidian-900/80 border border-slate-200/80 dark:border-white/10 text-xs text-slate-600 dark:text-slate-300">
+                Reveals high-low pile shearing and subtle botanical dye nuances under direct southern daylight.
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#insp-movements" class="btn-3d btn-3d-gold sheen px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+                <i data-lucide="compass" class="w-4 h-4"></i>
+                <span>Explore 4 Design Movements</span>
+              </a>
+              <a href="#insp-consultation" class="btn-3d btn-3d-dark sheen px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+                <i data-lucide="layers" class="w-4 h-4 text-gold-400"></i>
+                <span>Virtual Room Staging</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Visual Showcase (5 cols) -->
+          <div class="lg:col-span-5 relative" id="livingHeroVisualCol">
+            <div class="relative rounded-[32px] p-3 sm:p-4 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-2xl overflow-hidden group">
+              
+              <div class="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden bg-black/40" id="livingImageContainer">
+                <img 
+                  id="livingRoomHeroImg"
+                  src="images/insp_living_room.jpg" 
+                  alt="Sun-drenched double-height luxury penthouse living room overlooking Central Park with curved terracotta sofa and geometric rug" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+
+                <!-- Top Floating Tag -->
+                <div class="absolute top-4 left-4 bg-black/75 backdrop-blur-md border border-gold-500/40 rounded-full px-3.5 py-1 text-[11px] font-semibold text-gold-300 flex items-center gap-1.5">
+                  <i data-lucide="maximize" class="w-3.5 h-3.5 text-gold-400"></i>
+                  <span>Double-Height Penthouse Living Salon</span>
+                </div>
+
+                <!-- Bottom Glass Card -->
+                <div class="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-white">
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-serif font-bold tracking-wide">The Manhattan Skyline Commission</span>
+                    <span class="text-[10px] font-mono text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded">14' &times; 20' Custom</span>
+                  </div>
+                  <p class="text-[11px] text-slate-300 leading-snug">
+                    Architectural geometric composition in terracotta, navy, and desert bone anchoring curved bespoke upholstery.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 3 Pillar Stat Chips -->
+              <div class="grid grid-cols-3 gap-2.5 pt-3.5 text-center">
+                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
+                  <div class="font-serif font-bold text-sm sm:text-base text-gold-600 dark:text-gold-400">940+</div>
+                  <div class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">Styled Salons</div>
+                </div>
+                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
+                  <div class="font-serif font-bold text-sm sm:text-base text-gold-600 dark:text-gold-400">18</div>
+                  <div class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">Design Awards</div>
+                </div>
+                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
+                  <div class="font-serif font-bold text-sm sm:text-base text-emerald-600 dark:text-emerald-400">100%</div>
+                  <div class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">Loom Bespoke</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 2: BEDROOM INSPIRATION — THE SENSORY SANCTUARY -->
+    <!-- ======================================================== -->
+    <section id="insp-bedroom" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="moon" class="w-3.5 h-3.5"></i>
+            <span>Tactile Serenity &bull; Bedroom Inspiration</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            The Sensory Sanctuary: <span class="text-gold-500">Underfoot Serenity</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            The bedroom demands acoustic quietude, natural air purification, and sublime tactile contact upon waking. Explore how low-profile boucl&eacute; beds and sheer drapery harmonize with ribbed highland wool and Mulberry silk rugs.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left: Bedroom Imagery (6 cols) -->
+          <div class="lg:col-span-6 relative" id="bedroomImageCol">
+            <div class="relative rounded-[32px] p-3 sm:p-4 bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-2xl overflow-hidden group">
+              <div class="relative w-full aspect-[16/10] rounded-[24px] overflow-hidden bg-black/40">
+                <img 
+                  src="images/insp_bedroom.jpg" 
+                  alt="Minimalist Japandi bedroom sanctuary with zen garden view, low wooden platform furniture, daybed, and ribbed natural wool area rug" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+
+                <div class="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-gold-500/40 rounded-full px-3 py-1 text-[11px] font-semibold text-gold-300 flex items-center gap-1.5">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-400"></i>
+                  <span>Hypoallergenic &bull; Zero Chemical Off-Gassing</span>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-white">
+                  <span class="text-xs font-serif font-bold block mb-1">Japandi Primary Suite &bull; Zen Garden Flank</span>
+                  <p class="text-[11px] text-slate-300 leading-snug">
+                    Un-dyed organic wool area rug extending 36 inches on either side of the low bed frame for acoustic stillness and morning comfort.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Tactile Experience & Bedroom Rules (6 cols) -->
+          <div class="lg:col-span-6 space-y-6" id="bedroomTextCol">
+            
+            <div class="space-y-3">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 block">
+                The 3 Bedroom Sizing &amp; Placement Principles:
+              </span>
+
+              <!-- Principle 1 -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-sm space-y-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-serif font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-gold-500"></i>
+                    <span>The 36-Inch Barefoot Flank Rule</span>
+                  </h4>
+                  <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Golden Ratio</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Position the carpet perpendicular under the lower two-thirds of the bed, ensuring a generous 36-inch border extending past both sides and footboard.
+                </p>
+              </div>
+
+              <!-- Principle 2 -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-sm space-y-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-serif font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+                    <i data-lucide="volume-x" class="w-4 h-4 text-blue-500"></i>
+                    <span>Acoustic Reverberation Dampening (-14 dB)</span>
+                  </h4>
+                  <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">NRC 0.85</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Highland sheep fleece acts as a micro-cellular sound baffle, absorbing room flutter echo and footstep noise for deep, restorative sleep.
+                </p>
+              </div>
+
+              <!-- Principle 3 -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-sm space-y-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-serif font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+                    <i data-lucide="wind" class="w-4 h-4 text-emerald-500"></i>
+                    <span>Humidity Buffer &bull; Natural Lanolin Guard</span>
+                  </h4>
+                  <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded">Zero VOC</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Pure unbleached wool naturally absorbs and releases airborne moisture, regulating nocturnal bedroom climate without synthetic treatments.
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="#insp-consultation" class="btn-3d btn-3d-gold sheen px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+                <i data-lucide="edit-3" class="w-4 h-4"></i>
+                <span>Get Bedroom Sizing Consultation</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 3: DINING ROOM & OFFICE INSPIRATION — DUAL SALON -->
+    <!-- ======================================================== -->
+    <section id="insp-dining-office" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+            <span>Dining Room Inspiration &bull; Office Inspiration</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Dining Room Inspiration &amp; <span class="text-gold-500">Office Inspiration</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            Spaces where utility and ceremony coalesce. From banquets requiring smooth chair pullbacks and stain resistance, to private library studies demanding silence and castor-wheel resilience.
+          </p>
+
+          <!-- Dual Space Selector Pills -->
+          <div class="inline-flex p-1.5 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 mt-2">
+            <button class="space-tab-btn active-space-tab px-5 py-2.5 rounded-xl text-xs font-bold transition-all" data-space="dining">
+              The Grand Dining Salon
+            </button>
+            <button class="space-tab-btn px-5 py-2.5 rounded-xl text-xs font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-gold-500" data-space="office">
+              The Executive Library Study
+            </button>
+          </div>
+        </div>
+
+        <!-- Wide Feature Showcase -->
+        <div class="rounded-[32px] overflow-hidden p-3 sm:p-5 bg-white/80 dark:bg-obsidian-900/80 border border-slate-200/80 dark:border-white/10 shadow-2xl group mb-8" id="diningOfficeBanner">
+          <div class="relative w-full aspect-[21/9] sm:aspect-[16/7] rounded-[24px] overflow-hidden bg-black/50">
+            <img 
+              id="diningOfficeImg"
+              src="images/insp_dining_office.jpg" 
+              alt="Grand panoramic luxury reception salon with marble fireplace, chandelier, and bespoke ivory and champagne silk carpet" 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none"></div>
+
+            <div class="absolute top-4 left-4 sm:top-6 sm:left-6 bg-black/80 backdrop-blur-md border border-gold-500/40 rounded-full px-4 py-1.5 text-xs font-semibold text-gold-300 flex items-center gap-2">
+              <i data-lucide="award" class="w-3.5 h-3.5 text-gold-400"></i>
+              <span id="spaceTagline">Banquet Scale &bull; 24-Inch Pullback Clearance</span>
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 sm:p-6 text-white flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div class="space-y-1">
+                <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 block" id="spaceCategoryBadge">Dining Room Architecture</span>
+                <h3 class="font-serif text-lg sm:text-xl font-bold" id="spaceHeadline">The Champagne Salon &amp; Banquet Table Alignment</h3>
+                <p class="text-xs text-slate-300 max-w-xl" id="spaceParagraph">
+                  Generous 24-inch borders ensure dining chairs remain seated on the dense wool-silk pile even when guests slide back from dinner.
+                </p>
+              </div>
+              <a href="#insp-consultation" class="btn-3d btn-3d-gold sheen px-5 py-3 text-xs font-bold uppercase rounded-xl flex-shrink-0 inline-flex items-center gap-2">
+                <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                <span>Request Room Plan</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Performance Pillars for Selected Space -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="spacePillarsGrid">
+          
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-2">
+            <span class="text-[10px] font-mono uppercase tracking-wider text-gold-600 dark:text-gold-400 font-bold block" id="pillar1Sub">Dimensional Guideline</span>
+            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white" id="pillar1Title">24-Inch Chair Perimeter</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed" id="pillar1Desc">
+              Measure table width and length, then add a minimum of 48 inches to each axis so rear chair legs never catch on rug edges.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-2">
+            <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block" id="pillar2Sub">Weave Resilience</span>
+            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white" id="pillar2Title">Natural Stain Repellence</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed" id="pillar2Desc">
+              High-altitude sheep fleece contains natural protective lanolin, allowing wine, oils, and spills to be blotted away effortlessly.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-2">
+            <span class="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold block" id="pillar3Sub">Pile Specification</span>
+            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white" id="pillar3Title">Low-Shear Flatweave or 6mm Pile</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed" id="pillar3Desc">
+              A dense 6mm knot pile prevents chair dragging marks while providing rich acoustic sound dampening during lively dinner conversations.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 4: THE 4 INTERIOR MOVEMENTS — MINIMALIST, LUXURY, TRADITIONAL, MODERN -->
+    <!-- ======================================================== -->
+    <section id="insp-movements" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+            <span>The Design Anthology &bull; 4 Architectural Movements</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Minimalist, Luxury, Traditional &amp; <span class="text-gold-500">Modern Interiors</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            No single aesthetic defines the contemporary collector. We examine the four great interior movements and show how curated rugs harmonize with diverse architectural sensibilities.
+          </p>
+        </div>
+
+        <!-- Architectural Movements Showcase Ribbon -->
+        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-12" id="movementsShowcaseBanner">
+          <div class="relative w-full aspect-[21/9] sm:aspect-[24/8] rounded-2xl overflow-hidden bg-black/40">
+            <img src="images/insp_four_styles.jpg" alt="Curated architectural gallery showcasing Minimalist, Luxury, Traditional and Modern interiors" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent flex items-center p-6 sm:p-10">
+              <div class="max-w-xl text-white space-y-2">
+                <span class="text-gold-400 text-[11px] font-mono uppercase tracking-widest font-bold">Curated Architectural Disciplines</span>
+                <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold">Four Paradigms of Spatial Harmony</h3>
+                <p class="text-xs sm:text-sm text-slate-300 hidden sm:block">From contemplative negative space to palace-scale silk luster, explore how our looms adapt to distinct design languages.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Movement Quadrant Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12" id="movementsGrid">
+          
+          <!-- Movement 1: Minimalist -->
+          <div class="movement-card p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-4 transition-all duration-300 hover:border-gold-500/40 hover:-translate-y-1">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 dark:bg-white/5 relative">
+              <img src="images/col_minimalist.jpg" alt="Minimalist Japandi interior with textured wool rug" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <span class="absolute top-3 left-3 bg-black/80 text-gold-400 text-[10px] font-mono px-2 py-0.5 rounded backdrop-blur-md">Movement 01</span>
+            </div>
+            <div>
+              <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">Wabi-Sabi &bull; Monolithic Calm</div>
+              <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white mt-0.5">Minimalist Interiors</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                Emphasis on un-dyed Tibetan highland wool, raised geological rib shearing, neutral travertine palettes, and uninterrupted negative space.
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 dark:border-white/10 space-y-1 text-[11px]">
+              <div class="flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Key Materials:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Un-dyed Wool, Flax</span>
+              </div>
+              <div class="flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Ideal Backing:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">White Oak, Concrete</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movement 2: Luxury -->
+          <div class="movement-card p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-4 transition-all duration-300 hover:border-gold-500/40 hover:-translate-y-1">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 dark:bg-white/5 relative">
+              <img src="images/col_luxury_silk.jpg" alt="Palatial luxury interior with chandelier and imperial silk carpet" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <span class="absolute top-3 left-3 bg-black/80 text-gold-400 text-[10px] font-mono px-2 py-0.5 rounded backdrop-blur-md">Movement 02</span>
+            </div>
+            <div>
+              <div class="text-[10px] font-mono uppercase tracking-wider text-gold-600 dark:text-gold-400 font-bold">Imperial Opulence &bull; High Luster</div>
+              <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white mt-0.5">Luxury Interiors</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                High-knot density Mulberry filament silk, prismatic light reflection under chandeliers, jewel-toned lapis and gold, and palace-scale dimensions.
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 dark:border-white/10 space-y-1 text-[11px]">
+              <div class="flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Key Materials:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Pure Mulberry Silk</span>
+              </div>
+              <div class="flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Ideal Backing:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Calacatta Marble, Brass</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movement 3: Traditional -->
+          <div class="movement-card p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-4 transition-all duration-300 hover:border-gold-500/40 hover:-translate-y-1">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 dark:bg-white/5 relative">
+              <img src="images/col_heritage.jpg" alt="Traditional Persian Sultanabad medallion carpet on dark oak floor" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <span class="absolute top-3 left-3 bg-black/80 text-gold-400 text-[10px] font-mono px-2 py-0.5 rounded backdrop-blur-md">Movement 03</span>
+            </div>
+            <div>
+              <div class="text-[10px] font-mono uppercase tracking-wider text-amber-600 dark:text-amber-400 font-bold">Generational Provenance &bull; Heritage</div>
+              <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white mt-0.5">Traditional Interiors</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                Centuries-old Persian palmettes, Caucasian geometric motifs, aged botanical madder root dyes, and double-knotted historical resilience.
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 dark:border-white/10 space-y-1 text-[11px]">
+              <div class="flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Key Materials:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Hand-Spun Fleece, Dyes</span>
+              </div>
+              <div class="flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Ideal Backing:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Dark Herringbone, Stone</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Movement 4: Modern -->
+          <div class="movement-card p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-4 transition-all duration-300 hover:border-gold-500/40 hover:-translate-y-1">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 dark:bg-white/5 relative">
+              <img src="images/col_modern_living.jpg" alt="Modern architectural living room with modular bouclé sofa and wavy carved rug" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <span class="absolute top-3 left-3 bg-black/80 text-gold-400 text-[10px] font-mono px-2 py-0.5 rounded backdrop-blur-md">Movement 04</span>
+            </div>
+            <div>
+              <div class="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold">Bauhaus Geometry &bull; Sculptural Relief</div>
+              <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white mt-0.5">Modern Interiors</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                Asymmetric spatial layouts, high-low carved pile contours, architectural abstract geometries, and bold contemporary conversational forms.
+              </p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 dark:border-white/10 space-y-1 text-[11px]">
+              <div class="flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Key Materials:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Worsted Wool, Bamboo</span>
+              </div>
+              <div class="flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Ideal Backing:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Terrazzo, Smoked Walnut</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 5: RUG STYLING IDEAS & PLACEMENT BLUEPRINT -->
+    <!-- ======================================================== -->
+    <section id="insp-styling-ideas" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
+            <span>Curatorial Methodology &bull; Styling Ideas</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Master Rug Styling Ideas &amp; <span class="text-gold-500">Placement Rules</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            Mastering scale, texture layering, and light orientation transforms a room from furnished to curated. Follow our atelier's five golden styling theorems.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left: Flatlay Styling Imagery (5 cols) -->
+          <div class="lg:col-span-5 relative" id="stylingFlatlayCol">
+            <div class="relative rounded-[32px] p-3 sm:p-4 bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-2xl overflow-hidden group">
+              <div class="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden bg-black/40">
+                <img 
+                  src="images/insp_styling_ideas.jpg" 
+                  alt="Interior designer styling flatlay with raw sheep fleece, spun silk hanks, indigo bowls, and natural botanical roots" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+
+                <div class="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-gold-500/40 rounded-full px-3 py-1 text-[11px] font-semibold text-gold-300 flex items-center gap-1.5">
+                  <i data-lucide="feather" class="w-3.5 h-3.5 text-gold-400"></i>
+                  <span>Material Contrast &bull; Raw to Refined</span>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-white">
+                  <span class="text-xs font-serif font-bold block mb-1">Tactile Moodboard Flatlay</span>
+                  <p class="text-[11px] text-slate-300 leading-snug">
+                    Balancing rough natural jute and raw highland fleece against high-luster Mulberry silk yarn creates dimensional luxury.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Interactive Diagnostic Teaser -->
+              <div class="mt-4 p-4 rounded-2xl bg-gold-500/10 border border-gold-500/30 text-xs space-y-1">
+                <span class="font-bold text-slate-900 dark:text-gold-300 block">Atelier Styling Principle:</span>
+                <p class="text-slate-600 dark:text-slate-400">
+                  "Never match the rug to your main sofa fabric; match it to the room's secondary architectural accent to create conversational depth."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: The 5 Styling Rules (7 cols) -->
+          <div class="lg:col-span-7 space-y-3.5" id="stylingRulesCol">
+            
+            <div class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-serif font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-600 dark:text-gold-400 font-mono text-xs flex items-center justify-center font-bold">1</span>
+                  <span>The Layering Principle: Jute Foundation with Silk Runner</span>
+                </span>
+                <span class="text-[10px] font-mono text-slate-400">Tactile Depth</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed pl-8">
+                Lay a neutral oversized flatweave natural fiber rug as a grounding border, then layer an antique hand-knotted silk-wool runner on top at a slight angle to delineate a conversation zone.
+              </p>
+            </div>
+
+            <div class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-serif font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-600 dark:text-gold-400 font-mono text-xs flex items-center justify-center font-bold">2</span>
+                  <span>Secondary Color Extraction Theorem</span>
+                </span>
+                <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">Harmonic Balance</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed pl-8">
+                Identify the third or fourth rarest botanical tone inside the carpet (such as saffron gold or celadon sage) and echo that specific color across linen throw pillows or art framing.
+              </p>
+            </div>
+
+            <div class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-serif font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-600 dark:text-gold-400 font-mono text-xs flex items-center justify-center font-bold">3</span>
+                  <span>Pattern Counterbalance: Classical Rug with Monolithic Furniture</span>
+                </span>
+                <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 font-bold">Visual Weight</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed pl-8">
+                An intricate 800 KPSI Persian floral medallion pairs best with sleek, unadorned contemporary furniture (e.g. monolithic stone coffee tables and clean-line linen sofas) to prevent visual clutter.
+              </p>
+            </div>
+
+            <div class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-serif font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-600 dark:text-gold-400 font-mono text-xs flex items-center justify-center font-bold">4</span>
+                  <span>Pile Orientation &amp; 30-Degree Light Alignment</span>
+                </span>
+                <span class="text-[10px] font-mono text-amber-600 dark:text-amber-400 font-bold">Luster Angle</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed pl-8">
+                Hand-knotted rugs have a directional nap. Lay the carpet with the pile direction pointed toward the main entrance door so approaching guests experience maximum light reflection and sheen.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 6: REAL CUSTOMER SPACES & COLLECTOR RESIDENCES -->
+    <!-- ======================================================== -->
+    <section id="insp-customer-spaces" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="home" class="w-3.5 h-3.5"></i>
+            <span>Real Homes &bull; Customer Spaces</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Customer Spaces: <span class="text-gold-500">In Situ Residences</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            From London Mayfair townhouses and New York penthouses to alpine chalets and Lake Como villas. Discover how our patrons live with handcrafted floor art every day.
+          </p>
+        </div>
+
+        <!-- Featured London Penthouse Hero Banner -->
+        <div class="mb-12 rounded-[32px] overflow-hidden p-3 sm:p-5 bg-white/80 dark:bg-obsidian-900/80 border border-slate-200/80 dark:border-white/10 shadow-2xl group" id="customerHeroBanner">
+          <div class="relative w-full aspect-[21/9] sm:aspect-[16/7] rounded-[24px] overflow-hidden bg-black/50">
+            <img 
+              src="images/insp_customer_spaces.jpg" 
+              alt="Collector penthouse salon overlooking London skyline and Thames river with modern white sofa, coffee table, and blue/grey textured wool rug on chevron parquet" 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none"></div>
+
+            <div class="absolute top-4 left-4 sm:top-6 sm:left-6 bg-black/80 backdrop-blur-md border border-gold-500/40 rounded-full px-4 py-1.5 text-xs font-semibold text-gold-300 flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-400"></i>
+              <span>Collector Residence &bull; South Bank Tower Penthouse, London</span>
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 sm:p-6 text-white flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div class="space-y-1">
+                <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 block">Verified Commission</span>
+                <h3 class="font-serif text-lg sm:text-xl font-bold">&ldquo;The rug brought acoustic warmth to a 60-foot glass volume.&rdquo;</h3>
+                <p class="text-xs text-slate-300 max-w-xl">
+                  &mdash; Alistair &amp; Fiona S., Architects. 12' &times; 16' Custom Tibetan highland wool and silk geometric weave over dark chevron timber flooring.
+                </p>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-mono text-gold-400 bg-gold-500/10 px-3 py-1.5 rounded-xl border border-gold-500/30">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span>Certified Provenance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Verified Case Studies Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="caseStudiesGrid">
+          
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-gold-600 dark:text-gold-400 font-bold">New York City &bull; TriBeCa</span>
+              <span class="text-[10px] font-mono text-slate-400">12' &times; 18' Custom</span>
+            </div>
+            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Industrial Concrete Loft</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              &ldquo;We needed a rug that could anchor an enormous 3,000 sq.ft open living floor without competing with the original cast-iron pillars. The high-low un-dyed wool piece gave our space quiet soul.&rdquo;
+            </p>
+            <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-1 border-t border-slate-100 dark:border-white/10">
+              Patron: Marcus V., Industrial Designer
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">Italy &bull; Lake Como</span>
+              <span class="text-[10px] font-mono text-slate-400">10' &times; 14' Antique</span>
+            </div>
+            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Restored 1890s Venetian Villa</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              &ldquo;Placed upon original Palladian terrazzo flooring, the botanical silk Kashan carpet reflects the shimmering light from the lake like liquid jewelry. Absolute museum perfection.&rdquo;
+            </p>
+            <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-1 border-t border-slate-100 dark:border-white/10">
+              Patron: Contessa Beatrice D.
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold">Switzerland &bull; Zurich</span>
+              <span class="text-[10px] font-mono text-slate-400">Set of 4 Runners</span>
+            </div>
+            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Alpine Lakeside Residence</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              &ldquo;The custom natural-tone runners along our floating oak cantilever staircase transformed cold footsteps into an intimate, warm morning ritual with zero slippage or bunching.&rdquo;
+            </p>
+            <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-1 border-t border-slate-100 dark:border-white/10">
+              Patron: Dr. Lukas &amp; Hanna K.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 7: VIRTUAL ROOM SIMULATION & BESPOKE CONSULTATION -->
+    <!-- ======================================================== -->
+    <section id="insp-consultation" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
+      <!-- Ambient Radial Lighting -->
+      <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+            <span>3D CAD Staging &bull; Bring Your Space to Life</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Bespoke Room Simulation &amp; <span class="text-gold-500">Styling Consultation</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            Unsure of the perfect scale or weave? Upload your room photographs or floorplans. Within 48 hours, our Senior Interior Architects will render three photorealistic 3D simulations showing candidate rugs staged in your home.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left: Simulation Visual Showcase (5 cols) -->
+          <div class="lg:col-span-5 relative" id="simImageCol">
+            <div class="relative rounded-[32px] p-3 sm:p-4 bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-2xl overflow-hidden group">
+              <div class="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden bg-black/40">
+                <img 
+                  src="images/insp_room_simulation.jpg" 
+                  alt="Interior designers at marble table reviewing room blueprints, watercolor carpet sketches, and colorful yarn pom-poms" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+
+                <div class="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-gold-500/40 rounded-full px-3 py-1 text-[11px] font-semibold text-gold-300 flex items-center gap-1.5">
+                  <i data-lucide="eye" class="w-3.5 h-3.5 text-gold-400"></i>
+                  <span>48-Hour CAD Photorealism</span>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-white">
+                  <span class="text-xs font-serif font-bold block mb-1">Architectural Review Atelier</span>
+                  <p class="text-[11px] text-slate-300 leading-snug">
+                    Send room photos, fabric samples, or CAD drawings for calibrated color mapping (Delta-E &lt; 0.5) and proportional scale modeling.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 3 Service Inclusions -->
+              <div class="mt-4 space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                  <span>Photorealistic 3D CAD render in your exact room volume</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                  <span>Curated physical yarn pom-pom sample box shipped to your door</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                  <span>Complimentary in-home 72-hour physical rug staging trial</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Styling Consultation Request Form (7 cols) -->
+          <div class="lg:col-span-7 space-y-6" id="simFormCol">
+            
+            <div class="p-6 sm:p-8 rounded-[32px] bg-white/90 dark:bg-obsidian-900/90 border border-slate-200/80 dark:border-white/10 shadow-2xl space-y-5">
+              
+              <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/10 pb-4">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                    <i data-lucide="palette" class="w-5 h-5 text-gold-500"></i>
+                    <span>Request Spatial Consultation</span>
+                  </h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Complimentary 3D room simulation &amp; curatorial advice.</p>
+                </div>
+                <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full">
+                  Free Service
+                </span>
+              </div>
+
+              <form id="inspirationConsultForm" class="space-y-4">
+                
+                <!-- Row 1: Room Type & Primary Aesthetic -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  <div>
+                    <label class="block text-[11px] font-semibold text-slate-700 dark:text-slate-300 mb-1">Target Space *</label>
+                    <select id="consultRoom" required class="w-full rounded-xl px-3.5 py-2.5 text-xs bg-slate-50 dark:bg-obsidian-950 border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
+                      <option value="Grand Living Salon">Grand Living Salon</option>
+                      <option value="Primary Bedroom Suite">Primary Bedroom Suite</option>
+                      <option value="Dining Room & Banquet Hall">Dining Room & Banquet Hall</option>
+                      <option value="Executive Library / Study">Executive Library / Study</option>
+                      <option value="Penthouse Staircase & Gallery">Penthouse Staircase & Gallery</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-[11px] font-semibold text-slate-700 dark:text-slate-300 mb-1">Preferred Movement *</label>
+                    <select id="consultAesthetic" required class="w-full rounded-xl px-3.5 py-2.5 text-xs bg-slate-50 dark:bg-obsidian-950 border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
+                      <option value="Minimalist & Japandi Organic">Minimalist & Japandi Organic</option>
+                      <option value="Luxury Imperial Silk Medallion">Luxury Imperial Silk Medallion</option>
+                      <option value="Traditional Antique Persian / Sultanabad">Traditional Antique Persian / Sultanabad</option>
+                      <option value="Modern Bauhaus & Geometric Abstract">Modern Bauhaus & Geometric Abstract</option>
+                      <option value="Custom Bespoke Commission">Custom Bespoke Commission</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Row 2: Room Dimensions & Flooring Material -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  <div>
+                    <label class="block text-[11px] font-semibold text-slate-700 dark:text-slate-300 mb-1">Approximate Room Dimensions *</label>
+                    <input type="text" id="consultDim" required placeholder="e.g. 18 x 24 ft (5.5 x 7.3 m)" class="w-full rounded-xl px-3.5 py-2.5 text-xs bg-slate-50 dark:bg-obsidian-950 border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:border-gold-500" />
+                  </div>
+
+                  <div>
+                    <label class="block text-[11px] font-semibold text-slate-700 dark:text-slate-300 mb-1">Floor Finish *</label>
+                    <select id="consultFloor" required class="w-full rounded-xl px-3.5 py-2.5 text-xs bg-slate-50 dark:bg-obsidian-950 border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
+                      <option value="Light White Oak Hardwood">Light White Oak Hardwood</option>
+                      <option value="Dark Smoked Oak Chevron / Herringbone">Dark Smoked Oak Chevron / Herringbone</option>
+                      <option value="Polished Marble / Stone">Polished Marble / Stone</option>
+                      <option value="Venetian Terrazzo">Venetian Terrazzo</option>
+                      <option value="Polished Industrial Concrete">Polished Industrial Concrete</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Row 3: Name & Email -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  <div>
+                    <label class="block text-[11px] font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Full Name *</label>
+                    <input type="text" id="consultName" required placeholder="Elena Rostova" class="w-full rounded-xl px-3.5 py-2.5 text-xs bg-slate-50 dark:bg-obsidian-950 border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:border-gold-500" />
+                  </div>
+
+                  <div>
+                    <label class="block text-[11px] font-semibold text-slate-700 dark:text-slate-300 mb-1">Email Address *</label>
+                    <input type="email" id="consultEmail" required placeholder="elena@rostova-design.com" class="w-full rounded-xl px-3.5 py-2.5 text-xs bg-slate-50 dark:bg-obsidian-950 border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:border-gold-500" />
+                  </div>
+                </div>
+
+                <!-- Notes / Upload Mention -->
+                <div>
+                  <label class="block text-[11px] font-semibold text-slate-700 dark:text-slate-300 mb-1">Describe Furniture &amp; Spatial Lighting Needs</label>
+                  <textarea id="consultNotes" rows="2" placeholder="e.g. Curved bouclé sofa in cream, south-facing floor-to-ceiling glass windows, seeking subtle texture over bold color..." class="w-full rounded-xl px-3.5 py-2.5 text-xs bg-slate-50 dark:bg-obsidian-950 border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:border-gold-500 resize-none"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-3d btn-3d-gold sheen w-full py-4 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl shadow-xl flex items-center justify-center gap-2">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span>Submit for 3D Room Simulation</span>
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- MAIN LUXURY FOOTER (Based on Navbar & Reference Layout) -->
+  <!-- ======================================================== -->
+  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-14">
+    <!-- Outer Card Shell with 3D/Rounded Aesthetics Matching Reference -->
+    <div class="footer-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 transition-all duration-300 relative overflow-hidden">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 xl:gap-12 mb-10">
+
+        <!-- ==================================================== -->
+        <!-- COLUMN 1: BRAND LOGO, DESCRIPTION, TRUST BADGES, SOCIALS -->
+        <!-- ==================================================== -->
+        <div class="space-y-6">
+          <!-- Logo Block (Same Logo Which Is Present In Navbar) -->
+          <a href="index.html" id="footerBrandLogo" class="group flex items-center gap-2 focus:outline-none" aria-label="Rug & Carpet Store Homepage">
+            <!-- Compact 3D Interwoven Loom Emblem (SVG) -->
+            <div class="relative w-7 h-7 sm:w-7.5 sm:h-7.5 rounded-[7px] bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 p-[1.1px] shadow-[0_2px_8px_rgba(212,175,55,0.22)] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-1 flex-shrink-0">
+              <div class="w-full h-full bg-obsidian-950 rounded-[5.5px] flex items-center justify-center overflow-hidden relative">
+                <!-- Radial sheen -->
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,175,55,0.3),transparent_70%)]"></div>
+                
+                <!-- Creative Carpet Weave Geometric Monogram SVG -->
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-400 transition-transform duration-500 group-hover:scale-110" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+                  <!-- Interlacing Rug Loom Strands -->
+                  <rect x="7" y="7" width="26" height="26" rx="5" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 1.5" class="opacity-70" />
+                  <path d="M12 12L28 28M28 12L12 28" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M20 6V34M6 20H34" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <circle cx="20" cy="20" r="4.5" fill="#D4AF37" stroke="#121008" stroke-width="1.2" />
+                  <!-- Corner Knots -->
+                  <circle cx="10" cy="10" r="1.5" fill="currentColor" />
+                  <circle cx="30" cy="10" r="1.5" fill="currentColor" />
+                  <circle cx="10" cy="30" r="1.5" fill="currentColor" />
+                  <circle cx="30" cy="30" r="1.5" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Brand Typography (Without Atelier Badge, Compact) -->
+            <div class="flex flex-col">
+              <span id="footerBrandLogoTitle" class="font-serif font-bold text-[12.5px] sm:text-[14px] tracking-[0.05em] group-hover:text-gold-500 transition-colors uppercase leading-tight footer-trust-title">
+                Rug & Carpet
+              </span>
+              <span id="footerBrandLogoSubtitle" class="text-[7.5px] sm:text-[8px] tracking-[0.16em] uppercase font-medium leading-none mt-0.5 transition-colors footer-trust-sub">
+                Handcrafted &bull; Heritage
+              </span>
+            </div>
+          </a>
+
+          <!-- Description paragraph matching reference -->
+          <p class="text-xs sm:text-[13px] leading-relaxed footer-trust-sub">
+            The premier international atelier for handcrafted heritage rugs and bespoke architectural floor art. Every piece is tied by hand with pure organic Highland wool, raw mulberry silk, and certified museum-grade provenance.
+          </p>
+
+          <!-- 2 Trust / Guarantee Badges side-by-side matching reference image -->
+          <div class="grid grid-cols-2 gap-3 pt-1">
+            <!-- Badge 1: 100% Hand-Knotted -->
+            <div class="footer-trust-badge flex items-center gap-2.5 p-3 rounded-2xl transition-colors">
+              <div class="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-xs font-bold leading-tight truncate footer-trust-title">100% Hand-Knotted</span>
+                <span class="text-[9.5px] footer-trust-sub leading-tight mt-0.5 truncate">Master Artisans</span>
+              </div>
+            </div>
+
+            <!-- Badge 2: Certified Provenance -->
+            <div class="footer-trust-badge flex items-center gap-2.5 p-3 rounded-2xl transition-colors">
+              <div class="w-8 h-8 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-xs font-bold leading-tight truncate footer-trust-title">Museum Certified</span>
+                <span class="text-[9.5px] footer-trust-sub leading-tight mt-0.5 truncate">Clean Provenance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Follow Socials Row matching reference image -->
+          <div class="space-y-2.5 pt-1">
+            <div class="text-[10px] font-bold uppercase tracking-wider footer-trust-sub">
+              Follow The Atelier
+            </div>
+            <div class="flex items-center gap-2.5">
+              <!-- Instagram -->
+              <a href="#instagram" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="Instagram">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+
+              <!-- YouTube -->
+              <a href="#youtube" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="YouTube">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+
+              <!-- Facebook -->
+              <a href="#facebook" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="Facebook">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="#linkedin" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="LinkedIn">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </a>
+
+              <!-- X (Twitter) -->
+              <a href="#x" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="X (Twitter)">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: EXPLORE ATELIER (Based Directly on Navbar) -->
+        <!-- ==================================================== -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 footer-col-heading text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,0.6)]"></span>
+            <span>Explore Atelier</span>
+          </div>
+
+          <ul class="space-y-2.5 text-xs sm:text-[13px] font-medium">
+            <!-- Home with Home 1 and Home 2 subitems -->
+            <li class="space-y-1.5">
+              <a href="#home" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Home (Atelier & Collections)</span>
+              </a>
+              <ul class="pl-4 space-y-1 border-l border-white/10 dark:border-white/10 ml-2">
+                <li>
+                  <a href="#home-1" class="footer-link inline-flex items-center gap-1.5 text-[11.5px] transition-all">
+                    <span class="text-gold-500/80">•</span>
+                    <span>Home 1 (Royal Palace & Heirlooms)</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#home-2" class="footer-link inline-flex items-center gap-1.5 text-[11.5px] transition-all">
+                    <span class="text-gold-500/80">•</span>
+                    <span>Home 2 (Contemporary Luxury)</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Remaining Navbar Menu Links -->
+            <li>
+              <a href="#about" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>About Us</span>
+              </a>
+            </li>
+            <li>
+              <a href="#products" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="#collections" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Collections</span>
+              </a>
+            </li>
+            <!-- Custom Rugs (Highlighted in Gold, matching "Sell Your Car" in image) -->
+            <li>
+              <a href="#custom-rugs" class="inline-flex items-center gap-1.5 text-gold-400 hover:text-gold-300 font-bold hover:translate-x-1 transition-all">
+                <span class="rtl-chevron font-mono text-gold-400">›</span>
+                <span>Custom Rugs (Bespoke Atelier)</span>
+              </a>
+            </li>
+            <li>
+              <a href="#rug-guide" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Rug Guide</span>
+              </a>
+            </li>
+            <li>
+              <a href="#craftsmanship" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Craftsmanship</span>
+              </a>
+            </li>
+            <li>
+              <a href="#showroom" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Showroom</span>
+              </a>
+            </li>
+            <li>
+              <a href="#inspiration" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Inspiration</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Contact Support</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- COLUMN 3: COLLECTIONS & SERVICES (With Icons Matching Reference) -->
+        <!-- ==================================================== -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 footer-col-heading text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.6)]"></span>
+            <span>Collections & Services</span>
+          </div>
+
+          <ul class="space-y-3 text-xs sm:text-[13px] font-medium">
+            <li>
+              <a href="#persian-rugs" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <span>Persian & Oriental Heirlooms</span>
+              </a>
+            </li>
+            <li>
+              <a href="#silk-wool" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="gem" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                <span>Luxury Silk & Pure Wool</span>
+              </a>
+            </li>
+            <li>
+              <a href="#modern-rugs" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="sparkles" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Modern & Minimalist Rugs</span>
+              </a>
+            </li>
+            <li>
+              <a href="#vintage-oushak" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="arrow-left-right" class="w-4 h-4 text-sky-400 flex-shrink-0"></i>
+                <span>Vintage Oushak & Kilims</span>
+              </a>
+            </li>
+            <li>
+              <a href="#custom-dye" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="palette" class="w-4 h-4 text-rose-400 flex-shrink-0"></i>
+                <span>Bespoke Sizing & Custom Dye</span>
+              </a>
+            </li>
+            <li>
+              <a href="#room-visualizer" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="layers" class="w-4 h-4 text-purple-400 flex-shrink-0"></i>
+                <span>3D Virtual Room Visualizer</span>
+              </a>
+            </li>
+            <li>
+              <a href="#authenticity-guarantee" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <span>Lifetime Authenticity Guarantee</span>
+              </a>
+            </li>
+            <li>
+              <a href="#white-glove-delivery" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="truck" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                <span>White-Glove Home Delivery</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- COLUMN 4: PORTALS & NEWSLETTER (Matching Reference Layout) -->
+        <!-- ==================================================== -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 footer-col-heading text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.6)]"></span>
+            <span>Portals & Newsletter</span>
+          </div>
+
+          <!-- Action Card 1: Collector Dashboard -->
+          <div id="footerCollectorCard" class="footer-portal-card group flex items-center justify-between p-3.5 rounded-2xl transition-all cursor-pointer">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="user" class="w-4.5 h-4.5"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="footer-portal-title text-xs font-bold leading-tight group-hover:text-gold-400 transition-colors">
+                  Collector Dashboard
+                </span>
+                <span class="footer-portal-sub text-[10px] leading-tight mt-0.5">
+                  Saved Pieces & Garage
+                </span>
+              </div>
+            </div>
+            <i data-lucide="chevron-right" class="rtl-chevron w-4 h-4 text-slate-500 group-hover:text-gold-400 group-hover:translate-x-1 transition-all"></i>
+          </div>
+
+          <!-- Action Card 2: Trade & Designer Portal -->
+          <div id="footerTradeCard" class="footer-portal-card group flex items-center justify-between p-3.5 rounded-2xl transition-all cursor-pointer">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-4.5 h-4.5"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="footer-portal-title text-xs font-bold leading-tight group-hover:text-gold-400 transition-colors">
+                  Trade & Designer Portal
+                </span>
+                <span class="footer-portal-sub text-[10px] leading-tight mt-0.5">
+                  Architect CRM & Wholesale
+                </span>
+              </div>
+            </div>
+            <i data-lucide="chevron-right" class="rtl-chevron w-4 h-4 text-slate-500 group-hover:text-gold-400 group-hover:translate-x-1 transition-all"></i>
+          </div>
+
+          <!-- Newsletter Box matching reference -->
+          <div class="footer-news-card p-4 rounded-2xl space-y-2.5 transition-colors">
+            <div class="space-y-1">
+              <div class="footer-news-title text-xs font-bold flex items-center gap-1.5">
+                <span>Join Atelier Family!</span>
+                <span>✨</span>
+              </div>
+              <p class="footer-news-sub text-[11px] leading-relaxed">
+                Get free rug curation guides and $250 voucher off your bespoke purchase.
+              </p>
+            </div>
+
+            <form id="footerNewsletterForm" class="space-y-2.5">
+              <input 
+                type="email" 
+                required 
+                placeholder="buyer@email.com" 
+                class="footer-input w-full px-3.5 py-2.5 rounded-xl text-xs placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors"
+              />
+              <button 
+                type="submit" 
+                class="btn-3d btn-3d-amber sheen w-full h-10 text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center gap-2"
+              >
+                <span class="text-[10px]">▲</span>
+                <span>Subscribe</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==================================================== -->
+      <!-- BOTTOM COPYRIGHT & LEGAL BAR -->
+      <!-- ==================================================== -->
+      <div class="footer-bottom-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs footer-bottom-text">
+        <p class="text-center md:text-left">
+          &copy; 2026 <strong class="font-serif footer-trust-title">Rug & Carpet Store</strong> Atelier. All Rights Reserved. Master Hand-Knotted Traditions.
+        </p>
+
+        <div class="flex items-center flex-wrap justify-center gap-4 text-xs font-medium">
+          <a href="#privacy" class="hover:text-gold-400 transition-colors">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#terms" class="hover:text-gold-400 transition-colors">Terms of Curation</a>
+          <span>&bull;</span>
+          <a href="#ethics" class="hover:text-gold-400 transition-colors">Artisan Ethics</a>
+          <span>&bull;</span>
+          <a href="#provenance" class="hover:text-gold-400 transition-colors">Provenance Registry</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ======================================================== -->
+  <!-- 3D AUTH MODAL PREVIEW (Login & Sign Up) -->
+  <!-- ======================================================== -->
+  <div id="authModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="authModalBox" class="relative w-full max-w-md p-8 rounded-3xl bg-obsidian-950 border border-gold-500/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] transform scale-95 transition-transform duration-300 text-slate-100">
+      
+      <button id="closeAuthModal" class="absolute top-5 right-5 btn-3d-icon w-8 h-8 text-slate-400 hover:text-white" aria-label="Close modal">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="text-center space-y-2 mb-6">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center">
+          <i data-lucide="lock" class="w-6 h-6"></i>
+        </div>
+        <h3 id="modalTitle" class="font-serif text-2xl font-bold text-white">Member Portal</h3>
+        <p id="modalSubtitle" class="text-xs text-slate-400">Access your private carpet commissions and curation history.</p>
+      </div>
+
+      <form id="authForm" class="space-y-4" onsubmit="event.preventDefault(); alert('Demo action triggered!'); document.getElementById('authModal').classList.add('opacity-0', 'pointer-events-none');">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
+          <input type="email" placeholder="collector@atelier.com" required class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-gold-500 transition-colors" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Password</label>
+          <input type="password" placeholder="••••••••••••" required class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-gold-500 transition-colors" />
+        </div>
+        
+        <button type="submit" id="modalSubmitBtn" class="btn-3d btn-3d-gold sheen w-full h-12 text-xs font-extrabold uppercase tracking-wider mt-4">
+          Authenticate
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- JAVASCRIPT: LOGIC, 3D PARALLAX, & FRAMER MOTION -->
+  <!-- ======================================================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // ----------------------------------------------------
+    // Permanent Sticky Navbar Scroll Enhancer
+    // ----------------------------------------------------
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (!header) return;
+      if (window.scrollY > 15) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+
+    // ----------------------------------------------------
+    // Dynamic Active Navbar Status Controller
+    // ----------------------------------------------------
+    function syncActiveNavbarState() {
+      let currentFile = window.location.pathname.split('/').pop().toLowerCase();
+      if (!currentFile || currentFile === '/' || currentFile === '') {
+        currentFile = 'index.html';
+      }
+      currentFile = decodeURIComponent(currentFile.split('?')[0].split('#')[0]);
+
+      const aliases = {
+        'index.html': 'index.html',
+        'home-1': 'index.html',
+        'home-2.html': 'home-2.html',
+        'about.html': 'about.html',
+        'collections.html': 'collections.html',
+        'craftsmanship.html': 'craftmanship.html',
+        'craftmanship.html': 'craftmanship.html',
+        'custom-rugs.html': 'custom-rugs.html',
+        'inspiration.html': 'inspiration.html',
+        'products.html': 'products.html',
+        'rug-guide.html': 'rug-guide.html',
+        'contact.html': 'contact.html',
+        'showroom.html': 'showroom.html'
+      };
+
+      const targetKey = aliases[currentFile] || currentFile;
+
+      document.querySelectorAll('#desktopMenu a, #desktopMenu button, #mobileDrawer a').forEach(el => {
+        el.classList.remove('nav-pill-active', 'active');
+      });
+
+      document.querySelectorAll('#desktopMenu a, #mobileDrawer a').forEach(el => {
+        const href = (el.getAttribute('href') || '').toLowerCase().split('?')[0].split('#')[0];
+        const normalizedHref = aliases[href] || href;
+
+        if (normalizedHref && normalizedHref === targetKey) {
+          el.classList.add('nav-pill-active', 'active');
+        }
+      });
+
+      if (targetKey === 'index.html') {
+        document.getElementById('homeDropdownBtn')?.classList.add('nav-pill-active', 'active');
+        document.getElementById('mobileHomeLink')?.classList.add('nav-pill-active', 'active');
+      } else if (targetKey === 'home-2.html') {
+        document.getElementById('homeDropdownBtn')?.classList.add('nav-pill-active', 'active');
+      }
+    }
+
+    try {
+      syncActiveNavbarState();
+    } catch(e) {
+      console.warn('Active navbar state sync:', e);
+    }
+
+
+    // DOM Elements
+    const html = document.documentElement;
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    const mobileSunIcon = document.getElementById('mobileSunIcon');
+    const mobileMoonIcon = document.getElementById('mobileMoonIcon');
+
+    const rtlToggle = document.getElementById('rtlToggle');
+    const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileDrawerOverlay = document.getElementById('mobileDrawerOverlay');
+    const hamBarTop = document.getElementById('hamBarTop');
+    const hamBarMid = document.getElementById('hamBarMid');
+    const hamBarBot = document.getElementById('hamBarBot');
+
+    const mobileHomeAccordionBtn = document.getElementById('mobileHomeAccordionBtn');
+    const mobileHomeSubmenu = document.getElementById('mobileHomeSubmenu');
+    const mobileHomeChevron = document.getElementById('mobileHomeChevron');
+
+    const homeDropdownWrapper = document.getElementById('homeDropdownWrapper');
+    const homeDropdownBtn = document.getElementById('homeDropdownBtn');
+    const homeDropdownMenu = document.getElementById('homeDropdownMenu');
+    const homeChevron = document.getElementById('homeChevron');
+
+    // ----------------------------------------------------
+    // 1. DARK / LIGHT MODE CONTROLLER
+    // ----------------------------------------------------
+    let isDark = true;
+    function updateTheme(dark) {
+      isDark = dark;
+      if (isDark) {
+        html.classList.add('dark');
+        html.classList.remove('light');
+        document.body.classList.remove('bg-[#F8F9FA]', 'text-slate-900', 'bg-slate-100');
+        document.body.classList.add('bg-[#0A0C10]', 'text-slate-100');
+        sunIcon?.classList.remove('hidden');
+        moonIcon?.classList.add('hidden');
+        mobileSunIcon?.classList.remove('hidden');
+        mobileMoonIcon?.classList.add('hidden');
+      } else {
+        html.classList.remove('dark');
+        html.classList.add('light');
+        document.body.classList.remove('bg-[#0A0C10]', 'text-slate-100');
+        document.body.classList.add('bg-[#F8F9FA]', 'text-slate-900');
+        sunIcon?.classList.add('hidden');
+        moonIcon?.classList.remove('hidden');
+        mobileSunIcon?.classList.add('hidden');
+        mobileMoonIcon?.classList.remove('hidden');
+      }
+
+      // Smooth Framer Motion rotation & scale for toggle icons
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#darkModeToggle', {
+          rotate: [0, 180, 360],
+          scale: [1, 0.85, 1]
+        }, { duration: 0.45, easing: Motion.spring({ stiffness: 300, damping: 18 }) });
+
+        Motion.animate('#mobileDarkModeToggle', {
+          rotate: [0, 180, 360],
+          scale: [1, 0.85, 1]
+        }, { duration: 0.45, easing: Motion.spring({ stiffness: 300, damping: 18 }) });
+      }
+    }
+
+    darkModeToggle?.addEventListener('click', () => updateTheme(!isDark));
+    mobileDarkModeToggle?.addEventListener('click', () => updateTheme(!isDark));
+
+    // ----------------------------------------------------
+    // 2. RTL (RIGHT TO LEFT) CONTROLLER (Icon-Only)
+    // ----------------------------------------------------
+    let isRtl = false;
+    function updateDirection(rtl) {
+      isRtl = rtl;
+      const dirVal = isRtl ? 'rtl' : 'ltr';
+      html.setAttribute('dir', dirVal);
+
+      // Smooth Framer Motion spring jump & rotation for RTL icons
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#rtlToggle', {
+          scale: [1, 1.18, 1],
+          rotate: isRtl ? [0, 180] : [180, 0]
+        }, { duration: 0.4, easing: Motion.spring({ stiffness: 380, damping: 20 }) });
+
+        Motion.animate('#mobileRtlToggle', {
+          scale: [1, 1.18, 1],
+          rotate: isRtl ? [0, 180] : [180, 0]
+        }, { duration: 0.4, easing: Motion.spring({ stiffness: 380, damping: 20 }) });
+      }
+    }
+
+    rtlToggle.addEventListener('click', () => updateDirection(!isRtl));
+    mobileRtlToggle.addEventListener('click', () => updateDirection(!isRtl));
+
+    // ----------------------------------------------------
+    // 3. HAMBURGER MENU DRAWER (Mobile & Tablet)
+    // ----------------------------------------------------
+    let isDrawerOpen = false;
+
+        function openMobileDrawer() {
+      isDrawerOpen = true;
+      document.body.classList.add('mobile-drawer-open');
+      document.documentElement.classList.add('mobile-drawer-open');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+      mobileDrawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
+      mobileDrawerOverlay.classList.add('opacity-100', 'pointer-events-auto');
+      
+      mobileDrawer.classList.remove('translate-x-full');
+      mobileDrawer.classList.add('translate-x-0', 'open');
+
+      // Morph Hamburger Bars into X
+      hamBarTop.style.transform = 'translateY(6px) rotate(45deg)';
+      hamBarMid.style.opacity = '0';
+      hamBarBot.style.transform = 'translateY(-6px) rotate(-45deg)';
+
+      // Framer Motion staggered entrance with transform cleanup to ensure 60fps buttery scrolling
+      if (window.Motion && Motion.animate) {
+        try {
+          const anim = Motion.animate('.mobile-nav-link', {
+            opacity: [0, 1],
+            x: [isRtl ? -12 : 12, 0]
+          }, {
+            delay: Motion.stagger(0.02),
+            duration: 0.25,
+            easing: [0.16, 1, 0.3, 1]
+          });
+          if (anim && anim.finished) {
+            anim.finished.then(() => {
+              document.querySelectorAll('.mobile-nav-link').forEach(el => {
+                el.style.transform = '';
+              });
+            }).catch(() => {});
+          }
+        } catch(e) {}
+      }
+    }
+
+    function closeMobileDrawer() {
+      isDrawerOpen = false;
+      document.body.classList.remove('mobile-drawer-open');
+      document.documentElement.classList.remove('mobile-drawer-open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      mobileDrawerOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+      mobileDrawerOverlay.classList.add('opacity-0', 'pointer-events-none');
+
+      mobileDrawer.classList.add('translate-x-full');
+      mobileDrawer.classList.remove('translate-x-0', 'open');
+
+      // Restore Hamburger Bars
+      hamBarTop.style.transform = 'none';
+      hamBarMid.style.opacity = '1';
+      hamBarBot.style.transform = 'none';
+    }
+
+    hamburgerBtn.addEventListener('click', () => {
+      if (isDrawerOpen) closeMobileDrawer();
+      else openMobileDrawer();
+    });
+
+    closeDrawerBtn.addEventListener('click', closeMobileDrawer);
+    mobileDrawerOverlay.addEventListener('click', closeMobileDrawer);
+
+    // Mobile Home Accordion Toggle
+    mobileHomeAccordionBtn?.addEventListener('click', (e) => { e.stopPropagation();
+      const isHidden = mobileHomeSubmenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileHomeSubmenu.classList.remove('hidden');
+        mobileHomeChevron.style.transform = 'rotate(180deg)';
+        if (window.Motion && Motion.animate) {
+          Motion.animate('#mobileHomeSubmenu', {
+            opacity: [0, 1],
+            height: ['0px', 'auto']
+          }, { duration: 0.25 });
+        }
+      } else {
+        mobileHomeSubmenu.classList.add('hidden');
+        mobileHomeChevron.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    // Close mobile drawer on link click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', closeMobileDrawer);
+    });
+
+    // ----------------------------------------------------
+    // 4. DESKTOP HOME DROPDOWN CLICK & HOVER ENHANCEMENT
+    // ----------------------------------------------------
+    let isHomeOpen = false;
+    homeDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      isHomeOpen = !isHomeOpen;
+      homeDropdownBtn.setAttribute('aria-expanded', isHomeOpen);
+      if (isHomeOpen) {
+        homeDropdownMenu.classList.remove('opacity-0', 'invisible', 'translate-y-3', 'pointer-events-none');
+        homeChevron.classList.add('rotate-180');
+        if (window.Motion && Motion.animate) {
+          Motion.animate('#homeDropdownMenu', {
+            scale: [0.94, 1],
+            opacity: [0, 1],
+            y: [-8, 0]
+          }, { duration: 0.25, easing: Motion.spring({ stiffness: 350, damping: 24 }) });
+        }
+      } else {
+        homeDropdownMenu.classList.add('opacity-0', 'invisible', 'translate-y-3', 'pointer-events-none');
+        homeChevron.classList.remove('rotate-180');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!homeDropdownWrapper.contains(e.target)) {
+        isHomeOpen = false;
+        homeDropdownMenu.classList.add('opacity-0', 'invisible', 'translate-y-3', 'pointer-events-none');
+        homeChevron.classList.remove('rotate-180');
+      }
+    });
+
+    // ----------------------------------------------------
+    // 5. 3D BUTTON TACTILE TILT & PARALLAX (Framer Motion Physics)
+    // ----------------------------------------------------
+    const buttons3D = document.querySelectorAll('.btn-3d');
+
+    buttons3D.forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left; // x position within element.
+        const y = e.clientY - rect.top;  // y position within element.
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -12; // Invert for natural tilt
+        const rotateY = ((x - centerX) / centerX) * 12;
+
+        btn.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
+    });
+
+    // ----------------------------------------------------
+    // 6. VIEWPORT TRACKER & RESIZE HANDLER
+    // ----------------------------------------------------
+    function handleResize() {
+      const width = window.innerWidth;
+      if (width >= 1280) {
+        closeMobileDrawer();
+      }
+    }
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    // ----------------------------------------------------
+    // 7. AUTH MODAL CONTROLLER (Sign Up & Login)
+    // ----------------------------------------------------
+    const authModal = document.getElementById('authModal');
+    const authModalBox = document.getElementById('authModalBox');
+    const closeAuthModal = document.getElementById('closeAuthModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    const modalSubmitBtn = document.getElementById('modalSubmitBtn');
+
+    function openModal(type) {
+      if (type === 'signup') {
+        modalTitle.textContent = 'Create Atelier Account';
+        modalSubtitle.textContent = 'Join the connoisseur circle for bespoke rug commissions.';
+        modalSubmitBtn.textContent = 'Register Privilege Account';
+      } else {
+        modalTitle.textContent = 'Collector Login';
+        modalSubtitle.textContent = 'Access your curated showroom pieces and orders.';
+        modalSubmitBtn.textContent = 'Authenticate Member';
+      }
+
+      authModal.classList.remove('opacity-0', 'pointer-events-none');
+      authModal.classList.add('opacity-100', 'pointer-events-auto');
+      authModalBox.classList.remove('scale-95');
+      authModalBox.classList.add('scale-100');
+
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#authModalBox', {
+          y: [-20, 0],
+          opacity: [0, 1]
+        }, { duration: 0.3, easing: Motion.spring({ stiffness: 350, damping: 25 }) });
+      }
+    }
+
+    function closeModal() {
+      authModal.classList.remove('opacity-100', 'pointer-events-auto');
+      authModal.classList.add('opacity-0', 'pointer-events-none');
+      authModalBox.classList.remove('scale-100');
+      authModalBox.classList.add('scale-95');
+    }
+
+    document.getElementById('loginBtnDesktop')?.addEventListener('click', () => openModal('login'));
+    document.getElementById('signUpBtnDesktop')?.addEventListener('click', () => openModal('signup'));
+    document.getElementById('mobileLoginBtn')?.addEventListener('click', () => { closeMobileDrawer(); openModal('login'); });
+    document.getElementById('mobileSignUpBtn')?.addEventListener('click', () => { closeMobileDrawer(); openModal('signup'); });
+    closeAuthModal?.addEventListener('click', closeModal);
+    authModal?.addEventListener('click', (e) => {
+      if (e.target === authModal) closeModal();
+    });
+
+    // Wire Footer Portal Cards to Auth Modal
+    document.getElementById('footerCollectorCard')?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'login.html'; });
+    document.getElementById('footerTradeCard')?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'registeration.html'; });
+
+    // Footer Newsletter Form
+    const footerNewsletterForm = document.getElementById('footerNewsletterForm');
+    footerNewsletterForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = footerNewsletterForm.querySelector('input');
+      const email = input?.value || '';
+      alert(`✨ Welcome to Atelier Connoisseurs!\n\nYour exclusive $250 commission voucher has been sent to ${email}.`);
+      if (input) input.value = '';
+    });
+
+    
+    // ========================================================
+    // INSPIRATION INTERACTIVE LOGIC & FRAMER MOTION
+    // ========================================================
+
+    // 1. Lighting Mood Switcher in Section 1
+    const moodBtns = document.querySelectorAll('.mood-tab-btn');
+    const lightTempLabel = document.getElementById('lightTempLabel');
+    const moodDescBox = document.getElementById('moodDescBox');
+    const livingHeroImg = document.getElementById('livingRoomHeroImg');
+
+    moodBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        moodBtns.forEach(b => {
+          b.classList.remove('active-mood-tab');
+          b.classList.add('border-slate-200/80', 'dark:border-white/10', 'bg-white/60', 'dark:bg-obsidian-900/60');
+        });
+        btn.classList.add('active-mood-tab');
+        btn.classList.remove('border-slate-200/80', 'dark:border-white/10', 'bg-white/60', 'dark:bg-obsidian-900/60');
+
+        const temp = btn.getAttribute('data-temp');
+        const desc = btn.getAttribute('data-desc');
+        const mood = btn.getAttribute('data-mood');
+
+        lightTempLabel.textContent = temp;
+        moodDescBox.textContent = desc;
+
+        // Subtle color filter simulation on the hero image
+        if (livingHeroImg) {
+          if (mood === 'golden') {
+            livingHeroImg.style.filter = 'sepia(0.2) contrast(1.05) brightness(0.98)';
+          } else if (mood === 'midnight') {
+            livingHeroImg.style.filter = 'contrast(1.15) brightness(0.9) hue-rotate(-10deg)';
+          } else {
+            livingHeroImg.style.filter = 'none';
+          }
+        }
+
+        if (window.Motion && Motion.animate) {
+          Motion.animate('#moodDescBox', { opacity: [0.6, 1], y: [4, 0] }, { duration: 0.25 });
+        }
+      });
+    });
+
+    // 2. Dual Space Switcher in Section 3 (Dining vs Office)
+    const spaceData = {
+      dining: {
+        tagline: "Banquet Scale • 24-Inch Pullback Clearance",
+        cat: "Dining Room Architecture",
+        headline: "The Champagne Salon & Banquet Table Alignment",
+        paragraph: "Generous 24-inch borders ensure dining chairs remain seated on the dense wool-silk pile even when guests slide back from dinner.",
+        p1Sub: "Dimensional Guideline",
+        p1Title: "24-Inch Chair Perimeter",
+        p1Desc: "Measure table width and length, then add a minimum of 48 inches to each axis so rear chair legs never catch on rug edges.",
+        p2Sub: "Weave Resilience",
+        p2Title: "Natural Stain Repellence",
+        p2Desc: "High-altitude sheep fleece contains natural protective lanolin, allowing wine, oils, and spills to be blotted away effortlessly.",
+        p3Sub: "Pile Specification",
+        p3Title: "Low-Shear Flatweave or 6mm Pile",
+        p3Desc: "A dense 6mm knot pile prevents chair dragging marks while providing rich acoustic sound dampening during lively dinner conversations."
+      },
+      office: {
+        tagline: "Acoustic Silence • Castor-Wheel Glide",
+        cat: "Executive Library & Study",
+        headline: "The Executive Desk & Library Acoustic Sanctuary",
+        paragraph: "Dense Senneh knot construction allows executive office desk armchairs to glide smoothly without bunching or pile crushing.",
+        p1Sub: "Wheel Glide Tolerance",
+        p1Title: "High-Twist Worsted Foundation",
+        p1Desc: "Double-warp weaving foundation withstands localized pressure from heavy executive desks and brass chair castors.",
+        p2Sub: "Acoustic Isolation",
+        p2Title: "Bespoke Confidentiality (-18 dB)",
+        p2Desc: "Dense wool dampens private confidential phone calls and boardroom meetings across hard parquet floors.",
+        p3Sub: "Lighting Interaction",
+        p3Title: "Anti-Glare Task Light Diffusion",
+        p3Desc: "Matte botanical dye surfaces eliminate harsh laptop and desk lamp reflections for focused executive work."
+      }
+    };
+
+    const spaceTabBtns = document.querySelectorAll('.space-tab-btn');
+    const spaceTagline = document.getElementById('spaceTagline');
+    const spaceCategoryBadge = document.getElementById('spaceCategoryBadge');
+    const spaceHeadline = document.getElementById('spaceHeadline');
+    const spaceParagraph = document.getElementById('spaceParagraph');
+    const pillar1Sub = document.getElementById('pillar1Sub');
+    const pillar1Title = document.getElementById('pillar1Title');
+    const pillar1Desc = document.getElementById('pillar1Desc');
+    const pillar2Sub = document.getElementById('pillar2Sub');
+    const pillar2Title = document.getElementById('pillar2Title');
+    const pillar2Desc = document.getElementById('pillar2Desc');
+    const pillar3Sub = document.getElementById('pillar3Sub');
+    const pillar3Title = document.getElementById('pillar3Title');
+    const pillar3Desc = document.getElementById('pillar3Desc');
+
+    spaceTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        spaceTabBtns.forEach(b => {
+          b.classList.remove('active-space-tab');
+          b.classList.add('text-slate-600', 'dark:text-slate-400');
+        });
+        btn.classList.add('active-space-tab');
+        btn.classList.remove('text-slate-600', 'dark:text-slate-400');
+
+        const sp = btn.getAttribute('data-space');
+        const d = spaceData[sp];
+        if (d) {
+          spaceTagline.textContent = d.tagline;
+          spaceCategoryBadge.textContent = d.cat;
+          spaceHeadline.textContent = d.headline;
+          spaceParagraph.textContent = d.paragraph;
+          pillar1Sub.textContent = d.p1Sub;
+          pillar1Title.textContent = d.p1Title;
+          pillar1Desc.textContent = d.p1Desc;
+          pillar2Sub.textContent = d.p2Sub;
+          pillar2Title.textContent = d.p2Title;
+          pillar2Desc.textContent = d.p2Desc;
+          pillar3Sub.textContent = d.p3Sub;
+          pillar3Title.textContent = d.p3Title;
+          pillar3Desc.textContent = d.p3Desc;
+
+          if (window.Motion && Motion.animate) {
+            Motion.animate('#diningOfficeBanner', { opacity: [0.8, 1], scale: [0.98, 1] }, { duration: 0.3 });
+            Motion.animate('#spacePillarsGrid', { y: [15, 0], opacity: [0.7, 1] }, { duration: 0.35 });
+          }
+        }
+      });
+    });
+
+    // 3. Consultation Form Submission
+    const inspirationConsultForm = document.getElementById('inspirationConsultForm');
+    inspirationConsultForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const clientName = document.getElementById('consultName').value;
+      const room = document.getElementById('consultRoom').value;
+      const aesthetic = document.getElementById('consultAesthetic').value;
+      const dim = document.getElementById('consultDim').value;
+      const dossierId = "CAD-" + Math.floor(100000 + Math.random() * 900000);
+
+      alert(`📐 3D Spatial Staging Request Received!\n\nDossier Code: ${dossierId}\nClient: ${clientName}\nSpace: ${room} (${dim})\nAesthetic: ${aesthetic}\n\n✨ A Senior Interior Architect has been assigned to your project. You will receive 3 photorealistic CAD renders and a curated physical yarn pom-pom kit dispatched within 48 hours.`);
+      inspirationConsultForm.reset();
+    });
+
+    // 4. Unique Framer Motion for Inspiration Page
+    function initInspirationFramerMotion() {
+      if (!window.Motion || !Motion.animate) return;
+
+      // Section 1: Hero Parallax & Float
+      Motion.animate('#livingHeroTextCol', {
+        y: [30, 0],
+        opacity: [0, 1]
+      }, { duration: 0.8, easing: Motion.spring({ stiffness: 180, damping: 20 }) });
+
+      Motion.animate('#livingHeroVisualCol', {
+        scale: [0.93, 1],
+        opacity: [0, 1]
+      }, { duration: 0.9, delay: 0.15, easing: Motion.spring({ stiffness: 170, damping: 22 }) });
+
+      // 3D Parallax Tilt on Section 1 Showcase Card
+      const heroCard = document.querySelector('#livingHeroVisualCol .group');
+      heroCard?.addEventListener('mousemove', (e) => {
+        const rect = heroCard.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        heroCard.style.transform = `perspective(1000px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) scale3d(1.02, 1.02, 1.02)`;
+      });
+      heroCard?.addEventListener('mouseleave', () => {
+        heroCard.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)';
+      });
+
+      // Section 2: Bedroom Slide
+      if (Motion.inView) {
+        Motion.inView('#insp-bedroom', () => {
+          Motion.animate('#bedroomImageCol', { x: [-30, 0], opacity: [0, 1] }, { duration: 0.7 });
+          Motion.animate('#bedroomTextCol', { x: [30, 0], opacity: [0, 1] }, { duration: 0.7, delay: 0.1 });
+        });
+
+        // Section 3: Dining & Office Curtain
+        Motion.inView('#insp-dining-office', () => {
+          Motion.animate('#diningOfficeBanner', { scale: [0.96, 1], opacity: [0, 1] }, { duration: 0.8 });
+          const pillars = document.querySelectorAll('#spacePillarsGrid > div');
+          pillars.forEach((p, idx) => {
+            Motion.animate(p, { y: [30, 0], opacity: [0, 1] }, { duration: 0.55, delay: 0.15 + idx * 0.1 });
+          });
+        });
+
+        // Section 4: 4 Movements Stagger
+        Motion.inView('#insp-movements', () => {
+          Motion.animate('#movementsShowcaseBanner', { opacity: [0, 1], scale: [0.97, 1] }, { duration: 0.7 });
+          const moveCards = document.querySelectorAll('.movement-card');
+          moveCards.forEach((mc, i) => {
+            Motion.animate(mc, { y: [35, 0], opacity: [0, 1] }, { duration: 0.6, delay: 0.15 + i * 0.12 });
+          });
+        });
+
+        // Section 5: Styling Ideas Flatlay
+        Motion.inView('#insp-styling-ideas', () => {
+          Motion.animate('#stylingFlatlayCol', { scale: [0.94, 1], opacity: [0, 1] }, { duration: 0.75 });
+          Motion.animate('#stylingRulesCol', { y: [25, 0], opacity: [0, 1] }, { duration: 0.75, delay: 0.1 });
+        });
+
+        // Section 6: Customer Spaces
+        Motion.inView('#insp-customer-spaces', () => {
+          Motion.animate('#customerHeroBanner', { opacity: [0, 1], y: [25, 0] }, { duration: 0.7 });
+          const cases = document.querySelectorAll('#caseStudiesGrid > div');
+          cases.forEach((cs, i) => {
+            Motion.animate(cs, { y: [30, 0], opacity: [0, 1] }, { duration: 0.55, delay: 0.15 + i * 0.1 });
+          });
+        });
+
+        // Section 7: CAD Simulation & Form
+        Motion.inView('#insp-consultation', () => {
+          Motion.animate('#simImageCol', { x: [-25, 0], opacity: [0, 1] }, { duration: 0.7 });
+          Motion.animate('#simFormCol', { x: [25, 0], opacity: [0, 1] }, { duration: 0.7, delay: 0.1 });
+        });
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initInspirationFramerMotion();
+    });
+
+    // Refresh Lucide Icons to render all newly added footer icons
+    lucide.createIcons();
+
+    // Initial entrance animation using Framer Motion engine
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#mainHeader', {
+          y: [-50, 0],
+          opacity: [0, 1]
+        }, { duration: 0.6, easing: Motion.spring({ stiffness: 220, damping: 22 }) });
+
+        Motion.animate('#mainFooter', {
+          y: [40, 0],
+          opacity: [0, 1]
+        }, { duration: 0.7, delay: 0.15, easing: Motion.spring({ stiffness: 200, damping: 20 }) });
+      }
+    });
+  </script>
+</body>
+</html>

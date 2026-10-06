@@ -1,0 +1,3649 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rug & Carpet Store — Luxury Artisan Atelier</title>
+  <!-- Atelier Favicon Suite (SVG, Multi-size ICO & Retina PNG) -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+  <link rel="alternate icon" href="favicon.ico">
+
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            gold: {
+              300: '#F5DE93',
+              400: '#E6C665',
+              500: '#D4AF37',
+              600: '#AA8820',
+              700: '#836511',
+            },
+            obsidian: {
+              950: '#07080a',
+              900: '#0d0f14',
+              850: '#12151c',
+              800: '#171b24',
+              700: '#222735',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Motion (Framer Motion Engine for Vanilla & Modern Web) -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.17/dist/motion.js"></script>
+
+  <!-- High-Contrast Luxury Atelier Background Engine (Dark & Light) -->
+  <script src="js/atelier-background.js"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D4AF37;
+      border-radius: 9999px;
+    }
+
+    /* 3D Button Styles */
+    .btn-3d {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+      transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.15s ease, background 0.2s ease;
+      cursor: pointer;
+      user-select: none;
+      touch-action: manipulation;
+      transform-style: preserve-3d;
+      perspective: 800px;
+    }
+
+    /* 3D Gold Accent Button (Sign Up) */
+    .btn-3d-gold {
+      background: linear-gradient(180deg, #F9E79F 0%, #D4AF37 40%, #B89020 100%);
+      color: #121008;
+      border: 1px solid #FFE494;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.6) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.3) inset,
+        0 5px 0 #88670F,
+        0 8px 18px rgba(212, 175, 55, 0.45);
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+    .btn-3d-gold:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(180deg, #FCF0BC 0%, #DFC04E 40%, #C39922 100%);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.3) inset,
+        0 7px 0 #88670F,
+        0 12px 24px rgba(212, 175, 55, 0.55);
+    }
+    .btn-3d-gold:active {
+      transform: translateY(4px) !important;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.4) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        0 1px 0 #88670F,
+        0 3px 8px rgba(212, 175, 55, 0.35);
+    }
+
+    /* 3D Slate / Obsidian Button (Login) */
+    .btn-3d-dark {
+      background: linear-gradient(180deg, #2b303c 0%, #1a1e28 50%, #12151d 100%);
+      color: #E2E8F0;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.6) inset,
+        0 4px 0 #090a0e,
+        0 6px 14px rgba(0, 0, 0, 0.45);
+    }
+    .dark .btn-3d-dark {
+      background: linear-gradient(180deg, #2a2f3d 0%, #1a1e27 60%, #10131a 100%);
+    }
+    html:not(.dark) .btn-3d-dark {
+      background: linear-gradient(180deg, #ffffff 0%, #f1f3f7 60%, #e2e6ee 100%);
+      color: #1e293b;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.1) inset,
+        0 4px 0 #cbd5e1,
+        0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+    .btn-3d-dark:hover {
+      transform: translateY(-2px);
+      border-color: rgba(212, 175, 55, 0.4);
+      color: #F8FAFC;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.25) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.6) inset,
+        0 6px 0 #090a0e,
+        0 10px 20px rgba(0, 0, 0, 0.55);
+    }
+    html:not(.dark) .btn-3d-dark:hover {
+      color: #0f172a;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.12) inset,
+        0 6px 0 #cbd5e1,
+        0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    .btn-3d-dark:active {
+      transform: translateY(3px) !important;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.1) inset,
+        0 1px 0 #090a0e,
+        0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+    html:not(.dark) .btn-3d-dark:active {
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 1px 0 #cbd5e1,
+        0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 3D Round Control (Toggles & Hamburger) */
+    .btn-3d-icon {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+      user-select: none;
+    }
+    .dark .btn-3d-icon {
+      background: linear-gradient(180deg, #242934 0%, #151821 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.12) inset,
+        0 3px 0 #0d0f15,
+        0 5px 10px rgba(0, 0, 0, 0.35);
+    }
+    html:not(.dark) .btn-3d-icon {
+      background: linear-gradient(180deg, #ffffff 0%, #f1f4f9 100%);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 3px 0 #cbd5e1,
+        0 5px 10px rgba(0, 0, 0, 0.08);
+    }
+    .btn-3d-icon:hover {
+      transform: translateY(-2px);
+    }
+    .btn-3d-icon:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 #0d0f15, 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    html:not(.dark) .btn-3d-icon:active {
+      box-shadow: 0 1px 0 #cbd5e1, 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Navigation Gliding Indicator */
+    .nav-pill-active {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .nav-indicator {
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      z-index: -1;
+    }
+
+    /* Backdrop Glassmorphism */
+    .glass-nav {
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    /* RTL specific adjustments */
+    [dir="rtl"] {
+      text-align: right;
+    }
+    [dir="rtl"] .dropdown-menu {
+      left: auto;
+      right: 0;
+    }
+    [dir="rtl"] .mobile-drawer {
+      left: 0;
+      right: auto;
+      transform: translateX(-100%);
+    }
+    [dir="rtl"] .mobile-drawer.open {
+      transform: translateX(0);
+    }
+
+    /* 3D Specular Sheen for buttons */
+    .sheen {
+      position: relative;
+      overflow: hidden;
+    }
+    .sheen::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      transition: all 0.75s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .sheen:hover::after {
+      left: 140%;
+      opacity: 1;
+    }
+
+    /* ======================================================== */
+    /* THEME SYSTEM (Dark / Light Dynamic Navbar System) */
+    /* ======================================================== */
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    header#mainHeader {
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .dark header#mainHeader {
+      background-color: rgba(7, 8, 10, 0.88) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5) !important;
+    }
+    html:not(.dark) header#mainHeader {
+      background-color: rgba(255, 255, 255, 0.92) !important;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* Brand Logo Text */
+    .dark #brandLogoTitle {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #brandLogoTitle {
+      color: #0F172A !important;
+    }
+    .dark #brandLogoSubtitle {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) #brandLogoSubtitle {
+      color: #64748B !important;
+    }
+
+    /* Desktop Navigation Links */
+    .dark .nav-link,
+    .dark #homeDropdownBtn {
+      color: #CBD5E1 !important;
+    }
+    .dark .nav-link:hover,
+    .dark #homeDropdownBtn:hover {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) .nav-link,
+    html:not(.dark) #homeDropdownBtn {
+      color: #334155 !important;
+    }
+    html:not(.dark) .nav-link:hover,
+    html:not(.dark) #homeDropdownBtn:hover {
+      color: #AA8820 !important;
+    }
+
+    /* Home Dropdown Menu */
+    .dark #homeDropdownMenu {
+      background-color: rgba(7, 8, 10, 0.96) !important;
+      border-color: rgba(212, 175, 55, 0.25) !important;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
+    }
+    .dark #homeDropdownMenu a {
+      color: #E2E8F0 !important;
+    }
+    .dark #homeDropdownMenu a:hover {
+      background-color: rgba(212, 175, 55, 0.15) !important;
+      color: #E6C665 !important;
+    }
+    html:not(.dark) #homeDropdownMenu {
+      background-color: rgba(255, 255, 255, 0.98) !important;
+      border-color: rgba(226, 232, 240, 0.95) !important;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+    }
+    html:not(.dark) #homeDropdownMenu a {
+      color: #334155 !important;
+    }
+    html:not(.dark) #homeDropdownMenu a:hover {
+      background-color: rgba(212, 175, 55, 0.1) !important;
+      color: #AA8820 !important;
+    }
+
+    /* Hamburger Bars */
+    .dark #hamBarTop,
+    .dark #hamBarMid,
+    .dark #hamBarBot {
+      background-color: #E6C665 !important;
+    }
+    html:not(.dark) #hamBarTop,
+    html:not(.dark) #hamBarMid,
+    html:not(.dark) #hamBarBot {
+      background-color: #0F172A !important;
+    }
+
+    /* RTL Icon */
+    .dark #rtlIcon,
+    .dark #mobileRtlIcon {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) #rtlIcon,
+    html:not(.dark) #mobileRtlIcon {
+      color: #1E293B !important;
+    }
+
+    /* Mobile Drawer */
+    .dark #mobileDrawer {
+      background-color: rgba(7, 8, 10, 0.98) !important;
+      color: #F8FAFC !important;
+      border-left-color: rgba(212, 175, 55, 0.2) !important;
+    }
+    html:not(.dark) #mobileDrawer {
+      background-color: rgba(255, 255, 255, 0.98) !important;
+      color: #0F172A !important;
+      border-left-color: rgba(226, 232, 240, 0.9) !important;
+    }
+    .dark #mobileDrawerHeader {
+      border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) #mobileDrawerHeader {
+      border-bottom-color: rgba(226, 232, 240, 0.85) !important;
+    }
+    .dark #mobileDrawerTitle {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #mobileDrawerTitle {
+      color: #0F172A !important;
+    }
+    .dark #mobileDrawerSubtitle {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) #mobileDrawerSubtitle {
+      color: #64748B !important;
+    }
+    .dark #closeDrawerBtn {
+      color: #94A3B8 !important;
+    }
+    .dark #closeDrawerBtn:hover {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #closeDrawerBtn {
+      color: #64748B !important;
+    }
+    html:not(.dark) #closeDrawerBtn:hover {
+      color: #0F172A !important;
+    }
+    .dark #mobileHomeAccordionBtn {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) #mobileHomeAccordionBtn {
+      color: #0F172A !important;
+    }
+    .dark #mobileDrawer .mobile-nav-link {
+      color: #E2E8F0 !important;
+    }
+    .dark #mobileDrawer .mobile-nav-link:hover {
+      color: #E6C665 !important;
+      background-color: rgba(212, 175, 55, 0.1) !important;
+    }
+    html:not(.dark) #mobileDrawer .mobile-nav-link {
+      color: #334155 !important;
+    }
+    html:not(.dark) #mobileDrawer .mobile-nav-link:hover {
+      color: #AA8820 !important;
+      background-color: rgba(212, 175, 55, 0.1) !important;
+    }
+    .dark .mobile-section-heading {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .mobile-section-heading {
+      color: #64748B !important;
+    }
+    .dark .drawer-pref-box {
+      background-color: rgba(255, 255, 255, 0.04) !important;
+      border-color: rgba(255, 255, 255, 0.06) !important;
+      color: #E2E8F0 !important;
+    }
+    html:not(.dark) .drawer-pref-box {
+      background-color: #F8FAFC !important;
+      border-color: #E2E8F0 !important;
+      color: #1E293B !important;
+    }
+    .dark #mobileDrawerFooter {
+      background-color: rgba(13, 15, 20, 0.6) !important;
+      border-top-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) #mobileDrawerFooter {
+      background-color: #F8FAFC !important;
+      border-top-color: rgba(226, 232, 240, 0.9) !important;
+    }
+
+    /* Modal Dark & Light Mode */
+    .dark #authModalBox {
+      background-color: #07080a !important;
+      border-color: rgba(212, 175, 55, 0.3) !important;
+      color: #F8FAFC !important;
+    }
+    html:not(.dark) #authModalBox {
+      background-color: #FFFFFF !important;
+      border-color: #E2E8F0 !important;
+      color: #0F172A !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15) !important;
+    }
+    html:not(.dark) #modalTitle {
+      color: #0F172A !important;
+    }
+    html:not(.dark) #modalSubtitle {
+      color: #64748B !important;
+    }
+    html:not(.dark) #authModalBox input {
+      background-color: #F8FAFC !important;
+      border-color: #CBD5E1 !important;
+      color: #0F172A !important;
+    }
+
+    /* ======================================================== */
+    /* FOOTER THEME STYLING (Dark & Light Mode + RTL) */
+    /* ======================================================== */
+    .footer-card {
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .dark .footer-card {
+      background-color: #0B0F19 !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8) !important;
+    }
+    html:not(.dark) .footer-card {
+      background-color: #FFFFFF !important;
+      border: 1px solid rgba(226, 232, 240, 0.9) !important;
+      box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.06) !important;
+    }
+
+    /* Footer Trust Badges */
+    .dark .footer-trust-badge {
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) .footer-trust-badge {
+      background-color: #F8FAFC !important;
+      border: 1px solid #E2E8F0 !important;
+    }
+    .dark .footer-trust-title {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-trust-title {
+      color: #0F172A !important;
+    }
+    .dark .footer-trust-sub {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .footer-trust-sub {
+      color: #64748B !important;
+    }
+
+    /* Footer Section Headings */
+    .dark .footer-col-heading {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-col-heading {
+      color: #0F172A !important;
+    }
+
+    /* Footer Links & Services */
+    .dark .footer-link {
+      color: #94A3B8 !important;
+    }
+    .dark .footer-link:hover {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) .footer-link {
+      color: #475569 !important;
+    }
+    html:not(.dark) .footer-link:hover {
+      color: #B89020 !important;
+    }
+
+    /* Footer Portal Cards */
+    .dark .footer-portal-card {
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    .dark .footer-portal-card:hover {
+      background-color: rgba(255, 255, 255, 0.06) !important;
+      border-color: rgba(212, 175, 55, 0.35) !important;
+    }
+    html:not(.dark) .footer-portal-card {
+      background-color: #F8FAFC !important;
+      border: 1px solid #E2E8F0 !important;
+    }
+    html:not(.dark) .footer-portal-card:hover {
+      background-color: #F1F5F9 !important;
+      border-color: rgba(212, 175, 55, 0.5) !important;
+    }
+    .dark .footer-portal-title {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-portal-title {
+      color: #0F172A !important;
+    }
+    .dark .footer-portal-sub {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .footer-portal-sub {
+      color: #64748B !important;
+    }
+
+    /* Newsletter Card & Input */
+    .dark .footer-news-card {
+      background-color: rgba(255, 255, 255, 0.02) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) .footer-news-card {
+      background-color: #F8FAFC !important;
+      border: 1px solid #E2E8F0 !important;
+    }
+    .dark .footer-news-title {
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-news-title {
+      color: #0F172A !important;
+    }
+    .dark .footer-news-sub {
+      color: #94A3B8 !important;
+    }
+    html:not(.dark) .footer-news-sub {
+      color: #64748B !important;
+    }
+    .dark .footer-input {
+      background-color: #07090E !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      color: #FFFFFF !important;
+    }
+    html:not(.dark) .footer-input {
+      background-color: #FFFFFF !important;
+      border: 1px solid #CBD5E1 !important;
+      color: #0F172A !important;
+    }
+
+    /* 3D Amber / Orange Button */
+    .btn-3d-amber {
+      background: linear-gradient(180deg, #F59E0B 0%, #D97706 60%, #B45309 100%);
+      color: #FFFFFF;
+      border: 1px solid #FCD34D;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.6) inset,
+        0 -2px 0 rgba(0, 0, 0, 0.3) inset,
+        0 4px 0 #78350F,
+        0 8px 18px rgba(217, 119, 6, 0.45);
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+    .btn-3d-amber:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(180deg, #FBBF24 0%, #F59E0B 60%, #C2410C 100%);
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 6px 0 #78350F,
+        0 12px 24px rgba(217, 119, 6, 0.55);
+    }
+    .btn-3d-amber:active {
+      transform: translateY(3px) !important;
+      box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.3) inset,
+        0 1px 0 #78350F,
+        0 3px 8px rgba(217, 119, 6, 0.35);
+    }
+
+    /* Footer Social Buttons */
+    .dark .footer-social-btn {
+      color: #94A3B8 !important;
+    }
+    .dark .footer-social-btn:hover {
+      color: #E6C665 !important;
+      border-color: rgba(212, 175, 55, 0.4) !important;
+    }
+    html:not(.dark) .footer-social-btn {
+      color: #334155 !important;
+    }
+    html:not(.dark) .footer-social-btn:hover {
+      color: #B89020 !important;
+      border-color: rgba(212, 175, 55, 0.5) !important;
+    }
+
+    /* Footer Bottom Line */
+    .dark .footer-bottom-border {
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    html:not(.dark) .footer-bottom-border {
+      border-top: 1px solid rgba(226, 232, 240, 0.9) !important;
+    }
+    .dark .footer-bottom-text {
+      color: #64748B !important;
+    }
+    html:not(.dark) .footer-bottom-text {
+      color: #64748B !important;
+    }
+
+    /* RTL specific adjustments for footer */
+    [dir="rtl"] .rtl-chevron {
+      transform: rotate(180deg);
+    }
+
+    /* ======================================================== */
+    /* CONTACT SUITE - ULTRA-LUXURY ATELIER CONCIERGE STYLES */
+    /* ======================================================== */
+    .contact-glass-card {
+      background: rgba(13, 15, 20, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    html:not(.dark) .contact-glass-card {
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 12px 35px -6px rgba(0, 0, 0, 0.06), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+    }
+
+    .contact-inner-card {
+      background: rgba(23, 27, 36, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.25s ease;
+    }
+    html:not(.dark) .contact-inner-card {
+      background: #F8FAFC;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .contact-text-primary {
+      color: #F8FAFC;
+    }
+    html:not(.dark) .contact-text-primary {
+      color: #0F172A;
+    }
+
+    .contact-text-secondary {
+      color: #94A3B8;
+    }
+    html:not(.dark) .contact-text-secondary {
+      color: #475569;
+    }
+
+    .contact-text-muted {
+      color: #64748B;
+    }
+    html:not(.dark) .contact-text-muted {
+      color: #64748B;
+    }
+
+    .contact-input {
+      background: rgba(10, 12, 16, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #F8FAFC;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    html:not(.dark) .contact-input {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      color: #0F172A;
+    }
+    .contact-input:focus {
+      outline: none;
+      border-color: #D4AF37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.22);
+    }
+
+    .active-spec-card {
+      border-color: #D4AF37 !important;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.25) !important;
+    }
+
+    .map-grid-bg {
+      background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    /* Pulse beacon */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.08); }
+    }
+    .beacon-pulse {
+      animation: pulseGlow 2.5s infinite ease-in-out;
+    }
+
+  
+    /* ========================================================================== */
+    /* 100% BULLETPROOF FIXED STICKY NAVBAR ARCHITECTURE                         */
+    /* Unaffected by overflow-x, guarantees header stays permanently on screen   */
+    /* ========================================================================== */
+    #mainHeader {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      z-index: 50 !important;
+      margin: 0 !important;
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    }
+
+    body.has-navbar,
+    body:has(#mainHeader) {
+      padding-top: 5rem !important; /* 80px mobile header height */
+    }
+
+    @media (min-width: 640px) {
+      body.has-navbar,
+      body:has(#mainHeader) {
+        padding-top: 5.5rem !important; /* 88px desktop header height */
+      }
+    }
+
+        #mobileDrawerOverlay {
+      z-index: 55 !important;
+    }
+
+    /* ========================================================================== */
+    /* ZERO-LAG ULTRA-SMOOTH MOBILE DRAWER ARCHITECTURE                           */
+    /* Fixes scrolling lag, double-overflow conflicts, and backdrop-filter GPU stalls */
+    /* ========================================================================== */
+    html.mobile-drawer-open,
+    body.mobile-drawer-open {
+      overflow: hidden !important;
+      touch-action: none !important;
+      height: 100% !important;
+      overscroll-behavior: none !important;
+    }
+
+    #mobileDrawer {
+      position: fixed !important;
+      top: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      height: 100dvh !important;
+      max-height: 100dvh !important;
+      overflow: hidden !important; /* Outer container NEVER scrolls - fixes double-scroll lag */
+      backdrop-filter: none !important; /* Eliminate expensive GPU blur on every scroll frame */
+      -webkit-backdrop-filter: none !important;
+      will-change: transform !important;
+      transform: translate3d(100%, 0, 0) !important;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      z-index: 60 !important;
+      box-shadow: -8px 0 32px rgba(0, 0, 0, 0.45) !important;
+      contain: paint !important;
+    }
+
+    #mobileDrawer.translate-x-0,
+    #mobileDrawer.open {
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    [dir="rtl"] #mobileDrawer {
+      right: auto !important;
+      left: 0 !important;
+      transform: translate3d(-100%, 0, 0) !important;
+      box-shadow: 8px 0 32px rgba(0, 0, 0, 0.45) !important;
+    }
+
+    [dir="rtl"] #mobileDrawer.translate-x-0,
+    [dir="rtl"] #mobileDrawer.open {
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    /* Fixed Header & Footer inside Drawer */
+    #mobileDrawerHeader {
+      flex-shrink: 0 !important;
+      position: relative !important;
+      z-index: 10 !important;
+      transform: translateZ(0) !important;
+    }
+
+    #mobileDrawerFooter {
+      flex-shrink: 0 !important;
+      position: relative !important;
+      z-index: 10 !important;
+      transform: translateZ(0) !important;
+    }
+
+    /* Single Dedicated High-Performance Smooth Scroll Container */
+    #mobileDrawerContent,
+    #mobileDrawer > .flex-1 {
+      flex: 1 1 auto !important;
+      min-height: 0 !important; /* Critical for flex child scroll */
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      -webkit-overflow-scrolling: touch !important; /* 60fps/120fps iOS momentum */
+      overscroll-behavior: contain !important; /* Prevents scroll chaining to parent body */
+      overscroll-behavior-y: contain !important;
+      touch-action: pan-y !important;
+      contain: content !important; /* Isolate layout & paint calculations */
+      will-change: scroll-position !important;
+    }
+
+    /* Fast, Lightweight Scrollbar */
+    #mobileDrawerContent::-webkit-scrollbar,
+    #mobileDrawer > .flex-1::-webkit-scrollbar {
+      width: 4px !important;
+    }
+    #mobileDrawerContent::-webkit-scrollbar-track,
+    #mobileDrawer > .flex-1::-webkit-scrollbar-track {
+      background: transparent !important;
+    }
+    #mobileDrawerContent::-webkit-scrollbar-thumb,
+    #mobileDrawer > .flex-1::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.35) !important;
+      border-radius: 9999px !important;
+    }
+
+    /* Keep Drawer Buttons Lightweight during scroll */
+    #mobileDrawer .btn-3d {
+      transform-style: flat !important;
+      perspective: none !important;
+    }
+
+    #authModal {
+      z-index: 70 !important;
+    }
+
+    /* Enhanced Ambient Shadow & Border on Scroll */
+    #mainHeader.scrolled {
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.15) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+    }
+    html:not(.dark) #mainHeader.scrolled {
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 0 15px rgba(212, 175, 55, 0.2) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.45) !important;
+    }
+
+  
+    /* ========================================================== */
+    /* ACTIVE NAVBAR STATUS SYSTEM (DESKTOP & MOBILE)             */
+    /* ========================================================== */
+    
+    /* 1. Desktop Nav Active Links */
+    .nav-link.nav-pill-active,
+    .nav-link.active,
+    #homeDropdownBtn.nav-pill-active,
+    #homeDropdownBtn.active {
+      position: relative !important;
+      background: rgba(212, 175, 55, 0.16) !important;
+      color: #E6C665 !important;
+      border: 1px solid rgba(212, 175, 55, 0.45) !important;
+      font-weight: 700 !important;
+      border-radius: 10px !important;
+      box-shadow: 0 0 14px rgba(212, 175, 55, 0.22) !important;
+    }
+    
+    html:not(.dark) .nav-link.nav-pill-active,
+    html:not(.dark) .nav-link.active,
+    html:not(.dark) #homeDropdownBtn.nav-pill-active,
+    html:not(.dark) #homeDropdownBtn.active {
+      background: rgba(212, 175, 55, 0.18) !important;
+      color: #836511 !important;
+      border: 1px solid rgba(212, 175, 55, 0.55) !important;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 8px rgba(170, 136, 32, 0.18) !important;
+    }
+
+    /* Glowing Bottom Accent Indicator Bar for Active Desktop Link */
+    .nav-link.nav-pill-active::after,
+    .nav-link.active::after,
+    #homeDropdownBtn.nav-pill-active::after,
+    #homeDropdownBtn.active::after {
+      content: '' !important;
+      position: absolute !important;
+      bottom: -2px !important;
+      left: 15% !important;
+      right: 15% !important;
+      height: 2.5px !important;
+      background: linear-gradient(90deg, transparent, #E6C665 50%, transparent) !important;
+      border-radius: 9999px !important;
+      box-shadow: 0 0 8px #E6C665 !important;
+    }
+
+    /* 2. Desktop Dropdown Menu Active Item */
+    #homeDropdownMenu a.nav-pill-active,
+    #homeDropdownMenu a.active {
+      background: rgba(212, 175, 55, 0.2) !important;
+      color: #E6C665 !important;
+      font-weight: 700 !important;
+      border-left: 3px solid #D4AF37 !important;
+    }
+    html:not(.dark) #homeDropdownMenu a.nav-pill-active,
+    html:not(.dark) #homeDropdownMenu a.active {
+      background: rgba(212, 175, 55, 0.18) !important;
+      color: #836511 !important;
+      font-weight: 700 !important;
+      border-left: 3px solid #AA8820 !important;
+    }
+
+    /* 3. Mobile Drawer Active Link */
+    .mobile-nav-link.nav-pill-active,
+    .mobile-nav-link.active,
+    #mobileHomeLink.nav-pill-active,
+    #mobileHomeLink.active,
+    #mobileHomeAccordionBtn.nav-pill-active,
+    #mobileHomeAccordionBtn.active {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.05) 100%) !important;
+      color: #E6C665 !important;
+      border-left: 4px solid #D4AF37 !important;
+      font-weight: 700 !important;
+      box-shadow: inset 0 0 14px rgba(212, 175, 55, 0.12) !important;
+    }
+    .mobile-nav-link.nav-pill-active i,
+    .mobile-nav-link.active i,
+    #mobileHomeLink.nav-pill-active i,
+    #mobileHomeLink.active i {
+      color: #E6C665 !important;
+    }
+    html:not(.dark) .mobile-nav-link.nav-pill-active,
+    html:not(.dark) .mobile-nav-link.active,
+    html:not(.dark) #mobileHomeLink.nav-pill-active,
+    html:not(.dark) #mobileHomeLink.active,
+    html:not(.dark) #mobileHomeAccordionBtn.nav-pill-active,
+    html:not(.dark) #mobileHomeAccordionBtn.active {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.24) 0%, rgba(212, 175, 55, 0.06) 100%) !important;
+      color: #836511 !important;
+      border-left: 4px solid #AA8820 !important;
+      font-weight: 700 !important;
+    }
+    html:not(.dark) .mobile-nav-link.nav-pill-active i,
+    html:not(.dark) .mobile-nav-link.active i,
+    html:not(.dark) #mobileHomeLink.nav-pill-active i,
+    html:not(.dark) #mobileHomeLink.active i {
+      color: #836511 !important;
+    }
+
+  
+    /* ========================================================================== */
+    /* MASTER MOBILE-FIRST RESPONSIVE ARCHITECTURE                                */
+    /* Breakpoints: 320px, 480px, 768px, 1024px                                   */
+    /* Fixes overflow, text clipping, button squeezing, and card stacking        */
+    /* ========================================================================== */
+
+    /* 1. Global Box-Sizing & Viewport Boundary Reset */
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+      -webkit-box-sizing: border-box !important;
+    }
+
+    html {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      position: relative !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      min-width: 320px !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+    }
+
+    /* 2. Semantic Containers & Sections Strict Fit */
+    main {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+    }
+
+    section {
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: clip !important;
+      position: relative !important;
+    }
+
+    /* Contain decorative ambient radial orbs */
+    [class*="blur-"],
+    [class*="aurora-orb"],
+    .ambient-orb {
+      max-width: 90vw !important;
+      pointer-events: none !important;
+    }
+
+    /* 3. Media, Canvas & SVG Fluid Scaling */
+    img, video, canvas, svg, picture, iframe {
+      max-width: 100% !important;
+      height: auto;
+    }
+
+    /* 4. Universal Typography Word-Break Protection */
+    h1, h2, h3, h4, h5, h6, p, span, a, li, button, label, input, textarea {
+      overflow-wrap: break-word !important;
+      word-break: break-word !important;
+    }
+
+    /* Fix flex input shrinking */
+    input, textarea, select {
+      min-width: 0 !important;
+    }
+
+    /* 5. Mobile Drawer Responsive Bounds */
+    #mobileDrawer {
+      width: min(88vw, 380px) !important;
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: ULTRA-COMPACT MOBILE (320px to 479px)                          */
+    /* ========================================================================== */
+    @media (max-width: 479px) {
+      /* Typography Scaling */
+      h1, .font-serif.text-3xl, .font-serif.text-4xl, .font-serif.text-5xl {
+        font-size: clamp(1.45rem, 6.2vw, 2.15rem) !important;
+        line-height: 1.22 !important;
+      }
+      h2, .font-serif.text-2xl, .font-serif.text-3xl {
+        font-size: clamp(1.25rem, 5vw, 1.75rem) !important;
+        line-height: 1.25 !important;
+      }
+      h3, .font-serif.text-xl, .font-serif.text-2xl {
+        font-size: clamp(1.05rem, 4vw, 1.35rem) !important;
+        line-height: 1.3 !important;
+      }
+      p {
+        font-size: 0.85rem !important;
+        line-height: 1.55 !important;
+      }
+
+      /* Equalized Vertical Section Spacing */
+      section {
+        padding-top: 2.75rem !important;
+        padding-bottom: 2.75rem !important;
+      }
+
+      /* Container Horizontal Padding */
+      .mx-auto.px-4,
+      .mx-auto.px-6,
+      .mx-auto.px-8,
+      [class*="max-w-"][class*="mx-auto"] {
+        padding-left: 0.875rem !important;
+        padding-right: 0.875rem !important;
+      }
+
+      /* Universal Card Stacking */
+      .grid.grid-cols-2:not(.keep-grid-mobile),
+      .grid.grid-cols-3,
+      .grid.grid-cols-4,
+      .grid.grid-cols-5,
+      .grid.grid-cols-6 {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+      }
+
+      /* 3D Action Buttons Fitting Mobile Screens */
+      .btn-3d {
+        max-width: 100% !important;
+        padding-left: 0.875rem !important;
+        padding-right: 0.875rem !important;
+        font-size: 0.75rem !important;
+      }
+
+      /* Action Button Groups Wrap Vertically */
+      .hero-cta-group,
+      .btn-group-mobile,
+      form .flex-row:not(.keep-inline) {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 0.75rem !important;
+      }
+
+      /* Stat rows inside cards: 2 columns instead of 3 or 4 */
+      .grid.grid-cols-3.text-center,
+      .grid.grid-cols-4.text-center {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.5rem !important;
+      }
+
+      /* Modal and Auth Card Max Bounds */
+      #authModalBox,
+      #loginCard,
+      #registerCard {
+        width: 100% !important;
+        max-width: calc(100vw - 1.5rem) !important;
+        padding: 1.25rem 1rem !important;
+        margin: 0.75rem auto !important;
+      }
+
+      /* Header Logo Typography on 320px */
+      #brandLogoTitle {
+        font-size: 11.5px !important;
+      }
+      #brandLogoSubtitle {
+        font-size: 7px !important;
+      }
+
+      /* Footer Columns Stacking */
+      footer .grid.grid-cols-12,
+      footer .grid.grid-cols-2,
+      footer .grid.grid-cols-3,
+      footer .grid.grid-cols-4 {
+        grid-template-columns: 1fr !important;
+        gap: 1.75rem !important;
+      }
+    }
+
+    /* Special 320px Micro Screen Tuning */
+    @media (max-width: 340px) {
+      #mobileDrawer {
+        width: 96vw !important;
+      }
+      .mx-auto.px-4,
+      .mx-auto.px-6 {
+        padding-left: 0.625rem !important;
+        padding-right: 0.625rem !important;
+      }
+      h1 {
+        font-size: 1.4rem !important;
+      }
+      .btn-3d {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        height: 2.5rem !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: MOBILE LANDSCAPE & PHABLET (480px to 767px)                    */
+    /* ========================================================================== */
+    @media (min-width: 480px) and (max-width: 767px) {
+      h1, .font-serif.text-3xl, .font-serif.text-4xl, .font-serif.text-5xl {
+        font-size: clamp(1.85rem, 5vw, 2.5rem) !important;
+        line-height: 1.22 !important;
+      }
+      h2 {
+        font-size: clamp(1.45rem, 4vw, 1.95rem) !important;
+      }
+      section {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+      }
+      .grid.grid-cols-3,
+      .grid.grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1.25rem !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: TABLET PORTRAIT (768px to 1023px)                              */
+    /* ========================================================================== */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      h1, .font-serif.text-4xl, .font-serif.text-5xl {
+        font-size: clamp(2.2rem, 4vw, 3rem) !important;
+      }
+      section {
+        padding-top: 4.5rem !important;
+        padding-bottom: 4.5rem !important;
+      }
+      .grid.grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      .lg\:col-span-12,
+      .lg\:col-span-7,
+      .lg\:col-span-5 {
+        grid-column: span 12 / span 12 !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* BREAKPOINT: DESKTOP & WIDE DISPLAYS (1024px+)                              */
+    /* ========================================================================== */
+    @media (min-width: 1024px) {
+      section {
+        padding-top: 5.5rem !important;
+        padding-bottom: 5.5rem !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* RTL ICONS & TEXT FLOW RESILIENCE                                           */
+    /* ========================================================================== */
+    [dir="rtl"] {
+      text-align: right;
+    }
+    [dir="rtl"] [data-lucide="chevron-right"],
+    [dir="rtl"] [data-lucide="arrow-right"],
+    [dir="rtl"] .rtl-flip {
+      transform: scaleX(-1) !important;
+    }
+    [dir="rtl"] [data-lucide="chevron-left"],
+    [dir="rtl"] [data-lucide="arrow-left"] {
+      transform: scaleX(-1) !important;
+    }
+    [dir="rtl"] .border-l-4 {
+      border-left-width: 0 !important;
+      border-right-width: 4px !important;
+    }
+    [dir="rtl"] .border-l-2 {
+      border-left-width: 0 !important;
+      border-right-width: 2px !important;
+    }
+    [dir="rtl"] .pl-9 {
+      padding-left: 0 !important;
+      padding-right: 2.25rem !important;
+    }
+
+  </style>
+</head>
+
+<body class="has-navbar bg-[#0A0C10] text-slate-100 font-sans antialiased transition-colors duration-300 min-h-screen flex flex-col justify-between selection:bg-gold-500 selection:text-black">
+
+  <!-- ======================================================== -->
+  <!-- MAIN NAVBAR HEADER -->
+  <!-- ======================================================== -->
+  <header id="mainHeader" class="fixed top-0 left-0 right-0 z-40 w-full transition-all duration-300 glass-nav">
+    <div class="max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between gap-2">
+
+      <!-- ==================================================== -->
+      <!-- 1. LEFT: LOGO (Ultra-Sleek & Refined Luxury Emblem) -->
+      <!-- ==================================================== -->
+      <div class="flex items-center gap-2.5 flex-shrink-0">
+        <a href="index.html" id="brandLogo" class="group flex items-center gap-2 focus:outline-none" aria-label="Rug & Carpet Store Homepage">
+          
+          <!-- Compact 3D Interwoven Loom Emblem (SVG) -->
+          <div class="relative w-7 h-7 sm:w-7.5 sm:h-7.5 rounded-[7px] bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 p-[1.1px] shadow-[0_2px_8px_rgba(212,175,55,0.22)] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-1">
+            <div class="w-full h-full bg-obsidian-950 rounded-[5.5px] flex items-center justify-center overflow-hidden relative">
+              <!-- Radial sheen -->
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,175,55,0.3),transparent_70%)]"></div>
+              
+              <!-- Creative Carpet Weave Geometric Monogram SVG -->
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-400 transition-transform duration-500 group-hover:scale-110" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+                <!-- Interlacing Rug Loom Strands -->
+                <rect x="7" y="7" width="26" height="26" rx="5" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 1.5" class="opacity-70" />
+                <path d="M12 12L28 28M28 12L12 28" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M20 6V34M6 20H34" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <circle cx="20" cy="20" r="4.5" fill="#D4AF37" stroke="#121008" stroke-width="1.2" />
+                <!-- Corner Knots -->
+                <circle cx="10" cy="10" r="1.5" fill="currentColor" />
+                <circle cx="30" cy="10" r="1.5" fill="currentColor" />
+                <circle cx="10" cy="30" r="1.5" fill="currentColor" />
+                <circle cx="30" cy="30" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Brand Typography (Without Atelier Badge, Compact) -->
+          <div class="flex flex-col">
+            <span id="brandLogoTitle" class="font-serif font-bold text-[12.5px] sm:text-[14px] tracking-[0.05em] group-hover:text-gold-500 transition-colors uppercase leading-tight">
+              Rug & Carpet
+            </span>
+            <span id="brandLogoSubtitle" class="text-[7.5px] sm:text-[8px] tracking-[0.16em] uppercase font-medium leading-none mt-0.5 transition-colors">
+              Handcrafted &bull; Heritage
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- ==================================================== -->
+      <!-- 2. CENTER: NAVBAR MENU (Laptop / Desktop View) -->
+      <!-- ==================================================== -->
+      <nav id="desktopMenu" class="hidden xl:flex items-center justify-center flex-1 max-w-5xl px-2">
+        <ul class="flex items-center gap-0.5 2xl:gap-1 text-[12px] xl:text-[12.5px] 2xl:text-[13.5px] font-medium tracking-wide">
+          
+          <!-- HOME (With Smooth Dropdown for Home 1 and Home 2) -->
+          <li class="relative group/home" id="homeDropdownWrapper">
+            <a 
+              href="index.html" 
+              id="homeDropdownBtn" 
+              class="flex items-center gap-1 px-2 2xl:px-2.5 py-2 rounded-lg transition-colors focus:outline-none"
+              aria-expanded="false" 
+              aria-haspopup="true"
+            >
+              <span>Home</span>
+              <i data-lucide="chevron-down" id="homeChevron" class="w-3.5 h-3.5 transition-transform duration-300 group-hover/home:rotate-180"></i>
+            </a>
+
+            <!-- Home Dropdown Menu (Home 1 and Home 2 Only) -->
+            <div 
+              id="homeDropdownMenu" 
+              class="dropdown-menu absolute top-full left-0 mt-2 w-32 rounded-xl p-1.5 shadow-xl glass-nav opacity-0 invisible translate-y-2 pointer-events-none transition-all duration-200 group-hover/home:opacity-100 group-hover/home:visible group-hover/home:translate-y-0 group-hover/home:pointer-events-auto z-50"
+            >
+              <a href="index.html" class="block px-3 py-2 rounded-lg text-xs font-semibold transition-colors">
+                Home 1
+              </a>
+              <a href="home-2.html" class="block px-3 py-2 rounded-lg text-xs font-semibold transition-colors">
+                Home 2
+              </a>
+            </div>
+          </li>
+
+          <!-- Remaining 10 Direct Navbar Links -->
+          <li>
+            <a href="about.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">About</a>
+          </li>
+          <li>
+            <a href="products.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Products</a>
+          </li>
+          <li>
+            <a href="collections.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Collections</a>
+          </li>
+          <li>
+            <a href="custom-rugs.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap relative">
+              <span>Custom Rugs</span>
+              <span class="absolute -top-1 right-0 text-[8px] font-black uppercase px-1 py-0.2 rounded-full bg-gold-500 text-black shadow-sm">Bespoke</span>
+            </a>
+          </li>
+          <li>
+            <a href="rug-guide.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Rug Guide</a>
+          </li>
+          <li>
+            <a href="craftmanship.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Craftmanship</a>
+          </li>
+          <li>
+            <a href="showroom.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Showroom</a>
+          </li>
+          <li>
+            <a href="inspiration.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap">Inspiration</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link px-1.5 2xl:px-2.5 py-2 rounded-lg transition-colors whitespace-nowrap nav-pill-active active">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- ==================================================== -->
+      <!-- 3. RIGHT: TOGGLES & 3D BUTTONS (Desktop: Visible | Mobile/Tab: Inside Hamburger) -->
+      <!-- ==================================================== -->
+      <div class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0">
+
+        <!-- All Right-side Controls for Laptop / Desktop View -->
+        <div class="hidden xl:flex items-center gap-2.5">
+          <!-- Dark Mode Toggle Button (3D - Reduced Size) -->
+          <button 
+            id="darkModeToggle" 
+            class="btn-3d-icon w-9 h-9 rounded-xl focus:outline-none flex items-center justify-center" 
+            aria-label="Toggle Dark or Light Mode"
+            title="Toggle Dark / Light Theme"
+          >
+            <!-- Sun Icon (Shown in Dark Mode) -->
+            <i data-lucide="sun" id="sunIcon" class="w-4 h-4 text-gold-400 transition-transform duration-300"></i>
+            <!-- Moon Icon (Shown in Light Mode) -->
+            <i data-lucide="moon" id="moonIcon" class="w-4 h-4 text-slate-700 hidden transition-transform duration-300"></i>
+          </button>
+
+          <!-- Right to Left (RTL) Toggle Button (3D - Reduced Size & Right-Left Icon) -->
+          <button 
+            id="rtlToggle" 
+            class="btn-3d-icon w-9 h-9 rounded-xl focus:outline-none flex items-center justify-center" 
+            aria-label="Toggle Direction Right to Left"
+            title="Toggle Layout Direction (LTR / RTL)"
+          >
+            <!-- Right-Left Bidirectional Arrow Icon (⇄) -->
+            <svg id="rtlIcon" class="w-4 h-4 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8h16M16 4l4 4-4 4" />
+              <path d="M20 16H4M8 12l-4 4 4 4" />
+            </svg>
+          </button>
+
+          <!-- 3D Login Button (Exact Same Height & Width as Sign Up) -->
+          <button 
+            id="loginBtnDesktop" 
+            class="btn-3d btn-3d-dark sheen w-24 h-9 text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center text-center"
+           onclick="window.location.href='login.html'">
+            <span>Login</span>
+          </button>
+
+          <!-- 3D Sign Up Button (Exact Same Height & Width as Login) -->
+          <button 
+            id="signUpBtnDesktop" 
+            class="btn-3d btn-3d-gold sheen w-24 h-9 text-xs font-extrabold uppercase tracking-wider rounded-xl flex items-center justify-center text-center"
+           onclick="window.location.href='registeration.html'">
+            <span>Sign Up</span>
+          </button>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- MOBILE & TABLET HAMBURGER BUTTON (Right side) -->
+        <!-- ==================================================== -->
+        <button 
+          id="hamburgerBtn" 
+          class="xl:hidden btn-3d-icon w-11 h-11 text-gold-400 focus:outline-none relative z-50 flex items-center justify-center"
+          aria-label="Toggle Navigation Menu"
+          aria-expanded="false"
+        >
+          <div class="w-5 h-4 flex flex-col justify-between items-center relative">
+            <span id="hamBarTop" class="w-full h-0.5 bg-gold-400 rounded-full transition-all duration-300 origin-center"></span>
+            <span id="hamBarMid" class="w-full h-0.5 bg-gold-400 rounded-full transition-all duration-200"></span>
+            <span id="hamBarBot" class="w-full h-0.5 bg-gold-400 rounded-full transition-all duration-300 origin-center"></span>
+          </div>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- MOBILE & TABLET HAMBURGER MENU DRAWER -->
+  <!-- ======================================================== -->
+  <div id="mobileDrawerOverlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden"></div>
+
+    <aside 
+    id="mobileDrawer" 
+    class="mobile-drawer fixed top-0 right-0 h-full w-[85%] max-w-md z-50 shadow-2xl transform translate-x-full flex flex-col justify-between overflow-hidden xl:hidden"
+    aria-label="Mobile Navigation Menu"
+  >
+    <!-- Drawer Header -->
+    <div id="mobileDrawerHeader" class="p-6 border-b flex items-center justify-between transition-colors">
+      <a href="index.html" class="flex items-center gap-2 focus:outline-none cursor-pointer" aria-label="Rug & Carpet Store Homepage">
+        <div class="w-7 h-7 rounded-[7px] bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 p-[1.1px] shadow-md">
+          <div class="w-full h-full bg-obsidian-950 rounded-[5.5px] flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-gold-400" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+              <path d="M12 12L28 28M28 12L12 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="20" cy="20" r="4" fill="#D4AF37" />
+            </svg>
+          </div>
+        </div>
+        <div>
+          <div id="mobileDrawerTitle" class="font-serif font-bold text-xs sm:text-sm tracking-wide uppercase leading-tight transition-colors">Rug & Carpet</div>
+          <div id="mobileDrawerSubtitle" class="text-[7.5px] uppercase tracking-widest font-medium leading-none mt-0.5 transition-colors">Handcrafted &bull; Heritage</div>
+        </div>
+      </a>
+
+      <!-- Close Icon inside drawer header -->
+      <button id="closeDrawerBtn" class="btn-3d-icon w-9 h-9" aria-label="Close menu">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Navigation Links (All required items inside) -->
+    <div id="mobileDrawerContent" class="p-6 space-y-6 flex-1 overflow-y-auto">
+      
+      <!-- Home Link & Submenu Toggle -->
+      <div class="space-y-1">
+        <div class="w-full flex items-center justify-between p-1 rounded-xl transition-colors">
+          <a 
+            href="index.html" 
+            id="mobileHomeLink" 
+            class="mobile-nav-link flex-1 flex items-center gap-3 p-2.5 rounded-lg hover:bg-gold-500/10 text-sm font-semibold transition-colors"
+          >
+            <i data-lucide="home" class="w-4 h-4 text-gold-400"></i>
+            <span>Home</span>
+          </a>
+          <button 
+            id="mobileHomeAccordionBtn" 
+            class="p-2.5 text-slate-400 hover:text-gold-400 focus:outline-none" 
+            aria-label="Toggle Home Submenu"
+          >
+            <i data-lucide="chevron-down" id="mobileHomeChevron" class="w-4 h-4 transition-transform duration-200"></i>
+          </button>
+        </div>
+
+        <div id="mobileHomeSubmenu" class="hidden pl-9 space-y-1 pt-1">
+          <a href="index.html" class="mobile-nav-link block p-2 rounded-lg text-xs font-semibold transition-colors">
+            Home 1
+          </a>
+          <a href="home-2.html" class="mobile-nav-link block p-2 rounded-lg text-xs font-semibold transition-colors">
+            Home 2
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation Category: Collections & Atelier -->
+      <nav class="space-y-1">
+        <div class="mobile-section-heading text-[10px] font-bold uppercase tracking-wider px-3 pt-2">Collections &amp; Atelier</div>
+        
+        <a href="about.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="info" class="w-4 h-4 text-gold-400/80"></i>
+          <span>About</span>
+        </a>
+        
+        <a href="products.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="package" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Products</span>
+        </a>
+
+        <a href="collections.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="layers" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Collections</span>
+        </a>
+
+        <a href="custom-rugs.html" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="scissors" class="w-4 h-4 text-gold-400/80"></i>
+            <span>Custom Rugs</span>
+          </div>
+          <span class="text-[9px] font-bold uppercase px-2 py-0.5 rounded-full bg-gold-500 text-black">Bespoke</span>
+        </a>
+
+        <a href="rug-guide.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="book-open" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Rug Guide</span>
+        </a>
+
+        <a href="craftmanship.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="feather" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Craftmanship</span>
+        </a>
+
+        <a href="showroom.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="map-pin" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Showroom</span>
+        </a>
+
+        <a href="inspiration.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors">
+          <i data-lucide="compass" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Inspiration</span>
+        </a>
+
+        <a href="contact.html" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-gold-500/10 text-sm font-medium transition-colors nav-pill-active active">
+          <i data-lucide="mail" class="w-4 h-4 text-gold-400/80"></i>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <!-- Preferences Section Inside Drawer: Dark Mode & RTL -->
+      <div class="pt-4 border-t border-white/10 space-y-3">
+        <div class="mobile-section-heading text-[10px] font-bold uppercase tracking-wider">Settings & Direction</div>
+        
+        <div class="drawer-pref-box flex items-center justify-between p-3 rounded-xl transition-colors">
+          <span class="text-xs font-semibold flex items-center gap-2">
+            <i data-lucide="moon" class="w-4 h-4 text-gold-400"></i>
+            Theme Mode
+          </span>
+          <button id="mobileDarkModeToggle" class="btn-3d-icon w-9 h-9 flex items-center justify-center rounded-xl" aria-label="Toggle Dark Mode in Mobile Menu">
+            <i data-lucide="sun" id="mobileSunIcon" class="w-4 h-4 text-gold-400"></i>
+            <i data-lucide="moon" id="mobileMoonIcon" class="w-4 h-4 text-slate-700 hidden"></i>
+          </button>
+        </div>
+
+        <div class="drawer-pref-box flex items-center justify-between p-3 rounded-xl transition-colors">
+          <span class="text-xs font-semibold flex items-center gap-2">
+            <svg class="w-4 h-4 text-gold-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8h16M16 4l4 4-4 4" />
+              <path d="M20 16H4M8 12l-4 4 4 4" />
+            </svg>
+            Layout Direction
+          </span>
+          <button id="mobileRtlToggle" class="btn-3d-icon w-9 h-9 flex items-center justify-center rounded-xl" aria-label="Toggle Direction in Mobile Menu" title="Toggle Layout Direction (LTR / RTL)">
+            <svg id="mobileRtlIcon" class="w-4 h-4 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8h16M16 4l4 4-4 4" />
+              <path d="M20 16H4M8 12l-4 4 4 4" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer: 3D Action Buttons (Sign Up & Login - Identical Height & Width) -->
+    <div id="mobileDrawerFooter" class="p-5 border-t space-y-2.5 transition-colors">
+      <button id="mobileSignUpBtn" class="btn-3d btn-3d-gold sheen w-full h-11 text-xs font-extrabold uppercase tracking-wider flex items-center justify-center rounded-xl" onclick="window.location.href='registeration.html'">
+        <span>Sign Up</span>
+      </button>
+
+      <button id="mobileLoginBtn" class="btn-3d btn-3d-dark sheen w-full h-11 text-xs font-bold uppercase tracking-wider flex items-center justify-center rounded-xl" onclick="window.location.href='login.html'">
+        <span>Login</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Central semantic canvas -->
+  <main class="flex-1">
+
+  <!-- ======================================================== -->
+  <!-- SECTION 1: GLOBAL CONCIERGE & CONTACT PORTAL -->
+  <!-- ======================================================== -->
+  <section id="contact-hero-concierge" class="py-14 sm:py-20 lg:py-24 relative overflow-hidden">
+    <!-- Ambient Gold Glow -->
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gold-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+
+    <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Top Atelier Status Pill -->
+      <div id="contact-hero-badge" class="flex items-center justify-center gap-2 mb-6">
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 backdrop-blur-md text-[11px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-gold-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>Atelier Concierge &bull; Global Hotlines &amp; Business Hours</span>
+        </div>
+      </div>
+
+      <!-- Main Headline & Split -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-16">
+        
+        <!-- Left Column: Direct Communication Hub (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          <h1 id="contact-hero-title" class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight contact-text-primary leading-[1.12]">
+            Atelier Concierge &amp; <span class="bg-gradient-to-r from-gold-300 via-gold-500 to-amber-600 bg-clip-text text-transparent">Direct Lines</span>
+          </h1>
+          
+          <p class="text-base sm:text-lg lg:text-xl font-light leading-relaxed contact-text-secondary">
+            Connect directly with our Chief Curators, Master Colorists, and Global Logistics Directors. Whether commissioning an architectural centerpiece, scheduling an intimate gallery viewing, or consulting on archival restoration, our international desks are at your service.
+          </p>
+
+          <!-- 4 Direct Contact Cards (Phone Number, Email Address, Business Hours) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            
+            <!-- Phone Lines -->
+            <div class="contact-inner-card p-4 sm:p-5 rounded-2xl border space-y-2 group hover:border-gold-500/40 transition-all">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider contact-text-secondary flex items-center gap-2">
+                  <i data-lucide="phone-call" class="w-4 h-4 text-gold-400"></i> Direct Phone Numbers
+                </span>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Toll-Free VIP</span>
+              </div>
+              <div class="space-y-1 text-xs">
+                <div class="flex justify-between">
+                  <span class="contact-text-muted">London Mayfair:</span>
+                  <a href="tel:+442079460912" class="font-mono font-bold text-gold-400 hover:underline">+44 20 7946 0912</a>
+                </div>
+                <div class="flex justify-between">
+                  <span class="contact-text-muted">New York Salon:</span>
+                  <a href="tel:+12125550198" class="font-mono font-bold text-gold-400 hover:underline">+1 212 555 0198</a>
+                </div>
+                <div class="flex justify-between">
+                  <span class="contact-text-muted">VIP WhatsApp:</span>
+                  <a href="https://wa.me/447700900823" class="font-mono font-bold text-emerald-400 hover:underline">+44 7700 900823</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email Channels -->
+            <div class="contact-inner-card p-4 sm:p-5 rounded-2xl border space-y-2 group hover:border-gold-500/40 transition-all">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider contact-text-secondary flex items-center gap-2">
+                  <i data-lucide="mail" class="w-4 h-4 text-gold-400"></i> Email Addresses
+                </span>
+                <span class="text-[10px] font-mono text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded">&lt; 28m SLA</span>
+              </div>
+              <div class="space-y-1 text-xs">
+                <div class="flex justify-between">
+                  <span class="contact-text-muted">Private Concierge:</span>
+                  <a href="mailto:concierge@rugcarpet.com" class="font-semibold text-sand-100 hover:text-gold-400">concierge@rugcarpet.com</a>
+                </div>
+                <div class="flex justify-between">
+                  <span class="contact-text-muted">Custom Commissions:</span>
+                  <a href="mailto:bespoke@rugcarpet.com" class="font-semibold text-sand-100 hover:text-gold-400">bespoke@rugcarpet.com</a>
+                </div>
+                <div class="flex justify-between">
+                  <span class="contact-text-muted">Architectural Trade:</span>
+                  <a href="mailto:trade@rugcarpet.com" class="font-semibold text-sand-100 hover:text-gold-400">trade@rugcarpet.com</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Business Hours Matrix -->
+          <div class="p-4 sm:p-5 rounded-2xl contact-glass-card border space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider contact-text-secondary flex items-center gap-2">
+                <i data-lucide="clock" class="w-4 h-4 text-gold-400"></i> Global Atelier Business Hours
+              </span>
+              <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                🟢 All Flagship Desks Synchronized
+              </span>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+              <div class="contact-inner-card p-2.5 rounded-xl border">
+                <span class="block text-[10px] font-bold text-gold-400 uppercase">London (GMT)</span>
+                <span class="font-mono text-sand-100 font-semibold text-[11px]">09:00 - 18:30</span>
+                <span class="block text-[9px] contact-text-muted">Monday - Saturday</span>
+              </div>
+              <div class="contact-inner-card p-2.5 rounded-xl border">
+                <span class="block text-[10px] font-bold text-gold-400 uppercase">New York (EST)</span>
+                <span class="font-mono text-sand-100 font-semibold text-[11px]">10:00 - 19:00</span>
+                <span class="block text-[9px] contact-text-muted">Monday - Saturday</span>
+              </div>
+              <div class="contact-inner-card p-2.5 rounded-xl border">
+                <span class="block text-[10px] font-bold text-gold-400 uppercase">Milan (CET)</span>
+                <span class="font-mono text-sand-100 font-semibold text-[11px]">09:30 - 19:00</span>
+                <span class="block text-[9px] contact-text-muted">Monday - Saturday</span>
+              </div>
+              <div class="contact-inner-card p-2.5 rounded-xl border">
+                <span class="block text-[10px] font-bold text-gold-400 uppercase">Dubai (GST)</span>
+                <span class="font-mono text-sand-100 font-semibold text-[11px]">10:00 - 20:00</span>
+                <span class="block text-[9px] contact-text-muted">Sunday - Thursday</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#contact-showroom-booking" class="btn-3d btn-3d-gold sheen px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl shadow-lg inline-flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Book Showroom Appointment</span>
+            </a>
+            <a href="#contact-custom-enquiry" class="btn-3d btn-3d-dark sheen px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4 text-gold-400"></i>
+              <span>Custom Rug Commission Inquiry</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Visual Showcase (5 cols) -->
+        <div id="contact-hero-visual" class="lg:col-span-5 relative">
+          <div class="contact-glass-card rounded-[32px] p-4 sm:p-5 relative overflow-hidden group shadow-2xl">
+            <div class="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden bg-black/40">
+              <img src="images/contact_hero_concierge.jpg" alt="Luxury atelier concierge and communications desk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              
+              <div class="absolute top-4 left-4 bg-obsidian-950/85 backdrop-blur-md border border-gold-500/30 rounded-full px-3.5 py-1 text-[11px] font-semibold text-gold-300 flex items-center gap-1.5">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-400"></i>
+                <span>Private Curatorial Channel</span>
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4 bg-obsidian-950/90 backdrop-blur-md border border-white/10 rounded-2xl p-3.5">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-xs font-semibold text-sand-100 flex items-center gap-1.5">
+                    <i data-lucide="headphones" class="w-3.5 h-3.5 text-gold-400"></i> Atelier Concierge Direct
+                  </span>
+                  <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Active Duty</span>
+                </div>
+                <p class="text-[11px] text-sand-400 leading-snug">
+                  Direct hotline routing to Senior Curators for authentication, private salon viewings, and bespoke commissions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- SECTION 2: FLAGSHIP SHOWROOM LOCATIONS & STORE ADDRESSES -->
+  <!-- ======================================================== -->
+  <section id="contact-showroom-locations" class="py-14 sm:py-20 lg:py-24 relative overflow-hidden contact-inner-card border-y">
+    <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold-500/30 bg-gold-500/10 text-[11px] font-semibold tracking-[0.2em] uppercase text-gold-400">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          <span>Global Destinations</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold contact-text-primary tracking-tight">
+          Flagship Salons &amp; <span class="text-gold-400">Store Addresses</span>
+        </h2>
+        <p class="text-sm sm:text-base contact-text-secondary leading-relaxed">
+          Four international architectural destinations housing curated archival vaults, rare limited-edition carpets, and tactile fiber libraries.
+        </p>
+      </div>
+
+      <!-- Feature Banner Image for Showroom Gallery -->
+      <div class="mb-10 rounded-[28px] overflow-hidden contact-glass-card border p-4 sm:p-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-5 relative aspect-[16/9] rounded-2xl overflow-hidden bg-black/50">
+            <img src="images/contact_showroom_gallery.jpg" alt="Mayfair luxury rug and carpet showroom gallery interior" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-[11px] font-mono text-gold-400 bg-obsidian-950/80 px-2.5 py-1 rounded backdrop-blur-md">
+              London Mayfair Exhibition Salon
+            </span>
+          </div>
+          <div class="lg:col-span-7 space-y-2">
+            <span class="text-[11px] font-mono uppercase tracking-wider text-gold-400">Architectural Interior Spaces</span>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold contact-text-primary">Curator-Led Private Viewings</h3>
+            <p class="text-xs sm:text-sm contact-text-secondary leading-relaxed">
+              Step inside our illuminated galleries where heritage carpets are displayed as fine art under museum-grade lighting. Each flagship showroom features private viewing rooms, tactile wool and raw silk pom-pom libraries, and dedicated architectural workstations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Showroom Location Cards (Store Address, Phone Number, Hours) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Showroom 1: London Mayfair -->
+        <div class="showroom-card p-6 rounded-[28px] contact-glass-card border space-y-4 hover:border-gold-500/50 transition-all group">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-gold-400 bg-gold-500/10 px-2.5 py-1 rounded-lg">FLAGSHIP 01</span>
+            <span class="text-[10px] font-bold text-emerald-400 uppercase">Valet Available</span>
+          </div>
+          <div>
+            <h3 class="font-serif text-xl font-bold contact-text-primary group-hover:text-gold-400 transition-colors">London Mayfair</h3>
+            <p class="text-xs text-gold-400 font-semibold mt-0.5">United Kingdom</p>
+          </div>
+          <div class="space-y-2 text-xs border-t border-white/5 pt-3">
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Store Address</span>
+              <p class="contact-text-primary font-medium leading-snug">14 Mount Street, Mayfair, London W1K 2RF</p>
+            </div>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Phone Number</span>
+              <a href="tel:+442079460912" class="font-mono text-sand-100 hover:text-gold-400 font-semibold">+44 20 7946 0912</a>
+            </div>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Hours</span>
+              <p class="contact-text-secondary">Mon - Sat: 09:30 - 18:30 (Sun: By Appt)</p>
+            </div>
+          </div>
+          <a href="#contact-satellite-maps" class="inline-flex items-center gap-1.5 text-xs font-bold text-gold-400 hover:text-gold-300 pt-1">
+            <span>View Satellite Cartography</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Showroom 2: New York Madison -->
+        <div class="showroom-card p-6 rounded-[28px] contact-glass-card border space-y-4 hover:border-gold-500/50 transition-all group">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-gold-400 bg-gold-500/10 px-2.5 py-1 rounded-lg">FLAGSHIP 02</span>
+            <span class="text-[10px] font-bold text-emerald-400 uppercase">Private Elevator</span>
+          </div>
+          <div>
+            <h3 class="font-serif text-xl font-bold contact-text-primary group-hover:text-gold-400 transition-colors">New York Madison</h3>
+            <p class="text-xs text-gold-400 font-semibold mt-0.5">Upper East Side, USA</p>
+          </div>
+          <div class="space-y-2 text-xs border-t border-white/5 pt-3">
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Store Address</span>
+              <p class="contact-text-primary font-medium leading-snug">780 Madison Ave, New York, NY 10065</p>
+            </div>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Phone Number</span>
+              <a href="tel:+12125550198" class="font-mono text-sand-100 hover:text-gold-400 font-semibold">+1 212 555 0198</a>
+            </div>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Hours</span>
+              <p class="contact-text-secondary">Mon - Sat: 10:00 - 19:00 (Sun: Closed)</p>
+            </div>
+          </div>
+          <a href="#contact-satellite-maps" class="inline-flex items-center gap-1.5 text-xs font-bold text-gold-400 hover:text-gold-300 pt-1">
+            <span>View Satellite Cartography</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Showroom 3: Milan Brera -->
+        <div class="showroom-card p-6 rounded-[28px] contact-glass-card border space-y-4 hover:border-gold-500/50 transition-all group">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-gold-400 bg-gold-500/10 px-2.5 py-1 rounded-lg">FLAGSHIP 03</span>
+            <span class="text-[10px] font-bold text-emerald-400 uppercase">Design District</span>
+          </div>
+          <div>
+            <h3 class="font-serif text-xl font-bold contact-text-primary group-hover:text-gold-400 transition-colors">Milan Brera</h3>
+            <p class="text-xs text-gold-400 font-semibold mt-0.5">Lombardy, Italy</p>
+          </div>
+          <div class="space-y-2 text-xs border-t border-white/5 pt-3">
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Store Address</span>
+              <p class="contact-text-primary font-medium leading-snug">Via Brera 22, 20121 Milano MI, Italy</p>
+            </div>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Phone Number</span>
+              <a href="tel:+390289013450" class="font-mono text-sand-100 hover:text-gold-400 font-semibold">+39 02 8901 3450</a>
+            </div>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Hours</span>
+              <p class="contact-text-secondary">Mon - Sat: 09:30 - 19:00 (Sun: By Appt)</p>
+            </div>
+          </div>
+          <a href="#contact-satellite-maps" class="inline-flex items-center gap-1.5 text-xs font-bold text-gold-400 hover:text-gold-300 pt-1">
+            <span>View Satellite Cartography</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Showroom 4: Jaipur Compound -->
+        <div class="showroom-card p-6 rounded-[28px] contact-glass-card border space-y-4 hover:border-gold-500/50 transition-all group">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-gold-400 bg-gold-500/10 px-2.5 py-1 rounded-lg">ATELIER 04</span>
+            <span class="text-[10px] font-bold text-emerald-400 uppercase">High-Looms Active</span>
+          </div>
+          <div>
+            <h3 class="font-serif text-xl font-bold contact-text-primary group-hover:text-gold-400 transition-colors">Jaipur Heritage</h3>
+            <p class="text-xs text-gold-400 font-semibold mt-0.5">Rajasthan, India</p>
+          </div>
+          <div class="space-y-2 text-xs border-t border-white/5 pt-3">
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Store Address</span>
+              <p class="contact-text-primary font-medium leading-snug">Civil Lines Estate, Jaipur 302006, India</p>
+            </div>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Phone Number</span>
+              <a href="tel:+911412227890" class="font-mono text-sand-100 hover:text-gold-400 font-semibold">+91 141 222 7890</a>
+            </div>
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider contact-text-muted">Hours</span>
+              <p class="contact-text-secondary">Mon - Fri: 08:30 - 17:30 (Sat: Morning)</p>
+            </div>
+          </div>
+          <a href="#contact-satellite-maps" class="inline-flex items-center gap-1.5 text-xs font-bold text-gold-400 hover:text-gold-300 pt-1">
+            <span>View Satellite Cartography</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- SECTION 3: INTERACTIVE GOOGLE MAPS & SATELLITE CARTOGRAPHY -->
+  <!-- ======================================================== -->
+  <section id="contact-satellite-maps" class="py-14 sm:py-20 lg:py-24 relative overflow-hidden">
+    <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold-500/30 bg-gold-500/10 text-[11px] font-semibold tracking-[0.2em] uppercase text-gold-400">
+          <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+          <span>Cartography &amp; Transit</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold contact-text-primary tracking-tight">
+          Interactive <span class="text-gold-400">Google Maps</span> &amp; Ingress
+        </h2>
+        <p class="text-sm sm:text-base contact-text-secondary leading-relaxed">
+          Calibrated satellite positioning and seamless chauffeur ingress. Switch between international salons to inspect real-time coordinates and private arrival routes.
+        </p>
+
+        <!-- City Switcher Pills -->
+        <div class="inline-flex p-1 rounded-2xl contact-glass-card border border-gold-500/30">
+          <button class="map-city-pill px-4 py-2 rounded-xl text-xs font-bold transition-all bg-gold-500 text-black shadow-md" data-city="london" data-title="London Mayfair Flagship" data-coords="51.5098° N, 0.1503° W" data-addr="14 Mount Street, Mayfair, London W1K 2RF" data-station="Green Park &amp; Bond Street" data-airport="London Heathrow (LHR) - 45 mins chauffeur">
+            London
+          </button>
+          <button class="map-city-pill px-4 py-2 rounded-xl text-xs font-bold transition-all contact-text-secondary hover:text-gold-400" data-city="newyork" data-title="New York Madison Avenue Salon" data-coords="40.7681° N, 73.9669° W" data-addr="780 Madison Ave, Upper East Side, NY 10065" data-station="68th St / Hunter College" data-airport="JFK International / Teterboro (TEB)">
+            New York
+          </button>
+          <button class="map-city-pill px-4 py-2 rounded-xl text-xs font-bold transition-all contact-text-secondary hover:text-gold-400" data-city="milan" data-title="Milan Brera Design Studio" data-coords="45.4719° N, 9.1878° E" data-addr="Via Brera 22, 20121 Milano, Italy" data-station="Lanza &amp; Montenapoleone" data-airport="Milan Malpensa (MXP) - 50 mins">
+            Milan
+          </button>
+          <button class="map-city-pill px-4 py-2 rounded-xl text-xs font-bold transition-all contact-text-secondary hover:text-gold-400" data-city="jaipur" data-title="Jaipur Heritage Compound" data-coords="26.9124° N, 75.7873° E" data-addr="Civil Lines Estate, Jaipur 302006, India" data-station="Jaipur Junction Terminal" data-airport="Jaipur International (JAI) - 25 mins">
+            Jaipur
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        
+        <!-- Left: Interactive Map Stage (7 cols) -->
+        <div id="map-interactive-container" class="lg:col-span-7 contact-glass-card rounded-[32px] p-5 border relative overflow-hidden group shadow-2xl">
+          <div class="relative w-full aspect-[16/10] rounded-[22px] overflow-hidden bg-black">
+            <img id="mapDisplayImage" src="images/contact_satellite_maps.jpg" alt="Interactive satellite Google maps of showroom location" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+
+            <!-- Inset Active Pin Card -->
+            <div class="absolute bottom-4 left-4 right-4 bg-obsidian-950/90 backdrop-blur-md border border-gold-500/30 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span id="activeMapCityTitle" class="font-serif font-bold text-sm sm:text-base text-sand-100">London Mayfair Flagship</span>
+                  <span id="activeMapCoords" class="text-[10px] font-mono text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded">51.5098° N, 0.1503° W</span>
+                </div>
+                <p id="activeMapAddress" class="text-xs text-sand-400 mt-0.5">14 Mount Street, Mayfair, London W1K 2RF</p>
+              </div>
+              <a id="googleMapsExternalBtn" href="https://maps.google.com/?q=14+Mount+Street+London" target="_blank" rel="noopener noreferrer" class="btn-3d btn-3d-gold sheen px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-1.5 flex-shrink-0">
+                <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+                <span>Open in Google Maps</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Transit & Chauffeur Guide (5 cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="p-6 rounded-[28px] contact-glass-card border space-y-4">
+            <h3 class="font-serif text-xl font-bold contact-text-primary flex items-center gap-2">
+              <i data-lucide="car" class="w-5 h-5 text-gold-400"></i> Chauffeur &amp; Aviation Ingress
+            </h3>
+            
+            <div class="space-y-3 text-xs">
+              <div class="contact-inner-card p-3 rounded-xl border">
+                <span class="block text-[10px] uppercase tracking-wider text-gold-400 font-bold">Private Airport Transfer</span>
+                <p id="activeTransitAirport" class="contact-text-primary font-medium mt-0.5">London Heathrow (LHR) &bull; 45 mins via private chauffeur</p>
+              </div>
+
+              <div class="contact-inner-card p-3 rounded-xl border">
+                <span class="block text-[10px] uppercase tracking-wider text-gold-400 font-bold">Rapid Transit Access</span>
+                <p id="activeTransitStation" class="contact-text-primary font-medium mt-0.5">Green Park &amp; Bond Street Stations (Elizabeth Line Direct)</p>
+              </div>
+
+              <div class="contact-inner-card p-3 rounded-xl border">
+                <span class="block text-[10px] uppercase tracking-wider text-emerald-400 font-bold">White-Glove Valet Parking</span>
+                <p class="contact-text-primary font-medium mt-0.5">Complimentary curbside valet attendants stationing on Mount Street.</p>
+              </div>
+            </div>
+
+            <p class="text-[11px] contact-text-secondary leading-relaxed pt-1">
+              Visiting via private aviation or helicopter? Our concierge can arrange tarmac reception and secure vehicle escort directly to the salon entrance.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- SECTION 4: GENERAL ENQUIRY & COMMUNICATIONS DESK -->
+  <!-- ======================================================== -->
+  <section id="contact-general-enquiry" class="py-14 sm:py-20 lg:py-24 relative overflow-hidden contact-inner-card border-y">
+    <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold-500/30 bg-gold-500/10 text-[11px] font-semibold tracking-[0.2em] uppercase text-gold-400">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Client Relations</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold contact-text-primary tracking-tight">
+          General Enquiry &amp; <span class="text-gold-400">Client Assistance</span>
+        </h2>
+        <p class="text-sm sm:text-base contact-text-secondary leading-relaxed">
+          From provenance certifications and international white-glove shipping to heritage cleaning and press privileges. Select your inquiry scope for immediate routing.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+        
+        <!-- Left: Quick Query Form (7 cols) -->
+        <div class="lg:col-span-7 contact-glass-card rounded-[32px] p-6 sm:p-8 border space-y-6">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-xl font-bold contact-text-primary flex items-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5 text-gold-400"></i> General Enquiry Form
+            </h3>
+            <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded">28-Min SLA</span>
+          </div>
+
+          <!-- 4 Category Selector Pills -->
+          <div class="space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider contact-text-secondary">Select Enquiry Classification</span>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <button class="enquiry-cat-btn py-2 px-3 rounded-xl contact-inner-card border text-[11px] font-semibold active-spec-card text-gold-400 text-left" data-cat="Provenance & Authentication">
+                Provenance &amp; Origin
+              </button>
+              <button class="enquiry-cat-btn py-2 px-3 rounded-xl contact-inner-card border text-[11px] font-semibold contact-text-secondary hover:text-gold-400 text-left" data-cat="Global Shipping & Customs">
+                Global Cargo Transit
+              </button>
+              <button class="enquiry-cat-btn py-2 px-3 rounded-xl contact-inner-card border text-[11px] font-semibold contact-text-secondary hover:text-gold-400 text-left" data-cat="Botanical Cleaning & Care">
+                Care &amp; Restoration
+              </button>
+              <button class="enquiry-cat-btn py-2 px-3 rounded-xl contact-inner-card border text-[11px] font-semibold contact-text-secondary hover:text-gold-400 text-left" data-cat="Architectural Trade Accounts">
+                Trade Accounts
+              </button>
+            </div>
+          </div>
+
+          <form id="generalEnquiryForm" class="space-y-4 pt-1">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Your Full Name *</label>
+                <input type="text" id="genName" required placeholder="Lady Genevieve Sterling" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs" />
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Email Address *</label>
+                <input type="email" id="genEmail" required placeholder="genevieve@sterling.com" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Enquiry Narrative *</label>
+              <textarea id="genMessage" required rows="3" placeholder="Describe your question regarding collection provenance, international duties, or specific rug dimensions..." class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="btn-3d btn-3d-gold sheen w-full py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl shadow-lg flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit General Enquiry</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Visual & Service Card (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="contact-glass-card rounded-[32px] p-5 border relative overflow-hidden shadow-xl space-y-4">
+            <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-black/40">
+              <img src="images/contact_general_enquiry.jpg" alt="Client relations and general enquiry correspondence" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              
+              <div class="absolute bottom-4 left-4 right-4 bg-obsidian-950/90 backdrop-blur-md border border-white/10 rounded-2xl p-3.5">
+                <span class="text-xs font-serif font-bold text-sand-100 block mb-1">28-Minute Guaranteed Response</span>
+                <p class="text-[11px] text-sand-400 leading-snug">
+                  Every general inquiry submitted to our international client relations desk is assigned a reference ticket and handled by experienced carpet connoisseurs.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl contact-inner-card border flex items-center justify-between text-xs">
+              <span class="contact-text-muted">Direct Email:</span>
+              <a href="mailto:inquiries@rugcarpet.com" class="font-mono text-gold-400 font-bold hover:underline">inquiries@rugcarpet.com</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- SECTION 5: CUSTOM RUG ENQUIRY SUITE -->
+  <!-- ======================================================== -->
+  <section id="contact-custom-enquiry" class="py-14 sm:py-20 lg:py-24 relative overflow-hidden">
+    <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold-500/30 bg-gold-500/10 text-[11px] font-semibold tracking-[0.2em] uppercase text-gold-400">
+          <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
+          <span>Bespoke Commissions</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold contact-text-primary tracking-tight">
+          Custom Rug <span class="text-gold-400">Enquiry Desk</span>
+        </h2>
+        <p class="text-sm sm:text-base contact-text-secondary leading-relaxed">
+          Direct dialogue with Master Colorists and Loom Architects. Inquire regarding custom sizing, botanical dye matching, and millimetric cartoon development.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        
+        <!-- Left: Custom Rug Enquiry Visual Card (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="contact-glass-card rounded-[32px] p-5 border relative overflow-hidden shadow-xl space-y-4">
+            <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-black/40">
+              <img src="images/contact_custom_enquiry.jpg" alt="Master colorist and loom architect custom rug design table" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              
+              <div class="absolute bottom-4 left-4 right-4 bg-obsidian-950/90 backdrop-blur-md border border-white/10 rounded-2xl p-4">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-serif font-bold text-sand-100">Senior Loom Architect Assigned</span>
+                  <span class="text-[10px] font-mono text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded">Bespoke Suite</span>
+                </div>
+                <p class="text-[11px] text-sand-400 leading-snug">
+                  Upload architectural floorplans or room swatches for customized 3D CAD rendering within 48 hours.
+                </p>
+              </div>
+            </div>
+
+            <!-- Inclusions Checklist -->
+            <div class="space-y-1.5 text-xs contact-text-secondary px-1">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span>Direct yarn pom-pom sample delivery kit</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span>Delta-E &lt; 0.6 botanical color tolerance</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span>Vertical iron loom webcam progress link</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Dedicated Custom Rug Enquiry Form (7 cols) -->
+        <div class="lg:col-span-7 contact-glass-card rounded-[32px] p-6 sm:p-8 border space-y-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-xl font-bold contact-text-primary flex items-center gap-2">
+              <i data-lucide="crown" class="w-5 h-5 text-gold-400"></i> Custom Commission Request Form
+            </h3>
+            <span class="text-[10px] font-mono text-gold-400 bg-gold-500/10 px-2.5 py-1 rounded-full border border-gold-500/20">
+              High-Loom Priority
+            </span>
+          </div>
+
+          <form id="customRugEnquiryForm" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Architect / Client Name *</label>
+                <input type="text" id="customClientName" required placeholder="Lord Julian Vance" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs" />
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Email Address *</label>
+                <input type="email" id="customClientEmail" required placeholder="julian@vance-holdings.com" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Target Dimensions</label>
+                <select id="customDimensionsSelect" class="w-full contact-input rounded-xl px-3 py-2 text-xs">
+                  <option>8' &times; 10' (Living Room)</option>
+                  <option>9' &times; 12' (Palatial Dining)</option>
+                  <option>10' &times; 14' (Penthouse Suite)</option>
+                  <option>12' &times; 16' (Grand Salon)</option>
+                  <option>Bespoke Custom Measurements</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Primary Fiber</label>
+                <select id="customFiberSelect" class="w-full contact-input rounded-xl px-3 py-2 text-xs">
+                  <option>Highland Ghazni Wool (100%)</option>
+                  <option>Mulberry Raw Silk (100%)</option>
+                  <option>Wool &amp; Silk Hybrid (50/50)</option>
+                  <option>Tibetan Mohair Blend</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Knot Density</label>
+                <select id="customDensitySelect" class="w-full contact-input rounded-xl px-3 py-2 text-xs">
+                  <option>Master Loom (300 KPSI)</option>
+                  <option>Royal Heirloom (600 KPSI)</option>
+                  <option>Museum Imperium (1,000 KPSI)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Project Details &amp; Aesthetic Intent</label>
+              <textarea id="customProjectNotes" rows="3" placeholder="Provide notes regarding spatial lighting, existing parquet or marble flooring, desired palette motifs..." class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="btn-3d btn-3d-gold sheen w-full py-4 text-xs font-bold uppercase tracking-wider rounded-xl shadow-xl flex items-center justify-center gap-2">
+              <i data-lucide="feather" class="w-4 h-4"></i>
+              <span>Submit Custom Rug Commission Enquiry</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- SECTION 6: SHOWROOM BOOKING FORM (VIP APPOINTMENTS) -->
+  <!-- ======================================================== -->
+  <section id="contact-showroom-booking" class="py-14 sm:py-20 lg:py-24 relative overflow-hidden contact-inner-card border-y">
+    <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold-500/30 bg-gold-500/10 text-[11px] font-semibold tracking-[0.2em] uppercase text-gold-400">
+          <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i>
+          <span>VIP Reservations</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold contact-text-primary tracking-tight">
+          Showroom Booking <span class="text-gold-400">Form</span>
+        </h2>
+        <p class="text-sm sm:text-base contact-text-secondary leading-relaxed">
+          Reserve an exclusive 60-minute private showroom appointment with a Dedicated Rug Specialist, private vault access, and champagne reception.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        
+        <!-- Left: Interactive Multi-Step Showroom Booking Form (7 cols) -->
+        <div class="lg:col-span-7 contact-glass-card rounded-[32px] p-6 sm:p-8 border space-y-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-xl font-bold contact-text-primary flex items-center gap-2">
+              <i data-lucide="ticket" class="w-5 h-5 text-gold-400"></i> Reserve Private Showroom Walkthrough
+            </h3>
+            <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full">
+              Complimentary
+            </span>
+          </div>
+
+          <form id="showroomBookingForm" class="space-y-4">
+            <!-- Step 1: Destination Selection -->
+            <div class="space-y-1.5">
+              <label class="block text-[11px] font-semibold contact-text-secondary">Step 1: Choose Flagship Showroom *</label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <button type="button" class="booking-dest-btn py-2 px-3 rounded-xl contact-inner-card border text-[11px] font-semibold active-spec-card text-gold-400 text-left" data-dest="London Mayfair Flagship">
+                  London Mayfair
+                </button>
+                <button type="button" class="booking-dest-btn py-2 px-3 rounded-xl contact-inner-card border text-[11px] font-semibold contact-text-secondary hover:text-gold-400 text-left" data-dest="New York Madison Ave">
+                  New York Madison
+                </button>
+                <button type="button" class="booking-dest-btn py-2 px-3 rounded-xl contact-inner-card border text-[11px] font-semibold contact-text-secondary hover:text-gold-400 text-left" data-dest="Milan Brera Studio">
+                  Milan Brera
+                </button>
+                <button type="button" class="booking-dest-btn py-2 px-3 rounded-xl contact-inner-card border text-[11px] font-semibold contact-text-secondary hover:text-gold-400 text-left" data-dest="Jaipur Heritage Compound">
+                  Jaipur Heritage
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Experience Typology -->
+            <div class="space-y-1.5">
+              <label class="block text-[11px] font-semibold contact-text-secondary">Step 2: Experience Typology</label>
+              <select id="bookingExperienceSelect" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs">
+                <option>Curator-Led Archival Gallery Walkthrough (60 Mins)</option>
+                <option>Bespoke Custom Commission Tactile Fiber Session (90 Mins)</option>
+                <option>Architectural CAD &amp; Interior Designer Project Review (75 Mins)</option>
+                <option>Twilight Champagne Private Exhibition (Evening)</option>
+              </select>
+            </div>
+
+            <!-- Step 3: Date & Preferred Time -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Appointment Date *</label>
+                <input type="date" id="bookingDateInput" required class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs" />
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Time Slot *</label>
+                <select id="bookingTimeSelect" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs">
+                  <option>Morning (10:00 - 11:30)</option>
+                  <option>Mid-Day (12:30 - 14:00)</option>
+                  <option>Afternoon (15:00 - 16:30)</option>
+                  <option>Twilight (17:30 - 19:00)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Step 4: Guest Credentials -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Guest Full Name *</label>
+                <input type="text" id="bookingGuestName" required placeholder="Sir Arthur Pendelton" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs" />
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Contact Email *</label>
+                <input type="email" id="bookingGuestEmail" required placeholder="arthur@pendelton.co.uk" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs" />
+              </div>
+            </div>
+
+            <button type="submit" class="btn-3d btn-3d-gold sheen w-full py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl shadow-lg flex items-center justify-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+              <span>Confirm Showroom Appointment</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Visual VIP Showcase (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="contact-glass-card rounded-[32px] p-5 border relative overflow-hidden shadow-xl space-y-4">
+            <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-black/40">
+              <img src="images/contact_showroom_booking.jpg" alt="Private VIP showroom appointment lounge with champagne and heritage carpets" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              
+              <div class="absolute bottom-4 left-4 right-4 bg-obsidian-950/90 backdrop-blur-md border border-white/10 rounded-2xl p-4">
+                <span class="text-xs font-serif font-bold text-sand-100 block mb-1">The Atelier VIP Reception Privilege</span>
+                <p class="text-[11px] text-sand-400 leading-snug">
+                  Every private booking guarantees an exclusive suite reservation, dedicated Senior Curator guidance, and chilled champagne or artisanal botanical teas.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl contact-inner-card border flex items-center justify-between text-xs">
+              <span class="contact-text-muted">Concierge Desk:</span>
+              <span class="font-mono text-emerald-400 font-bold">Instant Calendar Sync</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- SECTION 7: MASTER CONTACT FORM & CENTRAL CONCIERGE -->
+  <!-- ======================================================== -->
+  <section id="contact-dispatch-desk" class="py-14 sm:py-20 lg:py-24 relative overflow-hidden">
+    <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold-500/30 bg-gold-500/10 text-[11px] font-semibold tracking-[0.2em] uppercase text-gold-400">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          <span>Direct Dispatch</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold contact-text-primary tracking-tight">
+          Contact <span class="text-gold-400">Form</span> &amp; Central Dispatch
+        </h2>
+        <p class="text-sm sm:text-base contact-text-secondary leading-relaxed">
+          The central communication conduit of our atelier. Send inquiries directly to our leadership council, log special requirements, or access 24/7 urgent restoration care.
+        </p>
+      </div>
+
+      <!-- Feature Banner for Section 7 -->
+      <div class="mb-10 rounded-[28px] overflow-hidden contact-glass-card border p-4 sm:p-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-5 relative aspect-[16/9] rounded-2xl overflow-hidden bg-black/50">
+            <img src="images/contact_dispatch_desk.jpg" alt="Master guild dispatch and communications center" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-[11px] font-mono text-gold-400 bg-obsidian-950/80 px-2.5 py-1 rounded backdrop-blur-md">
+              Central Curatorial Dispatch
+            </span>
+          </div>
+          <div class="lg:col-span-7 space-y-2">
+            <span class="text-[11px] font-mono uppercase tracking-wider text-emerald-400">Zero Middleman Transmission</span>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold contact-text-primary">Direct Guild Leadership Routing</h3>
+            <p class="text-xs sm:text-sm contact-text-secondary leading-relaxed">
+              Your inquiry is directly transmitted to our senior curatorial team. We uphold strict European privacy protocols, certified provenance tracking, and dedicated courier logistics.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+        
+        <!-- Left: The Comprehensive Contact Form (7 cols) -->
+        <div id="masterContactBox" class="lg:col-span-7 contact-glass-card rounded-[32px] p-6 sm:p-8 border space-y-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-xl font-bold contact-text-primary flex items-center gap-2">
+              <i data-lucide="file-text" class="w-5 h-5 text-gold-400"></i> Atelier Contact Form
+            </h3>
+            <span class="text-[10px] font-mono text-sand-400 bg-white/5 px-2.5 py-1 rounded-full">
+              Encrypted SSL Transmission
+            </span>
+          </div>
+
+          <form id="masterContactForm" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Full Name *</label>
+                <input type="text" id="contactFullName" required placeholder="Lord Alistair Sterling" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs" />
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Email Address *</label>
+                <input type="email" id="contactEmail" required placeholder="alistair@sterling.com" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Phone / WhatsApp Number</label>
+                <input type="tel" id="contactPhone" placeholder="+44 20 7946 0912" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs" />
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Preferred Response Mode</label>
+                <select id="contactResponseMode" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs">
+                  <option>Email Correspondence</option>
+                  <option>Direct Phone Call</option>
+                  <option>WhatsApp Encrypted Message</option>
+                  <option>Private Video Consultation</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Subject Header</label>
+              <input type="text" id="contactSubject" placeholder="Private Vault Inquiry / Restoration / Architectural Project" class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs" />
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold contact-text-secondary mb-1">Message Body *</label>
+              <textarea id="contactMessage" required rows="4" placeholder="Detail your request, project dimensions, desired provenance, or private showroom date..." class="w-full contact-input rounded-xl px-3.5 py-2.5 text-xs resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="btn-3d btn-3d-gold sheen w-full py-4 text-xs font-bold uppercase tracking-wider rounded-xl shadow-xl flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Dispatch Message to Atelier Concierge</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: 24/7 Global Urgent Care Line & Quick Assistance (5 cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <!-- Emergency Restoration Callout -->
+          <div class="p-6 rounded-[28px] bg-gradient-to-br from-amber-500/15 via-gold-500/5 to-transparent border border-amber-500/30 space-y-4 shadow-xl">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-alert" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block">24/7 Global Emergency Line</span>
+                <h4 class="font-serif text-lg font-bold contact-text-primary">Urgent Rug Care &amp; Restoration</h4>
+              </div>
+            </div>
+
+            <p class="text-xs contact-text-secondary leading-relaxed">
+              Suffered sudden flood or water damage, severe wine staining, or transit trauma to a rare hand-knotted antique? Contact our mobile emergency conservation unit immediately.
+            </p>
+
+            <div class="p-3.5 rounded-xl contact-inner-card border flex items-center justify-between">
+              <span class="text-xs font-semibold contact-text-muted">Conservation Line:</span>
+              <a href="tel:+442079460999" class="font-mono font-bold text-amber-400 hover:underline text-sm">+44 20 7946 0999</a>
+            </div>
+          </div>
+
+          <!-- Trust & Privacy Guarantees -->
+          <div class="contact-glass-card rounded-[28px] p-6 border space-y-3">
+            <span class="text-xs font-bold uppercase tracking-wider contact-text-secondary block">Guild Privacy Protocol</span>
+            <div class="space-y-2 text-xs contact-text-primary">
+              <div class="flex items-center gap-2">
+                <i data-lucide="lock" class="w-4 h-4 text-gold-400"></i>
+                <span>Strict Non-Disclosure &amp; VIP Archival Confidentiality</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-check" class="w-4 h-4 text-emerald-400"></i>
+                <span>Zero Third-Party Data Sharing or Marketing Resale</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="award" class="w-4 h-4 text-gold-400"></i>
+                <span>Certified Provenance Registration on All Communications</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LUXURY CONTACT DISPATCH CONFIRMATION MODAL -->
+  <div id="contactConfirmModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="contact-glass-card rounded-[32px] p-6 sm:p-10 max-w-lg w-full border border-gold-500/40 space-y-6 relative shadow-2xl animate-fade-in">
+      <button id="closeContactModal" class="absolute top-5 right-5 text-sand-400 hover:text-white p-2">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-center space-y-3">
+        <div class="w-16 h-16 rounded-full bg-gold-500/20 text-gold-400 border border-gold-500/40 flex items-center justify-center mx-auto">
+          <i data-lucide="sparkles" class="w-8 h-8"></i>
+        </div>
+        <h3 class="font-serif text-2xl font-bold contact-text-primary">Transmission Received</h3>
+        <p class="text-xs contact-text-secondary leading-relaxed">
+          Your dispatch has been registered in the Master Atelier Communications Registry under reference docket <span class="font-mono text-gold-400 font-bold" id="modalDocketId">#AT-MSG-2026-7492</span>.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-2xl contact-inner-card border space-y-2 text-xs">
+        <div class="flex justify-between"><span class="contact-text-muted">Assigned Desk:</span> <span class="contact-text-primary font-semibold">Senior Curatorial Council</span></div>
+        <div class="flex justify-between"><span class="contact-text-muted">First Contact Window:</span> <span class="text-emerald-400 font-semibold">&lt; 28 Minutes</span></div>
+        <div class="flex justify-between"><span class="contact-text-muted">Channel Protocol:</span> <span class="text-gold-400 font-semibold">Encrypted VIP Route</span></div>
+      </div>
+
+      <button id="dismissContactModalBtn" class="btn-3d btn-3d-gold sheen w-full py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl">
+        Return to Atelier
+      </button>
+    </div>
+  </div>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- MAIN LUXURY FOOTER (Based on Navbar & Reference Layout) -->
+  <!-- ======================================================== -->
+  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-14">
+    <!-- Outer Card Shell with 3D/Rounded Aesthetics Matching Reference -->
+    <div class="footer-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 transition-all duration-300 relative overflow-hidden">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 xl:gap-12 mb-10">
+
+        <!-- ==================================================== -->
+        <!-- COLUMN 1: BRAND LOGO, DESCRIPTION, TRUST BADGES, SOCIALS -->
+        <!-- ==================================================== -->
+        <div class="space-y-6">
+          <!-- Logo Block (Same Logo Which Is Present In Navbar) -->
+          <a href="index.html" id="footerBrandLogo" class="group flex items-center gap-2 focus:outline-none" aria-label="Rug & Carpet Store Homepage">
+            <!-- Compact 3D Interwoven Loom Emblem (SVG) -->
+            <div class="relative w-7 h-7 sm:w-7.5 sm:h-7.5 rounded-[7px] bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 p-[1.1px] shadow-[0_2px_8px_rgba(212,175,55,0.22)] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-1 flex-shrink-0">
+              <div class="w-full h-full bg-obsidian-950 rounded-[5.5px] flex items-center justify-center overflow-hidden relative">
+                <!-- Radial sheen -->
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,175,55,0.3),transparent_70%)]"></div>
+                
+                <!-- Creative Carpet Weave Geometric Monogram SVG -->
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold-400 transition-transform duration-500 group-hover:scale-110" viewBox="0 0 40 40" fill="none" stroke="currentColor">
+                  <!-- Interlacing Rug Loom Strands -->
+                  <rect x="7" y="7" width="26" height="26" rx="5" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 1.5" class="opacity-70" />
+                  <path d="M12 12L28 28M28 12L12 28" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M20 6V34M6 20H34" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <circle cx="20" cy="20" r="4.5" fill="#D4AF37" stroke="#121008" stroke-width="1.2" />
+                  <!-- Corner Knots -->
+                  <circle cx="10" cy="10" r="1.5" fill="currentColor" />
+                  <circle cx="30" cy="10" r="1.5" fill="currentColor" />
+                  <circle cx="10" cy="30" r="1.5" fill="currentColor" />
+                  <circle cx="30" cy="30" r="1.5" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Brand Typography (Without Atelier Badge, Compact) -->
+            <div class="flex flex-col">
+              <span id="footerBrandLogoTitle" class="font-serif font-bold text-[12.5px] sm:text-[14px] tracking-[0.05em] group-hover:text-gold-500 transition-colors uppercase leading-tight footer-trust-title">
+                Rug & Carpet
+              </span>
+              <span id="footerBrandLogoSubtitle" class="text-[7.5px] sm:text-[8px] tracking-[0.16em] uppercase font-medium leading-none mt-0.5 transition-colors footer-trust-sub">
+                Handcrafted &bull; Heritage
+              </span>
+            </div>
+          </a>
+
+          <!-- Description paragraph matching reference -->
+          <p class="text-xs sm:text-[13px] leading-relaxed footer-trust-sub">
+            The premier international atelier for handcrafted heritage rugs and bespoke architectural floor art. Every piece is tied by hand with pure organic Highland wool, raw mulberry silk, and certified museum-grade provenance.
+          </p>
+
+          <!-- 2 Trust / Guarantee Badges side-by-side matching reference image -->
+          <div class="grid grid-cols-2 gap-3 pt-1">
+            <!-- Badge 1: 100% Hand-Knotted -->
+            <div class="footer-trust-badge flex items-center gap-2.5 p-3 rounded-2xl transition-colors">
+              <div class="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-xs font-bold leading-tight truncate footer-trust-title">100% Hand-Knotted</span>
+                <span class="text-[9.5px] footer-trust-sub leading-tight mt-0.5 truncate">Master Artisans</span>
+              </div>
+            </div>
+
+            <!-- Badge 2: Certified Provenance -->
+            <div class="footer-trust-badge flex items-center gap-2.5 p-3 rounded-2xl transition-colors">
+              <div class="w-8 h-8 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-xs font-bold leading-tight truncate footer-trust-title">Museum Certified</span>
+                <span class="text-[9.5px] footer-trust-sub leading-tight mt-0.5 truncate">Clean Provenance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Follow Socials Row matching reference image -->
+          <div class="space-y-2.5 pt-1">
+            <div class="text-[10px] font-bold uppercase tracking-wider footer-trust-sub">
+              Follow The Atelier
+            </div>
+            <div class="flex items-center gap-2.5">
+              <!-- Instagram -->
+              <a href="#instagram" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="Instagram">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+
+              <!-- YouTube -->
+              <a href="#youtube" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="YouTube">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+
+              <!-- Facebook -->
+              <a href="#facebook" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="Facebook">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="#linkedin" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="LinkedIn">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </a>
+
+              <!-- X (Twitter) -->
+              <a href="#x" class="btn-3d-icon footer-social-btn w-9 h-9 rounded-xl transition-colors flex items-center justify-center" aria-label="X (Twitter)">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: EXPLORE ATELIER (Based Directly on Navbar) -->
+        <!-- ==================================================== -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 footer-col-heading text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,0.6)]"></span>
+            <span>Explore Atelier</span>
+          </div>
+
+          <ul class="space-y-2.5 text-xs sm:text-[13px] font-medium">
+            <!-- Home with Home 1 and Home 2 subitems -->
+            <li class="space-y-1.5">
+              <a href="#home" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Home (Atelier & Collections)</span>
+              </a>
+              <ul class="pl-4 space-y-1 border-l border-white/10 dark:border-white/10 ml-2">
+                <li>
+                  <a href="#home-1" class="footer-link inline-flex items-center gap-1.5 text-[11.5px] transition-all">
+                    <span class="text-gold-500/80">•</span>
+                    <span>Home 1 (Royal Palace & Heirlooms)</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#home-2" class="footer-link inline-flex items-center gap-1.5 text-[11.5px] transition-all">
+                    <span class="text-gold-500/80">•</span>
+                    <span>Home 2 (Contemporary Luxury)</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Remaining Navbar Menu Links -->
+            <li>
+              <a href="#about" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>About Us</span>
+              </a>
+            </li>
+            <li>
+              <a href="#products" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="#collections" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Collections</span>
+              </a>
+            </li>
+            <!-- Custom Rugs (Highlighted in Gold, matching "Sell Your Car" in image) -->
+            <li>
+              <a href="#custom-rugs" class="inline-flex items-center gap-1.5 text-gold-400 hover:text-gold-300 font-bold hover:translate-x-1 transition-all">
+                <span class="rtl-chevron font-mono text-gold-400">›</span>
+                <span>Custom Rugs (Bespoke Atelier)</span>
+              </a>
+            </li>
+            <li>
+              <a href="#rug-guide" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Rug Guide</span>
+              </a>
+            </li>
+            <li>
+              <a href="#craftsmanship" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Craftsmanship</span>
+              </a>
+            </li>
+            <li>
+              <a href="#showroom" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Showroom</span>
+              </a>
+            </li>
+            <li>
+              <a href="#inspiration" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Inspiration</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="footer-link inline-flex items-center gap-1.5 transition-all">
+                <span class="rtl-chevron font-mono text-slate-500">›</span>
+                <span>Contact Support</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- COLUMN 3: COLLECTIONS & SERVICES (With Icons Matching Reference) -->
+        <!-- ==================================================== -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 footer-col-heading text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.6)]"></span>
+            <span>Collections & Services</span>
+          </div>
+
+          <ul class="space-y-3 text-xs sm:text-[13px] font-medium">
+            <li>
+              <a href="#persian-rugs" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <span>Persian & Oriental Heirlooms</span>
+              </a>
+            </li>
+            <li>
+              <a href="#silk-wool" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="gem" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                <span>Luxury Silk & Pure Wool</span>
+              </a>
+            </li>
+            <li>
+              <a href="#modern-rugs" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="sparkles" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Modern & Minimalist Rugs</span>
+              </a>
+            </li>
+            <li>
+              <a href="#vintage-oushak" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="arrow-left-right" class="w-4 h-4 text-sky-400 flex-shrink-0"></i>
+                <span>Vintage Oushak & Kilims</span>
+              </a>
+            </li>
+            <li>
+              <a href="#custom-dye" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="palette" class="w-4 h-4 text-rose-400 flex-shrink-0"></i>
+                <span>Bespoke Sizing & Custom Dye</span>
+              </a>
+            </li>
+            <li>
+              <a href="#room-visualizer" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="layers" class="w-4 h-4 text-purple-400 flex-shrink-0"></i>
+                <span>3D Virtual Room Visualizer</span>
+              </a>
+            </li>
+            <li>
+              <a href="#authenticity-guarantee" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <span>Lifetime Authenticity Guarantee</span>
+              </a>
+            </li>
+            <li>
+              <a href="#white-glove-delivery" class="footer-link inline-flex items-center gap-2.5 transition-all">
+                <i data-lucide="truck" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                <span>White-Glove Home Delivery</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- COLUMN 4: PORTALS & NEWSLETTER (Matching Reference Layout) -->
+        <!-- ==================================================== -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 footer-col-heading text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.6)]"></span>
+            <span>Portals & Newsletter</span>
+          </div>
+
+          <!-- Action Card 1: Collector Dashboard -->
+          <div id="footerCollectorCard" class="footer-portal-card group flex items-center justify-between p-3.5 rounded-2xl transition-all cursor-pointer">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="user" class="w-4.5 h-4.5"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="footer-portal-title text-xs font-bold leading-tight group-hover:text-gold-400 transition-colors">
+                  Collector Dashboard
+                </span>
+                <span class="footer-portal-sub text-[10px] leading-tight mt-0.5">
+                  Saved Pieces & Garage
+                </span>
+              </div>
+            </div>
+            <i data-lucide="chevron-right" class="rtl-chevron w-4 h-4 text-slate-500 group-hover:text-gold-400 group-hover:translate-x-1 transition-all"></i>
+          </div>
+
+          <!-- Action Card 2: Trade & Designer Portal -->
+          <div id="footerTradeCard" class="footer-portal-card group flex items-center justify-between p-3.5 rounded-2xl transition-all cursor-pointer">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-4.5 h-4.5"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="footer-portal-title text-xs font-bold leading-tight group-hover:text-gold-400 transition-colors">
+                  Trade & Designer Portal
+                </span>
+                <span class="footer-portal-sub text-[10px] leading-tight mt-0.5">
+                  Architect CRM & Wholesale
+                </span>
+              </div>
+            </div>
+            <i data-lucide="chevron-right" class="rtl-chevron w-4 h-4 text-slate-500 group-hover:text-gold-400 group-hover:translate-x-1 transition-all"></i>
+          </div>
+
+          <!-- Newsletter Box matching reference -->
+          <div class="footer-news-card p-4 rounded-2xl space-y-2.5 transition-colors">
+            <div class="space-y-1">
+              <div class="footer-news-title text-xs font-bold flex items-center gap-1.5">
+                <span>Join Atelier Family!</span>
+                <span>✨</span>
+              </div>
+              <p class="footer-news-sub text-[11px] leading-relaxed">
+                Get free rug curation guides and $250 voucher off your bespoke purchase.
+              </p>
+            </div>
+
+            <form id="footerNewsletterForm" class="space-y-2.5">
+              <input 
+                type="email" 
+                required 
+                placeholder="buyer@email.com" 
+                class="footer-input w-full px-3.5 py-2.5 rounded-xl text-xs placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors"
+              />
+              <button 
+                type="submit" 
+                class="btn-3d btn-3d-amber sheen w-full h-10 text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center gap-2"
+              >
+                <span class="text-[10px]">▲</span>
+                <span>Subscribe</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==================================================== -->
+      <!-- BOTTOM COPYRIGHT & LEGAL BAR -->
+      <!-- ==================================================== -->
+      <div class="footer-bottom-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs footer-bottom-text">
+        <p class="text-center md:text-left">
+          &copy; 2026 <strong class="font-serif footer-trust-title">Rug & Carpet Store</strong> Atelier. All Rights Reserved. Master Hand-Knotted Traditions.
+        </p>
+
+        <div class="flex items-center flex-wrap justify-center gap-4 text-xs font-medium">
+          <a href="#privacy" class="hover:text-gold-400 transition-colors">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#terms" class="hover:text-gold-400 transition-colors">Terms of Curation</a>
+          <span>&bull;</span>
+          <a href="#ethics" class="hover:text-gold-400 transition-colors">Artisan Ethics</a>
+          <span>&bull;</span>
+          <a href="#provenance" class="hover:text-gold-400 transition-colors">Provenance Registry</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ======================================================== -->
+  <!-- 3D AUTH MODAL PREVIEW (Login & Sign Up) -->
+  <!-- ======================================================== -->
+  <div id="authModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="authModalBox" class="relative w-full max-w-md p-8 rounded-3xl bg-obsidian-950 border border-gold-500/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] transform scale-95 transition-transform duration-300 text-slate-100">
+      
+      <button id="closeAuthModal" class="absolute top-5 right-5 btn-3d-icon w-8 h-8 text-slate-400 hover:text-white" aria-label="Close modal">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="text-center space-y-2 mb-6">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center">
+          <i data-lucide="lock" class="w-6 h-6"></i>
+        </div>
+        <h3 id="modalTitle" class="font-serif text-2xl font-bold text-white">Member Portal</h3>
+        <p id="modalSubtitle" class="text-xs text-slate-400">Access your private carpet commissions and curation history.</p>
+      </div>
+
+      <form id="authForm" class="space-y-4" onsubmit="event.preventDefault(); alert('Demo action triggered!'); document.getElementById('authModal').classList.add('opacity-0', 'pointer-events-none');">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
+          <input type="email" placeholder="collector@atelier.com" required class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-gold-500 transition-colors" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Password</label>
+          <input type="password" placeholder="••••••••••••" required class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-gold-500 transition-colors" />
+        </div>
+        
+        <button type="submit" id="modalSubmitBtn" class="btn-3d btn-3d-gold sheen w-full h-12 text-xs font-extrabold uppercase tracking-wider mt-4">
+          Authenticate
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- JAVASCRIPT: LOGIC, 3D PARALLAX, & FRAMER MOTION -->
+  <!-- ======================================================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // ----------------------------------------------------
+    // Permanent Sticky Navbar Scroll Enhancer
+    // ----------------------------------------------------
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (!header) return;
+      if (window.scrollY > 15) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+
+    // ----------------------------------------------------
+    // Dynamic Active Navbar Status Controller
+    // ----------------------------------------------------
+    function syncActiveNavbarState() {
+      let currentFile = window.location.pathname.split('/').pop().toLowerCase();
+      if (!currentFile || currentFile === '/' || currentFile === '') {
+        currentFile = 'index.html';
+      }
+      currentFile = decodeURIComponent(currentFile.split('?')[0].split('#')[0]);
+
+      const aliases = {
+        'index.html': 'index.html',
+        'home-1': 'index.html',
+        'home-2.html': 'home-2.html',
+        'about.html': 'about.html',
+        'collections.html': 'collections.html',
+        'craftsmanship.html': 'craftmanship.html',
+        'craftmanship.html': 'craftmanship.html',
+        'custom-rugs.html': 'custom-rugs.html',
+        'inspiration.html': 'inspiration.html',
+        'products.html': 'products.html',
+        'rug-guide.html': 'rug-guide.html',
+        'contact.html': 'contact.html',
+        'showroom.html': 'showroom.html'
+      };
+
+      const targetKey = aliases[currentFile] || currentFile;
+
+      document.querySelectorAll('#desktopMenu a, #desktopMenu button, #mobileDrawer a').forEach(el => {
+        el.classList.remove('nav-pill-active', 'active');
+      });
+
+      document.querySelectorAll('#desktopMenu a, #mobileDrawer a').forEach(el => {
+        const href = (el.getAttribute('href') || '').toLowerCase().split('?')[0].split('#')[0];
+        const normalizedHref = aliases[href] || href;
+
+        if (normalizedHref && normalizedHref === targetKey) {
+          el.classList.add('nav-pill-active', 'active');
+        }
+      });
+
+      if (targetKey === 'index.html') {
+        document.getElementById('homeDropdownBtn')?.classList.add('nav-pill-active', 'active');
+        document.getElementById('mobileHomeLink')?.classList.add('nav-pill-active', 'active');
+      } else if (targetKey === 'home-2.html') {
+        document.getElementById('homeDropdownBtn')?.classList.add('nav-pill-active', 'active');
+      }
+    }
+
+    try {
+      syncActiveNavbarState();
+    } catch(e) {
+      console.warn('Active navbar state sync:', e);
+    }
+
+
+    // DOM Elements
+    const html = document.documentElement;
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    const mobileSunIcon = document.getElementById('mobileSunIcon');
+    const mobileMoonIcon = document.getElementById('mobileMoonIcon');
+
+    const rtlToggle = document.getElementById('rtlToggle');
+    const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileDrawerOverlay = document.getElementById('mobileDrawerOverlay');
+    const hamBarTop = document.getElementById('hamBarTop');
+    const hamBarMid = document.getElementById('hamBarMid');
+    const hamBarBot = document.getElementById('hamBarBot');
+
+    const mobileHomeAccordionBtn = document.getElementById('mobileHomeAccordionBtn');
+    const mobileHomeSubmenu = document.getElementById('mobileHomeSubmenu');
+    const mobileHomeChevron = document.getElementById('mobileHomeChevron');
+
+    const homeDropdownWrapper = document.getElementById('homeDropdownWrapper');
+    const homeDropdownBtn = document.getElementById('homeDropdownBtn');
+    const homeDropdownMenu = document.getElementById('homeDropdownMenu');
+    const homeChevron = document.getElementById('homeChevron');
+
+    // ----------------------------------------------------
+    // 1. DARK / LIGHT MODE CONTROLLER
+    // ----------------------------------------------------
+    let isDark = true;
+    function updateTheme(dark) {
+      isDark = dark;
+      if (isDark) {
+        html.classList.add('dark');
+        html.classList.remove('light');
+        document.body.classList.remove('bg-[#F8F9FA]', 'text-slate-900', 'bg-slate-100');
+        document.body.classList.add('bg-[#0A0C10]', 'text-slate-100');
+        sunIcon?.classList.remove('hidden');
+        moonIcon?.classList.add('hidden');
+        mobileSunIcon?.classList.remove('hidden');
+        mobileMoonIcon?.classList.add('hidden');
+      } else {
+        html.classList.remove('dark');
+        html.classList.add('light');
+        document.body.classList.remove('bg-[#0A0C10]', 'text-slate-100');
+        document.body.classList.add('bg-[#F8F9FA]', 'text-slate-900');
+        sunIcon?.classList.add('hidden');
+        moonIcon?.classList.remove('hidden');
+        mobileSunIcon?.classList.add('hidden');
+        mobileMoonIcon?.classList.remove('hidden');
+      }
+
+      // Smooth Framer Motion rotation & scale for toggle icons
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#darkModeToggle', {
+          rotate: [0, 180, 360],
+          scale: [1, 0.85, 1]
+        }, { duration: 0.45, easing: Motion.spring({ stiffness: 300, damping: 18 }) });
+
+        Motion.animate('#mobileDarkModeToggle', {
+          rotate: [0, 180, 360],
+          scale: [1, 0.85, 1]
+        }, { duration: 0.45, easing: Motion.spring({ stiffness: 300, damping: 18 }) });
+      }
+    }
+
+    darkModeToggle?.addEventListener('click', () => updateTheme(!isDark));
+    mobileDarkModeToggle?.addEventListener('click', () => updateTheme(!isDark));
+
+    // ----------------------------------------------------
+    // 2. RTL (RIGHT TO LEFT) CONTROLLER (Icon-Only)
+    // ----------------------------------------------------
+    let isRtl = false;
+    function updateDirection(rtl) {
+      isRtl = rtl;
+      const dirVal = isRtl ? 'rtl' : 'ltr';
+      html.setAttribute('dir', dirVal);
+
+      // Smooth Framer Motion spring jump & rotation for RTL icons
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#rtlToggle', {
+          scale: [1, 1.18, 1],
+          rotate: isRtl ? [0, 180] : [180, 0]
+        }, { duration: 0.4, easing: Motion.spring({ stiffness: 380, damping: 20 }) });
+
+        Motion.animate('#mobileRtlToggle', {
+          scale: [1, 1.18, 1],
+          rotate: isRtl ? [0, 180] : [180, 0]
+        }, { duration: 0.4, easing: Motion.spring({ stiffness: 380, damping: 20 }) });
+      }
+    }
+
+    rtlToggle.addEventListener('click', () => updateDirection(!isRtl));
+    mobileRtlToggle.addEventListener('click', () => updateDirection(!isRtl));
+
+    // ----------------------------------------------------
+    // 3. HAMBURGER MENU DRAWER (Mobile & Tablet)
+    // ----------------------------------------------------
+    let isDrawerOpen = false;
+
+        function openMobileDrawer() {
+      isDrawerOpen = true;
+      document.body.classList.add('mobile-drawer-open');
+      document.documentElement.classList.add('mobile-drawer-open');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+      mobileDrawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
+      mobileDrawerOverlay.classList.add('opacity-100', 'pointer-events-auto');
+      
+      mobileDrawer.classList.remove('translate-x-full');
+      mobileDrawer.classList.add('translate-x-0', 'open');
+
+      // Morph Hamburger Bars into X
+      hamBarTop.style.transform = 'translateY(6px) rotate(45deg)';
+      hamBarMid.style.opacity = '0';
+      hamBarBot.style.transform = 'translateY(-6px) rotate(-45deg)';
+
+      // Framer Motion staggered entrance with transform cleanup to ensure 60fps buttery scrolling
+      if (window.Motion && Motion.animate) {
+        try {
+          const anim = Motion.animate('.mobile-nav-link', {
+            opacity: [0, 1],
+            x: [isRtl ? -12 : 12, 0]
+          }, {
+            delay: Motion.stagger(0.02),
+            duration: 0.25,
+            easing: [0.16, 1, 0.3, 1]
+          });
+          if (anim && anim.finished) {
+            anim.finished.then(() => {
+              document.querySelectorAll('.mobile-nav-link').forEach(el => {
+                el.style.transform = '';
+              });
+            }).catch(() => {});
+          }
+        } catch(e) {}
+      }
+    }
+
+    function closeMobileDrawer() {
+      isDrawerOpen = false;
+      document.body.classList.remove('mobile-drawer-open');
+      document.documentElement.classList.remove('mobile-drawer-open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      mobileDrawerOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+      mobileDrawerOverlay.classList.add('opacity-0', 'pointer-events-none');
+
+      mobileDrawer.classList.add('translate-x-full');
+      mobileDrawer.classList.remove('translate-x-0', 'open');
+
+      // Restore Hamburger Bars
+      hamBarTop.style.transform = 'none';
+      hamBarMid.style.opacity = '1';
+      hamBarBot.style.transform = 'none';
+    }
+
+    hamburgerBtn.addEventListener('click', () => {
+      if (isDrawerOpen) closeMobileDrawer();
+      else openMobileDrawer();
+    });
+
+    closeDrawerBtn.addEventListener('click', closeMobileDrawer);
+    mobileDrawerOverlay.addEventListener('click', closeMobileDrawer);
+
+    // Mobile Home Accordion Toggle
+    mobileHomeAccordionBtn?.addEventListener('click', (e) => { e.stopPropagation();
+      const isHidden = mobileHomeSubmenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileHomeSubmenu.classList.remove('hidden');
+        mobileHomeChevron.style.transform = 'rotate(180deg)';
+        if (window.Motion && Motion.animate) {
+          Motion.animate('#mobileHomeSubmenu', {
+            opacity: [0, 1],
+            height: ['0px', 'auto']
+          }, { duration: 0.25 });
+        }
+      } else {
+        mobileHomeSubmenu.classList.add('hidden');
+        mobileHomeChevron.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    // Close mobile drawer on link click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', closeMobileDrawer);
+    });
+
+    // ----------------------------------------------------
+    // 4. DESKTOP HOME DROPDOWN CLICK & HOVER ENHANCEMENT
+    // ----------------------------------------------------
+    let isHomeOpen = false;
+    homeDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      isHomeOpen = !isHomeOpen;
+      homeDropdownBtn.setAttribute('aria-expanded', isHomeOpen);
+      if (isHomeOpen) {
+        homeDropdownMenu.classList.remove('opacity-0', 'invisible', 'translate-y-3', 'pointer-events-none');
+        homeChevron.classList.add('rotate-180');
+        if (window.Motion && Motion.animate) {
+          Motion.animate('#homeDropdownMenu', {
+            scale: [0.94, 1],
+            opacity: [0, 1],
+            y: [-8, 0]
+          }, { duration: 0.25, easing: Motion.spring({ stiffness: 350, damping: 24 }) });
+        }
+      } else {
+        homeDropdownMenu.classList.add('opacity-0', 'invisible', 'translate-y-3', 'pointer-events-none');
+        homeChevron.classList.remove('rotate-180');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!homeDropdownWrapper.contains(e.target)) {
+        isHomeOpen = false;
+        homeDropdownMenu.classList.add('opacity-0', 'invisible', 'translate-y-3', 'pointer-events-none');
+        homeChevron.classList.remove('rotate-180');
+      }
+    });
+
+    // ----------------------------------------------------
+    // 5. 3D BUTTON TACTILE TILT & PARALLAX (Framer Motion Physics)
+    // ----------------------------------------------------
+    const buttons3D = document.querySelectorAll('.btn-3d');
+
+    buttons3D.forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left; // x position within element.
+        const y = e.clientY - rect.top;  // y position within element.
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -12; // Invert for natural tilt
+        const rotateY = ((x - centerX) / centerX) * 12;
+
+        btn.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
+    });
+
+    // ----------------------------------------------------
+    // 6. VIEWPORT TRACKER & RESIZE HANDLER
+    // ----------------------------------------------------
+    function handleResize() {
+      const width = window.innerWidth;
+      if (width >= 1280) {
+        closeMobileDrawer();
+      }
+    }
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    // ----------------------------------------------------
+    // 7. AUTH MODAL CONTROLLER (Sign Up & Login)
+    // ----------------------------------------------------
+    const authModal = document.getElementById('authModal');
+    const authModalBox = document.getElementById('authModalBox');
+    const closeAuthModal = document.getElementById('closeAuthModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    const modalSubmitBtn = document.getElementById('modalSubmitBtn');
+
+    function openModal(type) {
+      if (type === 'signup') {
+        modalTitle.textContent = 'Create Atelier Account';
+        modalSubtitle.textContent = 'Join the connoisseur circle for bespoke rug commissions.';
+        modalSubmitBtn.textContent = 'Register Privilege Account';
+      } else {
+        modalTitle.textContent = 'Collector Login';
+        modalSubtitle.textContent = 'Access your curated showroom pieces and orders.';
+        modalSubmitBtn.textContent = 'Authenticate Member';
+      }
+
+      authModal.classList.remove('opacity-0', 'pointer-events-none');
+      authModal.classList.add('opacity-100', 'pointer-events-auto');
+      authModalBox.classList.remove('scale-95');
+      authModalBox.classList.add('scale-100');
+
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#authModalBox', {
+          y: [-20, 0],
+          opacity: [0, 1]
+        }, { duration: 0.3, easing: Motion.spring({ stiffness: 350, damping: 25 }) });
+      }
+    }
+
+    function closeModal() {
+      authModal.classList.remove('opacity-100', 'pointer-events-auto');
+      authModal.classList.add('opacity-0', 'pointer-events-none');
+      authModalBox.classList.remove('scale-100');
+      authModalBox.classList.add('scale-95');
+    }
+
+    document.getElementById('loginBtnDesktop')?.addEventListener('click', () => openModal('login'));
+    document.getElementById('signUpBtnDesktop')?.addEventListener('click', () => openModal('signup'));
+    document.getElementById('mobileLoginBtn')?.addEventListener('click', () => { closeMobileDrawer(); openModal('login'); });
+    document.getElementById('mobileSignUpBtn')?.addEventListener('click', () => { closeMobileDrawer(); openModal('signup'); });
+    closeAuthModal?.addEventListener('click', closeModal);
+    authModal?.addEventListener('click', (e) => {
+      if (e.target === authModal) closeModal();
+    });
+
+    // Wire Footer Portal Cards to Auth Modal
+    document.getElementById('footerCollectorCard')?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'login.html'; });
+    document.getElementById('footerTradeCard')?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'registeration.html'; });
+
+    // Footer Newsletter Form
+    const footerNewsletterForm = document.getElementById('footerNewsletterForm');
+    footerNewsletterForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = footerNewsletterForm.querySelector('input');
+      const email = input?.value || '';
+      alert(`✨ Welcome to Atelier Connoisseurs!\n\nYour exclusive $250 commission voucher has been sent to ${email}.`);
+      if (input) input.value = '';
+    });
+
+    // Refresh Lucide Icons to render all newly added footer icons
+    lucide.createIcons();
+
+    // Initial entrance animation using Framer Motion engine
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      if (window.Motion && Motion.animate) {
+        Motion.animate('#mainHeader', {
+          y: [-50, 0],
+          opacity: [0, 1]
+        }, { duration: 0.6, easing: Motion.spring({ stiffness: 220, damping: 22 }) });
+
+        Motion.animate('#mainFooter', {
+          y: [40, 0],
+          opacity: [0, 1]
+        }, { duration: 0.7, delay: 0.15, easing: Motion.spring({ stiffness: 200, damping: 20 }) });
+      }
+    });
+
+    // ========================================================
+    // CONTACT SUITE - INTERACTIVE ENGINE & FRAMER MOTION
+    // ========================================================
+
+    // 1. City Switcher for Map
+    document.querySelectorAll('.map-city-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.map-city-pill').forEach(p => {
+          p.className = 'map-city-pill px-4 py-2 rounded-xl text-xs font-bold transition-all contact-text-secondary hover:text-gold-400';
+        });
+        pill.className = 'map-city-pill px-4 py-2 rounded-xl text-xs font-bold transition-all bg-gold-500 text-black shadow-md';
+
+        const title = pill.dataset.title;
+        const coords = pill.dataset.coords;
+        const addr = pill.dataset.addr;
+        const station = pill.dataset.station;
+        const airport = pill.dataset.airport;
+
+        const activeMapCityTitle = document.getElementById('activeMapCityTitle');
+        const activeMapCoords = document.getElementById('activeMapCoords');
+        const activeMapAddress = document.getElementById('activeMapAddress');
+        const activeTransitStation = document.getElementById('activeTransitStation');
+        const activeTransitAirport = document.getElementById('activeTransitAirport');
+        const googleMapsExternalBtn = document.getElementById('googleMapsExternalBtn');
+
+        if (activeMapCityTitle) activeMapCityTitle.textContent = title;
+        if (activeMapCoords) activeMapCoords.textContent = coords;
+        if (activeMapAddress) activeMapAddress.textContent = addr;
+        if (activeTransitStation) activeTransitStation.textContent = station;
+        if (activeTransitAirport) activeTransitAirport.textContent = airport;
+        if (googleMapsExternalBtn) googleMapsExternalBtn.href = `https://maps.google.com/?q=${encodeURIComponent(addr)}`;
+      });
+    });
+
+    // 2. Enquiry Category Buttons
+    let activeEnquiryCategory = 'Provenance & Authentication';
+    document.querySelectorAll('.enquiry-cat-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.enquiry-cat-btn').forEach(b => b.classList.remove('active-spec-card'));
+        btn.classList.add('active-spec-card');
+        activeEnquiryCategory = btn.dataset.cat;
+      });
+    });
+
+    // 3. General Enquiry Submit
+    document.getElementById('generalEnquiryForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('genName')?.value || 'Guest';
+      alert(`✨ General Enquiry Received!\n\nDear ${name},\nYour inquiry regarding "${activeEnquiryCategory}" has been routed to our Senior Client Relations Council.\nA dedicated curator will reply within 28 minutes.`);
+      document.getElementById('generalEnquiryForm').reset();
+    });
+
+    // 4. Custom Rug Enquiry Submit
+    document.getElementById('customRugEnquiryForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const client = document.getElementById('customClientName')?.value || 'Client';
+      const dim = document.getElementById('customDimensionsSelect')?.value || '8x10';
+      const fiber = document.getElementById('customFiberSelect')?.value || 'Highland Wool';
+      alert(`👑 Custom Rug Commission Enquiry Logged!\n\nArchitect / Client: ${client}\nDimensions: ${dim}\nFiber: ${fiber}\n\nA Senior Loom Architect and Chief Colorist have been assigned to prepare your 3D CAD proposal.`);
+      document.getElementById('customRugEnquiryForm').reset();
+    });
+
+    // 5. Showroom Booking Step Buttons
+    let activeBookingDest = 'London Mayfair Flagship';
+    document.querySelectorAll('.booking-dest-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.booking-dest-btn').forEach(b => b.classList.remove('active-spec-card'));
+        btn.classList.add('active-spec-card');
+        activeBookingDest = btn.dataset.dest;
+      });
+    });
+
+    document.getElementById('showroomBookingForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const guest = document.getElementById('bookingGuestName')?.value || 'Guest';
+      const date = document.getElementById('bookingDateInput')?.value || 'Upcoming Date';
+      const slot = document.getElementById('bookingTimeSelect')?.value || 'Afternoon';
+      alert(`🏛️ VIP Showroom Appointment Confirmed!\n\nGuest: ${guest}\nDestination: ${activeBookingDest}\nDate: ${date} (${slot})\n\nYour private salon suite, dedicated curator, and champagne reception are prepared.`);
+      document.getElementById('showroomBookingForm').reset();
+    });
+
+    // 6. Master Contact Form & Modal
+    const masterContactForm = document.getElementById('masterContactForm');
+    const contactConfirmModal = document.getElementById('contactConfirmModal');
+    const closeContactModal = document.getElementById('closeContactModal');
+    const dismissContactModalBtn = document.getElementById('dismissContactModalBtn');
+
+    masterContactForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const randomDocket = 'AT-MSG-2026-' + Math.floor(1000 + Math.random() * 9000);
+      const docketElem = document.getElementById('modalDocketId');
+      if (docketElem) docketElem.textContent = '#' + randomDocket;
+
+      if (contactConfirmModal) {
+        contactConfirmModal.classList.remove('hidden');
+        contactConfirmModal.classList.add('flex');
+      }
+    });
+
+    const hideContactModal = () => {
+      if (contactConfirmModal) {
+        contactConfirmModal.classList.add('hidden');
+        contactConfirmModal.classList.remove('flex');
+      }
+      masterContactForm?.reset();
+    };
+
+    closeContactModal?.addEventListener('click', hideContactModal);
+    dismissContactModalBtn?.addEventListener('click', hideContactModal);
+    contactConfirmModal?.addEventListener('click', (e) => {
+      if (e.target === contactConfirmModal) hideContactModal();
+    });
+
+    // ========================================================
+    // FRAMER MOTION SUITE - 7 UNIQUE NON-REPEATING ANIMATIONS
+    // ========================================================
+    function initContactFramerMotion() {
+      if (!window.Motion || !Motion.inView || !Motion.animate) return;
+
+      // Section 1: Concierge Drop & Card Ripple
+      Motion.inView('#contact-hero-concierge', () => {
+        Motion.animate('#contact-hero-badge', {
+          y: [-25, 0],
+          opacity: [0, 1]
+        }, { duration: 0.5, easing: Motion.spring({ stiffness: 240, damping: 18 }) });
+
+        Motion.animate('#contact-hero-title', {
+          scale: [0.94, 1],
+          opacity: [0, 1]
+        }, { duration: 0.7, easing: Motion.spring({ stiffness: 200, damping: 18 }) });
+
+        Motion.animate('#contact-hero-visual', {
+          rotateX: [12, 0],
+          rotateY: [-10, 0],
+          scale: [0.92, 1],
+          opacity: [0, 1]
+        }, { duration: 0.8, delay: 0.15, easing: Motion.spring({ stiffness: 180, damping: 20 }) });
+      });
+
+      // Section 2: Showroom 4-Corner Diagonal Reveal
+      Motion.inView('#contact-showroom-locations', () => {
+        Motion.animate('#contact-showroom-locations .showroom-card', {
+          y: [35, 0],
+          opacity: [0, 1],
+          scale: [0.92, 1]
+        }, {
+          delay: Motion.stagger(0.08),
+          duration: 0.6,
+          easing: Motion.spring({ stiffness: 220, damping: 18 })
+        });
+      });
+
+      // Section 3: Cartographic Satellite Reticle Zoom
+      Motion.inView('#contact-satellite-maps', () => {
+        Motion.animate('#map-interactive-container', {
+          scale: [0.88, 1],
+          opacity: [0, 1]
+        }, { duration: 0.75, easing: [0.16, 1, 0.3, 1] });
+      });
+
+      // Section 4: Stationary Pill Cascade & Form Silky Slide
+      Motion.inView('#contact-general-enquiry', () => {
+        Motion.animate('#contact-general-enquiry .enquiry-cat-btn', {
+          scale: [0.7, 1],
+          opacity: [0, 1]
+        }, { delay: Motion.stagger(0.05), duration: 0.45 });
+
+        Motion.animate('#generalEnquiryForm', {
+          y: [30, 0],
+          opacity: [0, 1]
+        }, { duration: 0.6, easing: Motion.spring({ stiffness: 200, damping: 20 }) });
+      });
+
+      // Section 5: Blueprint Draft Unroll & Loom Alignment
+      Motion.inView('#contact-custom-enquiry', () => {
+        Motion.animate('#customRugEnquiryForm', {
+          x: [40, 0],
+          opacity: [0, 1]
+        }, { duration: 0.7, easing: Motion.spring({ stiffness: 190, damping: 20 }) });
+      });
+
+      // Section 6: VIP Velvet Step Transition & Calendar Pop
+      Motion.inView('#contact-showroom-booking', () => {
+        Motion.animate('#showroomBookingForm', {
+          rotateX: [12, 0],
+          y: [35, 0],
+          opacity: [0, 1]
+        }, { duration: 0.7, easing: Motion.spring({ stiffness: 200, damping: 20 }) });
+      });
+
+      // Section 7: Central Dispatch Vault Seal & Form Shimmer
+      Motion.inView('#contact-dispatch-desk', () => {
+        Motion.animate('#masterContactBox', {
+          y: [40, 0],
+          opacity: [0, 1]
+        }, { duration: 0.7, easing: Motion.spring({ stiffness: 200, damping: 22 }) });
+      });
+    }
+
+    // Initialize on DOM ready
+    window.addEventListener('DOMContentLoaded', () => {
+      initContactFramerMotion();
+    });
+
+  </script>
+</body>
+</html>

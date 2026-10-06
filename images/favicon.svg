@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5DE93"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#836511"/>
+    </linearGradient>
+    <linearGradient id="obsidianGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12151c"/>
+      <stop offset="100%" stop-color="#07080a"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#D4AF37" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  
+  <!-- Base Rounded Obsidian Shield -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#obsidianGrad)" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  
+  <!-- Inner Dashed Rug Loom Frame -->
+  <rect x="11" y="11" width="42" height="42" rx="8" fill="none" stroke="#D4AF37" stroke-width="2" stroke-dasharray="3.5 2.5" opacity="0.85"/>
+  
+  <!-- Diagonal Weave Threads -->
+  <path d="M19 19L45 45M45 19L19 45" stroke="#F5DE93" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Vertical & Horizontal Loom Warp/Weft -->
+  <path d="M32 10V54M10 32H54" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- 4 Corner Knots -->
+  <circle cx="16" cy="16" r="2.5" fill="#F5DE93"/>
+  <circle cx="48" cy="16" r="2.5" fill="#F5DE93"/>
+  <circle cx="16" cy="48" r="2.5" fill="#F5DE93"/>
+  <circle cx="48" cy="48" r="2.5" fill="#F5DE93"/>
+  
+  <!-- Center Brilliant Gold Seal & Knot -->
+  <circle cx="32" cy="32" r="7.5" fill="url(#goldGrad)" stroke="#07080a" stroke-width="1.8" filter="url(#goldGlow)"/>
+  <circle cx="32" cy="32" r="3" fill="#FFF4D0"/>
+</svg>
