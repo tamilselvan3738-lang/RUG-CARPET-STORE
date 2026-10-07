@@ -1629,20 +1629,12 @@
             </svg>
           </button>
 
-          <!-- 3D Login Button (Exact Same Height & Width as Sign Up) -->
+          <!-- 3D Book Now Button -->
           <button 
-            id="loginBtnDesktop" 
-            class="btn-3d btn-3d-dark sheen w-24 h-9 text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center text-center"
-           onclick="window.location.href='login.html'">
-            <span>Login</span>
-          </button>
-
-          <!-- 3D Sign Up Button (Exact Same Height & Width as Login) -->
-          <button 
-            id="signUpBtnDesktop" 
-            class="btn-3d btn-3d-gold sheen w-24 h-9 text-xs font-extrabold uppercase tracking-wider rounded-xl flex items-center justify-center text-center"
-           onclick="window.location.href='registeration.html'">
-            <span>Sign Up</span>
+            id="bookNowBtnDesktop" 
+            class="btn-3d btn-3d-gold sheen px-5 h-9 text-xs font-extrabold uppercase tracking-wider rounded-xl flex items-center justify-center text-center"
+            onclick="window.location.href='contact.html'">
+            <span>Book Now</span>
           </button>
         </div>
 
@@ -1819,14 +1811,10 @@
 
     </div>
 
-    <!-- Drawer Footer: 3D Action Buttons (Sign Up & Login - Identical Height & Width) -->
-    <div id="mobileDrawerFooter" class="p-5 border-t space-y-2.5 transition-colors">
-      <button id="mobileSignUpBtn" class="btn-3d btn-3d-gold sheen w-full h-11 text-xs font-extrabold uppercase tracking-wider flex items-center justify-center rounded-xl" onclick="window.location.href='registeration.html'">
-        <span>Sign Up</span>
-      </button>
-
-      <button id="mobileLoginBtn" class="btn-3d btn-3d-dark sheen w-full h-11 text-xs font-bold uppercase tracking-wider flex items-center justify-center rounded-xl" onclick="window.location.href='login.html'">
-        <span>Login</span>
+    <!-- Drawer Footer: 3D Action Button (Book Now) -->
+    <div id="mobileDrawerFooter" class="p-5 border-t transition-colors">
+      <button id="mobileBookNowBtn" class="btn-3d btn-3d-gold sheen w-full h-11 text-xs font-extrabold uppercase tracking-wider flex items-center justify-center rounded-xl" onclick="window.location.href='contact.html'">
+        <span>Book Now</span>
       </button>
     </div>
   </aside>
@@ -3685,10 +3673,8 @@
       authModalBox.classList.add('scale-95');
     }
 
-    document.getElementById('loginBtnDesktop')?.addEventListener('click', () => openModal('login'));
-    document.getElementById('signUpBtnDesktop')?.addEventListener('click', () => openModal('signup'));
-    document.getElementById('mobileLoginBtn')?.addEventListener('click', () => { closeMobileDrawer(); openModal('login'); });
-    document.getElementById('mobileSignUpBtn')?.addEventListener('click', () => { closeMobileDrawer(); openModal('signup'); });
+    document.getElementById('bookNowBtnDesktop')?.addEventListener('click', () => { window.location.href = 'contact.html'; });
+    document.getElementById('mobileBookNowBtn')?.addEventListener('click', () => { closeMobileDrawer(); window.location.href = 'contact.html'; });
     closeAuthModal?.addEventListener('click', closeModal);
     authModal?.addEventListener('click', (e) => {
       if (e.target === authModal) closeModal();
