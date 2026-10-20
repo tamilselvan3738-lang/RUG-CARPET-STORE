@@ -1838,32 +1838,248 @@
   </aside>
 
   <!-- Central semantic canvas -->
+    <!-- Central semantic canvas -->
   <main class="flex-1">
 
     <!-- ======================================================== -->
-    <!-- SECTION 1: ALL RUGS & CARPETS — MASTER WEAVING TAXONOMY -->
+    <!-- SECTION 1: PRODUCT CATEGORIES (Essential Category Hub)   -->
     <!-- ======================================================== -->
-    <section id="prod-all" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
+    <section id="prod-categories" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
       <!-- Ambient Radial Lighting -->
       <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="grid" class="w-3.5 h-3.5"></i>
-            <span>Master Catalog <span class="hidden sm:inline">&bull; All Rugs &amp; Carpets</span></span>
+            <span>Product Categories &bull; Fine Rugs &amp; Carpets</span>
           </div>
           <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            The Atelier Archive: <span class="text-gold-500">All Rugs &amp; Carpets</span>
+            Find Your Perfect Rug: <span class="text-gold-500">Essential Categories</span>
           </h1>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Explore our definitive collection across five master weaving disciplines. From knot-by-knot ancestral Tibetan looms to sculptural hand-tufted reliefs and reversible zero-pile flatweaves.
+            Browse our core rug and carpet collections by construction, fiber, and style. Every piece is handcrafted by master artisans to deliver lifetime elegance and tactile luxury.
+          </p>
+        </div>
+
+        <!-- 6 Visual Product Category Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-10">
+          
+          <!-- Category 1: Handwoven & Hand-Knotted -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all">
+            <div>
+              <div class="relative w-full aspect-[16/10] overflow-hidden bg-black/40">
+                <img src="images/col_handwoven.jpg" alt="Handwoven and Hand-Knotted Rugs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-gold-400 text-[11px] font-mono px-3 py-1 rounded-full font-bold">600&ndash;1200 KPSI</span>
+                <span class="absolute top-3 right-3 bg-gold-500 text-black text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-full">Heirloom Grade</span>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                    Handwoven &amp; Hand-Knotted
+                  </h3>
+                  <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $2,400</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Individual knots hand-tied by master Tibetan and Persian artisans over 6 to 18 months on vertical wooden looms.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 flex items-center gap-3">
+              <button onclick="filterCatalogBy('Handwoven')" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
+              </button>
+              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
+                <span>Explore</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 2: Hand-Tufted Sculptural Rugs -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all">
+            <div>
+              <div class="relative w-full aspect-[16/10] overflow-hidden bg-black/40">
+                <img src="images/col_statement_rugs.jpg" alt="Hand-Tufted Sculptural Rugs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-gold-400 text-[11px] font-mono px-3 py-1 rounded-full font-bold">12&ndash;18mm Pile</span>
+                <span class="absolute top-3 right-3 bg-blue-500/90 text-white text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-full">3D Relief</span>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                    Hand-Tufted Sculptural Rugs
+                  </h3>
+                  <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $1,850</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Dense worsted wool tufts sheared by hand into sculptural high-low architectural contours for contemporary spaces.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 flex items-center gap-3">
+              <button onclick="filterCatalogBy('Hand-Tufted')" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
+              </button>
+              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
+                <span>Explore</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 3: Flatweave & Kilim Rugs -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all">
+            <div>
+              <div class="relative w-full aspect-[16/10] overflow-hidden bg-black/40">
+                <img src="images/col_modern_living.jpg" alt="Flatweave and Kilim Rugs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-gold-400 text-[11px] font-mono px-3 py-1 rounded-full font-bold">Zero Pile</span>
+                <span class="absolute top-3 right-3 bg-purple-500/90 text-white text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-full">Reversible</span>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                    Flatweave &amp; Kilim Rugs
+                  </h3>
+                  <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $950</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Low-profile reversible soumak tapestry weaves, built for dining rooms, high-traffic corridors, and effortless chair glides.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 flex items-center gap-3">
+              <button onclick="filterCatalogBy('Flatweave')" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
+              </button>
+              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
+                <span>Explore</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 4: Silk & Wool Luxury Blends -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all">
+            <div>
+              <div class="relative w-full aspect-[16/10] overflow-hidden bg-black/40">
+                <img src="images/col_luxury_silk.jpg" alt="Silk and Wool Luxury Blends" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-gold-400 text-[11px] font-mono px-3 py-1 rounded-full font-bold">Mulberry Silk</span>
+                <span class="absolute top-3 right-3 bg-gold-500/90 text-black text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-full">Prismatic Sheen</span>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                    Silk &amp; Wool Luxury Blends
+                  </h3>
+                  <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $3,800</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Luminescent natural Mulberry filament silk interlocked with highland wool for shimmering chandelier reflections.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 flex items-center gap-3">
+              <button onclick="filterCatalogBy('Silk')" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
+              </button>
+              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
+                <span>Explore</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 5: Natural Fiber & Organic Jute -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all">
+            <div>
+              <div class="relative w-full aspect-[16/10] overflow-hidden bg-black/40">
+                <img src="images/col_natural_fiber.jpg" alt="Natural Fiber and Jute Rugs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-gold-400 text-[11px] font-mono px-3 py-1 rounded-full font-bold">Eco Organic</span>
+                <span class="absolute top-3 right-3 bg-emerald-500/90 text-black text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-full">Zero Synthetics</span>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                    Natural Fiber &amp; Jute
+                  </h3>
+                  <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $650</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Sustainably harvested Bengal jute, sisal, and Belgian flax woven into tactile, earthy foundations for modern spaces.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 flex items-center gap-3">
+              <button onclick="filterCatalogBy('Natural Fiber')" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
+              </button>
+              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
+                <span>Explore</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Category 6: Bespoke Architectural Commissions -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all">
+            <div>
+              <div class="relative w-full aspect-[16/10] overflow-hidden bg-black/40">
+                <img src="images/custom_hero_atelier.jpg" alt="Bespoke Architectural Custom Rugs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-gold-400 text-[11px] font-mono px-3 py-1 rounded-full font-bold">Made-to-Measure</span>
+                <span class="absolute top-3 right-3 bg-gold-500 text-black text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-full">Custom Quote</span>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                    Bespoke Custom Rugs
+                  </h3>
+                  <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $45 / sq.ft</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Tailor any dimension, contour, color palette, and knot density to match your exact interior architectural floorplan.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 flex items-center gap-3">
+              <a href="custom-rugs.html" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+                <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
+                <span>Custom Order</span>
+              </a>
+              <a href="contact.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
+                <span>Consultation</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 2: FEATURED RUGS & CARPETS (Live Inventory Grid)  -->
+    <!-- ======================================================== -->
+    <section id="prod-showcase" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="package" class="w-3.5 h-3.5"></i>
+            <span>Featured Rugs &amp; Carpets &bull; In Stock</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Featured Rugs &amp; Carpets: <span class="text-gold-500">Curated Live Selection</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            Each piece is accompanied by full architectural specifications, certified provenance, and transparent pricing. Select any rug to inspect macro details or arrange delivery.
           </p>
 
-          <!-- Interactive Search & Filter Indicator Bar -->
-          <div class="pt-2 max-w-2xl mx-auto">
+          <!-- Interactive Search & Live Filter Bar -->
+          <div class="pt-3 max-w-2xl mx-auto space-y-3">
             <div class="flex items-center gap-2 p-2 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200 dark:border-white/10 shadow-lg">
               <i data-lucide="search" class="w-4 h-4 text-gold-500 ml-2"></i>
               <input 
@@ -1873,652 +2089,21 @@
                 class="min-w-0 w-full bg-transparent text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none px-2"
               />
               <span class="text-[10px] font-mono font-bold text-gold-600 dark:text-gold-400 bg-gold-500/10 px-3 py-1.5 rounded-xl whitespace-nowrap">
-                284 Masterpieces
+                Live Inventory
               </span>
             </div>
-          </div>
-        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-12">
-          
-          <!-- Left: 5 Weaving Taxonomy Cards (7 cols) -->
-          <div class="lg:col-span-7 space-y-4" id="allTaxonomyCol">
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              
-              <!-- Taxonomy 1: Handwoven Rugs -->
-              <div class="p-5 rounded-3xl prod-card-glass space-y-2 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/40 transition-all cursor-pointer group" onclick="filterCatalogBy('Handwoven')">
-                <div class="flex items-center justify-between">
-                  <span class="text-xs font-mono uppercase tracking-wider text-gold-600 dark:text-gold-400 font-bold flex items-center gap-1.5">
-                    <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
-                    Ancestral Loom
-                  </span>
-                  <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">600&ndash;1200 KPSI</span>
-                </div>
-                <h3 class="font-serif font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                  Handwoven Rugs
-                </h3>
-                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Individual knots hand-tied by master artisans over 6 to 14 months. Exceptional generational durability with authentic selvedge finishes.
-                </p>
-              </div>
-
-              <!-- Taxonomy 2: Hand-Tufted Rugs -->
-              <div class="p-5 rounded-3xl prod-card-glass space-y-2 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/40 transition-all cursor-pointer group" onclick="filterCatalogBy('Hand-Tufted')">
-                <div class="flex items-center justify-between">
-                  <span class="text-xs font-mono uppercase tracking-wider text-gold-600 dark:text-gold-400 font-bold flex items-center gap-1.5">
-                    <i data-lucide="feather" class="w-3.5 h-3.5"></i>
-                    Sculptural Relief
-                  </span>
-                  <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">12&ndash;18mm Pile</span>
-                </div>
-                <h3 class="font-serif font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                  Hand-Tufted Rugs
-                </h3>
-                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Dense tufts punched into primary backing, then hand-sheared into 3D high-low sculptural contours with latex and cotton scrim lock.
-                </p>
-              </div>
-
-              <!-- Taxonomy 3: Flatweave Rugs -->
-              <div class="p-5 rounded-3xl prod-card-glass space-y-2 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/40 transition-all cursor-pointer group" onclick="filterCatalogBy('Flatweave')">
-                <div class="flex items-center justify-between">
-                  <span class="text-xs font-mono uppercase tracking-wider text-gold-600 dark:text-gold-400 font-bold flex items-center gap-1.5">
-                    <i data-lucide="repeat" class="w-3.5 h-3.5"></i>
-                    Zero-Pile Soumak
-                  </span>
-                  <span class="text-[10px] font-mono text-purple-600 dark:text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded">Reversible</span>
-                </div>
-                <h3 class="font-serif font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                  Flatweave Rugs
-                </h3>
-                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Interlaced warp and weft creating a reversible, low-profile carpet ideal for dining rooms, high-traffic corridors, and chair glides.
-                </p>
-              </div>
-
-              <!-- Taxonomy 4: Wool Rugs -->
-              <div class="p-5 rounded-3xl prod-card-glass space-y-2 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/40 transition-all cursor-pointer group" onclick="filterCatalogBy('Wool')">
-                <div class="flex items-center justify-between">
-                  <span class="text-xs font-mono uppercase tracking-wider text-gold-600 dark:text-gold-400 font-bold flex items-center gap-1.5">
-                    <i data-lucide="shield" class="w-3.5 h-3.5"></i>
-                    Highland Fleece
-                  </span>
-                  <span class="text-[10px] font-mono text-amber-600 dark:text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded">High Lanolin</span>
-                </div>
-                <h3 class="font-serif font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                  Wool Rugs
-                </h3>
-                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  High-altitude lanolin-rich sheep wool that naturally resists stains, self-extinguishes fire, and springs back under heavy furniture.
-                </p>
-              </div>
-
-            </div>
-
-            <!-- Taxonomy 5: Cotton Rugs (Spans full width) -->
-            <div class="p-5 rounded-3xl prod-card-glass space-y-2 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/40 transition-all cursor-pointer group" onclick="filterCatalogBy('Cotton')">
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1.5">
-                  <i data-lucide="leaf" class="w-3.5 h-3.5"></i>
-                  Organic Egyptian Fiber
-                </span>
-                <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">100% Breathable</span>
-              </div>
-              <h3 class="font-serif font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                Cotton Rugs
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                Spun from long-staple organic cotton for crisp dimensional stability, lightweight casual luxury, and gentle barefoot touch in sunlit rooms.
-              </p>
-            </div>
-
-          </div>
-
-          <!-- Right: Visual Showcase (5 cols) -->
-          <div class="lg:col-span-5 relative" id="allVisualCol">
-            <div class="relative rounded-[32px] p-3 sm:p-4 prod-card-glass shadow-2xl overflow-hidden group tilt-card-prod">
-              <div class="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden bg-black/40">
-                <img 
-                  id="prodAllHeroImg"
-                  src="images/prod_all_rugs_hero.jpg" 
-                  alt="Grand luxury rug showroom and art gallery displaying curated collection of handwoven, hand-tufted, flatweave, wool, and cotton rugs on brass racks" 
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent pointer-events-none"></div>
-
-                <div class="absolute top-4 left-4 bg-black/75 backdrop-blur-md border border-gold-500/40 rounded-full px-3.5 py-1 text-[11px] font-semibold text-gold-300 flex items-center gap-1.5">
-                  <i data-lucide="archive" class="w-3.5 h-3.5 text-gold-400"></i>
-                  <span>Atelier Permanent Exhibition</span>
-                </div>
-
-                <div class="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-white">
-                  <div class="flex items-center justify-between mb-1">
-                    <span class="text-xs font-serif font-bold tracking-wide">Fifth Avenue Grand Salon Gallery</span>
-                    <span class="text-[10px] font-mono text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded">Curated Vault</span>
-                  </div>
-                  <p class="text-[11px] text-slate-300 leading-snug">
-                    Over 280 master hand-knotted and hand-tufted carpets ready for private viewing or worldwide white-glove dispatch.
-                  </p>
-                </div>
-              </div>
-
-              <!-- 3 Pillar Stat Chips -->
-              <div class="grid grid-cols-3 gap-2.5 pt-3.5 text-center">
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
-                  <div class="font-serif font-bold text-sm sm:text-base text-gold-600 dark:text-gold-400">2,400+</div>
-                  <div class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">Active Looms</div>
-                </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
-                  <div class="font-serif font-bold text-sm sm:text-base text-gold-600 dark:text-gold-400">100%</div>
-                  <div class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">Natural Fibers</div>
-                </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
-                  <div class="font-serif font-bold text-sm sm:text-base text-emerald-600 dark:text-emerald-400">Bespoke</div>
-                  <div class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">Custom Sizing</div>
-                </div>
-              </div>
+            <!-- Quick Filter Pill Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 pt-1 text-xs">
+              <button onclick="filterCatalogBy('')" class="px-3 py-1.5 rounded-xl bg-gold-500/15 text-gold-600 dark:text-gold-400 font-bold border border-gold-500/30 hover:bg-gold-500 hover:text-black transition-all">All Pieces</button>
+              <button onclick="filterCatalogBy('Handwoven')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Handwoven</button>
+              <button onclick="filterCatalogBy('Hand-Tufted')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Hand-Tufted</button>
+              <button onclick="filterCatalogBy('Wool')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Highland Wool</button>
+              <button onclick="filterCatalogBy('Silk')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Mulberry Silk</button>
+              <button onclick="filterCatalogBy('Minimalist')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Minimalist</button>
+              <button onclick="filterCatalogBy('Traditional')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Traditional</button>
             </div>
           </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ======================================================== -->
-    <!-- SECTION 2: BY MATERIAL — THE FIBER CONNOISSEUR MATRIX     -->
-    <!-- ======================================================== -->
-    <section id="prod-material" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
-      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
-            <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-            <span>Curate By Material</span>
-          </div>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Fiber Connoisseur: <span class="text-gold-500">By Material</span>
-          </h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Fiber determines every tactile and functional characteristic: light luster, resilience, and footfall comfort. Filter our gallery across six uncompromised material categories.
-          </p>
-        </div>
-
-        <!-- Material Banner Image -->
-        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-12" id="materialBannerWrapper">
-          <div class="relative w-full aspect-[21/9] sm:aspect-[24/8] rounded-2xl overflow-hidden bg-black/40">
-            <img src="images/prod_by_material.jpg" alt="Flatlay still life of six distinct natural rug materials: Tibetan wool, organic cotton, woven jute, Mulberry silk, bamboo viscose, and Belgian flax" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent flex items-center p-6 sm:p-10">
-              <div class="max-w-xl text-white space-y-2">
-                <span class="text-gold-400 text-[11px] font-mono uppercase tracking-widest font-bold">Six Organic Weaving Foundations</span>
-                <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold">Wool, Cotton, Jute, Silk, Viscose &amp; Natural Fiber</h3>
-                <p class="text-xs sm:text-sm text-slate-300 hidden sm:block">Compare tactile density, moisture absorption, and refractive index across each natural element.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6 Material Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="materialsCardGrid">
-          
-          <!-- Material 1: Wool -->
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Wool')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400">01 &bull; Natural Wax Lanolin</span>
-              <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded">High Durability</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Wool Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Tibetan highland sheep wool with high lanolin wax content. Inherently stain-resistant, flame-retardant, and exceptionally resilient against compression under heavy furniture.
-            </p>
-            <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
-              <span>Best Rooms:</span>
-              <span class="font-semibold text-slate-900 dark:text-white">Living Room, Great Salons</span>
-            </div>
-          </div>
-
-          <!-- Material 2: Cotton -->
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Cotton')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-blue-600 dark:text-blue-400">02 &bull; Long-Staple Warp</span>
-              <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">Crisp Structure</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Cotton Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Provides the dimensionally rigid warp and weft skeleton for intricate hand-knotted rugs, as well as lightweight, washable summer flatweaves with natural breathability.
-            </p>
-            <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
-              <span>Best Rooms:</span>
-              <span class="font-semibold text-slate-900 dark:text-white">Breakfast Nooks, Verandas</span>
-            </div>
-          </div>
-
-          <!-- Material 3: Jute -->
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Jute')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400">03 &bull; Golden Bengal Bast</span>
-              <span class="text-[10px] font-mono text-amber-600 dark:text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded">Earthy Organic</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Jute Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Braided from golden plant bast stalks. Dense, textural, and grounded; provides the quintessential chunky neutral foundation layer for luxury double-rug styling.
-            </p>
-            <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
-              <span>Best Rooms:</span>
-              <span class="font-semibold text-slate-900 dark:text-white">Dining Rooms, Layer Foundations</span>
-            </div>
-          </div>
-
-          <!-- Material 4: Silk -->
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Silk')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-gold-600 dark:text-gold-400">04 &bull; Mulberry Filament</span>
-              <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded">Liquid Luster</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Silk Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Continuous natural filament silk with triangular cross-section threads that refract ambient chandelier light with unparalleled opulence and razor-sharp design definition.
-            </p>
-            <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
-              <span>Best Rooms:</span>
-              <span class="font-semibold text-slate-900 dark:text-white">Master Suites, Private Galleries</span>
-            </div>
-          </div>
-
-          <!-- Material 5: Viscose -->
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Viscose')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-purple-600 dark:text-purple-400">05 &bull; Bamboo Botanical</span>
-              <span class="text-[10px] font-mono text-purple-600 dark:text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded">Mirror Sheen</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Viscose Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Regenerated bamboo cellulose fibers producing a silken touch with shimmering directional pile response, commonly blended with wool for high-low sculptural accents.
-            </p>
-            <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
-              <span>Best Rooms:</span>
-              <span class="font-semibold text-slate-900 dark:text-white">Formal Lounges, Executive Suites</span>
-            </div>
-          </div>
-
-          <!-- Material 6: Natural Fiber -->
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Natural Fiber')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400">06 &bull; Flax, Sisal &amp; Abaca</span>
-              <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Zero Synthetics</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Natural Fiber Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Un-dyed organic plant fibers sourced from Belgian flax fields and sustainable abaca crops. Biodegradable, zero VOC emissions, and organically tactile.
-            </p>
-            <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
-              <span>Best Rooms:</span>
-              <span class="font-semibold text-slate-900 dark:text-white">Corridors, Modern Architecture</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ======================================================== -->
-    <!-- SECTION 3: BY SIZE — THE SPATIAL DIMENSION ARCHITECT     -->
-    <!-- ======================================================== -->
-    <section id="prod-size" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
-      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
-            <i data-lucide="maximize" class="w-3.5 h-3.5"></i>
-            <span>Scale &amp; Proportions &bull; By Size</span>
-          </div>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Spatial Proportions: <span class="text-gold-500">By Size</span>
-          </h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            From intimate bedside accents to palatial continuous-loom ballroom dimensions. Discover the five canonical scale classifications calibrated for architectural harmony.
-          </p>
-
-          <!-- Size Navigation Filter Pills -->
-          <div class="inline-flex flex-wrap justify-center gap-1.5 p-1.5 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200 dark:border-white/10 shadow-sm mt-3">
-            <button class="prod-tab-btn active-tab px-4 py-2 rounded-xl text-xs font-bold transition-all" onclick="filterCatalogBy('Small')">
-              Small Rugs (2' &times; 3' &ndash; 4' &times; 6')
-            </button>
-            <button class="prod-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-gold-500" onclick="filterCatalogBy('Medium')">
-              Medium Rugs (5' &times; 8' &ndash; 6' &times; 9')
-            </button>
-            <button class="prod-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-gold-500" onclick="filterCatalogBy('Large')">
-              Large Rugs (8' &times; 10' &ndash; 9' &times; 12')
-            </button>
-            <button class="prod-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-gold-500" onclick="filterCatalogBy('Runner')">
-              Runner Rugs (2.5' &times; 8' &ndash; 3' &times; 14')
-            </button>
-            <button class="prod-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-gold-500" onclick="filterCatalogBy('Extra Large')">
-              Extra Large Rugs (10' &times; 14'+)
-            </button>
-          </div>
-        </div>
-
-        <!-- Scale Blueprint Feature Banner -->
-        <div class="rounded-[32px] overflow-hidden p-3 sm:p-5 prod-card-glass shadow-2xl group mb-12" id="sizeBlueprintHeroBanner">
-          <div class="relative w-full aspect-[21/9] sm:aspect-[16/7] rounded-[24px] overflow-hidden bg-black/50">
-            <img 
-              src="images/prod_by_size.jpg" 
-              alt="Architectural design studio table with scale blueprints comparing Small, Medium, Large, Runner and Extra Large rug layout outlines under miniature furniture" 
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none"></div>
-
-            <div class="absolute top-4 left-4 sm:top-6 sm:left-6 bg-black/80 backdrop-blur-md border border-gold-500/40 rounded-full px-4 py-1.5 text-xs font-semibold text-gold-300 flex items-center gap-2">
-              <i data-lucide="ruler" class="w-3.5 h-3.5 text-gold-400"></i>
-              <span>Architectural Scale Modeling Studio</span>
-            </div>
-
-            <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 sm:p-6 text-white flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <div class="space-y-1">
-                <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 block">Scaled Room Layouts</span>
-                <h3 class="font-serif text-lg sm:text-xl font-bold">&ldquo;Every centimeter calibrated to seating footprints, door swings, and wall margins.&rdquo;</h3>
-                <p class="text-xs text-slate-300">From 2'×3' intimate landings to 14'×20' estate commissions woven continuously on monolithic upright timber looms.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5 Size Category Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4" id="sizeCategoryGrid">
-          
-          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-2 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Small')">
-            <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 font-bold uppercase">Small Rugs</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">2' &times; 3' &ndash; 4' &times; 6'</h4>
-            <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              Bedside soft landings, dressing room accents, and elegant entryway focal points.
-            </p>
-          </div>
-
-          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-2 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Medium')">
-            <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold uppercase">Medium Rugs</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">5' &times; 8' &ndash; 6' &times; 9'</h4>
-            <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              Executive home offices, cozy apartment seating, and intimate dining nooks.
-            </p>
-          </div>
-
-          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-2 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Large')">
-            <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 font-bold uppercase">Large Rugs</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">8' &times; 10' &ndash; 9' &times; 12'</h4>
-            <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              Canonical standard living rooms, primary conversational islands, and master suites.
-            </p>
-          </div>
-
-          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-2 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Runner')">
-            <span class="text-[10px] font-mono text-purple-600 dark:text-purple-400 font-bold uppercase">Runner Rugs</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">2.5' &times; 8' &ndash; 3' &times; 14'</h4>
-            <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              Grand gallery hallways, kitchen islands, and long circulation corridors.
-            </p>
-          </div>
-
-          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-2 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Extra Large')">
-            <span class="text-[10px] font-mono text-amber-600 dark:text-amber-400 font-bold uppercase">Extra Large</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">10' &times; 14'+ &amp; Custom</h4>
-            <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              Double-height architectural penthouses, formal banquet halls, and estate salons.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ======================================================== -->
-    <!-- SECTION 4: BY STYLE — THE 6 AESTHETIC MOVEMENTS          -->
-    <!-- ======================================================== -->
-    <section id="prod-style" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
-      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
-            <i data-lucide="palette" class="w-3.5 h-3.5"></i>
-            <span>Curatorial Aesthetics <span class="hidden sm:inline">&bull; By Style</span></span>
-          </div>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Curated Aesthetics: <span class="text-gold-500">By Style</span>
-          </h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Whether your architectural vision calls for classical Persian palmettes, clean Bauhaus geometries, or painterly silk watercolors.
-          </p>
-        </div>
-
-        <!-- Style Gallery Showcase Banner -->
-        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-12" id="styleGalleryBannerWrapper">
-          <div class="relative w-full aspect-[21/9] sm:aspect-[24/8] rounded-2xl overflow-hidden bg-black/40">
-            <img src="images/prod_by_style.jpg" alt="Fine art gallery wall displaying six curated luxury rugs: traditional, contemporary, minimalist, geometric, vintage, and abstract" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent flex items-center p-6 sm:p-10">
-              <div class="max-w-xl text-white space-y-2">
-                <span class="text-gold-400 text-[11px] font-mono uppercase tracking-widest font-bold">Six Curated Aesthetic Disciplines</span>
-                <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold">Traditional, Contemporary, Minimalist, Geometric, Vintage &amp; Abstract</h3>
-                <p class="text-xs sm:text-sm text-slate-300 hidden sm:block">From historic palace provenance to spontaneous watercolor brushstrokes woven in shimmering silk.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6 Style Movements Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="styleCardsGrid">
-          
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Traditional')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400">Movement 01</span>
-              <span class="text-[10px] font-mono text-amber-600 dark:text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded">Classical Provenance</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Traditional Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Intricate Persian medallion motifs, Shah Abbas floral palmettes, and double-knotted Caucasian tribal borders steeped in centuries of heritage.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Contemporary')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-blue-600 dark:text-blue-400">Movement 02</span>
-              <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">Organic Curves</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Contemporary Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Fluid asymmetrical silhouettes, wavy hand-carved contours, and mixed-pile textural contrasts designed for modern architectural volumes.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Minimalist')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400">Movement 03</span>
-              <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Wabi-Sabi Calm</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Minimalist Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Un-dyed organic wool, subtle ribbed Bouclé shearing, and monochromatic travertine harmony prioritizing texture over ornament.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Geometric')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-purple-600 dark:text-purple-400">Movement 04</span>
-              <span class="text-[10px] font-mono text-purple-600 dark:text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded">Bauhaus Linear</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Geometric Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Architectural grids, interlocking diamonds, and sharp contrasting color blocks echoing the mathematical rigor of modernist design.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Vintage')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-yellow-600 dark:text-yellow-400">Movement 05</span>
-              <span class="text-[10px] font-mono text-yellow-600 dark:text-yellow-400 bg-yellow-500/10 px-2 py-0.5 rounded">Aged Patina</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Vintage Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Rare restored collector heirlooms with muted vegetable dye patinas, distressed hand-shearing, and historical character spanning decades.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Abstract')">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-red-600 dark:text-red-400">Movement 06</span>
-              <span class="text-[10px] font-mono text-red-600 dark:text-red-400 bg-red-500/10 px-2 py-0.5 rounded">Watercolor Silk</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Abstract Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Expressive painterly washes, spontaneous gradient transitions, and liquid silk highlights resembling gallery canvas art laid underfoot.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ======================================================== -->
-    <!-- SECTION 5: BY ROOM — SPATIAL PLACEMENT ARCHITECTURE      -->
-    <!-- ======================================================== -->
-    <section id="prod-room" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
-      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
-            <i data-lucide="home" class="w-3.5 h-3.5"></i>
-            <span>Spatial Environments <span class="hidden sm:inline">&bull; By Room</span></span>
-          </div>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Architectural Curation: <span class="text-gold-500">By Room</span>
-          </h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Every environment possesses distinct functional demands: chair-pullback clearances in dining salons, sound absorption in executive studies, and bare-foot cloud softness in bedroom suites.
-          </p>
-
-          <!-- Room Tabs -->
-          <div class="inline-flex flex-wrap justify-center gap-1.5 p-1.5 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200 dark:border-white/10 shadow-sm mt-3">
-            <button class="room-tab-btn active-tab px-4 py-2 rounded-xl text-xs font-bold transition-all" onclick="filterCatalogBy('Living Room')">
-              Living Room Rugs
-            </button>
-            <button class="room-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-gold-500" onclick="filterCatalogBy('Bedroom')">
-              Bedroom Rugs
-            </button>
-            <button class="room-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-gold-500" onclick="filterCatalogBy('Dining Room')">
-              Dining Room Rugs
-            </button>
-            <button class="room-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-gold-500" onclick="filterCatalogBy('Hallway Runners')">
-              Hallway Runners
-            </button>
-            <button class="room-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-gold-500" onclick="filterCatalogBy('Office')">
-              Office Rugs
-            </button>
-          </div>
-        </div>
-
-        <!-- Room 5-Panel Panoramic Showcase Banner -->
-        <div class="rounded-[32px] overflow-hidden p-3 sm:p-5 prod-card-glass shadow-2xl group mb-12" id="roomTourHeroBanner">
-          <div class="relative w-full aspect-[21/9] sm:aspect-[16/7] rounded-[24px] overflow-hidden bg-black/50">
-            <img 
-              src="images/prod_by_room.jpg" 
-              alt="Panoramic view of luxury penthouse interior showcasing distinct rugs styled in Living Room, Dining Room, Hallway Corridor, Bedroom, and Home Office" 
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none"></div>
-
-            <div class="absolute top-4 left-4 sm:top-6 sm:left-6 bg-black/80 backdrop-blur-md border border-gold-500/40 rounded-full px-4 py-1.5 text-xs font-semibold text-gold-300 flex items-center gap-2">
-              <i data-lucide="compass" class="w-3.5 h-3.5 text-gold-400"></i>
-              <span>Integrated Penthouse Curation Tour</span>
-            </div>
-
-            <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 sm:p-6 text-white flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <div class="space-y-1">
-                <span class="text-xs font-mono uppercase tracking-widest text-gold-400 block">Zonal Acoustic Harmony</span>
-                <h3 class="font-serif text-lg sm:text-xl font-bold">&ldquo;Tailored pile density, traffic durability, and dimensions for every living zone.&rdquo;</h3>
-                <p class="text-xs text-slate-300">Each room requires calibrated acoustic damping, spill resilience, and directional fiber nap for ideal spatial balance.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5 Room Zonal Placement Spec Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4" id="roomSpecsGrid">
-          
-          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-2 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Living Room')">
-            <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 font-bold uppercase">Living Room Rugs</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Conversational Anchor</h4>
-            <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              Front-legs or all-legs on carpet; minimum 8' &times; 10'. Provides -16dB reverberation reduction.
-            </p>
-          </div>
-
-          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-2 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Bedroom')">
-            <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold uppercase">Bedroom Rugs</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Sensory Step Landing</h4>
-            <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              Perpendicular lower 2/3 bed reveal with 30&ndash;36" margin of high-pile cloud warmth.
-            </p>
-          </div>
-
-          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-2 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Dining Room')">
-            <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 font-bold uppercase">Dining Room Rugs</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Chair Pull-Back Glide</h4>
-            <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              Table + 24" perimeter clearance with low-profile flatweave avoiding chair castor snags.
-            </p>
-          </div>
-
-          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-2 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Hallway Runners')">
-            <span class="text-[10px] font-mono text-purple-600 dark:text-purple-400 font-bold uppercase">Hallway Runners</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Directional Nap Flow</h4>
-            <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              Nap oriented toward entrance with 4&ndash;6" side margin preventing hallway compression.
-            </p>
-          </div>
-
-          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-2 hover:border-gold-500/40 transition-all cursor-pointer" onclick="filterCatalogBy('Office')">
-            <span class="text-[10px] font-mono text-amber-600 dark:text-amber-400 font-bold uppercase">Office Rugs</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Executive Silence</h4>
-            <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              Castor wheel resistance, non-directional pile, and speech acoustic clarity optimization.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ======================================================== -->
-    <!-- SECTION 6: CURATED PRODUCT SHOWCASE GRID                  -->
-    <!-- ======================================================== -->
-    <section id="prod-showcase" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
-      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
-            <i data-lucide="package" class="w-3.5 h-3.5"></i>
-            <span>Curated Inventory <span class="hidden sm:inline">&bull; Product Showcase</span></span>
-          </div>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Curated Catalog: <span class="text-gold-500">Live Inventory</span>
-          </h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Select any rug to inspect complete architectural specifications, high-resolution knot details, custom color ways, and add directly to your enquiry dossier.
-          </p>
         </div>
 
         <!-- 6 Curated Live Product Cards Grid -->
@@ -2549,13 +2134,20 @@
                 </div>
               </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
-                class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2"
-                onclick="loadProductDetails('ART-8492', 'The Isfahan Imperial Medallion', '$4,850 USD', '70% Tibetan Highland Wool, 30% Pure Mulberry Silk', '9\' × 12\' (270 × 360 cm)', 'Hand-Knotted Senneh Double Knot (850 KPSI)', 'images/col_heritage.jpg')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="loadProductDetails('ART-8492', 'The Isfahan Imperial Medallion', '$4,850 USD', '70% Tibetan Highland Wool, 30% Pure Mulberry Silk', '9' × 12' (270 × 360 cm)', 'Hand-Knotted Senneh Double Knot (850 KPSI)', 'images/col_heritage.jpg')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-                <span>Inspect Product Details</span>
+                <span>View Details</span>
+              </button>
+              <button 
+                class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="window.location.href='contact.html?inquiry=ART-8492'"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
               </button>
             </div>
           </div>
@@ -2585,13 +2177,20 @@
                 </div>
               </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
-                class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2"
-                onclick="loadProductDetails('ART-3914', 'The Kyoto Wabi-Sabi Rib', '$3,200 USD', '100% Un-dyed Tibetan Highland Wool', '8\' × 10\' (240 × 300 cm)', 'Hand-Knotted Loop & Sheared Ribs (550 KPSI)', 'images/col_minimalist.jpg')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="loadProductDetails('ART-3914', 'The Kyoto Wabi-Sabi Rib', '$3,200 USD', '100% Un-dyed Tibetan Highland Wool', '8' × 10' (240 × 300 cm)', 'Hand-Knotted Loop & Sheared Ribs (550 KPSI)', 'images/col_minimalist.jpg')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-                <span>Inspect Product Details</span>
+                <span>View Details</span>
+              </button>
+              <button 
+                class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="window.location.href='contact.html?inquiry=ART-3914'"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
               </button>
             </div>
           </div>
@@ -2621,13 +2220,20 @@
                 </div>
               </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
-                class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2"
-                onclick="loadProductDetails('ART-5120', 'The Bauhaus Linear Relief', '$3,650 USD', '80% New Zealand Wool, 20% Bamboo Botanical Viscose', '9\' × 12\' (270 × 360 cm)', 'Hand-Tufted Hand-Carved 3D Shearing (14mm Pile)', 'images/col_statement_rugs.jpg')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="loadProductDetails('ART-5120', 'The Bauhaus Linear Relief', '$3,650 USD', '80% New Zealand Wool, 20% Bamboo Botanical Viscose', '9' × 12' (270 × 360 cm)', 'Hand-Tufted Hand-Carved 3D Shearing (14mm Pile)', 'images/col_statement_rugs.jpg')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-                <span>Inspect Product Details</span>
+                <span>View Details</span>
+              </button>
+              <button 
+                class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="window.location.href='contact.html?inquiry=ART-5120'"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
               </button>
             </div>
           </div>
@@ -2657,13 +2263,20 @@
                 </div>
               </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
-                class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2"
-                onclick="loadProductDetails('ART-7231', 'The Caspian Soumak Kilim Runner', '$1,850 USD', '65% Organic Wool, 35% Long-Staple Cotton', '3\' × 12\' (90 × 360 cm)', 'Flatweave Soumak Reversible Tapestry Weave', 'images/col_handwoven.jpg')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="loadProductDetails('ART-7231', 'The Caspian Soumak Kilim Runner', '$1,850 USD', '65% Organic Wool, 35% Long-Staple Cotton', '3' × 12' (90 × 360 cm)', 'Flatweave Soumak Reversible Tapestry Weave', 'images/col_handwoven.jpg')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-                <span>Inspect Product Details</span>
+                <span>View Details</span>
+              </button>
+              <button 
+                class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="window.location.href='contact.html?inquiry=ART-7231'"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
               </button>
             </div>
           </div>
@@ -2693,13 +2306,20 @@
                 </div>
               </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
-                class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2"
-                onclick="loadProductDetails('ART-9018', 'The Oushak Distressed Heritage', '$6,200 USD', '100% Hand-Spun Anatolian Wool', '10\' × 14\' (300 × 420 cm)', 'Hand-Knotted Turkish Ghiordes Double Knot (700 KPSI)', 'images/prod_showcase_hero.jpg')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="loadProductDetails('ART-9018', 'The Oushak Distressed Heritage', '$6,200 USD', '100% Hand-Spun Anatolian Wool', '10' × 14' (300 × 420 cm)', 'Hand-Knotted Turkish Ghiordes Double Knot (700 KPSI)', 'images/prod_showcase_hero.jpg')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-                <span>Inspect Product Details</span>
+                <span>View Details</span>
+              </button>
+              <button 
+                class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="window.location.href='contact.html?inquiry=ART-9018'"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
               </button>
             </div>
           </div>
@@ -2729,13 +2349,20 @@
                 </div>
               </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
-                class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2"
-                onclick="loadProductDetails('ART-6650', 'The Solstice Abstract Watercolor', '$5,400 USD', '50% Mulberry Silk, 50% Tibetan Highland Wool', '9\' × 12\' (270 × 360 cm)', 'Hand-Knotted Tibetan Loop & Cut (1,000 KPSI)', 'images/col_luxury_silk.jpg')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="loadProductDetails('ART-6650', 'The Solstice Abstract Watercolor', '$5,400 USD', '50% Mulberry Silk, 50% Tibetan Highland Wool', '9' × 12' (270 × 360 cm)', 'Hand-Knotted Tibetan Loop & Cut (1,000 KPSI)', 'images/col_luxury_silk.jpg')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-                <span>Inspect Product Details</span>
+                <span>View Details</span>
+              </button>
+              <button 
+                class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+                onclick="window.location.href='contact.html?inquiry=ART-6650'"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
               </button>
             </div>
           </div>
@@ -2747,25 +2374,642 @@
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 7: PRODUCT DETAILS & BESPOKE ENQUIRY DOSSIER      -->
+    <!-- SECTION 3: BESTSELLERS (Essential Top Collector Pieces)  -->
     <!-- ======================================================== -->
-    <section id="product-details" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
+    <section id="prod-bestsellers" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
+      <!-- Ambient Radial Backing -->
+      <div class="absolute top-1/3 right-1/4 w-[650px] h-[550px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-gold-400 text-gold-400"></i>
+            <span>Customer Favorites &bull; Top Rated</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Bestselling Rugs &amp; Carpets: <span class="text-gold-500">Most Loved Pieces</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            Our most requested and highly reviewed architectural rugs. Chosen by leading interior designers and collectors for their timeless beauty, durability, and craftsmanship.
+          </p>
+        </div>
+
+        <!-- 3 Spotlight Bestsellers Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+          
+          <!-- Bestseller 1 -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border-2 border-gold-500/50 shadow-2xl flex flex-col justify-between group hover:border-gold-500 transition-all relative">
+            <div class="absolute top-4 right-4 z-20 bg-gradient-to-r from-gold-500 to-gold-600 text-black text-[11px] font-mono font-extrabold uppercase px-3 py-1 rounded-full shadow-lg">
+              #1 Bestseller
+            </div>
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-black/40">
+                <img src="images/col_heritage.jpg" alt="The Isfahan Imperial Medallion" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 text-xs text-amber-400">
+                  <div class="flex text-gold-400 text-xs">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <span class="text-white text-[11px] font-bold">5.0</span>
+                  <span class="text-slate-400 text-[10px]">(48 reviews)</span>
+                </div>
+              </div>
+              <div class="p-6 sm:p-7 space-y-3">
+                <div class="text-[11px] font-mono text-gold-600 dark:text-gold-400 uppercase tracking-widest font-bold">Traditional Heritage</div>
+                <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                  The Isfahan Imperial Medallion
+                </h3>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Hand-knotted with pure Mulberry silk and Tibetan wool at 850 KPSI. Lifetime stain resistance and stunning light luster.
+                </p>
+                <div class="flex items-baseline justify-between pt-3 border-t border-slate-100 dark:border-white/10">
+                  <div>
+                    <span class="text-xs text-slate-400 block">Retail Price:</span>
+                    <span class="font-serif font-bold text-2xl text-gold-600 dark:text-gold-400">$4,850</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Size: 9' &times; 12'</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 sm:p-7 pt-0 flex items-center gap-3">
+              <button 
+                onclick="loadProductDetails('ART-8492', 'The Isfahan Imperial Medallion', '$4,850 USD', '70% Tibetan Highland Wool, 30% Pure Mulberry Silk', '9' × 12' (270 × 360 cm)', 'Hand-Knotted Senneh Double Knot (850 KPSI)', 'images/col_heritage.jpg')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                <span>View Details</span>
+              </button>
+              <button 
+                onclick="window.location.href='contact.html?inquiry=ART-8492'"
+                class="btn-3d btn-3d-dark sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bestseller 2 -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all relative">
+            <div class="absolute top-4 right-4 z-20 bg-slate-900/90 text-gold-400 text-[11px] font-mono font-bold uppercase px-3 py-1 rounded-full border border-gold-500/40">
+              #2 Bestseller
+            </div>
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-black/40">
+                <img src="images/col_minimalist.jpg" alt="The Kyoto Wabi-Sabi Ribbed Rug" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 text-xs text-amber-400">
+                  <div class="flex text-gold-400 text-xs">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <span class="text-white text-[11px] font-bold">5.0</span>
+                  <span class="text-slate-400 text-[10px]">(62 reviews)</span>
+                </div>
+              </div>
+              <div class="p-6 sm:p-7 space-y-3">
+                <div class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest font-bold">Minimalist Organic</div>
+                <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                  The Kyoto Wabi-Sabi Rib
+                </h3>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Architectural raised monolithic ribs hand-sheared from 100% un-dyed lanolin wool. Perfect for modern sanctuaries.
+                </p>
+                <div class="flex items-baseline justify-between pt-3 border-t border-slate-100 dark:border-white/10">
+                  <div>
+                    <span class="text-xs text-slate-400 block">Retail Price:</span>
+                    <span class="font-serif font-bold text-2xl text-gold-600 dark:text-gold-400">$3,200</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Size: 8' &times; 10'</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 sm:p-7 pt-0 flex items-center gap-3">
+              <button 
+                onclick="loadProductDetails('ART-3914', 'The Kyoto Wabi-Sabi Rib', '$3,200 USD', '100% Un-dyed Tibetan Highland Wool', '8' × 10' (240 × 300 cm)', 'Hand-Knotted Loop & Sheared Ribs (550 KPSI)', 'images/col_minimalist.jpg')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                <span>View Details</span>
+              </button>
+              <button 
+                onclick="window.location.href='contact.html?inquiry=ART-3914'"
+                class="btn-3d btn-3d-dark sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bestseller 3 -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all relative">
+            <div class="absolute top-4 right-4 z-20 bg-slate-900/90 text-gold-400 text-[11px] font-mono font-bold uppercase px-3 py-1 rounded-full border border-gold-500/40">
+              #3 Bestseller
+            </div>
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-black/40">
+                <img src="images/col_statement_rugs.jpg" alt="The Bauhaus Linear Relief" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 text-xs text-amber-400">
+                  <div class="flex text-gold-400 text-xs">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <span class="text-white text-[11px] font-bold">4.9</span>
+                  <span class="text-slate-400 text-[10px]">(39 reviews)</span>
+                </div>
+              </div>
+              <div class="p-6 sm:p-7 space-y-3">
+                <div class="text-[11px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest font-bold">Geometric 3D Relief</div>
+                <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                  The Bauhaus Linear Relief
+                </h3>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Sculptural hand-carved wool pile combined with botanical viscose accents. A striking anchor for luxury living rooms.
+                </p>
+                <div class="flex items-baseline justify-between pt-3 border-t border-slate-100 dark:border-white/10">
+                  <div>
+                    <span class="text-xs text-slate-400 block">Retail Price:</span>
+                    <span class="font-serif font-bold text-2xl text-gold-600 dark:text-gold-400">$3,650</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Size: 9' &times; 12'</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 sm:p-7 pt-0 flex items-center gap-3">
+              <button 
+                onclick="loadProductDetails('ART-5120', 'The Bauhaus Linear Relief', '$3,650 USD', '80% New Zealand Wool, 20% Bamboo Botanical Viscose', '9' × 12' (270 × 360 cm)', 'Hand-Tufted Hand-Carved 3D Shearing (14mm Pile)', 'images/col_statement_rugs.jpg')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                <span>View Details</span>
+              </button>
+              <button 
+                onclick="window.location.href='contact.html?inquiry=ART-5120'"
+                class="btn-3d btn-3d-dark sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 4: MATERIALS & DESIGNS (Clear Headings & CTAs)   -->
+    <!-- ======================================================== -->
+    <section id="prod-material" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+            <span>Materials &amp; Natural Fibers</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Materials &amp; Textures: <span class="text-gold-500">Pure Organic Fibers</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            Fiber determines every tactile and functional quality: stain resilience, light luster, and underfoot comfort. Explore our six authentic fiber categories with dedicated collections.
+          </p>
+        </div>
+
+        <!-- Material Banner Image -->
+        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-10" id="materialBannerWrapper">
+          <div class="relative w-full aspect-[21/9] sm:aspect-[24/8] rounded-2xl overflow-hidden bg-black/40">
+            <img src="images/prod_by_material.jpg" alt="Natural rug materials: Tibetan wool, organic cotton, jute, silk, viscose and flax" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent flex items-center p-6 sm:p-10">
+              <div class="max-w-xl text-white space-y-2">
+                <span class="text-gold-400 text-[11px] font-mono uppercase tracking-widest font-bold">Six Organic Weaving Foundations</span>
+                <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold">Wool, Cotton, Jute, Silk, Viscose &amp; Natural Fiber</h3>
+                <p class="text-xs sm:text-sm text-slate-300 hidden sm:block">Compare tactile density, moisture absorption, and refractive index across each natural element.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 Material Cards Grid with Shop Now Buttons -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="materialsCardGrid">
+          
+          <!-- Material 1: Wool -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400">01 &bull; Natural Wax Lanolin</span>
+                <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 bg-gold-500/10 px-2.5 py-0.5 rounded-full font-bold">High Durability</span>
+              </div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Tibetan Highland Wool</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Inherently stain-resistant, flame-retardant, and exceptionally resilient against compression under heavy furniture.
+              </p>
+              <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Best Rooms:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Living Rooms, Great Salons</span>
+              </div>
+            </div>
+            <button onclick="filterCatalogBy('Wool')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+              <span>Shop Wool Rugs</span>
+            </button>
+          </div>
+
+          <!-- Material 2: Cotton -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold uppercase text-blue-600 dark:text-blue-400">02 &bull; Long-Staple Warp</span>
+                <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full font-bold">Crisp Structure</span>
+              </div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Organic Egyptian Cotton</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Dimensionally rigid warp and weft foundation, plus lightweight, washable summer flatweaves with natural breathability.
+              </p>
+              <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Best Rooms:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Breakfast Nooks, Verandas</span>
+              </div>
+            </div>
+            <button onclick="filterCatalogBy('Cotton')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+              <span>Shop Cotton Rugs</span>
+            </button>
+          </div>
+
+          <!-- Material 3: Jute -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400">03 &bull; Golden Bengal Bast</span>
+                <span class="text-[10px] font-mono text-amber-600 dark:text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded-full font-bold">Earthy Texture</span>
+              </div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Golden Bengal Jute</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Braided plant stalks creating thick neutral textural layers. The quintessential foundation for luxury layered rug styling.
+              </p>
+              <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Best Rooms:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Dining Rooms, Layer Foundations</span>
+              </div>
+            </div>
+            <button onclick="filterCatalogBy('Jute')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+              <span>Shop Jute Rugs</span>
+            </button>
+          </div>
+
+          <!-- Material 4: Silk -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold uppercase text-gold-600 dark:text-gold-400">04 &bull; Mulberry Filament</span>
+                <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 bg-gold-500/10 px-2.5 py-0.5 rounded-full font-bold">Liquid Luster</span>
+              </div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Pure Mulberry Silk</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Continuous natural silk filaments that refract ambient chandelier light with unparalleled richness and razor-sharp motif definition.
+              </p>
+              <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Best Rooms:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Master Suites, Private Salons</span>
+              </div>
+            </div>
+            <button onclick="filterCatalogBy('Silk')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+              <span>Shop Silk Rugs</span>
+            </button>
+          </div>
+
+          <!-- Material 5: Viscose -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold uppercase text-purple-600 dark:text-purple-400">05 &bull; Bamboo Botanical</span>
+                <span class="text-[10px] font-mono text-purple-600 dark:text-purple-400 bg-purple-500/10 px-2.5 py-0.5 rounded-full font-bold">Silken Touch</span>
+              </div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Botanical Bamboo Viscose</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Silky soft regenerated bamboo fibers producing radiant directional highlights, blended with worsted wool for 3D sculptural carvings.
+              </p>
+              <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Best Rooms:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Formal Lounges, Executive Suites</span>
+              </div>
+            </div>
+            <button onclick="filterCatalogBy('Viscose')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+              <span>Shop Viscose Rugs</span>
+            </button>
+          </div>
+
+          <!-- Material 6: Natural Fiber -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400">06 &bull; Flax &amp; Sisal</span>
+                <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full font-bold">Zero VOC</span>
+              </div>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Belgian Flax &amp; Sisal</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Un-dyed organic plant fibers from sustainable farms. 100% biodegradable, hypoallergenic, zero off-gassing, and deeply textured.
+              </p>
+              <div class="pt-2 border-t border-slate-100 dark:border-white/10 text-[11px] flex justify-between text-slate-500 dark:text-slate-400">
+                <span>Best Rooms:</span>
+                <span class="font-semibold text-slate-900 dark:text-white">Corridors, Modern Architecture</span>
+              </div>
+            </div>
+            <button onclick="filterCatalogBy('Natural Fiber')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+              <span>Shop Natural Fibers</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 4B: DESIGNS & STYLES (Aesthetic Movements)       -->
+    <!-- ======================================================== -->
+    <section id="prod-style" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+            <span>Curated Designs &bull; Traditional to Modern</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Designs &amp; Architectural Styles: <span class="text-gold-500">6 Movements</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            Match your room architecture with authentic design traditions: ancestral Persian palmettes, Bauhaus geometric lines, or organic Japanese wabi-sabi textures.
+          </p>
+        </div>
+
+        <!-- Styles Banner Image -->
+        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-10">
+          <div class="relative w-full aspect-[21/9] sm:aspect-[24/8] rounded-2xl overflow-hidden bg-black/40">
+            <img src="images/prod_by_style.jpg" alt="Art gallery exhibition of six distinct rug design aesthetics: Traditional, Contemporary, Minimalist, Geometric, Vintage, and Abstract" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent flex items-center p-6 sm:p-10">
+              <div class="max-w-xl text-white space-y-2">
+                <span class="text-gold-400 text-[11px] font-mono uppercase tracking-widest font-bold">Six Curated Aesthetic Pillars</span>
+                <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold">Traditional, Contemporary, Minimalist, Geometric, Vintage &amp; Abstract</h3>
+                <p class="text-xs sm:text-sm text-slate-300 hidden sm:block">Select an aesthetic movement to immediately filter matching pieces in our inventory.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 Design Style Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Style 1: Traditional -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-xs font-mono text-gold-600 dark:text-gold-400 font-bold uppercase">Heritage &bull; Medallion &amp; Floral</span>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Traditional Persian &amp; Oriental</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Elaborate central medallions, arabesque borders, and Shah Abbas floral motifs with deep jewel tones of ruby, sapphire, and amber.
+              </p>
+            </div>
+            <button onclick="filterCatalogBy('Traditional')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <span>Shop Traditional Rugs</span>
+            </button>
+          </div>
+
+          <!-- Style 2: Contemporary -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-xs font-mono text-blue-600 dark:text-blue-400 font-bold uppercase">Modern Avant-Garde</span>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Contemporary Architectural</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Asymmetrical compositions, fluid tonal washes, and bold structural focal points curated for modern open-concept residences.
+              </p>
+            </div>
+            <button onclick="filterCatalogBy('Contemporary')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <span>Shop Contemporary Rugs</span>
+            </button>
+          </div>
+
+          <!-- Style 3: Minimalist -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold uppercase">Wabi-Sabi &bull; Monolithic</span>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Minimalist &amp; Textured</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Monochrome un-dyed fibers, subtle tonal ribbing, and tactile warmth that anchors rooms without visual clutter.
+              </p>
+            </div>
+            <button onclick="filterCatalogBy('Minimalist')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <span>Shop Minimalist Rugs</span>
+            </button>
+          </div>
+
+          <!-- Style 4: Geometric -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-xs font-mono text-purple-600 dark:text-purple-400 font-bold uppercase">Bauhaus &bull; Linear Precision</span>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Geometric &amp; Mid-Century</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                High-contrast linear geometry, diagonal grids, and 3D stepped carvings inspired by modern Scandinavian and Bauhaus movements.
+              </p>
+            </div>
+            <button onclick="filterCatalogBy('Geometric')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <span>Shop Geometric Rugs</span>
+            </button>
+          </div>
+
+          <!-- Style 5: Vintage -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-xs font-mono text-amber-600 dark:text-amber-400 font-bold uppercase">Aged Patina &bull; Antique Wash</span>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Vintage &amp; Distressed</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Gentle botanical washes producing soft terracotta, weathered sage, and faded rose patinas with generational authenticity.
+              </p>
+            </div>
+            <button onclick="filterCatalogBy('Vintage')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <span>Shop Vintage Rugs</span>
+            </button>
+          </div>
+
+          <!-- Style 6: Abstract -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-xs font-mono text-pink-600 dark:text-pink-400 font-bold uppercase">Fine Art &bull; Watercolor Gradient</span>
+              <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-white">Abstract &amp; Expressive</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Artworks for the floor featuring liquid color bleeds, silk ombre gradients, and dynamic painterly impressions.
+              </p>
+            </div>
+            <button onclick="filterCatalogBy('Abstract')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <span>Shop Abstract Rugs</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 5: PRICING & SIZING GUIDE (Transparent Values)   -->
+    <!-- ======================================================== -->
+    <section id="prod-size" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+            <span>Transparent Pricing &bull; Sizing Architecture</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Pricing &amp; Sizing Guide: <span class="text-gold-500">Transparent Benchmarks</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            Find the exact dimensions and price tier suited to your room layout. Every size is mapped to furniture placement standards to ensure effortless harmony.
+          </p>
+        </div>
+
+        <!-- Sizing Architectural Blueprint Banner -->
+        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-10">
+          <div class="relative w-full aspect-[21/9] sm:aspect-[24/8] rounded-2xl overflow-hidden bg-black/40">
+            <img src="images/prod_by_size.jpg" alt="Architectural blueprint and miniature models demonstrating rug sizes" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent flex items-center p-6 sm:p-10">
+              <div class="max-w-xl text-white space-y-2">
+                <span class="text-gold-400 text-[11px] font-mono uppercase tracking-widest font-bold">Standard &amp; Bespoke Dimensions</span>
+                <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold">From Intimate Bedroom Accents to Grand Salon Formats</h3>
+                <p class="text-xs sm:text-sm text-slate-300 hidden sm:block">All standard sizes in stock for immediate dispatch, or custom commission in any dimension.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Size & Pricing Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-8">
+          
+          <!-- Size 1 -->
+          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 font-bold uppercase">Accent / Bedroom</span>
+              <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">5' &times; 8' &ndash; 6' &times; 9'</h4>
+              <div class="font-serif font-bold text-lg text-gold-600 dark:text-gold-400">$650 &ndash; $1,800</div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                Bedside pairings, private reading nooks, or home entryways.
+              </p>
+            </div>
+            <button onclick="filterCatalogBy('Small')" class="btn-3d btn-3d-dark sheen w-full py-2 text-xs font-bold uppercase tracking-wider rounded-xl">
+              <span>Shop Small</span>
+            </button>
+          </div>
+
+          <!-- Size 2 -->
+          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold uppercase">Medium / Office</span>
+              <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">8' &times; 10'</h4>
+              <div class="font-serif font-bold text-lg text-gold-600 dark:text-gold-400">$2,200 &ndash; $3,400</div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                Queen bedrooms, executive studies, and cozy conversational lounges.
+              </p>
+            </div>
+            <button onclick="filterCatalogBy('Medium')" class="btn-3d btn-3d-dark sheen w-full py-2 text-xs font-bold uppercase tracking-wider rounded-xl">
+              <span>Shop 8' &times; 10'</span>
+            </button>
+          </div>
+
+          <!-- Size 3 -->
+          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border-2 border-gold-500/40 shadow-xl space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-mono text-gold-500 font-bold uppercase">Most Popular Size</span>
+              <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">9' &times; 12'</h4>
+              <div class="font-serif font-bold text-lg text-gold-600 dark:text-gold-400">$3,400 &ndash; $5,400</div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                Standard luxury living rooms and 6&ndash;8 person dining tables.
+              </p>
+            </div>
+            <button onclick="filterCatalogBy('Large')" class="btn-3d btn-3d-gold sheen w-full py-2 text-xs font-bold uppercase tracking-wider rounded-xl">
+              <span>Shop 9' &times; 12'</span>
+            </button>
+          </div>
+
+          <!-- Size 4 -->
+          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-mono text-purple-600 dark:text-purple-400 font-bold uppercase">Grand / Salon</span>
+              <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">10' &times; 14' &ndash; 12' &times; 15'</h4>
+              <div class="font-serif font-bold text-lg text-gold-600 dark:text-gold-400">$5,200 &ndash; $9,800</div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                Double-height great rooms, grand ballrooms, and luxury penthouses.
+              </p>
+            </div>
+            <button onclick="filterCatalogBy('Extra Large')" class="btn-3d btn-3d-dark sheen w-full py-2 text-xs font-bold uppercase tracking-wider rounded-xl">
+              <span>Shop Large</span>
+            </button>
+          </div>
+
+          <!-- Size 5 -->
+          <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 font-bold uppercase">Custom Commission</span>
+              <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Any Custom Scale</h4>
+              <div class="font-serif font-bold text-lg text-gold-600 dark:text-gold-400">$45 &ndash; $120 / sq.ft</div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                Custom round, oval, runner, or oversized dimensions to architectural specs.
+              </p>
+            </div>
+            <a href="custom-rugs.html" class="btn-3d btn-3d-dark sheen w-full py-2 text-xs font-bold uppercase tracking-wider rounded-xl text-center">
+              <span>Custom Size</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 6: PRODUCT DETAILS & BESPOKE ENQUIRY DOSSIER      -->
+    <!-- ======================================================== -->
+    <section id="product-details" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
       <!-- Ambient Radial Backing -->
       <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 space-y-4">
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-            <span>Architectural Dossier <span class="hidden sm:inline">&bull; Product Details</span></span>
+            <span>Detailed Inspection &bull; Product Specifications</span>
           </div>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
             Curator's Dossier: <span class="text-gold-500">Product Details &amp; Enquiry</span>
           </h2>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Inspect high-resolution knot densities, certified fiber provenance, custom dimension calibrations, care manuals, and submit directly to our private concierge atelier.
+            Inspect high-resolution knot densities, certified fiber provenance, custom dimension calibrations, care manuals, and submit an immediate purchase or staging reservation.
           </p>
         </div>
 
@@ -2848,127 +3092,94 @@
                   The Isfahan Imperial Medallion
                 </h3>
                 <div class="flex items-baseline gap-3 pt-1">
-                  <div class="font-serif font-bold text-2xl text-gold-600 dark:text-gold-400" id="dossierProdPrice">
+                  <span class="font-serif text-3xl font-bold text-gold-600 dark:text-gold-400" id="dossierProdPrice">
                     $4,850 USD
-                  </div>
-                  <span class="text-xs text-slate-500 dark:text-slate-400">
-                    (Includes white-glove packaging, insurance &amp; global transit)
                   </span>
+                  <span class="text-xs text-slate-500 dark:text-slate-400">Includes white-glove archival shipping &amp; 72hr in-home trial</span>
                 </div>
               </div>
 
-              <!-- 2. Material Details & Weaving Technique -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
-                  <div class="text-[10px] font-mono uppercase text-slate-400 flex items-center gap-1.5">
-                    <i data-lucide="layers" class="w-3 h-3 text-gold-500"></i>
-                    Material Details
-                  </div>
-                  <div class="font-serif font-bold text-sm text-slate-900 dark:text-white" id="dossierMaterialVal">
-                    70% Tibetan Highland Wool, 30% Pure Mulberry Silk
-                  </div>
-                  <div class="text-[11px] text-slate-500 dark:text-slate-400">Natural lanolin wax stain repellent coating.</div>
+              <!-- 2. Technical Architectural Data Grid -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
+                  <div class="text-[10px] font-mono text-slate-400 uppercase">Primary Material</div>
+                  <div class="font-semibold text-slate-900 dark:text-white truncate" id="dossierMaterialVal">Mulberry Silk &amp; Wool</div>
                 </div>
-
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
-                  <div class="text-[10px] font-mono uppercase text-slate-400 flex items-center gap-1.5">
-                    <i data-lucide="crosshair" class="w-3 h-3 text-gold-500"></i>
-                    Weaving Technique
-                  </div>
-                  <div class="font-serif font-bold text-sm text-slate-900 dark:text-white" id="dossierWeaveVal">
-                    Hand-Knotted Senneh Double Knot (850 KPSI)
-                  </div>
-                  <div class="text-[11px] text-slate-500 dark:text-slate-400">Organic cotton warp &amp; weft tension lock.</div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
+                  <div class="text-[10px] font-mono text-slate-400 uppercase">Weave Technique</div>
+                  <div class="font-semibold text-slate-900 dark:text-white truncate" id="dossierWeaveVal">850 KPSI Hand-Knotted</div>
                 </div>
-
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
+                  <div class="text-[10px] font-mono text-slate-400 uppercase">Standard Dimension</div>
+                  <div class="font-semibold text-slate-900 dark:text-white">9' &times; 12' (270 &times; 360 cm)</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
+                  <div class="text-[10px] font-mono text-slate-400 uppercase">Pile Thickness</div>
+                  <div class="font-semibold text-slate-900 dark:text-white">9.5 mm Architectural</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
+                  <div class="text-[10px] font-mono text-slate-400 uppercase">Loom Origin</div>
+                  <div class="font-semibold text-slate-900 dark:text-white">Tibetan Valley Atelier</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
+                  <div class="text-[10px] font-mono text-slate-400 uppercase">Production Time</div>
+                  <div class="font-semibold text-slate-900 dark:text-white">11 Months Loom-Tied</div>
+                </div>
               </div>
 
-              <!-- 3. Size & Dimensions Selector -->
+              <!-- 3. Available Colorways Swatches -->
               <div class="space-y-2">
-                <label class="text-xs font-mono font-bold uppercase text-slate-700 dark:text-slate-300 flex items-center justify-between">
-                  <span>Size &amp; Dimensions:</span>
-                  <span class="text-[10px] text-gold-500 font-normal">Custom Sizing On Request</span>
-                </label>
-                <select id="dossierSizeSelect" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs sm:text-sm font-semibold text-slate-900 dark:text-white focus:outline-none focus:border-gold-500 transition-colors">
-                  <option value="9x12" selected>9' &times; 12' (270 &times; 360 cm) &bull; Grand Salon Anchor</option>
-                  <option value="8x10">8' &times; 10' (240 &times; 300 cm) &bull; Standard Living Room</option>
-                  <option value="5x8">5' &times; 8' (150 &times; 240 cm) &bull; Accent / Intimate Suite</option>
-                  <option value="runner">3' &times; 12' (90 &times; 360 cm) &bull; Gallery Corridor Runner</option>
-                  <option value="10x14">10' &times; 14' (300 &times; 420 cm) &bull; Palatial Double-Height Scale</option>
-                  <option value="custom">Bespoke Architectural Continuous Loom (Made to CAD)</option>
-                </select>
-              </div>
-
-              <!-- 4. Color Options Swatches -->
-              <div class="space-y-2">
-                <label class="text-xs font-mono font-bold uppercase text-slate-700 dark:text-slate-300">
-                  Curated Color Options:
-                </label>
-                <div class="flex items-center gap-3" id="colorSwatchesRow">
-                  <button type="button" class="color-swatch-ring active-swatch w-7 h-7 rounded-full bg-[#E5D3B3] border-2 border-white shadow-md focus:outline-none" title="Ivory &amp; Saffron Champagne" onclick="selectColorSwatch(this, 'Ivory &amp; Saffron Champagne')"></button>
-                  <button type="button" class="color-swatch-ring w-7 h-7 rounded-full bg-[#1A365D] border-2 border-white shadow-md focus:outline-none" title="Midnight Cobalt &amp; Gold" onclick="selectColorSwatch(this, 'Midnight Cobalt &amp; Gold')"></button>
-                  <button type="button" class="color-swatch-ring w-7 h-7 rounded-full bg-[#8C3A27] border-2 border-white shadow-md focus:outline-none" title="Terracotta Madder Root" onclick="selectColorSwatch(this, 'Terracotta Madder Root')"></button>
-                  <button type="button" class="color-swatch-ring w-7 h-7 rounded-full bg-[#6B7280] border-2 border-white shadow-md focus:outline-none" title="Monochrome Slate Charcoal" onclick="selectColorSwatch(this, 'Monochrome Slate Charcoal')"></button>
-                  <span class="text-xs font-semibold text-slate-600 dark:text-slate-300 ml-2" id="selectedColorLabel">Ivory &amp; Saffron Champagne</span>
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-semibold text-slate-900 dark:text-white">Curated Colorways</span>
+                  <span class="text-slate-500 font-mono text-[11px]" id="selectedColorLabel">Champagne &amp; Lapis</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <button type="button" class="color-swatch-ring active-swatch w-7 h-7 rounded-full bg-[#1b2b48] border-2 border-white dark:border-obsidian-900 shadow-md focus:outline-none" onclick="selectColorSwatch(this, 'Lapis Gold')"></button>
+                  <button type="button" class="color-swatch-ring w-7 h-7 rounded-full bg-[#8c3a27] border-2 border-white dark:border-obsidian-900 shadow-md focus:outline-none" onclick="selectColorSwatch(this, 'Madder Terracotta')"></button>
+                  <button type="button" class="color-swatch-ring w-7 h-7 rounded-full bg-[#e3d6be] border-2 border-white dark:border-obsidian-900 shadow-md focus:outline-none" onclick="selectColorSwatch(this, 'Natural Sand Ivory')"></button>
+                  <button type="button" class="color-swatch-ring w-7 h-7 rounded-full bg-[#3d4b3b] border-2 border-white dark:border-obsidian-900 shadow-md focus:outline-none" onclick="selectColorSwatch(this, 'Sage Forest')"></button>
                 </div>
               </div>
 
-              <!-- 5. Care Instructions Expandable Accordion -->
+              <!-- 4. Interactive Accordion: Care Manual -->
               <div class="border border-slate-200/80 dark:border-white/10 rounded-2xl overflow-hidden">
-                <button type="button" id="careAccordionBtn" class="w-full p-4 flex items-center justify-between text-left bg-slate-50/50 dark:bg-white/[0.02] hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
-                  <span class="text-xs font-serif font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                    <i data-lucide="info" class="w-4 h-4 text-gold-500"></i>
-                    Care Instructions &amp; Maintenance Protocol
+                <button type="button" id="careAccordionBtn" class="w-full p-4 flex items-center justify-between text-left text-xs font-semibold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <i data-lucide="shield" class="w-4 h-4 text-gold-500"></i>
+                    Museum Care &amp; Maintenance Protocol
                   </span>
-                  <i data-lucide="chevron-down" id="careChevron" class="w-4 h-4 text-slate-400 transition-transform duration-200"></i>
+                  <i data-lucide="chevron-down" id="careChevron" class="w-4 h-4 text-slate-400 transition-transform duration-300"></i>
                 </button>
-                <div id="careContentBox" class="p-4 space-y-2 text-xs text-slate-600 dark:text-slate-300 bg-white dark:bg-obsidian-950 border-t border-slate-200/60 dark:border-white/10">
-                  <div class="flex items-start gap-2">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5"></i>
-                    <span><strong>Vacuuming:</strong> Brushless suction vacuuming once weekly; avoid motorized beater bars on silk veins and fringe tassels.</span>
-                  </div>
-                  <div class="flex items-start gap-2">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5"></i>
-                    <span><strong>Rotation:</strong> Rotate 180 degrees every 12 months to equalize sunlight exposure and path friction.</span>
-                  </div>
-                  <div class="flex items-start gap-2">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5"></i>
-                    <span><strong>Spills:</strong> Blot immediately with clean cotton cloth; never rub. Wool lanolin repels liquids for up to 15 minutes.</span>
-                  </div>
-                  <div class="flex items-start gap-2">
-                    <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5"></i>
-                    <span><strong>Professional Care:</strong> Professional immersion organic wool wash every 3 to 5 years.</span>
-                  </div>
+                <div id="careContentBox" class="p-4 pt-0 text-xs text-slate-600 dark:text-slate-300 space-y-2 border-t border-slate-100 dark:border-white/5 hidden">
+                  <p>&bull; Vacuum regularly without a rotating beater bar to protect delicate natural lanolin fibers.</p>
+                  <p>&bull; Blot spills immediately with clean linen towel and cold water; never rub or use synthetic chemical solvents.</p>
+                  <p>&bull; Complimentary professional atelier cleaning voucher included for year 3 and year 7.</p>
                 </div>
               </div>
 
-              <!-- 6. Add to Enquiry Form -->
-              <form id="productEnquiryForm" class="space-y-4 pt-2">
+              <!-- 5. Direct Purchase & Concierge Action Form -->
+              <form id="dossierEnquiryForm" class="space-y-4 pt-2 border-t border-slate-200/80 dark:border-white/10" onsubmit="event.preventDefault(); alert('✨ Acquisition Request Received!
+
+Our Senior Curator will contact your private office within 2 hours with formal consignment documents and shipping coordinates.'); this.reset();">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Your Full Name</label>
-                    <input type="text" id="enqClientName" required placeholder="Eleanor Vance" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
+                    <input type="text" required placeholder="Elena Rostova" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
                   </div>
                   <div>
-                    <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Email Address</label>
-                    <input type="email" id="enqClientEmail" required placeholder="eleanor@vance-interiors.com" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
+                    <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Private Email</label>
+                    <input type="email" required placeholder="e.rostova@atelier-interiors.com" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
                   </div>
-                </div>
-
-                <div>
-                  <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Room Dimensions or Custom Notes (Optional)</label>
-                  <textarea id="enqClientNotes" rows="2" placeholder="Looking to coordinate with walnut dining table or request yarn pom-pom sample box..." class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500"></textarea>
                 </div>
 
                 <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
                   <button type="submit" class="btn-3d btn-3d-gold sheen w-full sm:w-auto flex-1 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
-                    <i data-lucide="send" class="w-4 h-4"></i>
-                    <span>Add to Enquiry &bull; Reserve Piece</span>
+                    <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                    <span>Order / Reserve Piece</span>
                   </button>
                   <a href="contact.html" class="btn-3d btn-3d-dark sheen w-full sm:w-auto px-6 py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
-                    <i data-lucide="phone-call" class="w-4 h-4"></i>
-                    <span>Speak with Curator</span>
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Book In-Home Trial</span>
                   </a>
                 </div>
               </form>
@@ -2977,6 +3188,118 @@
 
           </div>
 
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 7: STORE INFORMATION & SHOWROOM ATELIER          -->
+    <!-- ======================================================== -->
+    <section id="prod-store-info" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-t border-slate-200/80 dark:border-white/10">
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Store Information &bull; Flagship Showroom</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Visit Our Store: <span class="text-gold-500">Fifth Avenue Flagship Atelier</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            Experience our carpets under natural architectural lighting. Examine knot densities in person, feel raw highland fibers, or meet with our master weavers for a custom commission.
+          </p>
+        </div>
+
+        <!-- 4 Store Information Feature Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          
+          <!-- Info Card 1: Address & Location -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Flagship Showroom</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              742 Fifth Avenue, 4th Floor<br />
+              New York, NY 10019<br />
+              United States
+            </p>
+            <div class="text-[11px] font-mono text-gold-600 dark:text-gold-400 font-bold pt-1">
+              Valet Parking Available
+            </div>
+          </div>
+
+          <!-- Info Card 2: Operating Hours -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500">
+              <i data-lucide="clock" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Showroom Hours</h3>
+            <div class="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <div class="flex justify-between"><span>Mon &ndash; Fri:</span> <span class="font-semibold text-slate-900 dark:text-white">10:00 AM &ndash; 7:00 PM</span></div>
+              <div class="flex justify-between"><span>Saturday:</span> <span class="font-semibold text-slate-900 dark:text-white">10:00 AM &ndash; 6:00 PM</span></div>
+              <div class="flex justify-between"><span>Sunday:</span> <span class="font-semibold text-gold-500">By VIP Appointment</span></div>
+            </div>
+            <div class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-bold pt-1">
+              Walk-Ins &amp; Bookings Welcome
+            </div>
+          </div>
+
+          <!-- Info Card 3: White-Glove In-Home Trial -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500">
+              <i data-lucide="truck" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white">White-Glove Delivery</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              Complimentary 72-hour in-home staging trial. We deliver, place, and stage up to three carpets in your home with zero obligation.
+            </p>
+            <div class="text-[11px] font-mono text-blue-600 dark:text-blue-400 font-bold pt-1">
+              100% Insured Worldwide Transit
+            </div>
+          </div>
+
+          <!-- Info Card 4: Concierge & Contact -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Direct Concierge</h3>
+            <div class="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <div>Phone: <a href="tel:+12128492000" class="font-semibold text-slate-900 dark:text-white hover:text-gold-500 transition-colors">+1 (212) 849-2000</a></div>
+              <div>Email: <a href="mailto:concierge@rugcarpetstore.com" class="font-semibold text-slate-900 dark:text-white hover:text-gold-500 transition-colors">concierge@rugcarpetstore.com</a></div>
+            </div>
+            <div class="text-[11px] font-mono text-gold-600 dark:text-gold-400 font-bold pt-1">
+              Response within 2 hours
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-gold-500/15 via-gold-500/5 to-transparent border border-gold-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-1 text-center md:text-left">
+            <h3 class="font-serif font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+              Ready to Explore or Commission Your Carpet?
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+              Schedule a personalized private consultation with our Senior Curator or visit our Fifth Avenue gallery.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-3 flex-shrink-0">
+            <a href="contact.html" class="btn-3d btn-3d-gold sheen px-7 py-3 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Book Showroom Visit</span>
+            </a>
+            <a href="collections.html" class="btn-3d btn-3d-dark sheen px-6 py-3 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4"></i>
+              <span>Explore Collections</span>
+            </a>
+          </div>
         </div>
 
       </div>
