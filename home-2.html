@@ -1239,8 +1239,8 @@
 
       /* Equalized Vertical Section Spacing */
       section {
-        padding-top: 2.75rem !important;
-        padding-bottom: 2.75rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
 
       /* Container Horizontal Padding */
@@ -1397,8 +1397,8 @@
         font-size: clamp(1.45rem, 4vw, 1.95rem) !important;
       }
       section {
-        padding-top: 3.5rem !important;
-        padding-bottom: 3.5rem !important;
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.25rem !important;
       }
       .grid.grid-cols-3,
       .grid.grid-cols-4 {
@@ -1420,8 +1420,8 @@
         font-size: clamp(2.2rem, 4vw, 3rem) !important;
       }
       section {
-        padding-top: 4.5rem !important;
-        padding-bottom: 4.5rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
       .grid.grid-cols-4,
       .grid.grid-cols-3 {
@@ -1446,10 +1446,60 @@
     /* ========================================================================== */
     @media (min-width: 1024px) {
       section {
-        padding-top: 5.5rem !important;
-        padding-bottom: 5.5rem !important;
+        padding-top: 3.25rem !important;
+        padding-bottom: 3.25rem !important;
       }
     }
+
+    /* ========================================================================== */
+    /* HERO, SECTION MT & FOOTER VERTICAL HARMONY (ZERO DEAD GAPS)                */
+    /* ========================================================================== */
+    #home-hero,
+    .hero-section,
+    [id*="hero"],
+    main > section:first-of-type,
+    body > section:first-of-type {
+      padding-top: 1.25rem !important;
+    }
+    @media (min-width: 640px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 1.5rem !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 2rem !important;
+      }
+    }
+
+    section:last-of-type {
+      padding-bottom: 1.5rem !important;
+    }
+    @media (min-width: 1024px) {
+      section:last-of-type {
+        padding-bottom: 1.75rem !important;
+      }
+    }
+
+    footer,
+    #mainFooter {
+      padding-top: 1rem !important;
+    }
+    @media (min-width: 1024px) {
+      footer,
+      #mainFooter {
+        padding-top: 1.25rem !important;
+      }
+    }
+
 
     /* ========================================================================== */
     /* RTL ICONS & TEXT FLOW RESILIENCE                                           */
@@ -2358,124 +2408,173 @@
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="crown" class="w-3.5 h-3.5"></i>
-            <span>Private Viewing <span class="hidden sm:inline">&bull; Global Concierge Portal</span></span>
+            <span>Private Viewing &bull; Global Concierge Portal</span>
           </div>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
             The Private Collector Salon &amp; <span class="text-gold-500">Global Concierge</span>
           </h2>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Whether visiting our private Fifth Avenue salon or requesting white-glove archival vault transit to your villa. Our concierge ensures effortless curation.
+            Whether visiting our private Fifth Avenue salon or requesting white-glove archival vault transit directly to your villa, our concierge team delivers seamless, personalized curation.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch mb-8 sm:mb-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
-          <!-- Left: Salon Visual Card (5 cols) -->
-          <div class="lg:col-span-5 flex flex-col justify-between relative space-y-4" id="h2SalonVisualCol">
-            <div class="relative rounded-[32px] p-3 sm:p-4 home2-card-glass shadow-2xl overflow-hidden group tilt-card-h2 flex-1 flex flex-col justify-between">
-              <div class="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden bg-black/40">
+          <!-- Left: Salon Visual & Archival Services (5 cols) -->
+          <div class="lg:col-span-5 flex flex-col justify-between space-y-4" id="h2SalonVisualCol">
+            
+            <!-- Salon In-Situ Feature Card -->
+            <div class="relative rounded-[28px] p-3 sm:p-4 home2-card-glass shadow-xl overflow-hidden group tilt-card-h2">
+              <div class="relative w-full aspect-[16/10] sm:aspect-[4/3] rounded-[20px] overflow-hidden bg-black/40">
                 <img 
                   src="images/home2_collector_portal.jpg" 
                   alt="Private VIP collector salon with marble table, fireplace, velvet armchairs, and master rugs on brass easels" 
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none"></div>
 
-                <div class="absolute top-4 left-4 bg-black/75 backdrop-blur-md border border-gold-500/40 rounded-full px-3.5 py-1 text-[11px] font-semibold text-gold-300 flex items-center gap-1.5">
+                <div class="absolute top-3.5 left-3.5 bg-black/80 backdrop-blur-md border border-gold-500/40 rounded-full px-3 py-1 text-[11px] font-semibold text-gold-300 flex items-center gap-1.5">
                   <i data-lucide="award" class="w-3.5 h-3.5 text-gold-400"></i>
                   <span>Private Collector Suite &bull; By Appointment</span>
                 </div>
 
-                <div class="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-white">
+                <div class="absolute bottom-3.5 left-3.5 right-3.5 bg-black/90 backdrop-blur-md border border-white/15 rounded-xl p-3.5 text-white">
                   <div class="flex items-center justify-between mb-1">
                     <span class="text-xs font-serif font-bold">White-Glove Archival Logistics</span>
-                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Fully Insured</span>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/15 px-2 py-0.5 rounded font-bold">Fully Insured</span>
                   </div>
                   <p class="text-[11px] text-slate-300 leading-snug">
-                    Shipped in climate-controlled cedar vault containers with complimentary 72-hour in-home staging trials.
+                    Shipped in climate-controlled cedar vault containers with complimentary 72-hour in-home staging trials worldwide.
                   </p>
                 </div>
               </div>
 
               <!-- 3 Service Inclusions -->
-              <div class="grid grid-cols-3 gap-2 pt-3.5 text-center text-[10px] font-mono font-semibold">
+              <div class="grid grid-cols-3 gap-2 pt-3 text-center text-[10px] font-mono font-semibold">
                 <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
-                  <div class="text-gold-600 dark:text-gold-400">72-Hour</div>
-                  <div class="text-[9px] text-slate-400">In-Home Trial</div>
+                  <div class="text-gold-600 dark:text-gold-400 font-bold">72-Hour</div>
+                  <div class="text-[9px] text-slate-500 dark:text-slate-400">In-Home Trial</div>
                 </div>
                 <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
-                  <div class="text-emerald-600 dark:text-emerald-400">100%</div>
-                  <div class="text-[9px] text-slate-400">Provenance Reg</div>
+                  <div class="text-emerald-600 dark:text-emerald-400 font-bold">100%</div>
+                  <div class="text-[9px] text-slate-500 dark:text-slate-400">Provenance Reg</div>
                 </div>
                 <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
-                  <div class="text-blue-600 dark:text-blue-400">Global</div>
-                  <div class="text-[9px] text-slate-400">Air Transit</div>
+                  <div class="text-blue-600 dark:text-blue-400 font-bold">Global</div>
+                  <div class="text-[9px] text-slate-500 dark:text-slate-400">Air Transit</div>
                 </div>
               </div>
             </div>
 
-            <!-- Archival Gallery Portal Card: Uses the MT space purposefully -->
-            <div class="p-4 sm:p-5 rounded-[24px] home2-card-glass border border-slate-200/80 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-lg">
-              <div class="space-y-0.5 text-center sm:text-left">
-                <div class="text-xs font-serif font-bold text-slate-900 dark:text-white flex items-center justify-center sm:justify-start gap-1.5">
-                  <i data-lucide="layers" class="w-3.5 h-3.5 text-gold-500"></i>
-                  <span>Archival Vault Gallery</span>
+            <!-- Archival Vault & Private Services Card (Meaningfully utilizes the space) -->
+            <div class="p-5 sm:p-6 rounded-[28px] home2-card-glass border border-slate-200/80 dark:border-white/10 shadow-xl space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-200/80 dark:border-white/10 pb-3">
+                <div class="flex items-center gap-2 text-xs font-serif font-bold text-slate-900 dark:text-white">
+                  <i data-lucide="layers" class="w-4 h-4 text-gold-500"></i>
+                  <span>Archival Vault &amp; Bespoke Previews</span>
                 </div>
-                <p class="text-[11px] text-slate-500 dark:text-slate-400">Preview 500+ private collector museum-grade pieces</p>
+                <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded font-bold uppercase">500+ Vault Pieces</span>
               </div>
-              <a href="collections.html" class="btn-3d btn-3d-dark sheen w-full sm:w-auto px-5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2 flex-shrink-0">
-                <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-                <span>Browse Gallery</span>
-              </a>
+
+              <!-- 3 Service Highlights -->
+              <div class="space-y-2.5 text-xs">
+                <div class="flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-lg bg-gold-500/10 border border-gold-500/20 text-gold-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="shield" class="w-3 h-3"></i>
+                  </div>
+                  <div>
+                    <span class="font-bold text-slate-900 dark:text-white">Rare Archival Access:</span>
+                    <span class="text-slate-600 dark:text-slate-300"> View unlisted museum-grade antique &amp; contemporary commissions.</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="box" class="w-3 h-3"></i>
+                  </div>
+                  <div>
+                    <span class="font-bold text-slate-900 dark:text-white">Complimentary Swatch Box:</span>
+                    <span class="text-slate-600 dark:text-slate-300"> Hand-spun dyed yarn pom-poms dispatched in 48 hours for tactile approval.</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="user-check" class="w-3 h-3"></i>
+                  </div>
+                  <div>
+                    <span class="font-bold text-slate-900 dark:text-white">Senior Architect Guidance:</span>
+                    <span class="text-slate-600 dark:text-slate-300"> Personal design review for dimensions, natural lighting, and acoustics.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dual Action Buttons -->
+              <div class="pt-1 flex flex-col sm:flex-row items-center gap-2.5">
+                <a href="collections.html" class="btn-3d btn-3d-gold sheen w-full sm:w-auto flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
+                  <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                  <span>Browse Vault Gallery</span>
+                </a>
+                <a href="contact.html" class="btn-3d btn-3d-dark sheen w-full sm:w-auto px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
+                  <i data-lucide="package" class="w-3.5 h-3.5"></i>
+                  <span>Request Swatch Kit</span>
+                </a>
+              </div>
             </div>
+
           </div>
 
           <!-- Right: VIP Concierge Appointment Console (7 cols) -->
           <div class="lg:col-span-7 flex flex-col justify-between" id="h2AppointmentConsoleCol">
             
-            <div class="home2-card-glass rounded-3xl p-6 sm:p-8 space-y-5 h-full flex flex-col justify-between">
+            <div class="home2-card-glass rounded-[28px] p-6 sm:p-8 space-y-5 h-full flex flex-col justify-between border border-slate-200/80 dark:border-white/10 shadow-xl">
               <div class="border-b border-slate-200/80 dark:border-white/10 pb-4 space-y-1">
                 <span class="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 font-bold">Private Atelier Booking</span>
                 <h3 class="font-serif font-bold text-2xl text-slate-900 dark:text-white">
                   Schedule Private Viewing or In-Home Trial
                 </h3>
                 <p class="text-xs text-slate-500 dark:text-slate-400">
-                  Select your preferred consultation venue. A Senior Interior Architect will be dedicated to your project.
+                  Select your preferred consultation venue. A Senior Interior Architect and Master Curator will be dedicated to your project.
                 </p>
               </div>
 
               <form id="h2ConciergeForm" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
                     <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Patron Full Name</label>
-                    <input type="text" id="h2PatronName" required placeholder="Lord Julian Sterling" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
+                    <input type="text" id="h2PatronName" required placeholder="Lord Julian Sterling" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500 transition-colors" />
                   </div>
                   <div>
                     <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Email / Private Office</label>
-                    <input type="email" id="h2PatronEmail" required placeholder="concierge@sterling-estates.com" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
+                    <input type="email" id="h2PatronEmail" required placeholder="concierge@sterling-estates.com" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500 transition-colors" />
                   </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
                     <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Preferred Consultation Venue</label>
-                    <select id="h2VenueSelect" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
-                      <option value="Fifth Avenue Private Salon">Fifth Avenue Private Salon (NYC)</option>
-                      <option value="In-Home 72-Hour Staging Trial">In-Home 72-Hour Staging Trial (Worldwide)</option>
-                      <option value="Virtual 3D Ray-Traced Studio">Virtual 3D Ray-Traced Studio Consultation</option>
+                    <select id="h2VenueSelect" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-gold-500 transition-colors">
+                      <option value="Fifth Avenue Private Salon">Fifth Avenue Private Salon (NYC Flagship)</option>
+                      <option value="In-Home 72-Hour Staging Trial">In-Home 72-Hour Staging Trial (Worldwide White-Glove)</option>
+                      <option value="Virtual 3D Ray-Traced Studio">Virtual 3D CAD Studio Consultation</option>
                     </select>
                   </div>
                   <div>
                     <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Architectural Space Dimension</label>
-                    <input type="text" id="h2SpaceDim" placeholder="e.g. 14' × 22' Double-Height Salon" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
+                    <input type="text" id="h2SpaceDim" placeholder="e.g. 14' × 22' Living Salon / Penthouse Dining" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500 transition-colors" />
                   </div>
                 </div>
 
-                <div class="pt-2">
+                <div class="pt-2 space-y-3">
                   <button type="submit" class="btn-3d btn-3d-gold sheen w-full py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
                     <i data-lucide="calendar" class="w-4 h-4"></i>
                     <span>Confirm Private Salon Appointment</span>
                   </button>
+                  
+                  <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400 px-1 pt-1 border-t border-slate-100 dark:border-white/5">
+                    <span class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-semibold">
+                      <i data-lucide="lock" class="w-3 h-3"></i> Strict Confidentiality
+                    </span>
+                    <span>Direct Concierge: +1 (212) 555-7848</span>
+                  </div>
                 </div>
               </form>
             </div>
@@ -2492,7 +2591,7 @@
   <!-- ======================================================== -->
   <!-- MAIN LUXURY FOOTER (Based on Navbar & Reference Layout) -->
   <!-- ======================================================== -->
-  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-14">
+  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 sm:pt-6 sm:pb-10 lg:pt-6 lg:pb-12">
     <!-- Outer Card Shell with 3D/Rounded Aesthetics Matching Reference -->
     <div class="footer-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 transition-all duration-300 relative overflow-hidden">
 

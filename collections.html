@@ -1286,8 +1286,8 @@
 
       /* Equalized Vertical Section Spacing */
       section {
-        padding-top: 2.75rem !important;
-        padding-bottom: 2.75rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
 
       /* Container Horizontal Padding */
@@ -1444,8 +1444,8 @@
         font-size: clamp(1.45rem, 4vw, 1.95rem) !important;
       }
       section {
-        padding-top: 3.5rem !important;
-        padding-bottom: 3.5rem !important;
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.25rem !important;
       }
       .grid.grid-cols-3,
       .grid.grid-cols-4 {
@@ -1467,8 +1467,8 @@
         font-size: clamp(2.2rem, 4vw, 3rem) !important;
       }
       section {
-        padding-top: 4.5rem !important;
-        padding-bottom: 4.5rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
       .grid.grid-cols-4,
       .grid.grid-cols-3 {
@@ -1493,10 +1493,60 @@
     /* ========================================================================== */
     @media (min-width: 1024px) {
       section {
-        padding-top: 5.5rem !important;
-        padding-bottom: 5.5rem !important;
+        padding-top: 3.25rem !important;
+        padding-bottom: 3.25rem !important;
       }
     }
+
+    /* ========================================================================== */
+    /* HERO, SECTION MT & FOOTER VERTICAL HARMONY (ZERO DEAD GAPS)                */
+    /* ========================================================================== */
+    #home-hero,
+    .hero-section,
+    [id*="hero"],
+    main > section:first-of-type,
+    body > section:first-of-type {
+      padding-top: 1.25rem !important;
+    }
+    @media (min-width: 640px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 1.5rem !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 2rem !important;
+      }
+    }
+
+    section:last-of-type {
+      padding-bottom: 1.5rem !important;
+    }
+    @media (min-width: 1024px) {
+      section:last-of-type {
+        padding-bottom: 1.75rem !important;
+      }
+    }
+
+    footer,
+    #mainFooter {
+      padding-top: 1rem !important;
+    }
+    @media (min-width: 1024px) {
+      footer,
+      #mainFooter {
+        padding-top: 1.25rem !important;
+      }
+    }
+
 
     /* ========================================================================== */
     /* RTL ICONS & TEXT FLOW RESILIENCE                                           */
@@ -1964,7 +2014,7 @@
               </div>
 
               <div class="flex items-center gap-3 flex-shrink-0">
-                <button onclick="document.getElementById('signUpBtnDesktop')?.click()" class="btn-3d btn-3d-gold sheen px-5 h-10 text-xs font-extrabold uppercase tracking-wider rounded-xl">
+                <button onclick="window.location.href='contact.html'" class="btn-3d btn-3d-gold sheen px-5 h-10 text-xs font-extrabold uppercase tracking-wider rounded-xl">
                   <span>Reserve Piece</span>
                 </button>
                 <a href="#heritage-handwoven" class="btn-3d btn-3d-dark sheen px-4 h-10 text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center">
@@ -2267,7 +2317,7 @@
               </div>
             </div>
 
-            <button onclick="document.getElementById('signUpBtnDesktop')?.click()" class="btn-3d btn-3d-gold sheen w-full h-11 text-xs font-extrabold uppercase tracking-wider rounded-xl">
+            <button onclick="window.location.href='contact.html'" class="btn-3d btn-3d-gold sheen w-full h-11 text-xs font-extrabold uppercase tracking-wider rounded-xl">
               <span>Request Private Silk Viewing</span>
             </button>
           </div>
@@ -2548,7 +2598,7 @@
               Our curators will transport up to three commissioned rugs directly to your residence. Observe how natural morning sunlight and ambient evening lighting interact with the wool and silk pile in your own space before finalizing your acquisition.
             </p>
             <div class="flex items-center flex-wrap gap-4 pt-2">
-              <button onclick="document.getElementById('signUpBtnDesktop')?.click()" class="btn-3d btn-3d-gold sheen px-8 h-12 text-xs font-extrabold uppercase tracking-wider rounded-xl">
+              <button onclick="window.location.href='contact.html'" class="btn-3d btn-3d-gold sheen px-8 h-12 text-xs font-extrabold uppercase tracking-wider rounded-xl">
                 <span>Book In-Home Private Showing</span>
               </button>
               <a href="about.html" class="btn-3d btn-3d-dark sheen px-8 h-12 text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center">
@@ -2565,7 +2615,7 @@
   <!-- ======================================================== -->
   <!-- MAIN LUXURY FOOTER (Based on Navbar & Reference Layout) -->
   <!-- ======================================================== -->
-  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-14">
+  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 sm:pt-6 sm:pb-10 lg:pt-6 lg:pb-12">
     <!-- Outer Card Shell with 3D/Rounded Aesthetics Matching Reference -->
     <div class="footer-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 transition-all duration-300 relative overflow-hidden">
 

@@ -71,6 +71,16 @@
       border-radius: 9999px;
     }
 
+    .no-scrollbar::-webkit-scrollbar {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none !important;
+      scrollbar-width: none !important;
+    }
+
     /* 3D Button Styles */
     .btn-3d {
       position: relative;
@@ -1250,8 +1260,8 @@
 
       /* Equalized Vertical Section Spacing */
       section {
-        padding-top: 2.75rem !important;
-        padding-bottom: 2.75rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
 
       /* Container Horizontal Padding */
@@ -1408,8 +1418,8 @@
         font-size: clamp(1.45rem, 4vw, 1.95rem) !important;
       }
       section {
-        padding-top: 3.5rem !important;
-        padding-bottom: 3.5rem !important;
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.25rem !important;
       }
       .grid.grid-cols-3,
       .grid.grid-cols-4 {
@@ -1431,8 +1441,8 @@
         font-size: clamp(2.2rem, 4vw, 3rem) !important;
       }
       section {
-        padding-top: 4.5rem !important;
-        padding-bottom: 4.5rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
       .grid.grid-cols-4,
       .grid.grid-cols-3 {
@@ -1457,10 +1467,60 @@
     /* ========================================================================== */
     @media (min-width: 1024px) {
       section {
-        padding-top: 5.5rem !important;
-        padding-bottom: 5.5rem !important;
+        padding-top: 3.25rem !important;
+        padding-bottom: 3.25rem !important;
       }
     }
+
+    /* ========================================================================== */
+    /* HERO, SECTION MT & FOOTER VERTICAL HARMONY (ZERO DEAD GAPS)                */
+    /* ========================================================================== */
+    #home-hero,
+    .hero-section,
+    [id*="hero"],
+    main > section:first-of-type,
+    body > section:first-of-type {
+      padding-top: 1.25rem !important;
+    }
+    @media (min-width: 640px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 1.5rem !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 2rem !important;
+      }
+    }
+
+    section:last-of-type {
+      padding-bottom: 1.5rem !important;
+    }
+    @media (min-width: 1024px) {
+      section:last-of-type {
+        padding-bottom: 1.75rem !important;
+      }
+    }
+
+    footer,
+    #mainFooter {
+      padding-top: 1rem !important;
+    }
+    @media (min-width: 1024px) {
+      footer,
+      #mainFooter {
+        padding-top: 1.25rem !important;
+      }
+    }
+
 
     /* ========================================================================== */
     /* RTL ICONS & TEXT FLOW RESILIENCE                                           */
@@ -1494,6 +1554,128 @@
       padding-right: 0 !important;
       padding-left: 2.25rem !important;
     }
+
+  
+    /* ========================================================================== */
+    /* MASTER CTA BANNER PERFECT RESPONSIVE ALIGNMENT ENGINE                      */
+    /* ========================================================================== */
+    .cta-banner-text,
+    .cta-banner h2,
+    .cta-banner h3,
+    #homeExploreCtaBar h3,
+    #guideConsultCtaBar h3,
+    #productsCtaBanner h3 {
+      word-break: normal !important;
+      overflow-wrap: normal !important;
+      hyphens: none !important;
+      white-space: normal !important;
+    }
+
+    @media (max-width: 1023px) {
+      .cta-banner,
+      #homeExploreCtaBar,
+      #guideConsultCtaBar,
+      #productsCtaBanner {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1.25rem !important;
+      }
+      .cta-banner-text,
+      .cta-banner > div:first-child,
+      #homeExploreCtaBar > div:first-child,
+      #guideConsultCtaBar > div:first-child,
+      #productsCtaBanner > div:first-child {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 0 !important;
+        padding-right: 0 !important;
+      }
+      .cta-banner-text h2,
+      .cta-banner-text h3,
+      #homeExploreCtaBar h3,
+      #guideConsultCtaBar h3,
+      #productsCtaBanner h3 {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .cta-banner-text p,
+      #homeExploreCtaBar p,
+      #guideConsultCtaBar p,
+      #productsCtaBanner p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .cta-banner-buttons,
+      .cta-banner > div:last-child,
+      #homeExploreCtaBar > div:last-child,
+      #guideConsultCtaBar > div:last-child,
+      #productsCtaBanner > div:last-child {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .cta-banner,
+      #homeExploreCtaBar,
+      #guideConsultCtaBar,
+      #productsCtaBanner {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 2rem !important;
+      }
+      .cta-banner-text,
+      .cta-banner > div:first-child,
+      #homeExploreCtaBar > div:first-child,
+      #guideConsultCtaBar > div:first-child,
+      #productsCtaBanner > div:first-child {
+        flex: 1 1 0% !important;
+        width: auto !important;
+        max-width: none !important;
+        text-align: left !important;
+        margin-bottom: 0 !important;
+        padding-right: 1.5rem !important;
+      }
+      .cta-banner-text h2,
+      .cta-banner-text h3,
+      #homeExploreCtaBar h3,
+      #guideConsultCtaBar h3,
+      #productsCtaBanner h3 {
+        text-align: left !important;
+      }
+      .cta-banner-text p,
+      #homeExploreCtaBar p,
+      #guideConsultCtaBar p,
+      #productsCtaBanner p {
+        text-align: left !important;
+      }
+      .cta-banner-buttons,
+      .cta-banner > div:last-child,
+      #homeExploreCtaBar > div:last-child,
+      #guideConsultCtaBar > div:last-child,
+      #productsCtaBanner > div:last-child {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        gap: 0.875rem !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -1844,14 +2026,14 @@
     <!-- ======================================================== -->
     <!-- SECTION 1: PRODUCT CATEGORIES (Essential Category Hub)   -->
     <!-- ======================================================== -->
-    <section id="prod-categories" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
+    <section id="prod-categories" class="relative py-12 sm:py-16 overflow-hidden">
       <!-- Ambient Radial Lighting -->
       <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="grid" class="w-3.5 h-3.5"></i>
             <span>Product Categories &bull; Fine Rugs &amp; Carpets</span>
@@ -1860,7 +2042,7 @@
             Find Your Perfect Rug: <span class="text-gold-500">Essential Categories</span>
           </h1>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Browse our core rug and carpet collections by construction, fiber, and style. Every piece is handcrafted by master artisans to deliver lifetime elegance and tactile luxury.
+            Browse our core rug and carpet collections by construction, fiber, and style. Every piece is handcrafted by master artisans to deliver lifetime elegance, durable construction, and tactile luxury.
           </p>
         </div>
 
@@ -1883,17 +2065,19 @@
                   <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $2,400</span>
                 </div>
                 <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Individual knots hand-tied by master Tibetan and Persian artisans over 6 to 18 months on vertical wooden looms.
+                  Individual knots hand-tied by master Tibetan and Persian artisans over 6 to 18 months on vertical wooden looms. Supreme durability for generations.
                 </p>
               </div>
             </div>
-            <div class="p-6 pt-0 flex items-center gap-3">
-              <button onclick="filterCatalogBy('Handwoven')" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+            <div class="p-6 pt-0 flex items-center gap-2.5 sm:gap-3">
+              <button onclick="filterCatalogBy('Handwoven')" class="btn-3d btn-3d-gold sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 whitespace-nowrap">
                 <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                 <span>Shop Now</span>
               </button>
-              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
-                <span>Explore</span>
+              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center whitespace-nowrap">
+                <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                <span class="hidden 2xl:inline">Explore Collections</span>
+                <span class="2xl:hidden">Collections</span>
               </a>
             </div>
           </div>
@@ -1914,17 +2098,19 @@
                   <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $1,850</span>
                 </div>
                 <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Dense worsted wool tufts sheared by hand into sculptural high-low architectural contours for contemporary spaces.
+                  Dense worsted wool tufts sheared by hand into sculptural high-low architectural contours for contemporary spaces and modern living rooms.
                 </p>
               </div>
             </div>
-            <div class="p-6 pt-0 flex items-center gap-3">
-              <button onclick="filterCatalogBy('Hand-Tufted')" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+            <div class="p-6 pt-0 flex items-center gap-2.5 sm:gap-3">
+              <button onclick="filterCatalogBy('Hand-Tufted')" class="btn-3d btn-3d-gold sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 whitespace-nowrap">
                 <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                 <span>Shop Now</span>
               </button>
-              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
-                <span>Explore</span>
+              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center whitespace-nowrap">
+                <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                <span class="hidden 2xl:inline">Explore Collections</span>
+                <span class="2xl:hidden">Collections</span>
               </a>
             </div>
           </div>
@@ -1945,17 +2131,19 @@
                   <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $950</span>
                 </div>
                 <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Low-profile reversible soumak tapestry weaves, built for dining rooms, high-traffic corridors, and effortless chair glides.
+                  Low-profile reversible soumak tapestry weaves, built for dining rooms, high-traffic corridors, and effortless chair glides with zero pile catching.
                 </p>
               </div>
             </div>
-            <div class="p-6 pt-0 flex items-center gap-3">
-              <button onclick="filterCatalogBy('Flatweave')" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+            <div class="p-6 pt-0 flex items-center gap-2.5 sm:gap-3">
+              <button onclick="filterCatalogBy('Flatweave')" class="btn-3d btn-3d-gold sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 whitespace-nowrap">
                 <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                 <span>Shop Now</span>
               </button>
-              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
-                <span>Explore</span>
+              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center whitespace-nowrap">
+                <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                <span class="hidden 2xl:inline">Explore Collections</span>
+                <span class="2xl:hidden">Collections</span>
               </a>
             </div>
           </div>
@@ -1976,17 +2164,19 @@
                   <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $3,800</span>
                 </div>
                 <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Luminescent natural Mulberry filament silk interlocked with highland wool for shimmering chandelier reflections.
+                  Luminescent natural Mulberry filament silk interlocked with highland wool for shimmering chandelier reflections and exquisite high-knot definition.
                 </p>
               </div>
             </div>
-            <div class="p-6 pt-0 flex items-center gap-3">
-              <button onclick="filterCatalogBy('Silk')" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+            <div class="p-6 pt-0 flex items-center gap-2.5 sm:gap-3">
+              <button onclick="filterCatalogBy('Silk')" class="btn-3d btn-3d-gold sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 whitespace-nowrap">
                 <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                 <span>Shop Now</span>
               </button>
-              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
-                <span>Explore</span>
+              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center whitespace-nowrap">
+                <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                <span class="hidden 2xl:inline">Explore Collections</span>
+                <span class="2xl:hidden">Collections</span>
               </a>
             </div>
           </div>
@@ -2007,17 +2197,19 @@
                   <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $650</span>
                 </div>
                 <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Sustainably harvested Bengal jute, sisal, and Belgian flax woven into tactile, earthy foundations for modern spaces.
+                  Sustainably harvested Bengal jute, sisal, and Belgian flax woven into tactile, earthy foundations for modern architectural and organic spaces.
                 </p>
               </div>
             </div>
-            <div class="p-6 pt-0 flex items-center gap-3">
-              <button onclick="filterCatalogBy('Natural Fiber')" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+            <div class="p-6 pt-0 flex items-center gap-2.5 sm:gap-3">
+              <button onclick="filterCatalogBy('Natural Fiber')" class="btn-3d btn-3d-gold sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 whitespace-nowrap">
                 <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                 <span>Shop Now</span>
               </button>
-              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
-                <span>Explore</span>
+              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center whitespace-nowrap">
+                <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                <span class="hidden 2xl:inline">Explore Collections</span>
+                <span class="2xl:hidden">Collections</span>
               </a>
             </div>
           </div>
@@ -2038,17 +2230,19 @@
                   <span class="text-xs font-mono font-bold text-gold-600 dark:text-gold-400">From $45 / sq.ft</span>
                 </div>
                 <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Tailor any dimension, contour, color palette, and knot density to match your exact interior architectural floorplan.
+                  Tailor any dimension, contour, color palette, and knot density to match your exact interior architectural floorplan with bespoke CAD rendering.
                 </p>
               </div>
             </div>
-            <div class="p-6 pt-0 flex items-center gap-3">
-              <a href="custom-rugs.html" class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+            <div class="p-6 pt-0 flex items-center gap-2.5 sm:gap-3">
+              <a href="custom-rugs.html" class="btn-3d btn-3d-gold sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 whitespace-nowrap">
                 <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
-                <span>Custom Order</span>
+                <span>Shop Custom</span>
               </a>
-              <a href="contact.html" class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center">
-                <span>Consultation</span>
+              <a href="collections.html" class="btn-3d btn-3d-dark sheen flex-1 h-11 px-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5 text-center whitespace-nowrap">
+                <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                <span class="hidden 2xl:inline">Explore Collections</span>
+                <span class="2xl:hidden">Collections</span>
               </a>
             </div>
           </div>
@@ -2062,11 +2256,11 @@
     <!-- ======================================================== -->
     <!-- SECTION 2: FEATURED RUGS & CARPETS (Live Inventory Grid)  -->
     <!-- ======================================================== -->
-    <section id="prod-showcase" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
+    <section id="prod-showcase" class="relative py-12 sm:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="package" class="w-3.5 h-3.5"></i>
             <span>Featured Rugs &amp; Carpets &bull; In Stock</span>
@@ -2075,7 +2269,7 @@
             Featured Rugs &amp; Carpets: <span class="text-gold-500">Curated Live Selection</span>
           </h2>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Each piece is accompanied by full architectural specifications, certified provenance, and transparent pricing. Select any rug to inspect macro details or arrange delivery.
+            Each piece is accompanied by full architectural specifications, certified provenance, and transparent pricing. Select any rug to inspect macro details or arrange immediate delivery.
           </p>
 
           <!-- Interactive Search & Live Filter Bar -->
@@ -2088,20 +2282,21 @@
                 placeholder="Search by collection, motif, or material (e.g. Silk, Medallion, Geometric)..." 
                 class="min-w-0 w-full bg-transparent text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none px-2"
               />
-              <span class="text-[10px] font-mono font-bold text-gold-600 dark:text-gold-400 bg-gold-500/10 px-3 py-1.5 rounded-xl whitespace-nowrap">
-                Live Inventory
+              <span id="catalogCountBadge" class="text-[10px] font-mono font-bold text-gold-600 dark:text-gold-400 bg-gold-500/10 px-3 py-1.5 rounded-xl whitespace-nowrap">
+                6 Pieces In Stock
               </span>
             </div>
 
             <!-- Quick Filter Pill Buttons -->
-            <div class="flex flex-wrap items-center justify-center gap-2 pt-1 text-xs">
-              <button onclick="filterCatalogBy('')" class="px-3 py-1.5 rounded-xl bg-gold-500/15 text-gold-600 dark:text-gold-400 font-bold border border-gold-500/30 hover:bg-gold-500 hover:text-black transition-all">All Pieces</button>
-              <button onclick="filterCatalogBy('Handwoven')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Handwoven</button>
-              <button onclick="filterCatalogBy('Hand-Tufted')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Hand-Tufted</button>
-              <button onclick="filterCatalogBy('Wool')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Highland Wool</button>
-              <button onclick="filterCatalogBy('Silk')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Mulberry Silk</button>
-              <button onclick="filterCatalogBy('Minimalist')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Minimalist</button>
-              <button onclick="filterCatalogBy('Traditional')" class="px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Traditional</button>
+            <div class="flex flex-wrap items-center justify-center gap-2 pt-1 text-xs" id="catalogFilterPills">
+              <button onclick="filterCatalogBy('')" class="filter-pill-btn active-pill px-3 py-1.5 rounded-xl bg-gold-500 text-black font-bold border border-gold-500 shadow-sm transition-all">All Pieces</button>
+              <button onclick="filterCatalogBy('Handwoven')" class="filter-pill-btn px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Handwoven</button>
+              <button onclick="filterCatalogBy('Hand-Tufted')" class="filter-pill-btn px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Hand-Tufted</button>
+              <button onclick="filterCatalogBy('Flatweave')" class="filter-pill-btn px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Flatweave</button>
+              <button onclick="filterCatalogBy('Wool')" class="filter-pill-btn px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Highland Wool</button>
+              <button onclick="filterCatalogBy('Silk')" class="filter-pill-btn px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Mulberry Silk</button>
+              <button onclick="filterCatalogBy('Minimalist')" class="filter-pill-btn px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Minimalist</button>
+              <button onclick="filterCatalogBy('Traditional')" class="filter-pill-btn px-3 py-1.5 rounded-xl bg-white dark:bg-obsidian-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 hover:border-gold-500 transition-all">Traditional</button>
             </div>
           </div>
         </div>
@@ -2137,14 +2332,14 @@
             <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
                 class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="loadProductDetails('ART-8492', 'The Isfahan Imperial Medallion', '$4,850 USD', '70% Tibetan Highland Wool, 30% Pure Mulberry Silk', '9' × 12' (270 × 360 cm)', 'Hand-Knotted Senneh Double Knot (850 KPSI)', 'images/col_heritage.jpg')"
+                onclick="openProductDetails('ART-8492')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
                 <span>View Details</span>
               </button>
               <button 
                 class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="window.location.href='contact.html?inquiry=ART-8492'"
+                onclick="quickShopProduct('ART-8492')"
               >
                 <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                 <span>Shop Now</span>
@@ -2180,14 +2375,14 @@
             <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
                 class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="loadProductDetails('ART-3914', 'The Kyoto Wabi-Sabi Rib', '$3,200 USD', '100% Un-dyed Tibetan Highland Wool', '8' × 10' (240 × 300 cm)', 'Hand-Knotted Loop & Sheared Ribs (550 KPSI)', 'images/col_minimalist.jpg')"
+                onclick="openProductDetails('ART-3914')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
                 <span>View Details</span>
               </button>
               <button 
                 class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="window.location.href='contact.html?inquiry=ART-3914'"
+                onclick="quickShopProduct('ART-3914')"
               >
                 <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                 <span>Shop Now</span>
@@ -2223,14 +2418,14 @@
             <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
                 class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="loadProductDetails('ART-5120', 'The Bauhaus Linear Relief', '$3,650 USD', '80% New Zealand Wool, 20% Bamboo Botanical Viscose', '9' × 12' (270 × 360 cm)', 'Hand-Tufted Hand-Carved 3D Shearing (14mm Pile)', 'images/col_statement_rugs.jpg')"
+                onclick="openProductDetails('ART-5120')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
                 <span>View Details</span>
               </button>
               <button 
                 class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="window.location.href='contact.html?inquiry=ART-5120'"
+                onclick="quickShopProduct('ART-5120')"
               >
                 <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                 <span>Shop Now</span>
@@ -2266,14 +2461,14 @@
             <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
                 class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="loadProductDetails('ART-7231', 'The Caspian Soumak Kilim Runner', '$1,850 USD', '65% Organic Wool, 35% Long-Staple Cotton', '3' × 12' (90 × 360 cm)', 'Flatweave Soumak Reversible Tapestry Weave', 'images/col_handwoven.jpg')"
+                onclick="openProductDetails('ART-7231')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
                 <span>View Details</span>
               </button>
               <button 
                 class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="window.location.href='contact.html?inquiry=ART-7231'"
+                onclick="quickShopProduct('ART-7231')"
               >
                 <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                 <span>Shop Now</span>
@@ -2309,14 +2504,14 @@
             <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
                 class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="loadProductDetails('ART-9018', 'The Oushak Distressed Heritage', '$6,200 USD', '100% Hand-Spun Anatolian Wool', '10' × 14' (300 × 420 cm)', 'Hand-Knotted Turkish Ghiordes Double Knot (700 KPSI)', 'images/prod_showcase_hero.jpg')"
+                onclick="openProductDetails('ART-9018')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
                 <span>View Details</span>
               </button>
               <button 
                 class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="window.location.href='contact.html?inquiry=ART-9018'"
+                onclick="quickShopProduct('ART-9018')"
               >
                 <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                 <span>Shop Now</span>
@@ -2352,14 +2547,14 @@
             <div class="p-6 pt-0 flex items-center gap-2.5">
               <button 
                 class="btn-3d btn-3d-gold sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="loadProductDetails('ART-6650', 'The Solstice Abstract Watercolor', '$5,400 USD', '50% Mulberry Silk, 50% Tibetan Highland Wool', '9' × 12' (270 × 360 cm)', 'Hand-Knotted Tibetan Loop & Cut (1,000 KPSI)', 'images/col_luxury_silk.jpg')"
+                onclick="openProductDetails('ART-6650')"
               >
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
                 <span>View Details</span>
               </button>
               <button 
                 class="btn-3d btn-3d-dark sheen flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-                onclick="window.location.href='contact.html?inquiry=ART-6650'"
+                onclick="quickShopProduct('ART-6650')"
               >
                 <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                 <span>Shop Now</span>
@@ -2374,213 +2569,17 @@
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 3: BESTSELLERS (Essential Top Collector Pieces)  -->
+    <!-- SECTION 3: MATERIALS & DESIGNS (Pure Fibers & Aesthetics)-->
     <!-- ======================================================== -->
-    <section id="prod-bestsellers" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
-      <!-- Ambient Radial Backing -->
-      <div class="absolute top-1/3 right-1/4 w-[650px] h-[550px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-
+    <!-- 3A: Materials & Natural Fibers -->
+    <section id="prod-material" class="relative py-12 sm:py-16 overflow-hidden">
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
-            <i data-lucide="star" class="w-3.5 h-3.5 fill-gold-400 text-gold-400"></i>
-            <span>Customer Favorites &bull; Top Rated</span>
-          </div>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Bestselling Rugs &amp; Carpets: <span class="text-gold-500">Most Loved Pieces</span>
-          </h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Our most requested and highly reviewed architectural rugs. Chosen by leading interior designers and collectors for their timeless beauty, durability, and craftsmanship.
-          </p>
-        </div>
-
-        <!-- 3 Spotlight Bestsellers Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-          
-          <!-- Bestseller 1 -->
-          <div class="prod-card-glass rounded-3xl overflow-hidden border-2 border-gold-500/50 shadow-2xl flex flex-col justify-between group hover:border-gold-500 transition-all relative">
-            <div class="absolute top-4 right-4 z-20 bg-gradient-to-r from-gold-500 to-gold-600 text-black text-[11px] font-mono font-extrabold uppercase px-3 py-1 rounded-full shadow-lg">
-              #1 Bestseller
-            </div>
-            <div>
-              <div class="relative w-full aspect-[4/3] overflow-hidden bg-black/40">
-                <img src="images/col_heritage.jpg" alt="The Isfahan Imperial Medallion" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 text-xs text-amber-400">
-                  <div class="flex text-gold-400 text-xs">
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                  </div>
-                  <span class="text-white text-[11px] font-bold">5.0</span>
-                  <span class="text-slate-400 text-[10px]">(48 reviews)</span>
-                </div>
-              </div>
-              <div class="p-6 sm:p-7 space-y-3">
-                <div class="text-[11px] font-mono text-gold-600 dark:text-gold-400 uppercase tracking-widest font-bold">Traditional Heritage</div>
-                <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                  The Isfahan Imperial Medallion
-                </h3>
-                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Hand-knotted with pure Mulberry silk and Tibetan wool at 850 KPSI. Lifetime stain resistance and stunning light luster.
-                </p>
-                <div class="flex items-baseline justify-between pt-3 border-t border-slate-100 dark:border-white/10">
-                  <div>
-                    <span class="text-xs text-slate-400 block">Retail Price:</span>
-                    <span class="font-serif font-bold text-2xl text-gold-600 dark:text-gold-400">$4,850</span>
-                  </div>
-                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Size: 9' &times; 12'</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 sm:p-7 pt-0 flex items-center gap-3">
-              <button 
-                onclick="loadProductDetails('ART-8492', 'The Isfahan Imperial Medallion', '$4,850 USD', '70% Tibetan Highland Wool, 30% Pure Mulberry Silk', '9' × 12' (270 × 360 cm)', 'Hand-Knotted Senneh Double Knot (850 KPSI)', 'images/col_heritage.jpg')"
-                class="btn-3d btn-3d-gold sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-              >
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-                <span>View Details</span>
-              </button>
-              <button 
-                onclick="window.location.href='contact.html?inquiry=ART-8492'"
-                class="btn-3d btn-3d-dark sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-              >
-                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
-                <span>Shop Now</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Bestseller 2 -->
-          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all relative">
-            <div class="absolute top-4 right-4 z-20 bg-slate-900/90 text-gold-400 text-[11px] font-mono font-bold uppercase px-3 py-1 rounded-full border border-gold-500/40">
-              #2 Bestseller
-            </div>
-            <div>
-              <div class="relative w-full aspect-[4/3] overflow-hidden bg-black/40">
-                <img src="images/col_minimalist.jpg" alt="The Kyoto Wabi-Sabi Ribbed Rug" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 text-xs text-amber-400">
-                  <div class="flex text-gold-400 text-xs">
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                  </div>
-                  <span class="text-white text-[11px] font-bold">5.0</span>
-                  <span class="text-slate-400 text-[10px]">(62 reviews)</span>
-                </div>
-              </div>
-              <div class="p-6 sm:p-7 space-y-3">
-                <div class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest font-bold">Minimalist Organic</div>
-                <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                  The Kyoto Wabi-Sabi Rib
-                </h3>
-                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Architectural raised monolithic ribs hand-sheared from 100% un-dyed lanolin wool. Perfect for modern sanctuaries.
-                </p>
-                <div class="flex items-baseline justify-between pt-3 border-t border-slate-100 dark:border-white/10">
-                  <div>
-                    <span class="text-xs text-slate-400 block">Retail Price:</span>
-                    <span class="font-serif font-bold text-2xl text-gold-600 dark:text-gold-400">$3,200</span>
-                  </div>
-                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Size: 8' &times; 10'</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 sm:p-7 pt-0 flex items-center gap-3">
-              <button 
-                onclick="loadProductDetails('ART-3914', 'The Kyoto Wabi-Sabi Rib', '$3,200 USD', '100% Un-dyed Tibetan Highland Wool', '8' × 10' (240 × 300 cm)', 'Hand-Knotted Loop & Sheared Ribs (550 KPSI)', 'images/col_minimalist.jpg')"
-                class="btn-3d btn-3d-gold sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-              >
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-                <span>View Details</span>
-              </button>
-              <button 
-                onclick="window.location.href='contact.html?inquiry=ART-3914'"
-                class="btn-3d btn-3d-dark sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-              >
-                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
-                <span>Shop Now</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Bestseller 3 -->
-          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all relative">
-            <div class="absolute top-4 right-4 z-20 bg-slate-900/90 text-gold-400 text-[11px] font-mono font-bold uppercase px-3 py-1 rounded-full border border-gold-500/40">
-              #3 Bestseller
-            </div>
-            <div>
-              <div class="relative w-full aspect-[4/3] overflow-hidden bg-black/40">
-                <img src="images/col_statement_rugs.jpg" alt="The Bauhaus Linear Relief" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 text-xs text-amber-400">
-                  <div class="flex text-gold-400 text-xs">
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                  </div>
-                  <span class="text-white text-[11px] font-bold">4.9</span>
-                  <span class="text-slate-400 text-[10px]">(39 reviews)</span>
-                </div>
-              </div>
-              <div class="p-6 sm:p-7 space-y-3">
-                <div class="text-[11px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest font-bold">Geometric 3D Relief</div>
-                <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                  The Bauhaus Linear Relief
-                </h3>
-                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Sculptural hand-carved wool pile combined with botanical viscose accents. A striking anchor for luxury living rooms.
-                </p>
-                <div class="flex items-baseline justify-between pt-3 border-t border-slate-100 dark:border-white/10">
-                  <div>
-                    <span class="text-xs text-slate-400 block">Retail Price:</span>
-                    <span class="font-serif font-bold text-2xl text-gold-600 dark:text-gold-400">$3,650</span>
-                  </div>
-                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Size: 9' &times; 12'</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 sm:p-7 pt-0 flex items-center gap-3">
-              <button 
-                onclick="loadProductDetails('ART-5120', 'The Bauhaus Linear Relief', '$3,650 USD', '80% New Zealand Wool, 20% Bamboo Botanical Viscose', '9' × 12' (270 × 360 cm)', 'Hand-Tufted Hand-Carved 3D Shearing (14mm Pile)', 'images/col_statement_rugs.jpg')"
-                class="btn-3d btn-3d-gold sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-              >
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-                <span>View Details</span>
-              </button>
-              <button 
-                onclick="window.location.href='contact.html?inquiry=ART-5120'"
-                class="btn-3d btn-3d-dark sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
-              >
-                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
-                <span>Shop Now</span>
-              </button>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ======================================================== -->
-    <!-- SECTION 4: MATERIALS & DESIGNS (Clear Headings & CTAs)   -->
-    <!-- ======================================================== -->
-    <section id="prod-material" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
-      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-            <span>Materials &amp; Natural Fibers</span>
+            <span>Materials &amp; Natural Fibers &bull; Organic Tactility</span>
           </div>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
             Materials &amp; Textures: <span class="text-gold-500">Pure Organic Fibers</span>
@@ -2744,15 +2743,12 @@
       </div>
     </section>
 
-
-    <!-- ======================================================== -->
-    <!-- SECTION 4B: DESIGNS & STYLES (Aesthetic Movements)       -->
-    <!-- ======================================================== -->
-    <section id="prod-style" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
+    <!-- 3B: Designs & Architectural Styles -->
+    <section id="prod-style" class="relative py-12 sm:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-t border-slate-200/80 dark:border-white/10">
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="compass" class="w-3.5 h-3.5"></i>
             <span>Curated Designs &bull; Traditional to Modern</span>
@@ -2766,7 +2762,7 @@
         </div>
 
         <!-- Styles Banner Image -->
-        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-10">
+        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-10" id="styleGalleryBannerWrapper">
           <div class="relative w-full aspect-[21/9] sm:aspect-[24/8] rounded-2xl overflow-hidden bg-black/40">
             <img src="images/prod_by_style.jpg" alt="Art gallery exhibition of six distinct rug design aesthetics: Traditional, Contemporary, Minimalist, Geometric, Vintage, and Abstract" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
             <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent flex items-center p-6 sm:p-10">
@@ -2780,7 +2776,7 @@
         </div>
 
         <!-- 6 Design Style Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="styleCardsGrid">
           
           <!-- Style 1: Traditional -->
           <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-4 hover:border-gold-500/40 transition-all flex flex-col justify-between">
@@ -2792,6 +2788,7 @@
               </p>
             </div>
             <button onclick="filterCatalogBy('Traditional')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
               <span>Shop Traditional Rugs</span>
             </button>
           </div>
@@ -2806,6 +2803,7 @@
               </p>
             </div>
             <button onclick="filterCatalogBy('Contemporary')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
               <span>Shop Contemporary Rugs</span>
             </button>
           </div>
@@ -2820,6 +2818,7 @@
               </p>
             </div>
             <button onclick="filterCatalogBy('Minimalist')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
               <span>Shop Minimalist Rugs</span>
             </button>
           </div>
@@ -2834,6 +2833,7 @@
               </p>
             </div>
             <button onclick="filterCatalogBy('Geometric')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
               <span>Shop Geometric Rugs</span>
             </button>
           </div>
@@ -2848,6 +2848,7 @@
               </p>
             </div>
             <button onclick="filterCatalogBy('Vintage')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
               <span>Shop Vintage Rugs</span>
             </button>
           </div>
@@ -2862,6 +2863,7 @@
               </p>
             </div>
             <button onclick="filterCatalogBy('Abstract')" class="btn-3d btn-3d-gold sheen w-full py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
               <span>Shop Abstract Rugs</span>
             </button>
           </div>
@@ -2873,13 +2875,210 @@
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 5: PRICING & SIZING GUIDE (Transparent Values)   -->
+    <!-- SECTION 4: BESTSELLERS (Essential Top Collector Pieces)  -->
     <!-- ======================================================== -->
-    <section id="prod-size" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
+    <section id="prod-bestsellers" class="relative py-12 sm:py-16 overflow-hidden">
+      <!-- Ambient Radial Backing -->
+      <div class="absolute top-1/3 right-1/4 w-[650px] h-[550px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-gold-400 text-gold-400"></i>
+            <span>Customer Favorites &bull; Top Rated</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Bestselling Rugs &amp; Carpets: <span class="text-gold-500">Most Loved Pieces</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            Our most requested and highly reviewed architectural rugs. Chosen by leading interior designers and collectors for their timeless beauty, durability, and craftsmanship.
+          </p>
+        </div>
+
+        <!-- 3 Spotlight Bestsellers Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+          
+          <!-- Bestseller 1 -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border-2 border-gold-500/50 shadow-2xl flex flex-col justify-between group hover:border-gold-500 transition-all relative">
+            <div class="absolute top-4 right-4 z-20 bg-gradient-to-r from-gold-500 to-gold-600 text-black text-[11px] font-mono font-extrabold uppercase px-3 py-1 rounded-full shadow-lg">
+              #1 Bestseller
+            </div>
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-black/40">
+                <img src="images/col_heritage.jpg" alt="The Isfahan Imperial Medallion" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 text-xs text-amber-400">
+                  <div class="flex text-gold-400 text-xs">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <span class="text-white text-[11px] font-bold">5.0</span>
+                  <span class="text-slate-400 text-[10px]">(48 reviews)</span>
+                </div>
+              </div>
+              <div class="p-6 sm:p-7 space-y-3">
+                <div class="text-[11px] font-mono text-gold-600 dark:text-gold-400 uppercase tracking-widest font-bold">Traditional Heritage</div>
+                <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                  The Isfahan Imperial Medallion
+                </h3>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Hand-knotted with pure Mulberry silk and Tibetan wool at 850 KPSI. Lifetime stain resistance and stunning light luster.
+                </p>
+                <div class="flex items-baseline justify-between pt-3 border-t border-slate-100 dark:border-white/10">
+                  <div>
+                    <span class="text-xs text-slate-400 block">Retail Price:</span>
+                    <span class="font-serif font-bold text-2xl text-gold-600 dark:text-gold-400">$4,850</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Size: 9' &times; 12'</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 sm:p-7 pt-0 flex items-center gap-3">
+              <button 
+                onclick="openProductDetails('ART-8492')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                <span>View Details</span>
+              </button>
+              <button 
+                onclick="quickShopProduct('ART-8492')"
+                class="btn-3d btn-3d-dark sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bestseller 2 -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all relative">
+            <div class="absolute top-4 right-4 z-20 bg-slate-900/90 text-gold-400 text-[11px] font-mono font-bold uppercase px-3 py-1 rounded-full border border-gold-500/40">
+              #2 Bestseller
+            </div>
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-black/40">
+                <img src="images/col_minimalist.jpg" alt="The Kyoto Wabi-Sabi Ribbed Rug" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 text-xs text-amber-400">
+                  <div class="flex text-gold-400 text-xs">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <span class="text-white text-[11px] font-bold">5.0</span>
+                  <span class="text-slate-400 text-[10px]">(62 reviews)</span>
+                </div>
+              </div>
+              <div class="p-6 sm:p-7 space-y-3">
+                <div class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest font-bold">Minimalist Organic</div>
+                <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                  The Kyoto Wabi-Sabi Rib
+                </h3>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Architectural raised monolithic ribs hand-sheared from 100% un-dyed lanolin wool. Perfect for modern sanctuaries.
+                </p>
+                <div class="flex items-baseline justify-between pt-3 border-t border-slate-100 dark:border-white/10">
+                  <div>
+                    <span class="text-xs text-slate-400 block">Retail Price:</span>
+                    <span class="font-serif font-bold text-2xl text-gold-600 dark:text-gold-400">$3,200</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Size: 8' &times; 10'</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 sm:p-7 pt-0 flex items-center gap-3">
+              <button 
+                onclick="openProductDetails('ART-3914')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                <span>View Details</span>
+              </button>
+              <button 
+                onclick="quickShopProduct('ART-3914')"
+                class="btn-3d btn-3d-dark sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bestseller 3 -->
+          <div class="prod-card-glass rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-xl flex flex-col justify-between group hover:border-gold-500/40 transition-all relative">
+            <div class="absolute top-4 right-4 z-20 bg-slate-900/90 text-gold-400 text-[11px] font-mono font-bold uppercase px-3 py-1 rounded-full border border-gold-500/40">
+              #3 Bestseller
+            </div>
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-black/40">
+                <img src="images/col_statement_rugs.jpg" alt="The Bauhaus Linear Relief" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 text-xs text-amber-400">
+                  <div class="flex text-gold-400 text-xs">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  </div>
+                  <span class="text-white text-[11px] font-bold">4.9</span>
+                  <span class="text-slate-400 text-[10px]">(39 reviews)</span>
+                </div>
+              </div>
+              <div class="p-6 sm:p-7 space-y-3">
+                <div class="text-[11px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest font-bold">Geometric 3D Relief</div>
+                <h3 class="font-serif font-bold text-xl text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                  The Bauhaus Linear Relief
+                </h3>
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Sculptural hand-carved wool pile combined with botanical viscose accents. A striking anchor for luxury living rooms.
+                </p>
+                <div class="flex items-baseline justify-between pt-3 border-t border-slate-100 dark:border-white/10">
+                  <div>
+                    <span class="text-xs text-slate-400 block">Retail Price:</span>
+                    <span class="font-serif font-bold text-2xl text-gold-600 dark:text-gold-400">$3,650</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Size: 9' &times; 12'</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 sm:p-7 pt-0 flex items-center gap-3">
+              <button 
+                onclick="openProductDetails('ART-5120')"
+                class="btn-3d btn-3d-gold sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                <span>View Details</span>
+              </button>
+              <button 
+                onclick="quickShopProduct('ART-5120')"
+                class="btn-3d btn-3d-dark sheen flex-1 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5"
+              >
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                <span>Shop Now</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- SECTION 5: PRICING & SIZING GUIDE (Transparent Values)   -->
+    <!-- ======================================================== -->
+    <section id="prod-size" class="relative py-12 sm:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
+      <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
             <span>Transparent Pricing &bull; Sizing Architecture</span>
@@ -2893,7 +3092,7 @@
         </div>
 
         <!-- Sizing Architectural Blueprint Banner -->
-        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-10">
+        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-10" id="sizeBlueprintHeroBanner">
           <div class="relative w-full aspect-[21/9] sm:aspect-[24/8] rounded-2xl overflow-hidden bg-black/40">
             <img src="images/prod_by_size.jpg" alt="Architectural blueprint and miniature models demonstrating rug sizes" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
             <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent flex items-center p-6 sm:p-10">
@@ -2907,7 +3106,7 @@
         </div>
 
         <!-- 5 Size & Pricing Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-8" id="sizeCategoryGrid">
           
           <!-- Size 1 -->
           <div class="p-5 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-md space-y-3 flex flex-col justify-between">
@@ -2965,7 +3164,7 @@
               </p>
             </div>
             <button onclick="filterCatalogBy('Extra Large')" class="btn-3d btn-3d-dark sheen w-full py-2 text-xs font-bold uppercase tracking-wider rounded-xl">
-              <span>Shop Large</span>
+              <span>Shop Grand</span>
             </button>
           </div>
 
@@ -2993,14 +3192,14 @@
     <!-- ======================================================== -->
     <!-- SECTION 6: PRODUCT DETAILS & BESPOKE ENQUIRY DOSSIER      -->
     <!-- ======================================================== -->
-    <section id="product-details" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
+    <section id="product-details" class="relative py-12 sm:py-16 overflow-hidden">
       <!-- Ambient Radial Backing -->
       <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
             <span>Detailed Inspection &bull; Product Specifications</span>
@@ -3111,19 +3310,19 @@
                 </div>
                 <div class="p-3 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
                   <div class="text-[10px] font-mono text-slate-400 uppercase">Standard Dimension</div>
-                  <div class="font-semibold text-slate-900 dark:text-white">9' &times; 12' (270 &times; 360 cm)</div>
+                  <div class="font-semibold text-slate-900 dark:text-white" id="dossierSizeVal">9' &times; 12' (270 &times; 360 cm)</div>
                 </div>
                 <div class="p-3 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
                   <div class="text-[10px] font-mono text-slate-400 uppercase">Pile Thickness</div>
-                  <div class="font-semibold text-slate-900 dark:text-white">9.5 mm Architectural</div>
+                  <div class="font-semibold text-slate-900 dark:text-white" id="dossierPileVal">9.5 mm Architectural</div>
                 </div>
                 <div class="p-3 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
                   <div class="text-[10px] font-mono text-slate-400 uppercase">Loom Origin</div>
-                  <div class="font-semibold text-slate-900 dark:text-white">Tibetan Valley Atelier</div>
+                  <div class="font-semibold text-slate-900 dark:text-white" id="dossierOriginVal">Tibetan Valley Atelier</div>
                 </div>
                 <div class="p-3 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 space-y-1">
                   <div class="text-[10px] font-mono text-slate-400 uppercase">Production Time</div>
-                  <div class="font-semibold text-slate-900 dark:text-white">11 Months Loom-Tied</div>
+                  <div class="font-semibold text-slate-900 dark:text-white" id="dossierProdTimeVal">11 Months Loom-Tied</div>
                 </div>
               </div>
 
@@ -3157,27 +3356,41 @@
                 </div>
               </div>
 
-              <!-- 5. Direct Purchase & Concierge Action Form -->
-              <form id="dossierEnquiryForm" class="space-y-4 pt-2 border-t border-slate-200/80 dark:border-white/10" onsubmit="event.preventDefault(); alert('✨ Acquisition Request Received!
-
-Our Senior Curator will contact your private office within 2 hours with formal consignment documents and shipping coordinates.'); this.reset();">
+              <!-- 5. Direct Purchase & Concierge Action Form (Clean JS handler, no inline syntax error) -->
+              <form id="dossierEnquiryForm" class="space-y-4 pt-2 border-t border-slate-200/80 dark:border-white/10">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Your Full Name</label>
-                    <input type="text" required placeholder="Elena Rostova" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
+                    <input type="text" id="enqClientName" required placeholder="Elena Rostova" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
                   </div>
                   <div>
                     <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Private Email</label>
-                    <input type="email" required placeholder="e.rostova@atelier-interiors.com" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
+                    <input type="email" id="enqClientEmail" required placeholder="e.rostova@atelier-interiors.com" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
                   </div>
                 </div>
 
-                <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
-                  <button type="submit" class="btn-3d btn-3d-gold sheen w-full sm:w-auto flex-1 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Desired Dimensions</label>
+                    <select id="dossierSizeSelect" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-gold-500">
+                      <option value="9' × 12' (270 × 360 cm)">9' × 12' (Standard Living)</option>
+                      <option value="8' × 10' (240 × 300 cm)">8' × 10' (Medium Bedroom)</option>
+                      <option value="10' × 14' (300 × 420 cm)">10' × 14' (Grand Salon)</option>
+                      <option value="Custom Size">Bespoke Custom Dimension</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold block mb-1">Special Room Notes</label>
+                    <input type="text" id="enqClientNotes" placeholder="e.g. Parquet flooring, warm chandelier" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-obsidian-950 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-gold-500" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                  <button type="submit" class="btn-3d btn-3d-gold sheen w-full h-12 py-3 px-4 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2 whitespace-nowrap">
                     <i data-lucide="check-circle-2" class="w-4 h-4"></i>
                     <span>Order / Reserve Piece</span>
                   </button>
-                  <a href="contact.html" class="btn-3d btn-3d-dark sheen w-full sm:w-auto px-6 py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
+                  <a href="contact.html" class="btn-3d btn-3d-dark sheen w-full h-12 py-3 px-4 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2 whitespace-nowrap">
                     <i data-lucide="calendar" class="w-4 h-4"></i>
                     <span>Book In-Home Trial</span>
                   </a>
@@ -3197,11 +3410,11 @@ Our Senior Curator will contact your private office within 2 hours with formal c
     <!-- ======================================================== -->
     <!-- SECTION 7: STORE INFORMATION & SHOWROOM ATELIER          -->
     <!-- ======================================================== -->
-    <section id="prod-store-info" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-t border-slate-200/80 dark:border-white/10">
+    <section id="prod-store-info" class="relative py-12 sm:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-t border-slate-200/80 dark:border-white/10">
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
             <span>Store Information &bull; Flagship Showroom</span>
@@ -3281,27 +3494,26 @@ Our Senior Curator will contact your private office within 2 hours with formal c
         </div>
 
         <!-- Call to Action Banner -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-gold-500/15 via-gold-500/5 to-transparent border border-gold-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div class="space-y-1 text-center md:text-left">
-            <h3 class="font-serif font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+        <div class="cta-banner p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-gold-500/15 via-gold-500/5 to-transparent border border-gold-500/30" id="productsCtaBanner">
+          <div class="cta-banner-text space-y-1.5">
+            <h3 class="font-serif font-bold text-xl sm:text-2xl lg:text-3xl text-slate-900 dark:text-white leading-snug">
               Ready to Explore or Commission Your Carpet?
             </h3>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl">
               Schedule a personalized private consultation with our Senior Curator or visit our Fifth Avenue gallery.
             </p>
           </div>
-          <div class="flex flex-wrap items-center justify-center gap-3 flex-shrink-0">
-            <a href="contact.html" class="btn-3d btn-3d-gold sheen px-7 py-3 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+          <div class="cta-banner-buttons">
+            <a href="contact.html" class="btn-3d btn-3d-gold sheen px-7 py-3 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
               <i data-lucide="calendar" class="w-4 h-4"></i>
               <span>Book Showroom Visit</span>
             </a>
-            <a href="collections.html" class="btn-3d btn-3d-dark sheen px-6 py-3 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+            <a href="collections.html" class="btn-3d btn-3d-dark sheen px-6 py-3 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
               <i data-lucide="layers" class="w-4 h-4"></i>
               <span>Explore Collections</span>
             </a>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -3310,7 +3522,7 @@ Our Senior Curator will contact your private office within 2 hours with formal c
   <!-- ======================================================== -->
   <!-- MAIN LUXURY FOOTER (Based on Navbar & Reference Layout) -->
   <!-- ======================================================== -->
-  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-14">
+  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 sm:pt-6 sm:pb-10 lg:pt-6 lg:pb-12">
     <!-- Outer Card Shell with 3D/Rounded Aesthetics Matching Reference -->
     <div class="footer-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 transition-all duration-300 relative overflow-hidden">
 
@@ -3685,7 +3897,84 @@ Our Senior Curator will contact your private office within 2 hours with formal c
   <!-- ======================================================== -->
   <!-- 3D AUTH MODAL PREVIEW (Login & Sign Up) -->
   <!-- ======================================================== -->
-  <div id="authModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+  
+  <!-- ======================================================== -->
+  <!-- INTERACTIVE PRODUCT QUICK VIEW MODAL (Zero-Error View Details) -->
+  <!-- ======================================================== -->
+  <div id="productQuickViewModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="productQuickViewBox" class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-3xl bg-white dark:bg-obsidian-950 border border-slate-200 dark:border-gold-500/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] transform scale-95 transition-transform duration-300 text-slate-900 dark:text-slate-100">
+      
+      <button id="closeQuickViewBtn" onclick="closeQuickViewModal()" class="absolute top-4 right-4 btn-3d-icon w-8 h-8 text-slate-400 hover:text-white" aria-label="Close modal">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <!-- Image Container -->
+        <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-black/40 border border-slate-200 dark:border-white/10">
+          <img id="qvModalImg" src="images/col_heritage.jpg" alt="Rug preview" class="w-full h-full object-cover" />
+          <div class="absolute top-3 left-3 bg-black/80 text-gold-400 text-[10px] font-mono px-2.5 py-1 rounded-full backdrop-blur-md" id="qvModalCode">
+            ART-8492
+          </div>
+          <div class="absolute bottom-3 left-3 bg-black/80 text-emerald-400 text-[10px] font-mono font-bold px-2.5 py-1 rounded-full backdrop-blur-md">
+            Verified In Stock
+          </div>
+        </div>
+
+        <!-- Specifications & Action -->
+        <div class="space-y-4">
+          <div class="space-y-1">
+            <span class="text-[11px] font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 font-bold" id="qvModalCategory">
+              Handwoven Heritage
+            </span>
+            <h3 class="font-serif font-bold text-2xl text-slate-900 dark:text-white" id="qvModalTitle">
+              The Isfahan Imperial Medallion
+            </h3>
+            <div class="font-serif font-bold text-2xl text-gold-600 dark:text-gold-400 pt-1" id="qvModalPrice">
+              $4,850 USD
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed" id="qvModalDesc">
+            Pure Mulberry silk floral palmettes woven onto hand-spun Tibetan highland wool field.
+          </p>
+
+          <!-- Technical Specs -->
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
+              <span class="text-[10px] font-mono text-slate-400 block uppercase">Fiber Blend</span>
+              <span class="font-semibold truncate block" id="qvModalMaterial">Silk &amp; Wool</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
+              <span class="text-[10px] font-mono text-slate-400 block uppercase">Knot Density</span>
+              <span class="font-semibold truncate block" id="qvModalWeave">850 KPSI</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
+              <span class="text-[10px] font-mono text-slate-400 block uppercase">Standard Size</span>
+              <span class="font-semibold truncate block" id="qvModalSize">9' × 12'</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
+              <span class="text-[10px] font-mono text-slate-400 block uppercase">Atelier Origin</span>
+              <span class="font-semibold truncate block" id="qvModalOrigin">Tibetan Valley</span>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex flex-col sm:flex-row items-center gap-2.5 pt-2">
+            <button id="qvModalShopBtn" onclick="quickShopFromModal()" class="btn-3d btn-3d-gold sheen w-full py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+              <span>Shop Now / Reserve</span>
+            </button>
+            <button id="qvModalDossierBtn" onclick="jumpToFullDossier()" class="btn-3d btn-3d-dark sheen w-full py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-1.5">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+              <span>Full Dossier</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<div id="authModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
     <div id="authModalBox" class="relative w-full max-w-md p-8 rounded-3xl bg-obsidian-950 border border-gold-500/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] transform scale-95 transition-transform duration-300 text-slate-100">
       
       <button id="closeAuthModal" class="absolute top-5 right-5 btn-3d-icon w-8 h-8 text-slate-400 hover:text-white" aria-label="Close modal">
@@ -3736,7 +4025,6 @@ Our Senior Curator will contact your private office within 2 hours with formal c
         header.classList.remove('scrolled');
       }
     }, { passive: true });
-
 
     // ----------------------------------------------------
     // Dynamic Active Navbar Status Controller
@@ -3793,7 +4081,6 @@ Our Senior Curator will contact your private office within 2 hours with formal c
       console.warn('Active navbar state sync:', e);
     }
 
-
     // DOM Elements
     const html = document.documentElement;
     const darkModeToggle = document.getElementById('darkModeToggle');
@@ -3849,7 +4136,6 @@ Our Senior Curator will contact your private office within 2 hours with formal c
         mobileMoonIcon?.classList.remove('hidden');
       }
 
-      // Smooth Framer Motion rotation & scale for toggle icons
       if (window.Motion && Motion.animate) {
         Motion.animate('#darkModeToggle', {
           rotate: [0, 180, 360],
@@ -3875,7 +4161,6 @@ Our Senior Curator will contact your private office within 2 hours with formal c
       const dirVal = isRtl ? 'rtl' : 'ltr';
       html.setAttribute('dir', dirVal);
 
-      // Smooth Framer Motion spring jump & rotation for RTL icons
       if (window.Motion && Motion.animate) {
         Motion.animate('#rtlToggle', {
           scale: [1, 1.18, 1],
@@ -3889,15 +4174,15 @@ Our Senior Curator will contact your private office within 2 hours with formal c
       }
     }
 
-    rtlToggle.addEventListener('click', () => updateDirection(!isRtl));
-    mobileRtlToggle.addEventListener('click', () => updateDirection(!isRtl));
+    rtlToggle?.addEventListener('click', () => updateDirection(!isRtl));
+    mobileRtlToggle?.addEventListener('click', () => updateDirection(!isRtl));
 
     // ----------------------------------------------------
     // 3. HAMBURGER MENU DRAWER (Mobile & Tablet)
     // ----------------------------------------------------
     let isDrawerOpen = false;
 
-        function openMobileDrawer() {
+    function openMobileDrawer() {
       isDrawerOpen = true;
       document.body.classList.add('mobile-drawer-open');
       document.documentElement.classList.add('mobile-drawer-open');
@@ -3908,12 +4193,10 @@ Our Senior Curator will contact your private office within 2 hours with formal c
       mobileDrawer.classList.remove('translate-x-full');
       mobileDrawer.classList.add('translate-x-0', 'open');
 
-      // Morph Hamburger Bars into X
       hamBarTop.style.transform = 'translateY(6px) rotate(45deg)';
       hamBarMid.style.opacity = '0';
       hamBarBot.style.transform = 'translateY(-6px) rotate(-45deg)';
 
-      // Framer Motion staggered entrance with transform cleanup to ensure 60fps buttery scrolling
       if (window.Motion && Motion.animate) {
         try {
           const anim = Motion.animate('.mobile-nav-link', {
@@ -3946,22 +4229,21 @@ Our Senior Curator will contact your private office within 2 hours with formal c
       mobileDrawer.classList.add('translate-x-full');
       mobileDrawer.classList.remove('translate-x-0', 'open');
 
-      // Restore Hamburger Bars
       hamBarTop.style.transform = 'none';
       hamBarMid.style.opacity = '1';
       hamBarBot.style.transform = 'none';
     }
 
-    hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn?.addEventListener('click', () => {
       if (isDrawerOpen) closeMobileDrawer();
       else openMobileDrawer();
     });
 
-    closeDrawerBtn.addEventListener('click', closeMobileDrawer);
-    mobileDrawerOverlay.addEventListener('click', closeMobileDrawer);
+    closeDrawerBtn?.addEventListener('click', closeMobileDrawer);
+    mobileDrawerOverlay?.addEventListener('click', closeMobileDrawer);
 
-    // Mobile Home Accordion Toggle
-    mobileHomeAccordionBtn?.addEventListener('click', (e) => { e.stopPropagation();
+    mobileHomeAccordionBtn?.addEventListener('click', (e) => { 
+      e.stopPropagation();
       const isHidden = mobileHomeSubmenu.classList.contains('hidden');
       if (isHidden) {
         mobileHomeSubmenu.classList.remove('hidden');
@@ -3978,7 +4260,6 @@ Our Senior Curator will contact your private office within 2 hours with formal c
       }
     });
 
-    // Close mobile drawer on link click
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
       link.addEventListener('click', closeMobileDrawer);
     });
@@ -3987,7 +4268,7 @@ Our Senior Curator will contact your private office within 2 hours with formal c
     // 4. DESKTOP HOME DROPDOWN CLICK & HOVER ENHANCEMENT
     // ----------------------------------------------------
     let isHomeOpen = false;
-    homeDropdownBtn.addEventListener('click', (e) => {
+    homeDropdownBtn?.addEventListener('click', (e) => {
       e.stopPropagation();
       isHomeOpen = !isHomeOpen;
       homeDropdownBtn.setAttribute('aria-expanded', isHomeOpen);
@@ -4008,33 +4289,28 @@ Our Senior Curator will contact your private office within 2 hours with formal c
     });
 
     document.addEventListener('click', (e) => {
-      if (!homeDropdownWrapper.contains(e.target)) {
+      if (homeDropdownWrapper && !homeDropdownWrapper.contains(e.target)) {
         isHomeOpen = false;
-        homeDropdownMenu.classList.add('opacity-0', 'invisible', 'translate-y-3', 'pointer-events-none');
-        homeChevron.classList.remove('rotate-180');
+        homeDropdownMenu?.classList.add('opacity-0', 'invisible', 'translate-y-3', 'pointer-events-none');
+        homeChevron?.classList.remove('rotate-180');
       }
     });
 
     // ----------------------------------------------------
-    // 5. 3D BUTTON TACTILE TILT & PARALLAX (Framer Motion Physics)
+    // 5. 3D BUTTON TACTILE TILT & PARALLAX
     // ----------------------------------------------------
     const buttons3D = document.querySelectorAll('.btn-3d');
-
     buttons3D.forEach(btn => {
       btn.addEventListener('mousemove', (e) => {
         const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left; // x position within element.
-        const y = e.clientY - rect.top;  // y position within element.
-
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-
-        const rotateX = ((y - centerY) / centerY) * -12; // Invert for natural tilt
-        const rotateY = ((x - centerX) / centerX) * 12;
-
-        btn.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+        const rotateX = ((y - centerY) / centerY) * -10;
+        const rotateY = ((x - centerX) / centerX) * 10;
+        btn.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.025, 1.025, 1.025)`;
       });
-
       btn.addEventListener('mouseleave', () => {
         btn.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
       });
@@ -4087,10 +4363,10 @@ Our Senior Curator will contact your private office within 2 hours with formal c
     }
 
     function closeModal() {
-      authModal.classList.remove('opacity-100', 'pointer-events-auto');
-      authModal.classList.add('opacity-0', 'pointer-events-none');
-      authModalBox.classList.remove('scale-100');
-      authModalBox.classList.add('scale-95');
+      authModal?.classList.remove('opacity-100', 'pointer-events-auto');
+      authModal?.classList.add('opacity-0', 'pointer-events-none');
+      authModalBox?.classList.remove('scale-100');
+      authModalBox?.classList.add('scale-95');
     }
 
     document.getElementById('bookNowBtnDesktop')?.addEventListener('click', () => { window.location.href = 'contact.html'; });
@@ -4100,11 +4376,9 @@ Our Senior Curator will contact your private office within 2 hours with formal c
       if (e.target === authModal) closeModal();
     });
 
-    // Wire Footer Portal Cards to Auth Modal
     document.getElementById('footerCollectorCard')?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'login.html'; });
     document.getElementById('footerTradeCard')?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'registeration.html'; });
 
-    // Footer Newsletter Form
     const footerNewsletterForm = document.getElementById('footerNewsletterForm');
     footerNewsletterForm?.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -4114,35 +4388,241 @@ Our Senior Curator will contact your private office within 2 hours with formal c
       if (input) input.value = '';
     });
 
-    // Refresh Lucide Icons to render all newly added footer icons
-    lucide.createIcons();
-
-    // Initial entrance animation using Framer Motion engine
-    window.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
-      if (window.Motion && Motion.animate) {
-        Motion.animate('#mainHeader', {
-          y: [-50, 0],
-          opacity: [0, 1]
-        }, { duration: 0.6, easing: Motion.spring({ stiffness: 220, damping: 22 }) });
-
-        Motion.animate('#mainFooter', {
-          y: [40, 0],
-          opacity: [0, 1]
-        }, { duration: 0.7, delay: 0.15, easing: Motion.spring({ stiffness: 200, damping: 20 }) });
+    // ========================================================
+    // CENTRAL PRODUCTS REPOSITORY (ZERO SYNTAX ERRORS)
+    // ========================================================
+    const PRODUCTS_DATA = {
+      'ART-8492': {
+        code: 'ART-8492',
+        title: 'The Isfahan Imperial Medallion',
+        price: '$4,850 USD',
+        category: 'Traditional &bull; Handwoven',
+        materials: '70% Tibetan Highland Wool, 30% Pure Mulberry Silk',
+        size: "9' × 12' (270 × 360 cm)",
+        pile: '9.5 mm Architectural Pile',
+        weave: 'Hand-Knotted Senneh Double Knot (850 KPSI)',
+        origin: 'Tibetan Valley Atelier',
+        productionTime: '11 Months Loom-Tied',
+        image: 'images/col_heritage.jpg',
+        description: 'Pure Mulberry silk floral palmettes woven onto hand-spun Tibetan highland wool field. Renowned for radiant chandelier reflections, dense knot foundation, and generational durability.'
+      },
+      'ART-3914': {
+        code: 'ART-3914',
+        title: 'The Kyoto Wabi-Sabi Rib',
+        price: '$3,200 USD',
+        category: 'Minimalist &bull; Handwoven',
+        materials: '100% Un-dyed Tibetan Highland Wool',
+        size: "8' × 10' (240 × 300 cm)",
+        pile: '12.0 mm Raised Contours',
+        weave: 'Hand-Knotted Loop & Sheared Ribs (550 KPSI)',
+        origin: 'Himalayan Organic Looms',
+        productionTime: '7 Months Loom-Tied',
+        image: 'images/col_minimalist.jpg',
+        description: 'Highland fleece sheared into raised monolithic architectural ripples with natural un-dyed lanolin. Built for calm contemporary bedrooms and private studies.'
+      },
+      'ART-5120': {
+        code: 'ART-5120',
+        title: 'The Bauhaus Linear Relief',
+        price: '$3,650 USD',
+        category: 'Geometric &bull; Hand-Tufted',
+        materials: '80% New Zealand Wool, 20% Bamboo Botanical Viscose',
+        size: "9' × 12' (270 × 360 cm)",
+        pile: '14.0 mm 3D Carved Relief',
+        weave: 'Hand-Tufted Hand-Carved 3D Shearing',
+        origin: 'Atelier Modernist Studio',
+        productionTime: '4 Months Hand-Tufted',
+        image: 'images/col_statement_rugs.jpg',
+        description: 'Sculptural 3D hand-carved contours combining matte worsted wool with botanical viscose highlights. A striking anchor for luxury living rooms.'
+      },
+      'ART-7231': {
+        code: 'ART-7231',
+        title: 'The Caspian Soumak Kilim Runner',
+        price: '$1,850 USD',
+        category: 'Contemporary &bull; Flatweave',
+        materials: '65% Organic Wool, 35% Long-Staple Cotton',
+        size: "3' × 12' (90 × 360 cm) Runner",
+        pile: 'Zero-Pile Soumak Flatweave',
+        weave: 'Flatweave Soumak Reversible Tapestry Weave',
+        origin: 'Caspian Basin Weaving Guild',
+        productionTime: '3 Months Hand-Woven',
+        image: 'images/col_handwoven.jpg',
+        description: 'Reversible tight tapestry weave on cotton foundation; impervious to door swings, high footfall, and easy dining chair glides.'
+      },
+      'ART-9018': {
+        code: 'ART-9018',
+        title: 'The Oushak Distressed Heritage',
+        price: '$6,200 USD',
+        category: 'Vintage &bull; Handwoven',
+        materials: '100% Hand-Spun Anatolian Wool',
+        size: "10' × 14' (300 × 420 cm)",
+        pile: '8.0 mm Distressed Shorn Pile',
+        weave: 'Hand-Knotted Turkish Ghiordes Double Knot (700 KPSI)',
+        origin: 'Anatolian Heritage Atelier',
+        productionTime: '14 Months Loom-Tied',
+        image: 'images/prod_showcase_hero.jpg',
+        description: 'Authentic Anatolian palmette design aged with gentle botanical washes, muted terracotta, and weathered sage tones.'
+      },
+      'ART-6650': {
+        code: 'ART-6650',
+        title: 'The Solstice Abstract Watercolor',
+        price: '$5,400 USD',
+        category: 'Abstract &bull; Fine Art',
+        materials: '50% Mulberry Silk, 50% Tibetan Highland Wool',
+        size: "9' × 12' (270 × 360 cm)",
+        pile: '10.5 mm Sheared Luster',
+        weave: 'Hand-Knotted Tibetan Loop & Cut (1,000 KPSI)',
+        origin: 'Lhasa Master Weaving Studio',
+        productionTime: '12 Months Loom-Tied',
+        image: 'images/col_luxury_silk.jpg',
+        description: 'Impressionistic gradients of lapis indigo and champagne gold with liquid luster under chandeliers.'
       }
+    };
+
+    let activeSelectedProdCode = 'ART-8492';
+
+    // ----------------------------------------------------
+    // 1. OPEN PRODUCT DETAILS (VIEW DETAILS ACTION)
+    // ----------------------------------------------------
+    function openProductDetails(code) {
+      const prod = PRODUCTS_DATA[code] || PRODUCTS_DATA['ART-8492'];
+      activeSelectedProdCode = code;
+
+      // Update Quick View Modal
+      const qvImg = document.getElementById('qvModalImg');
+      const qvCode = document.getElementById('qvModalCode');
+      const qvTitle = document.getElementById('qvModalTitle');
+      const qvPrice = document.getElementById('qvModalPrice');
+      const qvCategory = document.getElementById('qvModalCategory');
+      const qvDesc = document.getElementById('qvModalDesc');
+      const qvMaterial = document.getElementById('qvModalMaterial');
+      const qvWeave = document.getElementById('qvModalWeave');
+      const qvSize = document.getElementById('qvModalSize');
+      const qvOrigin = document.getElementById('qvModalOrigin');
+
+      if (qvImg) qvImg.src = prod.image;
+      if (qvCode) qvCode.textContent = prod.code;
+      if (qvTitle) qvTitle.textContent = prod.title;
+      if (qvPrice) qvPrice.textContent = prod.price;
+      if (qvCategory) qvCategory.innerHTML = prod.category;
+      if (qvDesc) qvDesc.textContent = prod.description;
+      if (qvMaterial) qvMaterial.textContent = prod.materials;
+      if (qvWeave) qvWeave.textContent = prod.weave;
+      if (qvSize) qvSize.textContent = prod.size;
+      if (qvOrigin) qvOrigin.textContent = prod.origin;
+
+      // Sync Section 6 Dossier as well
+      syncDossierWithProduct(prod);
+
+      // Open Modal
+      const qvModal = document.getElementById('productQuickViewModal');
+      const qvBox = document.getElementById('productQuickViewBox');
+      if (qvModal && qvBox) {
+        qvModal.classList.remove('opacity-0', 'pointer-events-none');
+        qvModal.classList.add('opacity-100', 'pointer-events-auto');
+        qvBox.classList.remove('scale-95');
+        qvBox.classList.add('scale-100');
+
+        if (window.Motion && Motion.animate) {
+          Motion.animate(qvBox, { y: [-15, 0], opacity: [0, 1] }, { duration: 0.28 });
+        }
+      }
+    }
+
+    function closeQuickViewModal() {
+      const qvModal = document.getElementById('productQuickViewModal');
+      const qvBox = document.getElementById('productQuickViewBox');
+      if (qvModal && qvBox) {
+        qvModal.classList.remove('opacity-100', 'pointer-events-auto');
+        qvModal.classList.add('opacity-0', 'pointer-events-none');
+        qvBox.classList.remove('scale-100');
+        qvBox.classList.add('scale-95');
+      }
+    }
+
+    function quickShopFromModal() {
+      closeQuickViewModal();
+      quickShopProduct(activeSelectedProdCode);
+    }
+
+    function jumpToFullDossier() {
+      closeQuickViewModal();
+      const sec = document.getElementById('product-details');
+      if (sec) {
+        sec.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Close modal on click outside or ESC
+    document.getElementById('productQuickViewModal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'productQuickViewModal') closeQuickViewModal();
     });
-  
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeQuickViewModal();
+    });
 
-    // ========================================================
-    // PRODUCTS INTERACTIVE LOGIC & UNIQUE FRAMER MOTION
-    // ========================================================
+    // ----------------------------------------------------
+    // 2. QUICK SHOP NOW ACTION
+    // ----------------------------------------------------
+    function quickShopProduct(code) {
+      const prod = PRODUCTS_DATA[code] || PRODUCTS_DATA['ART-8492'];
+      activeSelectedProdCode = code;
+      syncDossierWithProduct(prod);
 
-    // 1. Live Catalog Filter & Search Engine
+      const sec = document.getElementById('product-details');
+      if (sec) {
+        sec.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      setTimeout(() => {
+        const nameInput = document.getElementById('enqClientName');
+        if (nameInput) {
+          nameInput.focus();
+        }
+      }, 500);
+    }
+
+    function syncDossierWithProduct(prod) {
+      const codeEl = document.getElementById('dossierProdCode');
+      const titleEl = document.getElementById('dossierProdTitle');
+      const priceEl = document.getElementById('dossierProdPrice');
+      const matEl = document.getElementById('dossierMaterialVal');
+      const weaveEl = document.getElementById('dossierWeaveVal');
+      const sizeEl = document.getElementById('dossierSizeVal');
+      const pileEl = document.getElementById('dossierPileVal');
+      const originEl = document.getElementById('dossierOriginVal');
+      const prodTimeEl = document.getElementById('dossierProdTimeVal');
+      const mainImg = document.getElementById('dossierMainImg');
+
+      if (codeEl) codeEl.textContent = 'ITEM REF: ' + prod.code;
+      if (titleEl) titleEl.textContent = prod.title;
+      if (priceEl) priceEl.textContent = prod.price;
+      if (matEl) matEl.textContent = prod.materials;
+      if (weaveEl) weaveEl.textContent = prod.weave;
+      if (sizeEl) sizeEl.textContent = prod.size;
+      if (pileEl) pileEl.textContent = prod.pile;
+      if (originEl) originEl.textContent = prod.origin;
+      if (prodTimeEl) prodTimeEl.textContent = prod.productionTime;
+      if (mainImg && prod.image) mainImg.src = prod.image;
+    }
+
+    // ----------------------------------------------------
+    // 3. LIVE CATALOG FILTER & SEARCH ENGINE
+    // ----------------------------------------------------
     function filterCatalogBy(term) {
       const items = document.querySelectorAll('#productGridContainer > div');
       const searchBox = document.getElementById('catalogSearchInput');
+      const countBadge = document.getElementById('catalogCountBadge');
       if (searchBox) searchBox.value = term;
+
+      // Update pill styles
+      document.querySelectorAll('#catalogFilterPills button').forEach(btn => {
+        btn.classList.remove('bg-gold-500', 'text-black', 'active-pill');
+        btn.classList.add('bg-white', 'dark:bg-obsidian-900', 'text-slate-700', 'dark:text-slate-300');
+        if ((!term && btn.textContent.includes('All Pieces')) || (term && btn.textContent.toLowerCase().includes(term.toLowerCase()))) {
+          btn.classList.remove('bg-white', 'dark:bg-obsidian-900', 'text-slate-700', 'dark:text-slate-300');
+          btn.classList.add('bg-gold-500', 'text-black', 'active-pill');
+        }
+      });
 
       let visibleCount = 0;
       items.forEach(item => {
@@ -4150,7 +4630,7 @@ Our Senior Curator will contact your private office within 2 hours with formal c
         const text = item.textContent.toLowerCase();
         const query = term.toLowerCase();
 
-        if (cat.includes(query) || text.includes(query)) {
+        if (!query || cat.includes(query) || text.includes(query)) {
           item.style.display = 'flex';
           visibleCount++;
         } else {
@@ -4158,7 +4638,11 @@ Our Senior Curator will contact your private office within 2 hours with formal c
         }
       });
 
-      // Scroll smoothly to showcase grid
+      if (countBadge) {
+        countBadge.textContent = `${visibleCount} ${visibleCount === 1 ? 'Piece' : 'Pieces'} In Stock`;
+      }
+
+      // Smooth scroll to showcase
       const target = document.getElementById('prod-showcase');
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' });
@@ -4172,46 +4656,28 @@ Our Senior Curator will contact your private office within 2 hours with formal c
     document.getElementById('catalogSearchInput')?.addEventListener('input', (e) => {
       const q = e.target.value.toLowerCase().trim();
       const items = document.querySelectorAll('#productGridContainer > div');
+      const countBadge = document.getElementById('catalogCountBadge');
+      let visibleCount = 0;
+
       items.forEach(item => {
         const cat = (item.dataset.category || '').toLowerCase();
         const text = item.textContent.toLowerCase();
         if (!q || cat.includes(q) || text.includes(q)) {
           item.style.display = 'flex';
+          visibleCount++;
         } else {
           item.style.display = 'none';
         }
       });
+
+      if (countBadge) {
+        countBadge.textContent = `${visibleCount} ${visibleCount === 1 ? 'Piece' : 'Pieces'} In Stock`;
+      }
     });
 
-    // 2. Load Selected Product into Section 7 Dossier
-    function loadProductDetails(code, title, price, materials, size, weave, imgSrc) {
-      const codeEl = document.getElementById('dossierProdCode');
-      const titleEl = document.getElementById('dossierProdTitle');
-      const priceEl = document.getElementById('dossierProdPrice');
-      const matEl = document.getElementById('dossierMaterialVal');
-      const weaveEl = document.getElementById('dossierWeaveVal');
-      const mainImg = document.getElementById('dossierMainImg');
-
-      if (codeEl) codeEl.textContent = 'ITEM REF: ' + code;
-      if (titleEl) titleEl.textContent = title;
-      if (priceEl) priceEl.textContent = price;
-      if (matEl) matEl.textContent = materials;
-      if (weaveEl) weaveEl.textContent = weave;
-      if (mainImg && imgSrc) mainImg.src = imgSrc;
-
-      // Scroll to Section 7
-      const sec7 = document.getElementById('product-details');
-      if (sec7) {
-        sec7.scrollIntoView({ behavior: 'smooth' });
-      }
-
-      if (window.Motion && Motion.animate) {
-        Motion.animate('#dossierDetailsCol', { y: [20, 0], opacity: [0.8, 1] }, { duration: 0.4 });
-        Motion.animate('#dossierVisualCol', { scale: [0.97, 1], opacity: [0.8, 1] }, { duration: 0.4 });
-      }
-    }
-
-    // 3. Switch Thumbnail in Dossier
+    // ----------------------------------------------------
+    // 4. SWITCH THUMBNAIL IN DOSSIER
+    // ----------------------------------------------------
     function switchDossierThumb(src) {
       const mainImg = document.getElementById('dossierMainImg');
       if (mainImg) {
@@ -4222,7 +4688,9 @@ Our Senior Curator will contact your private office within 2 hours with formal c
       }
     }
 
-    // 4. Color Swatches Selection
+    // ----------------------------------------------------
+    // 5. COLOR SWATCHES SELECTION
+    // ----------------------------------------------------
     function selectColorSwatch(btn, colorName) {
       document.querySelectorAll('.color-swatch-ring').forEach(b => b.classList.remove('active-swatch'));
       btn.classList.add('active-swatch');
@@ -4230,116 +4698,119 @@ Our Senior Curator will contact your private office within 2 hours with formal c
       if (lbl) lbl.textContent = colorName;
     }
 
-    // 5. Care Instructions Accordion Toggle
+    // ----------------------------------------------------
+    // 6. CARE INSTRUCTIONS ACCORDION
+    // ----------------------------------------------------
     const careBtn = document.getElementById('careAccordionBtn');
     const careBox = document.getElementById('careContentBox');
     const careChevron = document.getElementById('careChevron');
-    if (careBtn && careBox) {
-      careBtn.addEventListener('click', () => {
-        const isHidden = careBox.classList.contains('hidden');
-        if (isHidden) {
-          careBox.classList.remove('hidden');
-          careChevron?.classList.add('rotate-180');
-        } else {
-          careBox.classList.add('hidden');
-          careChevron?.classList.remove('rotate-180');
-        }
-      });
-    }
+    careBtn?.addEventListener('click', () => {
+      const isHidden = careBox?.classList.contains('hidden');
+      if (isHidden) {
+        careBox?.classList.remove('hidden');
+        careChevron?.classList.add('rotate-180');
+      } else {
+        careBox?.classList.add('hidden');
+        careChevron?.classList.remove('rotate-180');
+      }
+    });
 
-    // 6. Product Enquiry Form Handler
-    document.getElementById('productEnquiryForm')?.addEventListener('submit', (e) => {
+    // ----------------------------------------------------
+    // 7. ROBUST DOSSIER ACQUISITION FORM SUBMISSION
+    // ----------------------------------------------------
+    const dossierForm = document.getElementById('dossierEnquiryForm');
+    dossierForm?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('enqClientName')?.value || 'Client';
-      const email = document.getElementById('enqClientEmail')?.value || '';
-      const prod = document.getElementById('dossierProdTitle')?.textContent || 'Carpet';
-      const size = document.getElementById('dossierSizeSelect')?.value || 'Standard';
+      const name = document.getElementById('enqClientName')?.value || 'Valued Patron';
+      const email = document.getElementById('enqClientEmail')?.value || 'client@atelier.com';
+      const prod = document.getElementById('dossierProdTitle')?.textContent || 'Handcrafted Carpet';
+      const size = document.getElementById('dossierSizeSelect')?.value || "9' × 12'";
       const color = document.getElementById('selectedColorLabel')?.textContent || 'Curated';
-      const ref = 'ENQ-' + Math.floor(100000 + Math.random() * 900000);
+      const refCode = 'ACQ-' + Math.floor(100000 + Math.random() * 900000);
 
-      alert(`🏛️ Product Enquiry Registered!\n\nDossier Code: ${ref}\nClient: ${name}\nItem: ${prod}\nCalibrated Size: ${size}\nColorway: ${color}\n\n✨ Our Senior Curator has reserved this masterpiece for 72 hours. You will receive a high-resolution weave dossier, provenance certificate, and yarn swatch dispatch tracking to ${email}.`);
-      e.target.reset();
+      alert(`🏛️ Acquisition & Reservation Request Confirmed!\n\nReservation Ref: ${refCode}\nClient: ${name}\nItem: ${prod}\nSize: ${size}\nColorway: ${color}\n\n✨ A Senior Atelier Curator has reserved this masterpiece for 72 hours. A signed provenance certificate and dispatch tracking will be forwarded to ${email}.`);
+      dossierForm.reset();
     });
 
-    // 7. 3D Tilt Effect on Showcase Cards
-    document.querySelectorAll('.tilt-card-prod').forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        card.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) scale3d(1.015, 1.015, 1.015)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)';
-      });
-    });
-
-    // 8. Unique Framer Motion for Products Page
+    // ----------------------------------------------------
+    // 8. SAFE FRAMER MOTION ANIMATION (ZERO RUNTIME ERRORS)
+    // ----------------------------------------------------
     function initProductsFramerMotion() {
       if (!window.Motion || !Motion.animate) return;
 
-      // Section 1: Hero Spring Elevation
-      Motion.animate('#allTaxonomyCol', {
-        y: [30, 0],
-        opacity: [0, 1]
-      }, { duration: 0.8, easing: Motion.spring({ stiffness: 180, damping: 22 }) });
+      try {
 
-      Motion.animate('#allVisualCol', {
-        scale: [0.93, 1],
-        opacity: [0, 1]
-      }, { duration: 0.9, delay: 0.15, easing: Motion.spring({ stiffness: 170, damping: 20 }) });
-
-      if (Motion.inView) {
-        
-        // Section 2: Materials Fiber Grid Reveal
-        Motion.inView('#prod-material', () => {
-          Motion.animate('#materialBannerWrapper', { opacity: [0, 1], y: [25, 0] }, { duration: 0.7 });
-          const mCards = document.querySelectorAll('#materialsCardGrid > div');
-          mCards.forEach((mc, i) => {
-            Motion.animate(mc, { y: [35, 0], opacity: [0, 1] }, { duration: 0.55, delay: 0.1 + i * 0.1 });
+        const catCards = document.querySelectorAll('#prod-categories .prod-card-glass');
+        if (catCards.length > 0) {
+          Motion.animate(catCards, { y: [20, 0], opacity: [0, 1] }, {
+            delay: Motion.stagger(0.06),
+            duration: 0.5,
+            easing: [0.16, 1, 0.3, 1]
           });
-        });
+        }
 
-        // Section 3: Size Calibrator Horizontal Expand
-        Motion.inView('#prod-size', () => {
-          Motion.animate('#sizeBlueprintHeroBanner', { scaleX: [0.94, 1], opacity: [0, 1] }, { duration: 0.8 });
-          const sCards = document.querySelectorAll('#sizeCategoryGrid > div');
-          sCards.forEach((sc, i) => {
-            Motion.animate(sc, { y: [30, 0], opacity: [0, 1] }, { duration: 0.5, delay: 0.15 + i * 0.08 });
+        if (Motion.inView) {
+          Motion.inView('#prod-showcase', () => {
+            const pCards = document.querySelectorAll('#productGridContainer > div');
+            if (pCards.length) {
+              Motion.animate(pCards, { y: [25, 0], opacity: [0, 1] }, {
+                delay: Motion.stagger(0.06),
+                duration: 0.5
+              });
+            }
           });
-        });
 
-        // Section 4: Style Movements Cascading Gallery
-        Motion.inView('#prod-style', () => {
-          Motion.animate('#styleGalleryBannerWrapper', { opacity: [0, 1], scale: [0.97, 1] }, { duration: 0.75 });
-          const stCards = document.querySelectorAll('#styleCardsGrid > div');
-          stCards.forEach((stc, i) => {
-            Motion.animate(stc, { y: [35, 0], opacity: [0, 1] }, { duration: 0.55, delay: 0.12 + i * 0.09 });
+          Motion.inView('#prod-material', () => {
+            const mBanner = document.getElementById('materialBannerWrapper');
+            if (mBanner) Motion.animate(mBanner, { opacity: [0, 1], y: [20, 0] }, { duration: 0.6 });
+            const mCards = document.querySelectorAll('#materialsCardGrid > div');
+            if (mCards.length) {
+              Motion.animate(mCards, { y: [20, 0], opacity: [0, 1] }, {
+                delay: Motion.stagger(0.05),
+                duration: 0.45
+              });
+            }
           });
-        });
 
-        // Section 5: Room Placement Wave Stagger
-        Motion.inView('#prod-room', () => {
-          Motion.animate('#roomTourHeroBanner', { scale: [0.96, 1], opacity: [0, 1] }, { duration: 0.75 });
-          const rmCards = document.querySelectorAll('#roomSpecsGrid > div');
-          rmCards.forEach((rc, i) => {
-            Motion.animate(rc, { x: [-25, 0], opacity: [0, 1] }, { duration: 0.55, delay: 0.15 + i * 0.1 });
+          Motion.inView('#prod-style', () => {
+            const stCards = document.querySelectorAll('#styleCardsGrid > div');
+            if (stCards.length) {
+              Motion.animate(stCards, { y: [20, 0], opacity: [0, 1] }, {
+                delay: Motion.stagger(0.05),
+                duration: 0.45
+              });
+            }
           });
-        });
 
-        // Section 6: Live Catalog Grid Pop
-        Motion.inView('#prod-showcase', () => {
-          const pCards = document.querySelectorAll('#productGridContainer > div');
-          pCards.forEach((pc, i) => {
-            Motion.animate(pc, { y: [40, 0], opacity: [0, 1] }, { duration: 0.6, delay: 0.1 + i * 0.12 });
+          Motion.inView('#prod-bestsellers', () => {
+            const bCards = document.querySelectorAll('#prod-bestsellers .prod-card-glass');
+            if (bCards.length) {
+              Motion.animate(bCards, { y: [25, 0], opacity: [0, 1] }, {
+                delay: Motion.stagger(0.08),
+                duration: 0.55
+              });
+            }
           });
-        });
 
-        // Section 7: Product Dossier Dual Convergence
-        Motion.inView('#product-details', () => {
-          Motion.animate('#dossierVisualCol', { x: [-30, 0], opacity: [0, 1] }, { duration: 0.75 });
-          Motion.animate('#dossierDetailsCol', { x: [30, 0], opacity: [0, 1] }, { duration: 0.75, delay: 0.1 });
-        });
+          Motion.inView('#prod-size', () => {
+            const sCards = document.querySelectorAll('#sizeCategoryGrid > div');
+            if (sCards.length) {
+              Motion.animate(sCards, { y: [20, 0], opacity: [0, 1] }, {
+                delay: Motion.stagger(0.05),
+                duration: 0.45
+              });
+            }
+          });
+
+          Motion.inView('#product-details', () => {
+            const vCol = document.getElementById('dossierVisualCol');
+            const dCol = document.getElementById('dossierDetailsCol');
+            if (vCol) Motion.animate(vCol, { x: [-20, 0], opacity: [0, 1] }, { duration: 0.55 });
+            if (dCol) Motion.animate(dCol, { x: [20, 0], opacity: [0, 1] }, { duration: 0.55, delay: 0.08 });
+          });
+        }
+      } catch (err) {
+        console.warn('Motion animation notice:', err);
       }
     }
 

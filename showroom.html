@@ -1232,8 +1232,8 @@
 
       /* Equalized Vertical Section Spacing */
       section {
-        padding-top: 2.75rem !important;
-        padding-bottom: 2.75rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
 
       /* Container Horizontal Padding */
@@ -1390,8 +1390,8 @@
         font-size: clamp(1.45rem, 4vw, 1.95rem) !important;
       }
       section {
-        padding-top: 3.5rem !important;
-        padding-bottom: 3.5rem !important;
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.25rem !important;
       }
       .grid.grid-cols-3,
       .grid.grid-cols-4 {
@@ -1413,8 +1413,8 @@
         font-size: clamp(2.2rem, 4vw, 3rem) !important;
       }
       section {
-        padding-top: 4.5rem !important;
-        padding-bottom: 4.5rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
       .grid.grid-cols-4,
       .grid.grid-cols-3 {
@@ -1439,10 +1439,60 @@
     /* ========================================================================== */
     @media (min-width: 1024px) {
       section {
-        padding-top: 5.5rem !important;
-        padding-bottom: 5.5rem !important;
+        padding-top: 3.25rem !important;
+        padding-bottom: 3.25rem !important;
       }
     }
+
+    /* ========================================================================== */
+    /* HERO, SECTION MT & FOOTER VERTICAL HARMONY (ZERO DEAD GAPS)                */
+    /* ========================================================================== */
+    #home-hero,
+    .hero-section,
+    [id*="hero"],
+    main > section:first-of-type,
+    body > section:first-of-type {
+      padding-top: 1.25rem !important;
+    }
+    @media (min-width: 640px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 1.5rem !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 2rem !important;
+      }
+    }
+
+    section:last-of-type {
+      padding-bottom: 1.5rem !important;
+    }
+    @media (min-width: 1024px) {
+      section:last-of-type {
+        padding-bottom: 1.75rem !important;
+      }
+    }
+
+    footer,
+    #mainFooter {
+      padding-top: 1rem !important;
+    }
+    @media (min-width: 1024px) {
+      footer,
+      #mainFooter {
+        padding-top: 1.25rem !important;
+      }
+    }
+
 
     /* ========================================================================== */
     /* RTL ICONS & TEXT FLOW RESILIENCE                                           */
@@ -2890,7 +2940,7 @@
   <!-- ======================================================== -->
   <!-- MAIN LUXURY FOOTER (Based on Navbar & Reference Layout) -->
   <!-- ======================================================== -->
-  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-14">
+  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 sm:pt-6 sm:pb-10 lg:pt-6 lg:pb-12">
     <!-- Outer Card Shell with 3D/Rounded Aesthetics Matching Reference -->
     <div class="footer-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 transition-all duration-300 relative overflow-hidden">
 

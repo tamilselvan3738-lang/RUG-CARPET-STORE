@@ -1241,8 +1241,8 @@
 
       /* Equalized Vertical Section Spacing */
       section {
-        padding-top: 2.75rem !important;
-        padding-bottom: 2.75rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
 
       /* Container Horizontal Padding */
@@ -1399,8 +1399,8 @@
         font-size: clamp(1.45rem, 4vw, 1.95rem) !important;
       }
       section {
-        padding-top: 3.5rem !important;
-        padding-bottom: 3.5rem !important;
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.25rem !important;
       }
       .grid.grid-cols-3,
       .grid.grid-cols-4 {
@@ -1422,8 +1422,8 @@
         font-size: clamp(2.2rem, 4vw, 3rem) !important;
       }
       section {
-        padding-top: 4.5rem !important;
-        padding-bottom: 4.5rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
       .grid.grid-cols-4,
       .grid.grid-cols-3 {
@@ -1448,10 +1448,60 @@
     /* ========================================================================== */
     @media (min-width: 1024px) {
       section {
-        padding-top: 5.5rem !important;
-        padding-bottom: 5.5rem !important;
+        padding-top: 3.25rem !important;
+        padding-bottom: 3.25rem !important;
       }
     }
+
+    /* ========================================================================== */
+    /* HERO, SECTION MT & FOOTER VERTICAL HARMONY (ZERO DEAD GAPS)                */
+    /* ========================================================================== */
+    #home-hero,
+    .hero-section,
+    [id*="hero"],
+    main > section:first-of-type,
+    body > section:first-of-type {
+      padding-top: 1.25rem !important;
+    }
+    @media (min-width: 640px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 1.5rem !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 2rem !important;
+      }
+    }
+
+    section:last-of-type {
+      padding-bottom: 1.5rem !important;
+    }
+    @media (min-width: 1024px) {
+      section:last-of-type {
+        padding-bottom: 1.75rem !important;
+      }
+    }
+
+    footer,
+    #mainFooter {
+      padding-top: 1rem !important;
+    }
+    @media (min-width: 1024px) {
+      footer,
+      #mainFooter {
+        padding-top: 1.25rem !important;
+      }
+    }
+
 
     /* ========================================================================== */
     /* RTL ICONS & TEXT FLOW RESILIENCE                                           */
@@ -1485,6 +1535,128 @@
       padding-right: 0 !important;
       padding-left: 2.25rem !important;
     }
+
+  
+    /* ========================================================================== */
+    /* MASTER CTA BANNER PERFECT RESPONSIVE ALIGNMENT ENGINE                      */
+    /* ========================================================================== */
+    .cta-banner-text,
+    .cta-banner h2,
+    .cta-banner h3,
+    #homeExploreCtaBar h3,
+    #guideConsultCtaBar h3,
+    #productsCtaBanner h3 {
+      word-break: normal !important;
+      overflow-wrap: normal !important;
+      hyphens: none !important;
+      white-space: normal !important;
+    }
+
+    @media (max-width: 1023px) {
+      .cta-banner,
+      #homeExploreCtaBar,
+      #guideConsultCtaBar,
+      #productsCtaBanner {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1.25rem !important;
+      }
+      .cta-banner-text,
+      .cta-banner > div:first-child,
+      #homeExploreCtaBar > div:first-child,
+      #guideConsultCtaBar > div:first-child,
+      #productsCtaBanner > div:first-child {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 0 !important;
+        padding-right: 0 !important;
+      }
+      .cta-banner-text h2,
+      .cta-banner-text h3,
+      #homeExploreCtaBar h3,
+      #guideConsultCtaBar h3,
+      #productsCtaBanner h3 {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .cta-banner-text p,
+      #homeExploreCtaBar p,
+      #guideConsultCtaBar p,
+      #productsCtaBanner p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .cta-banner-buttons,
+      .cta-banner > div:last-child,
+      #homeExploreCtaBar > div:last-child,
+      #guideConsultCtaBar > div:last-child,
+      #productsCtaBanner > div:last-child {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .cta-banner,
+      #homeExploreCtaBar,
+      #guideConsultCtaBar,
+      #productsCtaBanner {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 2rem !important;
+      }
+      .cta-banner-text,
+      .cta-banner > div:first-child,
+      #homeExploreCtaBar > div:first-child,
+      #guideConsultCtaBar > div:first-child,
+      #productsCtaBanner > div:first-child {
+        flex: 1 1 0% !important;
+        width: auto !important;
+        max-width: none !important;
+        text-align: left !important;
+        margin-bottom: 0 !important;
+        padding-right: 1.5rem !important;
+      }
+      .cta-banner-text h2,
+      .cta-banner-text h3,
+      #homeExploreCtaBar h3,
+      #guideConsultCtaBar h3,
+      #productsCtaBanner h3 {
+        text-align: left !important;
+      }
+      .cta-banner-text p,
+      #homeExploreCtaBar p,
+      #guideConsultCtaBar p,
+      #productsCtaBanner p {
+        text-align: left !important;
+      }
+      .cta-banner-buttons,
+      .cta-banner > div:last-child,
+      #homeExploreCtaBar > div:last-child,
+      #guideConsultCtaBar > div:last-child,
+      #productsCtaBanner > div:last-child {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        gap: 0.875rem !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -2882,26 +3054,26 @@
         </div>
 
         <!-- Closing Curatorial Consultation Bar -->
-        <div class="rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-obsidian-900 via-obsidian-850 to-obsidian-900 border border-gold-500/30 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6" id="guideConsultCtaBar">
-          <div class="space-y-1.5 text-center md:text-left">
-            <span class="text-xs font-mono text-gold-400 uppercase tracking-widest font-bold block">Complimentary Concierge Service</span>
-            <h3 class="font-serif text-xl sm:text-2xl font-bold">Request Physical Swatch Box &amp; Sizing Blueprint</h3>
-            <p class="text-xs text-slate-300 max-w-xl">
-              Receive curated hand-woven yarn pom-poms and architectural CAD floorplan overlays rendered by our atelier design team within 48 hours.
+        <div class="cta-banner rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-obsidian-900 via-obsidian-850 to-obsidian-900 border border-gold-500/30 text-white shadow-2xl" id="guideConsultCtaBar">
+          <div class="cta-banner-text space-y-2">
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white leading-snug">
+              Need Expert Guidance for Your Space?
+            </h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm max-w-xl">
+              Schedule a personalized private consultation with our Senior Curator or request an in-home trial showing.
             </p>
           </div>
-          <div class="flex items-center gap-3 shrink-0">
-            <a href="custom-rugs.html" class="btn-3d btn-3d-gold sheen px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
-              <i data-lucide="scissors" class="w-4 h-4"></i>
-              <span>Commission Bespoke Rug</span>
+          <div class="cta-banner-buttons">
+            <a href="contact.html" class="btn-3d btn-3d-gold sheen px-6 py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Book Private Consultation</span>
             </a>
-            <a href="showroom.html" class="btn-3d btn-3d-dark sheen px-6 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
-              <i data-lucide="map-pin" class="w-4 h-4"></i>
-              <span>Visit Showroom</span>
+            <a href="products.html" class="btn-3d btn-3d-dark sheen px-6 py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span>Explore Collection</span>
             </a>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -2910,7 +3082,7 @@
   <!-- ======================================================== -->
   <!-- MAIN LUXURY FOOTER (Based on Navbar & Reference Layout) -->
   <!-- ======================================================== -->
-  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-14">
+  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 sm:pt-6 sm:pb-10 lg:pt-6 lg:pb-12">
     <!-- Outer Card Shell with 3D/Rounded Aesthetics Matching Reference -->
     <div class="footer-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 transition-all duration-300 relative overflow-hidden">
 

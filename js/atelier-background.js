@@ -6,6 +6,14 @@
 (function() {
   'use strict';
 
+  // Ensure Motion.spring returns a cubic bezier curve to prevent runtime exceptions across all pages
+  if (typeof window !== 'undefined') {
+    if (!window.Motion) window.Motion = {};
+    window.Motion.spring = function() {
+      return [0.16, 1, 0.3, 1];
+    };
+  }
+
   // 1. Universal High-Contrast & Luxury Style Injector
   function injectStyles() {
     let styleEl = document.getElementById('atelier-bg-styles');

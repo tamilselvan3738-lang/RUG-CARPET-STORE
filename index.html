@@ -1242,8 +1242,8 @@
 
       /* Equalized Vertical Section Spacing */
       section {
-        padding-top: 2.75rem !important;
-        padding-bottom: 2.75rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
 
       /* Container Horizontal Padding */
@@ -1400,8 +1400,8 @@
         font-size: clamp(1.45rem, 4vw, 1.95rem) !important;
       }
       section {
-        padding-top: 3.5rem !important;
-        padding-bottom: 3.5rem !important;
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.25rem !important;
       }
       .grid.grid-cols-3,
       .grid.grid-cols-4 {
@@ -1423,8 +1423,8 @@
         font-size: clamp(2.2rem, 4vw, 3rem) !important;
       }
       section {
-        padding-top: 4.5rem !important;
-        padding-bottom: 4.5rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
       }
       .grid.grid-cols-4,
       .grid.grid-cols-3 {
@@ -1449,8 +1449,59 @@
     /* ========================================================================== */
     @media (min-width: 1024px) {
       section {
-        padding-top: 5.5rem !important;
-        padding-bottom: 5.5rem !important;
+        padding-top: 3.25rem !important;
+        padding-bottom: 3.25rem !important;
+      }
+    }
+
+    /* ========================================================================== */
+    /* HERO, SECTION MT & FOOTER VERTICAL HARMONY (ZERO DEAD GAPS)                */
+    /* ========================================================================== */
+    #home-hero,
+    .hero-section,
+    [id*="hero"],
+    main > section:first-of-type,
+    body > section:first-of-type {
+      padding-top: 1.25rem !important;
+    }
+    @media (min-width: 640px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 1.5rem !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      #home-hero,
+      .hero-section,
+      [id*="hero"],
+      main > section:first-of-type,
+      body > section:first-of-type {
+        padding-top: 2rem !important;
+      }
+    }
+
+    section:last-of-type,
+    #home-care-explore {
+      padding-bottom: 1.5rem !important;
+    }
+    @media (min-width: 1024px) {
+      section:last-of-type,
+      #home-care-explore {
+        padding-bottom: 1.75rem !important;
+      }
+    }
+
+    footer,
+    #mainFooter {
+      padding-top: 1rem !important;
+    }
+    @media (min-width: 1024px) {
+      footer,
+      #mainFooter {
+        padding-top: 1.25rem !important;
       }
     }
 
@@ -1486,6 +1537,128 @@
       padding-right: 0 !important;
       padding-left: 2.25rem !important;
     }
+
+  
+    /* ========================================================================== */
+    /* MASTER CTA BANNER PERFECT RESPONSIVE ALIGNMENT ENGINE                      */
+    /* ========================================================================== */
+    .cta-banner-text,
+    .cta-banner h2,
+    .cta-banner h3,
+    #homeExploreCtaBar h3,
+    #guideConsultCtaBar h3,
+    #productsCtaBanner h3 {
+      word-break: normal !important;
+      overflow-wrap: normal !important;
+      hyphens: none !important;
+      white-space: normal !important;
+    }
+
+    @media (max-width: 1023px) {
+      .cta-banner,
+      #homeExploreCtaBar,
+      #guideConsultCtaBar,
+      #productsCtaBanner {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1.25rem !important;
+      }
+      .cta-banner-text,
+      .cta-banner > div:first-child,
+      #homeExploreCtaBar > div:first-child,
+      #guideConsultCtaBar > div:first-child,
+      #productsCtaBanner > div:first-child {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 0 !important;
+        padding-right: 0 !important;
+      }
+      .cta-banner-text h2,
+      .cta-banner-text h3,
+      #homeExploreCtaBar h3,
+      #guideConsultCtaBar h3,
+      #productsCtaBanner h3 {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .cta-banner-text p,
+      #homeExploreCtaBar p,
+      #guideConsultCtaBar p,
+      #productsCtaBanner p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .cta-banner-buttons,
+      .cta-banner > div:last-child,
+      #homeExploreCtaBar > div:last-child,
+      #guideConsultCtaBar > div:last-child,
+      #productsCtaBanner > div:last-child {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .cta-banner,
+      #homeExploreCtaBar,
+      #guideConsultCtaBar,
+      #productsCtaBanner {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 2rem !important;
+      }
+      .cta-banner-text,
+      .cta-banner > div:first-child,
+      #homeExploreCtaBar > div:first-child,
+      #guideConsultCtaBar > div:first-child,
+      #productsCtaBanner > div:first-child {
+        flex: 1 1 0% !important;
+        width: auto !important;
+        max-width: none !important;
+        text-align: left !important;
+        margin-bottom: 0 !important;
+        padding-right: 1.5rem !important;
+      }
+      .cta-banner-text h2,
+      .cta-banner-text h3,
+      #homeExploreCtaBar h3,
+      #guideConsultCtaBar h3,
+      #productsCtaBanner h3 {
+        text-align: left !important;
+      }
+      .cta-banner-text p,
+      #homeExploreCtaBar p,
+      #guideConsultCtaBar p,
+      #productsCtaBanner p {
+        text-align: left !important;
+      }
+      .cta-banner-buttons,
+      .cta-banner > div:last-child,
+      #homeExploreCtaBar > div:last-child,
+      #guideConsultCtaBar > div:last-child,
+      #productsCtaBanner > div:last-child {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        gap: 0.875rem !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -1833,7 +2006,7 @@
   <main class="flex-1">
 
     <!-- ======================================================== -->
-    <!-- SECTION 1: STORE INTRODUCTION & HANDWOVEN COLLECTIONS     -->
+    <!-- SECTION 1: STORE HERO & HANDCRAFTED COLLECTIONS          -->
     <!-- ======================================================== -->
     <section id="home-hero" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
       <!-- Ambient Radial Glow -->
@@ -1842,26 +2015,30 @@
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
+        <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-8 space-y-3.5">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="crown" class="w-3.5 h-3.5"></i>
-            <span>Master Atelier &bull; Handcrafted Heritage</span>
+            <span>Master Atelier &bull; Handcrafted Rugs &amp; Carpets</span>
           </div>
           <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Exquisite Handwoven Rugs &amp; <span class="text-gold-500">Artisan Carpets</span>
+            Handcrafted Rugs &amp; Luxury Carpets for <span class="text-gold-500">Distinctive Living Spaces</span>
           </h1>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Curating authentic hand-knotted Tibetan, Persian, and Anatolian masterpieces. Each heirloom rug is hand-tied with pure highland wool and mulberry silk for distinguished architectural spaces.
+            Curating authentic hand-knotted Persian, vintage, and contemporary artisan rugs. Hand-tied from 100% pure highland wool and mulberry silk for enduring beauty, underfoot luxury, and generational longevity.
           </p>
 
           <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
-            <a href="collections.html" class="btn-3d btn-3d-gold sheen px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
-              <i data-lucide="sparkles" class="w-4 h-4"></i>
-              <span>Explore Collection</span>
+            <a href="products.html" class="btn-3d btn-3d-gold sheen px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+              <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+              <span>Shop Now</span>
             </a>
-            <a href="custom-rugs.html" class="btn-3d btn-3d-dark sheen px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
-              <i data-lucide="scissors" class="w-4 h-4"></i>
-              <span>Custom Rug Services</span>
+            <a href="collections.html" class="btn-3d btn-3d-dark sheen px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span>Explore Collections</span>
+            </a>
+            <a href="custom-rugs.html" class="px-5 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 hover:text-gold-500 inline-flex items-center gap-1.5 transition-colors">
+              <span>Custom Sizing</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
           </div>
         </div>
@@ -1875,52 +2052,52 @@
               <div class="flex items-center justify-between">
                 <span class="text-xs font-mono uppercase tracking-wider text-gold-600 dark:text-gold-400 font-bold flex items-center gap-2">
                   <i data-lucide="feather" class="w-4 h-4"></i>
-                  Ancestral Provenance
+                  Hand-Knotted Craftsmanship
                 </span>
-                <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded font-bold">100% Handwoven</span>
+                <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded font-bold">100% Hand-Tied</span>
               </div>
               <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white">
-                Handwoven Rug Collections &bull; The Knot-by-Knot Sanctuary
+                Over 400,000 Hand-Tied Knots Per Carpet
               </h3>
               <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                Each carpet in our Handwoven Rug Collections requires between 400,000 and 2.5 million individual hand-tied knots. Crafted over 9 to 18 months on upright timber looms, these pieces carry the irreplaceable spirit of human touch.
+                Each heirloom carpet is woven knot-by-knot on upright timber looms over 9 to 18 months by master artisans, ensuring generational resilience without glues or synthetic adhesives.
               </p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
               <div class="p-5 rounded-3xl home-card-glass space-y-2 border border-slate-200/80 dark:border-white/10">
-                <div class="text-[10px] font-mono text-gold-600 dark:text-gold-400 uppercase font-bold">Highland Wool Weave</div>
-                <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Tibetan Lanolin Density</h4>
+                <div class="text-[10px] font-mono text-gold-600 dark:text-gold-400 uppercase font-bold">Pure Highland Wool</div>
+                <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Natural Stain Resistance</h4>
                 <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Natural sheep lanolin provides lifelong stain resistance without toxic chemical coatings.
+                  Rich sheep lanolin provides lifelong protection against spills and dirt with soft underfoot resilience.
                 </p>
               </div>
 
               <div class="p-5 rounded-3xl home-card-glass space-y-2 border border-slate-200/80 dark:border-white/10">
-                <div class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase font-bold">Mulberry Silk Luster</div>
-                <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Prismatic Light Sheen</h4>
+                <div class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase font-bold">Raw Mulberry Silk</div>
+                <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Luminous Light Sheen</h4>
                 <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Filament silk reflects architectural chandelier lighting with liquid golden warmth.
+                  Fine silk fibers reflect ambient room lighting with radiant depth, ideal for salons and formal dining spaces.
                 </p>
               </div>
 
             </div>
 
-            <!-- Certified Pedigree Bar -->
+            <!-- Certified Provenance Bar -->
             <div class="p-4 rounded-2xl bg-gradient-to-r from-gold-500/10 via-gold-500/5 to-transparent border border-gold-500/30 flex items-center justify-between text-xs">
               <span class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
                 <i data-lucide="shield-check" class="w-4 h-4 text-gold-500"></i>
                 Every piece accompanied by a registered Certificate of Provenance
               </span>
-              <span class="font-mono text-[10px] text-gold-600 dark:text-gold-400 font-bold uppercase">Atelier Authenticated</span>
+              <span class="font-mono text-[10px] text-gold-600 dark:text-gold-400 font-bold uppercase">100% Guaranteed Authentic</span>
             </div>
 
           </div>
 
           <!-- Right Column: Visual Showcase (5 cols) -->
           <div class="lg:col-span-5 relative flex flex-col justify-between" id="homeHeroVisualCol">
-            <div class="relative rounded-[32px] p-3 sm:p-4 home-card-glass shadow-2xl overflow-hidden group tilt-card-home">
+            <div class="relative rounded-[32px] p-3 sm:p-4 home-card-glass shadow-2xl overflow-hidden group tilt-card-home h-full flex flex-col justify-between">
               <div class="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden bg-black/40">
                 <img 
                   id="homeHeroImg"
@@ -1932,22 +2109,22 @@
 
                 <div class="absolute top-4 left-4 bg-black/75 backdrop-blur-md border border-gold-500/40 rounded-full px-3.5 py-1 text-[11px] font-semibold text-gold-300 flex items-center gap-1.5">
                   <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-400"></i>
-                  <span>Flagship Atelier &bull; Fifth Avenue Salon</span>
+                  <span>Fifth Avenue Flagship Showroom</span>
                 </div>
 
                 <div class="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-white">
                   <div class="flex items-center justify-between mb-1">
-                    <span class="text-xs font-serif font-bold tracking-wide">The Permanent Master Archive</span>
-                    <span class="text-[10px] font-mono text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded">Curated Vault</span>
+                    <span class="text-xs font-serif font-bold tracking-wide">Live Showroom Inventory</span>
+                    <span class="text-[10px] font-mono text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded">In Stock</span>
                   </div>
                   <p class="text-[11px] text-slate-300 leading-snug">
-                    Over 500 handwoven museum-grade carpets curated for sovereign collector residences worldwide.
+                    Over 500 handwoven museum-grade rugs in stock and ready for immediate white-glove delivery worldwide.
                   </p>
                 </div>
               </div>
 
               <!-- 3 Pillar Stat Chips -->
-              <div class="grid grid-cols-3 gap-2.5 pt-3.5 text-center">
+              <div class="grid grid-cols-3 gap-2.5 pt-3.5 mt-auto text-center">
                 <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">
                   <div class="font-serif font-bold text-sm sm:text-base text-gold-600 dark:text-gold-400">300+</div>
                   <div class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">Years Heritage</div>
@@ -1966,12 +2143,46 @@
 
         </div>
 
+        <!-- Quick Category Navigation Ribbon -->
+        <div class="mt-6 pt-6 border-t border-slate-200/80 dark:border-white/10">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400">Quick Category Navigation</span>
+            <a href="products.html" class="text-xs text-gold-500 hover:underline font-semibold flex items-center gap-1">View All Categories <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            <a href="products.html" class="p-3.5 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/50 hover:shadow-md transition-all text-center group">
+              <div class="text-xs font-serif font-bold text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">Hand-Knotted Wool</div>
+              <div class="text-[10px] font-mono text-slate-500 dark:text-slate-400 mt-0.5">From $1,850</div>
+            </a>
+            <a href="products.html" class="p-3.5 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/50 hover:shadow-md transition-all text-center group">
+              <div class="text-xs font-serif font-bold text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">Vintage Persian</div>
+              <div class="text-[10px] font-mono text-slate-500 dark:text-slate-400 mt-0.5">From $2,800</div>
+            </a>
+            <a href="products.html" class="p-3.5 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/50 hover:shadow-md transition-all text-center group">
+              <div class="text-xs font-serif font-bold text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">Organic Jute &amp; Sisal</div>
+              <div class="text-[10px] font-mono text-slate-500 dark:text-slate-400 mt-0.5">From $1,250</div>
+            </a>
+            <a href="products.html" class="p-3.5 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/50 hover:shadow-md transition-all text-center group">
+              <div class="text-xs font-serif font-bold text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">Mulberry Silk</div>
+              <div class="text-[10px] font-mono text-slate-500 dark:text-slate-400 mt-0.5">From $3,400</div>
+            </a>
+            <a href="products.html" class="p-3.5 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/50 hover:shadow-md transition-all text-center group">
+              <div class="text-xs font-serif font-bold text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">Modern Geometric</div>
+              <div class="text-[10px] font-mono text-slate-500 dark:text-slate-400 mt-0.5">From $1,650</div>
+            </a>
+            <a href="custom-rugs.html" class="p-3.5 rounded-2xl bg-gold-500/10 border border-gold-500/30 hover:border-gold-500 hover:shadow-md transition-all text-center group">
+              <div class="text-xs font-serif font-bold text-gold-600 dark:text-gold-400 group-hover:text-gold-500 transition-colors">Custom Sizing</div>
+              <div class="text-[10px] font-mono text-slate-500 dark:text-slate-400 mt-0.5">Bespoke Looming</div>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 2: CURATED SUITE — FEATURED, NEW ARRIVALS & BEST SELLERS -->
+    <!-- SECTION 2: CURATED INVENTORY & BEST SELLERS              -->
     <!-- ======================================================== -->
     <section id="home-curations" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1980,13 +2191,13 @@
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-            <span>Curatorial Spotlight <span class="hidden sm:inline">&bull; Featured, New Arrivals &amp; Best Sellers</span></span>
+            <span>Curated Inventory</span>
           </div>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Featured Rugs, New Arrivals &amp; <span class="text-gold-500">Best Selling Rugs</span>
+            Featured Rugs &amp; <span class="text-gold-500">Best-Selling Collections</span>
           </h2>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Discover the centerpiece acquisitions of the season. Switch between curated museum spotlights, freshly finished loom arrivals, and our most coveted collector favorites.
+            Explore our most popular handwoven pieces, recent loom completions, and collector favorites. Filter by curations to find your home's anchor.
           </p>
 
           <!-- Tri-Curatorial Switcher Tabs -->
@@ -2026,7 +2237,12 @@
                 <p class="text-xs text-slate-300" id="curationDesc">Woven over 14 months using hand-spun virgin wool and ancient madder root dyes. An architectural anchor for grand dining and salon living.</p>
               </div>
               <div class="flex items-center gap-3 shrink-0">
-                <a href="products.html" class="btn-3d btn-3d-gold sheen px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-xl">
+                <a href="products.html" class="btn-3d btn-3d-gold sheen px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+                  <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                  <span>Shop Now &bull; $3,450</span>
+                </a>
+                <a href="products.html#product-details" class="btn-3d btn-3d-dark sheen px-5 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-1.5">
+                  <i data-lucide="eye" class="w-3.5 h-3.5"></i>
                   <span>View Details</span>
                 </a>
               </div>
@@ -2037,36 +2253,45 @@
         <!-- 3 Feature Spotlight Columns -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="curationsTripletGrid">
           
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
-            <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 uppercase tracking-widest font-bold">Spotlight 01</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Featured Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Hand-selected by our Master Curators for international museum-grade provenance, intricate double knots, and rare botanical vegetable dye formulas.
-            </p>
-            <div class="text-[11px] font-mono text-gold-600 dark:text-gold-400 pt-2 border-t border-slate-100 dark:border-white/10">
-              Rare Atelier Editions
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 uppercase tracking-widest font-bold">Category Spotlight 01</span>
+              <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Featured Masterpieces</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Hand-selected for international museum-grade provenance, intricate double knots, and rare botanical vegetable dye formulas.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-white/10 flex items-center justify-between">
+              <span class="text-[11px] font-mono text-gold-600 dark:text-gold-400 font-semibold">From $2,800</span>
+              <a href="products.html" class="text-xs font-bold text-slate-900 dark:text-white hover:text-gold-500 inline-flex items-center gap-1">Shop Featured <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
             </div>
           </div>
 
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
-            <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest font-bold">Spotlight 02</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">New Arrivals</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Fresh off the alpine looms this season. Contemporary organic curves, wabi-sabi sheared ribs, and liquid silk watercolor designs just unrolled in our gallery.
-            </p>
-            <div class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 pt-2 border-t border-slate-100 dark:border-white/10">
-              Fresh 2026 Weaves
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest font-bold">Category Spotlight 02</span>
+              <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Fresh Loom Arrivals</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Contemporary organic curves, wabi-sabi sheared ribs, and liquid silk watercolor designs just completed on alpine timber looms.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-white/10 flex items-center justify-between">
+              <span class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">From $1,950</span>
+              <a href="products.html" class="text-xs font-bold text-slate-900 dark:text-white hover:text-gold-500 inline-flex items-center gap-1">Shop New <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
             </div>
           </div>
 
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
-            <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest font-bold">Spotlight 03</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Best Selling Rugs</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              The canonical favorites anchoring over 1,200 luxury penthouses worldwide. Renowned for supreme underfoot resilience and timeless spatial versatility.
-            </p>
-            <div class="text-[11px] font-mono text-blue-600 dark:text-blue-400 pt-2 border-t border-slate-100 dark:border-white/10">
-              Patron Acclaimed Classics
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest font-bold">Category Spotlight 03</span>
+              <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">Best-Selling Classics</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                The canonical favorites anchoring over 1,200 luxury residences worldwide, renowned for high foot-traffic resilience and timeless versatility.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-white/10 flex items-center justify-between">
+              <span class="text-[11px] font-mono text-blue-600 dark:text-blue-400 font-semibold">From $2,250</span>
+              <a href="products.html" class="text-xs font-bold text-slate-900 dark:text-white hover:text-gold-500 inline-flex items-center gap-1">Shop Bestsellers <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
             </div>
           </div>
 
@@ -2077,7 +2302,7 @@
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 3: TRADITIONAL VS MODERN & CONTEMPORARY RUGS      -->
+    <!-- SECTION 3: TRADITIONAL VS CONTEMPORARY RUG STYLES        -->
     <!-- ======================================================== -->
     <section id="home-movements" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -2086,93 +2311,94 @@
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="scale" class="w-3.5 h-3.5"></i>
-            <span>The Dialectic <span class="hidden sm:inline">&bull; Traditional &amp; Modern Collections</span></span>
+            <span>Design Styles</span>
           </div>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Traditional Masterpieces &amp; <span class="text-gold-500">Contemporary Rugs</span>
+            Traditional Heritage vs. <span class="text-gold-500">Contemporary Rugs</span>
           </h2>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Textile architecture thrives on contrast. Explore how centuries-old Persian palmettes and avant-garde Bauhaus sculptural geometries coexist in contemporary interior design.
+            Whether your home features classical architectural paneling or sleek modern minimalism, find the perfect rug style to balance and ground your interior.
           </p>
         </div>
 
         <!-- Visual Feature Banner -->
-        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-12" id="movementsBannerWrapper">
+        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-10" id="movementsBannerWrapper">
           <div class="relative w-full aspect-[21/9] sm:aspect-[24/8] rounded-2xl overflow-hidden bg-black/40">
-            <img src="images/index_traditional_modern.jpg" alt="Traditional Persian Sultanabad medallion carpet juxtaposed with modern minimalist living interior" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent flex items-center p-6 sm:p-10">
-              <div class="max-w-xl text-white space-y-2">
-                <span class="text-gold-400 text-[11px] font-mono uppercase tracking-widest font-bold">Two Grand Paradigms of Spatial Harmony</span>
-                <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold">From Historic Persian Palmettes to Modernist Sculptural Relief</h3>
-                <p class="text-xs sm:text-sm text-slate-300 hidden sm:block">Whether grounding classical Haussmann panelling or softening concrete architectural brutalism.</p>
+            <img 
+              src="images/index_movements_banner.jpg" 
+              alt="Split architectural showcase: left side classical Persian rug with antique furniture, right side modern minimalist textured rug with concrete and glass architecture" 
+              class="w-full h-full object-cover" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-black/85 flex items-center justify-between p-6 sm:p-12 text-white">
+              <div class="max-w-md space-y-1">
+                <span class="text-gold-400 text-[11px] font-mono uppercase tracking-widest font-bold">Heritage Lineage</span>
+                <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold">Classical Heritage</h3>
+                <p class="text-xs text-slate-300 hidden sm:block">Intricate florals, palmettes, and botanical madder root dyes.</p>
+              </div>
+              <div class="max-w-md text-right space-y-1">
+                <span class="text-gold-400 text-[11px] font-mono uppercase tracking-widest font-bold">Architectural Modernism</span>
+                <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold">Modern Geometric</h3>
+                <p class="text-xs text-slate-300 hidden sm:block">Sculptural high-low pile, neutral calm, and Japandi wabi-sabi textures.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Dual Era Dialectic Columns -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="movementsDualGrid">
+        <!-- Dual Era Columns -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
           
-          <!-- Left Wing: Traditional Rug Collection -->
-          <div class="p-8 rounded-3xl home-card-glass space-y-4 border border-slate-200/80 dark:border-white/10" id="traditionalWingCol">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400 flex items-center gap-2">
-                <i data-lucide="compass" class="w-4 h-4"></i>
-                Centuries-Old Lineage
-              </span>
-              <span class="text-[10px] font-mono text-amber-600 dark:text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded font-bold">Double-Knotted Senneh</span>
-            </div>
-            <h3 class="font-serif font-bold text-2xl text-slate-900 dark:text-white">
-              Traditional Rug Collection
-            </h3>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Featuring historical Isfahan medallions, Tabriz palmettes, Caucasian tribal zigzags, and Oushak botanical washes. Each motif represents symbolic geometries passed down across generations of weaving families, dyed with madder root, woad, and walnut husks.
-            </p>
-            <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-white/5">
-                <div class="text-[10px] text-slate-400 uppercase">Knot Density</div>
-                <div class="font-semibold text-slate-900 dark:text-white mt-0.5">800 &ndash; 1,200 KPSI</div>
+          <!-- Traditional Column -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-4 flex flex-col justify-between" id="traditionalWingCol">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono uppercase tracking-wider text-gold-600 dark:text-gold-400 font-bold">Classical Lineage</span>
+                <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400">From $2,200</span>
               </div>
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-white/5">
-                <div class="text-[10px] text-slate-400 uppercase">Heirloom Horizon</div>
-                <div class="font-semibold text-slate-900 dark:text-white mt-0.5">100+ Years Generational</div>
+              <h3 class="font-serif font-bold text-2xl text-slate-900 dark:text-white">
+                Traditional Heritage Rug Collection
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Featuring historic Isfahan medallions, Tabriz palmettes, Caucasian tribal motifs, and Oushak botanical washes. Each piece is dyed using pure madder root, indigo, and walnut husks.
+              </p>
+              <div class="grid grid-cols-2 gap-2 text-[11px] font-mono text-slate-600 dark:text-slate-300 pt-2">
+                <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5">Knot Density: 350&ndash;650 KPSI</div>
+                <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5">Dyes: 100% Vegetable Vat</div>
               </div>
             </div>
-            <a href="collections.html" class="inline-flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 hover:text-gold-500 pt-2">
-              <span>Explore Traditional Vault</span>
-              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-            </a>
+
+            <div class="pt-2">
+              <a href="products.html" class="btn-3d btn-3d-gold sheen w-full sm:w-auto px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+                <span>Shop Traditional Rugs</span>
+              </a>
+            </div>
           </div>
 
-          <!-- Right Wing: Modern & Contemporary Rugs -->
-          <div class="p-8 rounded-3xl home-card-glass space-y-4 border border-slate-200/80 dark:border-white/10" id="modernWingCol">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-blue-600 dark:text-blue-400 flex items-center gap-2">
-                <i data-lucide="layout" class="w-4 h-4"></i>
-                Avant-Garde Architectural
-              </span>
-              <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded font-bold">3D Sculptural Shearing</span>
-            </div>
-            <h3 class="font-serif font-bold text-2xl text-slate-900 dark:text-white">
-              Modern &amp; Contemporary Rugs
-            </h3>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Designed in collaboration with visionary interior architects. Expressive high-low carved linear relief, wabi-sabi un-dyed Bouclé, fluid asymmetrical borders, and watercolor silk gradients that transform floors into sculptural art installations.
-            </p>
-            <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-white/5">
-                <div class="text-[10px] text-slate-400 uppercase">Pile Variation</div>
-                <div class="font-semibold text-slate-900 dark:text-white mt-0.5">High-Low 3D Contours</div>
+          <!-- Modern Column -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-4 flex flex-col justify-between" id="modernWingCol">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono uppercase tracking-wider text-gold-600 dark:text-gold-400 font-bold">Contemporary Space</span>
+                <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400">From $1,850</span>
               </div>
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-white/5">
-                <div class="text-[10px] text-slate-400 uppercase">Material Core</div>
-                <div class="font-semibold text-slate-900 dark:text-white mt-0.5">Highland Wool &amp; Viscose</div>
+              <h3 class="font-serif font-bold text-2xl text-slate-900 dark:text-white">
+                Modern &amp; Contemporary Rugs
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Minimalist geometries, carved architectural pile depths, and natural undyed yarns designed to soften polished concrete, wide-plank oak, and contemporary glass residential architecture.
+              </p>
+              <div class="grid grid-cols-2 gap-2 text-[11px] font-mono text-slate-600 dark:text-slate-300 pt-2">
+                <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5">Texture: High-Low Relief</div>
+                <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5">Palette: Monochromatic Neutral</div>
               </div>
             </div>
-            <a href="collections.html" class="inline-flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-gold-500 pt-2">
-              <span>Explore Modern Collection</span>
-              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-            </a>
+
+            <div class="pt-2">
+              <a href="products.html" class="btn-3d btn-3d-dark sheen w-full sm:w-auto px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
+                <i data-lucide="compass" class="w-4 h-4"></i>
+                <span>Shop Modern Rugs</span>
+              </a>
+            </div>
           </div>
 
         </div>
@@ -2182,7 +2408,7 @@
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 4: PREMIUM CARPETS, ARTISAN CRAFTSMANSHIP & NATURAL MATERIALS -->
+    <!-- SECTION 4: NATURAL MATERIALS & ARTISAN WEAVING CRAFT     -->
     <!-- ======================================================== -->
     <section id="home-craftsmanship" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -2190,67 +2416,69 @@
         <!-- Header -->
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
-            <i data-lucide="feather" class="w-3.5 h-3.5"></i>
-            <span>The Trinity of Luxury <span class="hidden sm:inline">&bull; Carpets, Craft &amp; Materials</span></span>
+            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+            <span>Materials &amp; Craft</span>
           </div>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Artisan Craftsmanship &amp; <span class="text-gold-500">Natural Materials</span>
+            Pure Natural Fibers &amp; <span class="text-gold-500">Artisan Hand-Knotted Craft</span>
           </h2>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            True luxury begins where industrial synthesis ends. Discover how master loom craftsmanship and unadulterated highland natural fibers create carpets of incomparable dignity.
+            True luxury begins with honest materials. Our rugs are crafted exclusively from biodegradable highland wool, mulberry silk, and organic plant fibers with zero toxic off-gassing.
           </p>
         </div>
 
-        <!-- Master Loom Banner Image -->
-        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-12" id="craftBannerWrapper">
+        <!-- Craft Feature Banner -->
+        <div class="rounded-3xl overflow-hidden p-3 bg-white/70 dark:bg-obsidian-900/70 border border-slate-200/80 dark:border-white/10 shadow-xl mb-10" id="craftBannerWrapper">
           <div class="relative w-full aspect-[21/9] sm:aspect-[24/8] rounded-2xl overflow-hidden bg-black/40">
-            <img src="images/index_craft_materials.jpg" alt="Master guild weavers working at a monumental vertical timber loom weaving an intricate silk and highland wool carpet in sunlit artisan workshop" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent flex items-center p-6 sm:p-10">
+            <img 
+              src="images/index_craft_banner.jpg" 
+              alt="Elder master weaver hand-knotting wool on huge vertical wooden timber loom in quiet sunlit artisan workshop" 
+              class="w-full h-full object-cover" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/35 to-transparent flex items-center p-6 sm:p-12">
               <div class="max-w-xl text-white space-y-2">
-                <span class="text-gold-400 text-[11px] font-mono uppercase tracking-widest font-bold">Generational Guild Weavers</span>
+                <span class="text-gold-400 text-[11px] font-mono uppercase tracking-widest font-bold">Generational Loom Traditions</span>
                 <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold">Monumental Upright Timber Looms</h3>
-                <p class="text-xs sm:text-sm text-slate-300 hidden sm:block">From hand-carding wool to drop-spindle spinning and vegetable vat dyeing, every step honors centuries of unhurried artisan mastery.</p>
+                <p class="text-xs sm:text-sm text-slate-300">From hand-carding fleece to drop-spindle spinning and vegetable vat dyeing, every step preserves ancient artisan weaving traditions.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 3 Trinity Pillars Grid -->
+        <!-- 3 Pillars Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="craftTrinityGrid">
           
-          <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-gold-600 dark:text-gold-400">Pillar 01</span>
-              <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded font-bold">Mansion Scale</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Premium Carpet Collection</h4>
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-500 font-bold font-mono">01</div>
+            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Highland Tibetan Wool</h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Expansive wall-to-wall border carpets and continuous-loom broadloom weaves engineered for ballrooms, private cinema salons, and grand residential corridors without visible seams.
+              Sheared from high-altitude sheep, rich in protective lanolin for lifetime spill and soil resistance without harsh chemical fluorocarbon treatments.
             </p>
           </div>
 
-          <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400">Pillar 02</span>
-              <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded font-bold">Drop-Spindle Touch</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Artisan Craftsmanship</h4>
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 font-bold font-mono">02</div>
+            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Raw Mulberry Filament Silk</h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Every drop-spindle yarn twist and double-knot lock is executed by generational guild artisans who maintain calibrated warp tension that machine tufting cannot replicate.
+              Harvested in continuous filaments to produce exquisite tactile smoothness and dynamic multidirectional sheen under morning and evening lighting.
             </p>
           </div>
 
-          <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase text-blue-600 dark:text-blue-400">Pillar 03</span>
-              <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded font-bold">100% Organic</span>
-            </div>
-            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Natural Materials</h4>
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-500 font-bold font-mono">03</div>
+            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white">Ethical Guild Patronage</h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Ethically sourced 3,500m Tibetan highland sheep fleece, Chinese Mulberry filament silk, Belgian flax, and botanical pigments (indigo, madder, saffron). Zero volatile organic compounds.
+              100% fair-trade certified patronage. Every weaver receives direct living wages, healthcare, and educational support for their artisan communities.
             </p>
           </div>
 
+        </div>
+
+        <div class="text-center pt-8">
+          <a href="rug-guide.html" class="btn-3d btn-3d-dark sheen px-7 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            <span>Read Complete Rug Fiber &amp; Weave Guide</span>
+          </a>
         </div>
 
       </div>
@@ -2258,7 +2486,7 @@
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 5: CUSTOM RUG SERVICES & WHY CHOOSE OUR RUGS      -->
+    <!-- SECTION 5: BESPOKE COMMISSIONS & CUSTOM SIZING           -->
     <!-- ======================================================== -->
     <section id="home-bespoke" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -2266,32 +2494,32 @@
         <!-- Header -->
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
-            <i data-lucide="scissors" class="w-3.5 h-3.5"></i>
-            <span>Bespoke Excellence <span class="hidden sm:inline">&bull; Custom Services &amp; The Atelier Promise</span></span>
+            <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
+            <span>Custom Commissions</span>
           </div>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Bespoke Commissions &amp; <span class="text-gold-500">Atelier Standards</span>
+            Bespoke Rugs Tailored to Your <span class="text-gold-500">Space &amp; Palette</span>
           </h2>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            No two architectural visions are alike. Collaborate with our Fifth Avenue design atelier to create a bespoke commissioned rug tailored to your exact floorplan, palette, and fiber specifications.
+            Have a unique room dimension, color palette, or architectural layout? Collaborate directly with our Fifth Avenue design team to weave a rug made exclusively for your residence.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
-          <!-- Left: Visual Showcase (5 cols) -->
-          <div class="lg:col-span-5 relative" id="bespokeVisualCol">
-            <div class="relative rounded-[32px] p-3 sm:p-4 home-card-glass shadow-2xl overflow-hidden group tilt-card-home">
+          <!-- Left: 4 Step Process Card (5 cols) -->
+          <div class="lg:col-span-5 relative flex flex-col justify-between" id="bespokeVisualCol">
+            <div class="relative rounded-[32px] p-3 sm:p-4 home-card-glass shadow-2xl overflow-hidden group tilt-card-home flex-1 flex flex-col justify-between">
               <div class="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden bg-black/40">
                 <img 
-                  src="images/index_custom_services.jpg" 
-                  alt="Private VIP consultation room with interior architect, blueprints, yarn pom-poms, watercolor rug renderings, and calipers" 
+                  src="images/index_bespoke_standards.jpg" 
+                  alt="Architectural studio workspace with architectural floorplans, wool pom-pom swatches, drafting compass, and master carpet render" 
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent pointer-events-none"></div>
 
                 <div class="absolute top-4 left-4 bg-black/75 backdrop-blur-md border border-gold-500/40 rounded-full px-3.5 py-1 text-[11px] font-semibold text-gold-300 flex items-center gap-1.5">
-                  <i data-lucide="edit-3" class="w-3.5 h-3.5 text-gold-400"></i>
+                  <i data-lucide="scissors" class="w-3.5 h-3.5 text-gold-400"></i>
                   <span>Bespoke Commission Atelier</span>
                 </div>
 
@@ -2308,21 +2536,21 @@
 
               <!-- 4 Step Mini Tracker -->
               <div class="grid grid-cols-4 gap-1.5 pt-3.5 text-center text-[10px] font-mono">
-                <div class="p-2 rounded-xl bg-gold-500/10 border border-gold-500/20 text-gold-600 dark:text-gold-400 font-bold">1. CAD Staging</div>
-                <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">2. Yarn Swatch</div>
+                <div class="p-2 rounded-xl bg-gold-500/10 border border-gold-500/20 text-gold-600 dark:text-gold-400 font-bold">1. Room Sizing</div>
+                <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">2. Swatches</div>
                 <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">3. Hand Weaving</div>
-                <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">4. Staging Trial</div>
+                <div class="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5">4. Home Trial</div>
               </div>
             </div>
           </div>
 
-          <!-- Right: Why Choose Our Rugs 6 Pillars (7 cols) -->
-          <div class="lg:col-span-7 space-y-4" id="bespokePillarsCol">
+          <!-- Right: Why Choose Our Rugs 4 Pillars (7 cols) -->
+          <div class="lg:col-span-7 flex flex-col justify-between space-y-4" id="bespokePillarsCol">
             
             <div class="border-b border-slate-200/80 dark:border-white/10 pb-3">
               <span class="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 font-bold">The Atelier Standard</span>
               <h3 class="font-serif font-bold text-xl sm:text-2xl text-slate-900 dark:text-white mt-1">
-                Why Choose Our Rugs: Six Uncompromising Standards
+                Why Choose Our Custom Rugs
               </h3>
             </div>
 
@@ -2331,10 +2559,10 @@
               <div class="p-4 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 space-y-1">
                 <div class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold uppercase flex items-center gap-1.5">
                   <i data-lucide="check" class="w-3.5 h-3.5"></i>
-                  Zero Synthetic Fibers
+                  Zero Synthetics
                 </div>
                 <h4 class="font-serif font-bold text-sm text-slate-900 dark:text-white">100% Biodegradable &amp; Non-Toxic</h4>
-                <p class="text-[11px] text-slate-500 dark:text-slate-400">Zero plastic, polypropylene, or petroleum backing latex.</p>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Zero plastic, polypropylene, or petroleum-based adhesive backing.</p>
               </div>
 
               <div class="p-4 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 space-y-1">
@@ -2342,34 +2570,38 @@
                   <i data-lucide="check" class="w-3.5 h-3.5"></i>
                   Chromatic Precision
                 </div>
-                <h4 class="font-serif font-bold text-sm text-slate-900 dark:text-white">Delta-E &lt; 0.5 Matching</h4>
-                <p class="text-[11px] text-slate-500 dark:text-slate-400">Master colorist matching to your wood and fabric tones.</p>
+                <h4 class="font-serif font-bold text-sm text-slate-900 dark:text-white">Exact Color Matching</h4>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Master colorist yarn matching to your interior fabrics, paints, and wood.</p>
               </div>
 
               <div class="p-4 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 space-y-1">
                 <div class="text-[10px] font-mono text-blue-600 dark:text-blue-400 font-bold uppercase flex items-center gap-1.5">
                   <i data-lucide="check" class="w-3.5 h-3.5"></i>
-                  Lifetime Provenance
+                  Lifetime Authenticity
                 </div>
                 <h4 class="font-serif font-bold text-sm text-slate-900 dark:text-white">Registered Guild Certificate</h4>
-                <p class="text-[11px] text-slate-500 dark:text-slate-400">Hand-signed certificate ensuring generational collector value.</p>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Hand-signed certificate verifying knot density and heirloom collector value.</p>
               </div>
 
               <div class="p-4 rounded-2xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 space-y-1">
                 <div class="text-[10px] font-mono text-purple-600 dark:text-purple-400 font-bold uppercase flex items-center gap-1.5">
                   <i data-lucide="check" class="w-3.5 h-3.5"></i>
-                  Fair Trade Guild
+                  Fair Trade Practice
                 </div>
-                <h4 class="font-serif font-bold text-sm text-slate-900 dark:text-white">Ethical Living Wages</h4>
-                <p class="text-[11px] text-slate-500 dark:text-slate-400">Direct artisan patronage preserving ancient village weaving arts.</p>
+                <h4 class="font-serif font-bold text-sm text-slate-900 dark:text-white">Ethical Artisan Wages</h4>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400">Direct patronage empowering multi-generational master weaving families.</p>
               </div>
 
             </div>
 
-            <div class="pt-2">
+            <div class="pt-2 flex flex-wrap gap-3">
               <a href="custom-rugs.html" class="btn-3d btn-3d-gold sheen px-7 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
                 <i data-lucide="sliders" class="w-4 h-4"></i>
                 <span>Configure Custom Rug Commission</span>
+              </a>
+              <a href="contact.html" class="btn-3d btn-3d-dark sheen px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                <span>Consult Our Rug Specialists</span>
               </a>
             </div>
 
@@ -2382,7 +2614,7 @@
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 6: CUSTOMER FAVORITES & REAL COLLECTOR SPACES     -->
+    <!-- SECTION 6: CUSTOMER FAVORITES IN REAL LIVING SPACES      -->
     <!-- ======================================================== -->
     <section id="home-favorites" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden bg-slate-50/70 dark:bg-white/[0.02] border-y border-slate-200/80 dark:border-white/10">
       <div class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -2391,18 +2623,18 @@
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="heart" class="w-3.5 h-3.5"></i>
-            <span>Living Art <span class="hidden sm:inline">&bull; Customer Favorites</span></span>
+            <span>Customer Favorites</span>
           </div>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Customer Favorites: <span class="text-gold-500">In Situ Collector Residences</span>
+            Customer Favorites in <span class="text-gold-500">Real Living Spaces</span>
           </h2>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Step inside private penthouses, mountain chalets, and historic townhouses to experience our most celebrated Customer Favorites in daily living harmony.
+            Step inside real penthouses, chalets, and historic townhouses to experience our most celebrated rug models in daily living harmony.
           </p>
         </div>
 
         <!-- Featured Penthouse Banner -->
-        <div class="rounded-[32px] overflow-hidden p-3 sm:p-5 home-card-glass shadow-2xl group mb-12" id="favoritesHeroBanner">
+        <div class="rounded-[32px] overflow-hidden p-3 sm:p-5 home-card-glass shadow-2xl group mb-10" id="favoritesHeroBanner">
           <div class="relative w-full aspect-[21/9] sm:aspect-[16/7] rounded-[24px] overflow-hidden bg-black/50">
             <img 
               src="images/index_customer_favorites.jpg" 
@@ -2413,14 +2645,14 @@
 
             <div class="absolute top-4 left-4 sm:top-6 sm:left-6 bg-black/80 backdrop-blur-md border border-gold-500/40 rounded-full px-4 py-1.5 text-xs font-semibold text-gold-300 flex items-center gap-2">
               <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-400"></i>
-              <span>Collector Residence &bull; Tribeca Penthouse Commission</span>
+              <span>Tribeca Penthouse Installation</span>
             </div>
 
             <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 sm:p-6 text-white flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div class="space-y-1">
-                <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 block">5.0 Star Patron Rating &bull; Verified Commission</span>
+                <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 block">5.0 Star Patron Rating &bull; Verified Home Installation</span>
                 <h3 class="font-serif text-lg sm:text-xl font-bold">&ldquo;The rug became the foundational soul of our 40-foot double-height salon.&rdquo;</h3>
-                <p class="text-xs text-slate-300">&mdash; Julian &amp; Claire Vance, Tribeca Loft Architectural Commission (14' &times; 20' Hand-Spun Wool &amp; Silk)</p>
+                <p class="text-xs text-slate-300">&mdash; Julian &amp; Claire Vance, Tribeca Loft (Installed: 14' &times; 20' Hand-Spun Wool &amp; Silk)</p>
               </div>
               <div class="flex items-center gap-2 shrink-0">
                 <span class="text-gold-400 text-sm font-bold">&starf;&starf;&starf;&starf;&starf;</span>
@@ -2433,39 +2665,45 @@
         <!-- 3 Customer Favorite Showcase Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="favoritesCardsGrid">
           
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
-            <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 uppercase tracking-widest font-bold">Favorite #1</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">The Bel Air Villa Medallion</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Ivory and champagne silk veins running through dense un-dyed Tibetan fleece, anchoring curved Italian seating with acoustic majesty.
-            </p>
-            <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-white/10 flex justify-between">
-              <span>Installed Scale:</span>
-              <span class="font-semibold text-slate-900 dark:text-white">12' &times; 16' Custom</span>
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 uppercase tracking-widest font-bold">Living Room Favorite</span>
+              <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">The Bel Air Villa Medallion</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Ivory and champagne silk veins running through dense un-dyed Tibetan fleece, anchoring seating areas with acoustic majesty.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-white/10 flex items-center justify-between">
+              <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Scale: 12' &times; 16'</span>
+              <a href="products.html" class="text-xs font-bold text-gold-500 hover:underline">Shop Now &rarr;</a>
             </div>
           </div>
 
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
-            <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest font-bold">Favorite #2</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">The Manhattan Japandi Rib</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Raised monolithic wool ridges creating barefoot textural calm in primary bedroom suites. Absorbs sound and regulates indoor moisture.
-            </p>
-            <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-white/10 flex justify-between">
-              <span>Installed Scale:</span>
-              <span class="font-semibold text-slate-900 dark:text-white">9' &times; 12' Standard</span>
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest font-bold">Bedroom Favorite</span>
+              <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">The Manhattan Japandi Rib</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Raised monolithic wool ridges creating barefoot textural calm in primary bedroom suites. Absorbs sound and regulates indoor moisture.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-white/10 flex items-center justify-between">
+              <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Scale: 9' &times; 12'</span>
+              <a href="products.html" class="text-xs font-bold text-emerald-500 hover:underline">Shop Now &rarr;</a>
             </div>
           </div>
 
-          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3">
-            <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest font-bold">Favorite #3</span>
-            <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">The Kensington Gallery Runner</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              Aged botanical madder root dyes and durable double knots designed to welcome entering guests along grand historic townhouse corridors.
-            </p>
-            <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-white/10 flex justify-between">
-              <span>Installed Scale:</span>
-              <span class="font-semibold text-slate-900 dark:text-white">3' &times; 14' Runner</span>
+          <div class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest font-bold">Entryway Favorite</span>
+              <h4 class="font-serif font-bold text-base text-slate-900 dark:text-white">The Kensington Gallery Runner</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Aged botanical madder root dyes and durable double knots designed to welcome entering guests along grand historic corridors.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-white/10 flex items-center justify-between">
+              <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Scale: 3' &times; 14'</span>
+              <a href="products.html" class="text-xs font-bold text-blue-500 hover:underline">Shop Now &rarr;</a>
             </div>
           </div>
 
@@ -2476,7 +2714,7 @@
 
 
     <!-- ======================================================== -->
-    <!-- SECTION 7: RUG CARE HIGHLIGHTS & EXPLORE COLLECTION GRAND FINALE -->
+    <!-- SECTION 7: RUG CARE HIGHLIGHTS & STORE INFORMATION       -->
     <!-- ======================================================== -->
     <section id="home-care-explore" class="relative py-10 sm:py-14 lg:py-16 overflow-hidden">
       <!-- Ambient Radial Backing -->
@@ -2488,129 +2726,148 @@
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-4">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-xs font-bold uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400">
             <i data-lucide="shield" class="w-3.5 h-3.5"></i>
-            <span>Preservation Protocol <span class="hidden sm:inline">&bull; Rug Care Highlights</span></span>
+            <span>Care &amp; Showroom</span>
           </div>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-            Rug Care Highlights &amp; <span class="text-gold-500">Explore Collection</span>
+            Rug Care Guidance &amp; <span class="text-gold-500">Visit Our Showroom</span>
           </h2>
           <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            A hand-knotted carpet is an eternal work of art. Learn our master conservator preservation protocols, and step into our digital showroom to explore the complete catalog.
+            Hand-knotted rugs are made to last for generations with simple, regular care. Learn our essential maintenance guidelines, or visit our flagship showroom.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-14">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch mb-10">
           
-          <!-- Left: Conservator Visual Card (5 cols) -->
-          <div class="lg:col-span-5 relative" id="careVisualCol">
-            <div class="relative rounded-[32px] p-3 sm:p-4 home-card-glass shadow-2xl overflow-hidden group tilt-card-home">
-              <div class="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden bg-black/40">
-                <img 
-                  src="images/index_care_explore.jpg" 
-                  alt="Artisan conservator table with wool care instruments, gentle natural fiber cleansers, camel-hair brushes, rolled silk carpets, and open catalog" 
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent pointer-events-none"></div>
+          <!-- Left: Care Guidelines (5 cols) -->
+          <div class="lg:col-span-5 flex flex-col justify-between" id="careVisualCol">
+            <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-xl space-y-5 h-full flex flex-col justify-between">
+              <div class="space-y-2 border-b border-slate-200/80 dark:border-white/10 pb-4">
+                <span class="text-xs font-mono uppercase tracking-wider text-gold-600 dark:text-gold-400 font-bold">Longevity Guide</span>
+                <h3 class="font-serif font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+                  Four Golden Rules for Rug Care
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Natural lanolin in sheep wool protects against spills. Follow these simple rules to preserve fiber luster for a lifetime.</p>
+              </div>
 
-                <div class="absolute top-4 left-4 bg-black/75 backdrop-blur-md border border-gold-500/40 rounded-full px-3.5 py-1 text-[11px] font-semibold text-gold-300 flex items-center gap-1.5">
-                  <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-400"></i>
-                  <span>Atelier Conservator Protocol</span>
-                </div>
-
-                <div class="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-white">
-                  <div class="flex items-center justify-between mb-1">
-                    <span class="text-xs font-serif font-bold">Generational Longevity Guide</span>
-                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">100+ Years</span>
+              <div class="space-y-3.5 text-xs text-slate-600 dark:text-slate-300">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 dark:text-gold-400 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">1</div>
+                  <div>
+                    <strong class="text-slate-900 dark:text-white block">Brushless Vacuuming Only:</strong>
+                    Disengage rotating beater bars; gentle suction cleans dust without abrading hand-knotted pile.
                   </div>
-                  <p class="text-[11px] text-slate-300 leading-snug">
-                    Natural sheep lanolin provides inherent stain resistance. Follow our four golden preservation rules to protect fiber luster.
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">2</div>
+                  <div>
+                    <strong class="text-slate-900 dark:text-white block">Annual 180&deg; Solar Rotation:</strong>
+                    Rotate rugs once a year to ensure even foot traffic distribution and balanced natural light exposure.
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-600 dark:text-blue-400 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">3</div>
+                  <div>
+                    <strong class="text-slate-900 dark:text-white block">Immediate Spill Blotting:</strong>
+                    Blot liquids immediately with a dry white cotton towel. Never scrub or apply chemical detergents.
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-600 dark:text-purple-400 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5">4</div>
+                  <div>
+                    <strong class="text-slate-900 dark:text-white block">Professional Organic Wash:</strong>
+                    Have your carpet gently washed every 3 to 5 years by certified heirloom textile conservators.
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a href="rug-guide.html" class="text-xs font-bold text-gold-500 hover:underline flex items-center gap-1.5">
+                  <span>Read Detailed Cleaning &amp; Stain Removal Guide</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Store Destinations (7 cols) -->
+          <div class="lg:col-span-7 flex flex-col justify-between" id="explorePortalsCol">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full">
+              
+              <!-- Portal 1: Products -->
+              <a href="products.html" class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg hover:border-gold-500/40 transition-all flex flex-col justify-between group">
+                <div class="space-y-2">
+                  <div class="w-10 h-10 rounded-2xl bg-gold-500/10 text-gold-500 flex items-center justify-center">
+                    <i data-lucide="grid" class="w-5 h-5"></i>
+                  </div>
+                  <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                    All Rugs &amp; Carpets
+                  </h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                    Filter our live catalog by dimension, natural fiber, knot density, and pricing from $1,250 to $8,500+.
                   </p>
                 </div>
-              </div>
-
-              <!-- 4 Care Golden Rules Chips -->
-              <div class="grid grid-cols-2 gap-2 pt-3.5 text-[11px] text-slate-600 dark:text-slate-300">
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0"></i>
-                  <span>Brushless vacuum only</span>
+                <div class="text-xs font-bold text-gold-500 flex items-center gap-1 pt-3">
+                  <span>Shop Catalog</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
                 </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0"></i>
-                  <span>180&deg; Annual solar rotation</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0"></i>
-                  <span>15-min spill blotting</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0"></i>
-                  <span>Organic immersion wash</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Explore Collection Grand Portals (7 cols) -->
-          <div class="lg:col-span-7 space-y-5" id="explorePortalsCol">
-            
-            <div class="border-b border-slate-200/80 dark:border-white/10 pb-3">
-              <span class="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 font-bold">The Navigation Gateway</span>
-              <h3 class="font-serif font-bold text-2xl text-slate-900 dark:text-white mt-1">
-                Explore Collection: Destination Gallerias
-              </h3>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              
-              <a href="collections.html" class="p-5 rounded-3xl home-card-glass space-y-2 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/40 transition-all group block">
-                <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-mono text-gold-600 dark:text-gold-400 uppercase font-bold">Curated Vault</span>
-                  <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-gold-500 transition-colors"></i>
-                </div>
-                <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                  Explore Collections
-                </h4>
-                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Browse handwoven, heritage, silk luxury, and contemporary architectural carpets.
-                </p>
               </a>
 
-              <a href="products.html" class="p-5 rounded-3xl home-card-glass space-y-2 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/40 transition-all group block">
-                <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase font-bold">Live Inventory</span>
-                  <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-gold-500 transition-colors"></i>
+              <!-- Portal 2: Collections -->
+              <a href="collections.html" class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg hover:border-gold-500/40 transition-all flex flex-col justify-between group">
+                <div class="space-y-2">
+                  <div class="w-10 h-10 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                  </div>
+                  <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                    Curated Collections
+                  </h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                    Explore curated design series, from classical Persian heritages to modern minimalist Japandi topographies.
+                  </p>
                 </div>
-                <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                  All Rugs &amp; Carpets Catalog
-                </h4>
-                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Filter by material, dimension scale, aesthetic movement, and room placement.
-                </p>
+                <div class="text-xs font-bold text-gold-500 flex items-center gap-1 pt-3">
+                  <span>Explore Series</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
+                </div>
               </a>
 
-              <a href="custom-rugs.html" class="p-5 rounded-3xl home-card-glass space-y-2 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/40 transition-all group block">
-                <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-mono text-blue-600 dark:text-blue-400 uppercase font-bold">Bespoke Atelier</span>
-                  <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-gold-500 transition-colors"></i>
+              <!-- Portal 3: Showroom -->
+              <a href="showroom.html" class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg hover:border-gold-500/40 transition-all flex flex-col justify-between group">
+                <div class="space-y-2">
+                  <div class="w-10 h-10 rounded-2xl bg-blue-500/10 text-blue-500 flex items-center justify-center">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                  </div>
+                  <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                    Flagship Showroom
+                  </h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                    Visit our Fifth Avenue Salon in New York City. Open Mon&ndash;Sat 10am&ndash;7pm for private sensory viewings.
+                  </p>
                 </div>
-                <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                  Custom Rug Services
-                </h4>
-                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Commission continuous-loom carpets customized to your architect's CAD floorplans.
-                </p>
+                <div class="text-xs font-bold text-gold-500 flex items-center gap-1 pt-3">
+                  <span>Showroom Info</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
+                </div>
               </a>
 
-              <a href="rug-guide.html" class="p-5 rounded-3xl home-card-glass space-y-2 border border-slate-200/80 dark:border-white/10 hover:border-gold-500/40 transition-all group block">
-                <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-mono text-purple-600 dark:text-purple-400 uppercase font-bold">Master Reference</span>
-                  <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-gold-500 transition-colors"></i>
+              <!-- Portal 4: Custom Rugs -->
+              <a href="custom-rugs.html" class="p-6 rounded-3xl bg-white dark:bg-obsidian-900 border border-slate-200/80 dark:border-white/10 shadow-lg hover:border-gold-500/40 transition-all flex flex-col justify-between group">
+                <div class="space-y-2">
+                  <div class="w-10 h-10 rounded-2xl bg-purple-500/10 text-purple-500 flex items-center justify-center">
+                    <i data-lucide="sliders" class="w-5 h-5"></i>
+                  </div>
+                  <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
+                    Custom Rug Studio
+                  </h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                    Configure custom sizes, bespoke fiber balances, and request complimentary yarn sample boxes.
+                  </p>
                 </div>
-                <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white group-hover:text-gold-500 transition-colors">
-                  Architectural Rug Guide
-                </h4>
-                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Sizing blueprints, room-by-room clearance rules, layering theorems &amp; textures.
-                </p>
+                <div class="text-xs font-bold text-gold-500 flex items-center gap-1 pt-3">
+                  <span>Start Custom</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
+                </div>
               </a>
 
             </div>
@@ -2619,27 +2876,27 @@
 
         </div>
 
-        <!-- Grand Concierge Consultation Bar -->
-        <div class="rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-obsidian-900 via-obsidian-850 to-obsidian-900 border border-gold-500/30 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6" id="homeExploreCtaBar">
-          <div class="space-y-1.5 text-center md:text-left">
-            <span class="text-xs font-mono text-gold-400 uppercase tracking-widest font-bold block">Private Concierge Appointment</span>
-            <h3 class="font-serif text-xl sm:text-2xl font-bold">Book a Private Viewing or Request Swatch Kit</h3>
-            <p class="text-xs text-slate-300 max-w-xl">
-              Experience the weight, luster, and lanolin touch in person at our Fifth Avenue atelier, or receive complimentary yarn pom-poms delivered to your door.
+        <!-- Grand Call to Action Bar -->
+        <div class="cta-banner p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-gold-500/15 via-gold-500/10 to-obsidian-900 border border-gold-500/30" id="homeExploreCtaBar">
+          <div class="cta-banner-text space-y-1.5">
+            <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white leading-snug">
+              Ready to Find the Perfect Rug for Your Space?
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl">
+              Browse our inventory online, request a 72-hour in-home trial, or schedule a private consultation.
             </p>
           </div>
-          <div class="flex items-center gap-3 shrink-0">
-            <a href="showroom.html" class="btn-3d btn-3d-gold sheen px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
-              <i data-lucide="calendar" class="w-4 h-4"></i>
-              <span>Book Showroom Visit</span>
+          <div class="cta-banner-buttons">
+            <a href="products.html" class="btn-3d btn-3d-gold sheen px-7 py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
+              <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+              <span>Shop All Rugs</span>
             </a>
-            <a href="contact.html" class="btn-3d btn-3d-dark sheen px-6 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl inline-flex items-center gap-2">
-              <i data-lucide="mail" class="w-4 h-4"></i>
-              <span>Contact Concierge</span>
+            <a href="contact.html" class="btn-3d btn-3d-dark sheen px-7 py-3.5 text-xs font-bold uppercase tracking-wider rounded-xl inline-flex items-center justify-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Book Appointment</span>
             </a>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -2648,7 +2905,7 @@
   <!-- ======================================================== -->
   <!-- MAIN LUXURY FOOTER (Based on Navbar & Reference Layout) -->
   <!-- ======================================================== -->
-  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-14">
+  <footer id="mainFooter" class="w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 sm:pt-6 sm:pb-10 lg:pt-6 lg:pb-12">
     <!-- Outer Card Shell with 3D/Rounded Aesthetics Matching Reference -->
     <div class="footer-card rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 transition-all duration-300 relative overflow-hidden">
 
